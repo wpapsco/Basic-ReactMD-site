@@ -3621,5 +3621,7 @@ svg.md-icon {
   .md-background--secondary-hover:hover {
     background: rgba(213, 0, 249, 0.9); } }
 
-body {
-  margin: 0; }
+#main {
+  margin: auto;
+  width: 50%;
+  padding: 10px; }

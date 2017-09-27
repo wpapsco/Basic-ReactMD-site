@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import webfontloader from "webfontloader"
-import Button from 'react-md/lib/Buttons/Button';
-import SVGIcon from 'react-md/lib/SVGIcons';
-//import NavigationDrawer from 'react-md/lib/NavigationDrawers';
+import webfontloader from "webfontloader";
+import Paper from 'react-md/lib/Papers';
+import Toolbar from 'react-md/lib/Toolbars';
+
 
 webfontloader.load({
     google: {
@@ -14,7 +14,15 @@ webfontloader.load({
 class Layout extends React.Component {
     render() {
         return (
-            <Button flat>Hello, World!</Button>
+            <div id="layout">
+                <Toolbar
+                    title="Test Site!"
+                >
+                </Toolbar>
+                <Paper id="main">
+                    test!
+                </Paper>
+            </div>
         );
     }
 }
