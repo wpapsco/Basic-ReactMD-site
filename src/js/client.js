@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import webfontloader from "webfontloader";
 import Paper from 'react-md/lib/Papers';
 import Toolbar from 'react-md/lib/Toolbars';
-
+import DataForm from './components/DataForm'
 
 webfontloader.load({
     google: {
@@ -20,7 +20,7 @@ class Layout extends React.Component {
                 >
                 </Toolbar>
                 <Paper id="main">
-                    test!
+                    <DataForm />
                 </Paper>
             </div>
         );

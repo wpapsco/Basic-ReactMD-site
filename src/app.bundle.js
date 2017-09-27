@@ -651,7 +651,54 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 9 */,
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports);
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports);
+    global.keyCodes = mod.exports;
+  }
+})(this, function (exports) {
+  "use strict";
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  var LEFT_MOUSE = exports.LEFT_MOUSE = 0;
+  var RIGHT_MOUSE = exports.RIGHT_MOUSE = 2;
+
+  var TAB = exports.TAB = 9;
+  var ENTER = exports.ENTER = 13;
+  var ESC = exports.ESC = 27;
+  var SPACE = exports.SPACE = 32;
+  var PAGE_UP = exports.PAGE_UP = 33;
+  var PAGE_DOWN = exports.PAGE_DOWN = 34;
+  var END = exports.END = 35;
+  var HOME = exports.HOME = 36;
+  var LEFT = exports.LEFT = 37;
+  var UP = exports.UP = 38;
+  var RIGHT = exports.RIGHT = 39;
+  var DOWN = exports.DOWN = 40;
+
+  var ZERO = exports.ZERO = 48;
+  var NINE = exports.NINE = 57;
+  var KEYPAD_ZERO = exports.KEYPAD_ZERO = 96;
+  var KEYPAD_NINE = exports.KEYPAD_NINE = 105;
+});
+//# sourceMappingURL=keyCodes.js.map
+
+/***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -779,7 +826,121 @@ module.exports = ExecutionEnvironment;
 /***/ }),
 /* 13 */,
 /* 14 */,
-/* 15 */,
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(3)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('classnames'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.classnames);
+    global.themeColors = mod.exports;
+  }
+})(this, function (exports, _classnames) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = themeColors;
+
+  var _classnames2 = _interopRequireDefault(_classnames);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  /**
+   * This is a utility function to apply the different text colors as a class name.
+   *
+   * @param {Object} options - The options to use to figure out which styles to apply.
+   * @param {boolean?} options.text - Boolean if the base text color should attempt to be
+   *    applied. This will only be applied if all the other states are not true.
+   * @param {boolean?} options.disabled - Boolean if the text should be disabled.
+   * @param {boolean?} options.error - Boolean if the error color should attempt to be applied.
+   *    This will only be applied if the disabled state is false.
+   * @param {boolean?} options.primary - Boolean if the primary color should be applied. This
+   *    will only be applied if all the other states are false.
+   * @param {boolean?} options.secondary - Boolean if the secondary color should be applied.
+   *    This will only be applied if all the other states are false.
+   * @param {boolean?} options.inherit - Boolean if the color should be inherited by a parent.
+   *    This will only be applied if the error and disabled states are false.
+   * @return {String} the class name
+   */
+  function themeColors() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        _ref$themeText = _ref.themeText,
+        themeText = _ref$themeText === undefined ? true : _ref$themeText,
+        _ref$text = _ref.text,
+        text = _ref$text === undefined ? false : _ref$text,
+        _ref$background = _ref.background,
+        background = _ref$background === undefined ? false : _ref$background,
+        _ref$disabled = _ref.disabled,
+        disabled = _ref$disabled === undefined ? false : _ref$disabled,
+        _ref$error = _ref.error,
+        error = _ref$error === undefined ? false : _ref$error,
+        _ref$hint = _ref.hint,
+        hint = _ref$hint === undefined ? false : _ref$hint,
+        _ref$primary = _ref.primary,
+        primary = _ref$primary === undefined ? false : _ref$primary,
+        _ref$secondary = _ref.secondary,
+        secondary = _ref$secondary === undefined ? false : _ref$secondary,
+        _ref$inherit = _ref.inherit,
+        inherit = _ref$inherit === undefined ? false : _ref$inherit,
+        _ref$ink = _ref.ink,
+        ink = _ref$ink === undefined ? false : _ref$ink,
+        _ref$card = _ref.card,
+        card = _ref$card === undefined ? false : _ref$card,
+        _ref$hover = _ref.hover,
+        hover = _ref$hover === undefined ? false : _ref$hover;
+
+    var className = arguments[1];
+
+    var colors = '';
+    if (themeText) {
+      if (disabled) {
+        colors = 'md-text--disabled';
+      } else if (error) {
+        colors = 'md-text--error';
+      } else if (inherit) {
+        colors = 'md-text--inherit';
+      } else {
+        colors = (0, _classnames2.default)({
+          'md-text': text && !primary && !secondary && !hint,
+          'md-text--secondary': hint,
+          'md-text--theme-primary': !hint && primary,
+          'md-text--theme-secondary': !hint && secondary,
+          'md-ink--primary': ink && primary,
+          'md-ink--secondary': ink && secondary
+        });
+      }
+    } else {
+      colors = (0, _classnames2.default)({
+        'md-background': background && !primary && !secondary && !card,
+        'md-background--card': card,
+        'md-background--primary': primary,
+        'md-background--primary-hover': primary && hover,
+        'md-background--secondary': secondary,
+        'md-background--secondary-hover': secondary && hover
+      });
+    }
+
+    return (0, _classnames2.default)(colors, className);
+  }
+});
+//# sourceMappingURL=themeColors.js.map
+
+/***/ }),
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1239,6 +1400,10 @@ var _Toolbars = __webpack_require__(69);
 
 var _Toolbars2 = _interopRequireDefault(_Toolbars);
 
+var _DataForm = __webpack_require__(72);
+
+var _DataForm2 = _interopRequireDefault(_DataForm);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1274,7 +1439,7 @@ var Layout = function (_React$Component) {
                 _react2.default.createElement(
                     _Papers2.default,
                     { id: "main" },
-                    "test!"
+                    _react2.default.createElement(_DataForm2.default, null)
                 )
             );
         }
@@ -21502,10 +21667,355 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=invalidIf.js.map
 
 /***/ }),
-/* 45 */,
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(15)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('prop-types'), require('classnames'), require('../utils/themeColors'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.propTypes, global.classnames, global.themeColors);
+    global.FontIcon = mod.exports;
+  }
+})(this, function (exports, _react, _propTypes, _classnames, _themeColors) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _classnames2 = _interopRequireDefault(_classnames);
+
+  var _themeColors2 = _interopRequireDefault(_themeColors);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  function _objectWithoutProperties(obj, keys) {
+    var target = {};
+
+    for (var i in obj) {
+      if (keys.indexOf(i) >= 0) continue;
+      if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+      target[i] = obj[i];
+    }
+
+    return target;
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var ICON_SIZE = 24;
+
+  /**
+   * The \`FontIcon\` component is used for rendering a font-icon library's
+   * icon. The default is to use the `material-icons` library, but others
+   * can be used as well.
+   *
+   * If you are using another font-icon library that does not always create
+   * icons with a perfect 1:1 scale (such as font-awesome), it is recommended
+   * to update the `.md-icon` styles to set the width and height to `$md-font-icon-size`.
+   * However, this will prevent different sided icons.
+   *
+   * ```scss
+   * .md-icon.fa {
+   *   height: $md-font-icon-size;
+   *   width: $md-font-icon-size;
+   * }
+   * ```
+   */
+
+  var FontIcon = function (_PureComponent) {
+    _inherits(FontIcon, _PureComponent);
+
+    function FontIcon(props) {
+      _classCallCheck(this, FontIcon);
+
+      var _this = _possibleConstructorReturn(this, (FontIcon.__proto__ || Object.getPrototypeOf(FontIcon)).call(this));
+
+      _initialiseProps.call(_this);
+
+      _this.state = { styles: _this._mergeStyles(props) };
+      return _this;
+    }
+
+    _createClass(FontIcon, [{
+      key: 'componentWillReceiveProps',
+      value: function componentWillReceiveProps(nextProps) {
+        var _props = this.props,
+            style = _props.style,
+            forceSize = _props.forceSize,
+            forceFontSize = _props.forceFontSize;
+
+        if (style !== nextProps.style || forceSize !== nextProps.forceSize || forceFontSize !== nextProps.forceFontSize) {
+          this.setState({ styles: this._mergeStyles(nextProps) });
+        }
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var styles = this.state.styles;
+
+        var _props2 = this.props,
+            iconClassName = _props2.iconClassName,
+            className = _props2.className,
+            children = _props2.children,
+            disabled = _props2.disabled,
+            primary = _props2.primary,
+            secondary = _props2.secondary,
+            error = _props2.error,
+            inherit = _props2.inherit,
+            style = _props2.style,
+            forceSize = _props2.forceSize,
+            forceFontSize = _props2.forceFontSize,
+            props = _objectWithoutProperties(_props2, ['iconClassName', 'className', 'children', 'disabled', 'primary', 'secondary', 'error', 'inherit', 'style', 'forceSize', 'forceFontSize']);
+
+        var classes = (0, _classnames2.default)('md-icon', iconClassName, (0, _themeColors2.default)({
+          disabled: disabled,
+          error: error,
+          inherit: inherit,
+          primary: primary,
+          secondary: secondary
+        }), className);
+
+        return _react2.default.createElement(
+          'i',
+          _extends({}, props, { style: styles, className: classes }),
+          children
+        );
+      }
+    }]);
+
+    return FontIcon;
+  }(_react.PureComponent);
+
+  FontIcon.propTypes = {
+    /**
+     * An optional style to apply.
+     */
+    style: _propTypes2.default.object,
+
+    /**
+     * An optional className to apply to the `FontIcon`.
+     */
+    className: _propTypes2.default.string,
+
+    /**
+     * The icon font library className to use to display the icon.
+     */
+    iconClassName: _propTypes2.default.string.isRequired,
+
+    /**
+     * Boolean if the primary theme color should be applied.
+     */
+    primary: _propTypes2.default.bool,
+
+    /**
+     * Boolean if the secondary theme color should be applied.
+     */
+    secondary: _propTypes2.default.bool,
+
+    /**
+     * Boolean if the icon is considered disabled and should inherit the
+     * disabled color.
+     */
+    disabled: _propTypes2.default.bool,
+
+    /**
+     * Boolean if the error color should be applied to the icon.
+     */
+    error: _propTypes2.default.bool,
+
+    /**
+     * Boolean if the color of the icon should be inherited by parent elements.
+     */
+    inherit: _propTypes2.default.bool,
+
+    /**
+     * Either a boolean that will enforce the 24x24 size of the font icon or a number of the size
+     * to enforce. This is useful when using other font icon libraries that do not have a consistent
+     * size.
+     */
+    forceSize: _propTypes2.default.oneOfType([_propTypes2.default.bool, _propTypes2.default.number]),
+
+    /**
+     * Boolean if the `forceSize` prop should also force the `font-size` instead of only `width` and `height`.
+     */
+    forceFontSize: function forceFontSize(props, propName, component) {
+      for (var _len = arguments.length, args = Array(_len > 3 ? _len - 3 : 0), _key = 3; _key < _len; _key++) {
+        args[_key - 3] = arguments[_key];
+      }
+
+      var error = _propTypes2.default.bool.apply(_propTypes2.default, [props, propName, component].concat(args));
+      if (!error && typeof props.forceSize === 'undefined' && props[propName]) {
+        error = new Error('You provided a `forceFontSize` prop to the ' + component + ' component, without specifying the `forceSize` ' + ('prop. Either set the `forceSize` prop to a boolean or a number, or disable `' + propName + '`.'));
+      }
+
+      return error;
+    },
+
+    /**
+     * Any children required to display the icon with the font library.
+     */
+    children: _propTypes2.default.node
+  };
+  FontIcon.defaultProps = {
+    iconClassName: 'material-icons'
+  };
+
+  var _initialiseProps = function _initialiseProps() {
+    this._mergeStyles = function (_ref) {
+      var style = _ref.style,
+          forceSize = _ref.forceSize,
+          forceFontSize = _ref.forceFontSize;
+
+      var styles = style;
+      if (typeof forceSize === 'boolean') {
+        styles = _extends({
+          height: ICON_SIZE,
+          width: ICON_SIZE,
+          fontSize: forceFontSize ? ICON_SIZE : undefined
+        }, style);
+      } else if (typeof forceSize === 'number') {
+        styles = _extends({
+          height: forceSize,
+          width: forceSize,
+          fontSize: forceFontSize ? forceSize : undefined
+        }, style);
+      }
+
+      return styles;
+    };
+  };
+
+  exports.default = FontIcon;
+});
+//# sourceMappingURL=FontIcon.js.map
+
+/***/ }),
 /* 46 */,
 /* 47 */,
-/* 48 */,
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports);
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports);
+    global.getField = mod.exports;
+  }
+})(this, function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = getField;
+  /** @module utils/getField */
+
+  /**
+   * Gets the current field for a component that can the field
+   * as either uncontrolled or controlled.
+   *
+   * @param {Object} props - the props object.
+   * @param {Object} state = the state object.
+   * @param {string=} field - the field to extract a value from. Defaults to 'value'.
+   *
+   * @return the field's value.
+   */
+  function getField(props, state) {
+    var field = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'value';
+
+    return typeof props[field] !== 'undefined' ? props[field] : state[field];
+  }
+});
+//# sourceMappingURL=getField.js.map
+
+/***/ }),
 /* 49 */,
 /* 50 */,
 /* 51 */,
@@ -22440,6 +22950,4310 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   exports.default = ToolbarTitle;
 });
 //# sourceMappingURL=ToolbarTitle.js.map
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _TextFields = __webpack_require__(73);
+
+var _TextFields2 = _interopRequireDefault(_TextFields);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DataForm = function (_React$Component) {
+    _inherits(DataForm, _React$Component);
+
+    function DataForm(props) {
+        _classCallCheck(this, DataForm);
+
+        var _this = _possibleConstructorReturn(this, (DataForm.__proto__ || Object.getPrototypeOf(DataForm)).call(this, props));
+
+        _this.handleSubmit = function (e) {
+            e.preventDefault();
+            console.log(_this.state);
+            alert(_this.state.full_name);
+        };
+
+        _this.handleChange = function (name, value) {
+            _this.setState(_defineProperty({}, name, value));
+        };
+
+        _this.state = {
+            full_name: ''
+        };
+        return _this;
+    }
+
+    _createClass(DataForm, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'form',
+                { className: 'md-grid text-fields__application', onSubmit: this.handleSubmit },
+                _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Test form'
+                ),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    label: 'Full Name',
+                    value: this.state.value,
+                    onChange: this.handleChange.bind(this, 'full_name')
+                })
+            );
+        }
+    }]);
+
+    return DataForm;
+}(_react2.default.Component);
+
+exports.default = DataForm;
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(74)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('./TextField'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.TextField);
+    global.index = mod.exports;
+  }
+})(this, function (exports, _TextField2) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.TextField = undefined;
+
+  var _TextField3 = _interopRequireDefault(_TextField2);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  exports.default = _TextField3.default;
+  exports.TextField = _TextField3.default;
+});
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(22), __webpack_require__(75), __webpack_require__(48), __webpack_require__(76), __webpack_require__(77), __webpack_require__(44), __webpack_require__(78), __webpack_require__(79), __webpack_require__(45), __webpack_require__(80), __webpack_require__(81), __webpack_require__(82), __webpack_require__(84), __webpack_require__(85), __webpack_require__(89)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('prop-types'), require('classnames'), require('react-prop-types/lib/deprecated'), require('react-prop-types/lib/isRequiredForA11y'), require('../utils/getField'), require('../utils/Positioning/getTextWidth'), require('../utils/PropTypes/controlled'), require('../utils/PropTypes/invalidIf'), require('../utils/PropTypes/minNumber'), require('../utils/StringUtils/addSuffix'), require('../FontIcons/FontIcon'), require('../FontIcons/getDeprecatedIcon'), require('./FloatingLabel'), require('./TextFieldMessage'), require('./PasswordButton'), require('./InputField'), require('./TextFieldDivider'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.propTypes, global.classnames, global.deprecated, global.isRequiredForA11y, global.getField, global.getTextWidth, global.controlled, global.invalidIf, global.minNumber, global.addSuffix, global.FontIcon, global.getDeprecatedIcon, global.FloatingLabel, global.TextFieldMessage, global.PasswordButton, global.InputField, global.TextFieldDivider);
+    global.TextField = mod.exports;
+  }
+})(this, function (exports, _react, _propTypes, _classnames, _deprecated, _isRequiredForA11y, _getField, _getTextWidth, _controlled, _invalidIf, _minNumber, _addSuffix, _FontIcon, _getDeprecatedIcon, _FloatingLabel, _TextFieldMessage, _PasswordButton, _InputField, _TextFieldDivider) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _classnames2 = _interopRequireDefault(_classnames);
+
+  var _deprecated2 = _interopRequireDefault(_deprecated);
+
+  var _isRequiredForA11y2 = _interopRequireDefault(_isRequiredForA11y);
+
+  var _getField2 = _interopRequireDefault(_getField);
+
+  var _getTextWidth2 = _interopRequireDefault(_getTextWidth);
+
+  var _controlled2 = _interopRequireDefault(_controlled);
+
+  var _invalidIf2 = _interopRequireDefault(_invalidIf);
+
+  var _minNumber2 = _interopRequireDefault(_minNumber);
+
+  var _addSuffix2 = _interopRequireDefault(_addSuffix);
+
+  var _FontIcon2 = _interopRequireDefault(_FontIcon);
+
+  var _getDeprecatedIcon2 = _interopRequireDefault(_getDeprecatedIcon);
+
+  var _FloatingLabel2 = _interopRequireDefault(_FloatingLabel);
+
+  var _TextFieldMessage2 = _interopRequireDefault(_TextFieldMessage);
+
+  var _PasswordButton2 = _interopRequireDefault(_PasswordButton);
+
+  var _InputField2 = _interopRequireDefault(_InputField);
+
+  var _TextFieldDivider2 = _interopRequireDefault(_TextFieldDivider);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  function _objectWithoutProperties(obj, keys) {
+    var target = {};
+
+    for (var i in obj) {
+      if (keys.indexOf(i) >= 0) continue;
+      if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+      target[i] = obj[i];
+    }
+
+    return target;
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var DEFAULT_TEXT_FIELD_SIZE = 180;
+
+  /**
+   * The `TextField` component can either be a single line `input` field or a multiline
+   * `textarea` field. `FontIcon`s, messages, and password indicators can also be added
+   * to this field.
+   *
+   * The optional mouse and touch events will be added to the entire container while the
+   * text specific events will be added to the `input` or `textarea` tags.
+   */
+
+  var TextField = function (_PureComponent) {
+    _inherits(TextField, _PureComponent);
+
+    function TextField(props) {
+      _classCallCheck(this, TextField);
+
+      var _this = _possibleConstructorReturn(this, (TextField.__proto__ || Object.getPrototypeOf(TextField)).call(this, props));
+
+      _initialiseProps.call(_this);
+
+      var currentLength = _this._getLength(typeof props.value !== 'undefined' ? props.value : props.defaultValue);
+
+      _this._canvas = null;
+      var width = null;
+      if (typeof props.resize !== 'undefined') {
+        width = typeof props.resize.min === 'number' ? props.resize.min : DEFAULT_TEXT_FIELD_SIZE;
+      }
+
+      _this.state = {
+        active: false,
+        error: props.maxLength ? props.maxLength < currentLength : false,
+        floating: _this._isValued(props.defaultValue) || _this._isValued(props.value),
+        passwordVisible: props.passwordInitiallyVisible,
+        currentLength: currentLength,
+        width: width
+      };
+      return _this;
+    }
+
+    _createClass(TextField, [{
+      key: 'componentWillMount',
+      value: function componentWillMount() {
+        var _props = this.props,
+            value = _props.value,
+            defaultValue = _props.defaultValue,
+            resize = _props.resize;
+
+        var v = typeof value !== 'undefined' ? value : defaultValue;
+        if (!resize || typeof document === 'undefined' || !v) {
+          return;
+        }
+
+        this.setState({ width: this._calcWidth(v) });
+      }
+    }, {
+      key: 'componentDidMount',
+      value: function componentDidMount() {
+        var _props2 = this.props,
+            value = _props2.value,
+            defaultValue = _props2.defaultValue,
+            resize = _props2.resize;
+
+        var v = typeof value !== 'undefined' ? value : defaultValue;
+        if (resize && v) {
+          this.setState({ width: this._calcWidth(v) }); // eslint-disable-line react/no-did-mount-set-state
+        }
+      }
+    }, {
+      key: 'componentWillReceiveProps',
+      value: function componentWillReceiveProps(nextProps) {
+        var value = nextProps.value,
+            maxLength = nextProps.maxLength,
+            required = nextProps.required,
+            resize = nextProps.resize;
+
+        if (this.props.value !== value) {
+          var _state = this.state,
+              error = _state.error,
+              width = _state.width;
+
+          var currentLength = this._getLength(value);
+          if (required && error) {
+            error = !this._isValued(value);
+          }
+
+          if (maxLength) {
+            error = error || currentLength > maxLength;
+          }
+
+          if (resize) {
+            var nextWidth = this._calcWidth(value);
+            if (!resize.disableShrink || nextWidth > width) {
+              width = nextWidth;
+            }
+          }
+
+          this.setState({
+            error: error,
+            width: width,
+            currentLength: currentLength,
+            floating: this._isValued(value) || this.state.floating && this.state.active
+          });
+        }
+      }
+    }, {
+      key: 'blur',
+      value: function blur() {
+        this._field.blur();
+      }
+    }, {
+      key: '_cloneIcon',
+      value: function _cloneIcon(icon, active, error, disabled, stateful, block, dir) {
+        if (!icon) {
+          return icon;
+        }
+
+        try {
+          var iconEl = _react.Children.only(icon);
+          return (0, _react.cloneElement)(iconEl, {
+            key: iconEl.key || 'icon-' + dir,
+            disabled: stateful ? disabled : undefined,
+            primary: stateful ? !error && active : undefined,
+            error: stateful ? error : undefined,
+            className: (0, _classnames2.default)('md-text-field-icon', {
+              'md-text-field-icon--positioned': !block
+            }, iconEl.props.className)
+          });
+        } catch (e) {
+          return icon;
+        }
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var _state2 = this.state,
+            currentLength = _state2.currentLength,
+            passwordVisible = _state2.passwordVisible,
+            width = _state2.width;
+
+        var _props3 = this.props,
+            id = _props3.id,
+            type = _props3.type,
+            style = _props3.style,
+            className = _props3.className,
+            inputStyle = _props3.inputStyle,
+            inputClassName = _props3.inputClassName,
+            block = _props3.block,
+            fullWidth = _props3.fullWidth,
+            required = _props3.required,
+            customSize = _props3.customSize,
+            maxLength = _props3.maxLength,
+            errorText = _props3.errorText,
+            helpText = _props3.helpText,
+            helpOnFocus = _props3.helpOnFocus,
+            disabled = _props3.disabled,
+            leftIconStateful = _props3.leftIconStateful,
+            rightIconStateful = _props3.rightIconStateful,
+            passwordIcon = _props3.passwordIcon,
+            lineDirection = _props3.lineDirection,
+            paddedBlock = _props3.paddedBlock,
+            onDoubleClick = _props3.onDoubleClick,
+            onTouchStart = _props3.onTouchStart,
+            onTouchMove = _props3.onTouchMove,
+            onTouchCancel = _props3.onTouchCancel,
+            onTouchEnd = _props3.onTouchEnd,
+            onMouseDown = _props3.onMouseDown,
+            onMouseUp = _props3.onMouseUp,
+            onMouseOver = _props3.onMouseOver,
+            onMouseLeave = _props3.onMouseLeave,
+            ink = _props3.ink,
+            inlineIndicator = _props3.inlineIndicator,
+            toolbar = _props3.toolbar,
+            icon = _props3.icon,
+            passwordIconChildren = _props3.passwordIconChildren,
+            passwordIconClassName = _props3.passwordIconClassName,
+            propLabel = _props3.label,
+            propPlaceholder = _props3.placeholder,
+            propError = _props3.error,
+            propActive = _props3.active,
+            propFloating = _props3.floating,
+            propLeftIcon = _props3.leftIcon,
+            propRightIcon = _props3.rightIcon,
+            onClick = _props3.onClick,
+            onChange = _props3.onChange,
+            onBlur = _props3.onBlur,
+            onFocus = _props3.onFocus,
+            resize = _props3.resize,
+            adjustMinWidth = _props3.adjustMinWidth,
+            propFloatingLabel = _props3.floatingLabel,
+            props = _objectWithoutProperties(_props3, ['id', 'type', 'style', 'className', 'inputStyle', 'inputClassName', 'block', 'fullWidth', 'required', 'customSize', 'maxLength', 'errorText', 'helpText', 'helpOnFocus', 'disabled', 'leftIconStateful', 'rightIconStateful', 'passwordIcon', 'lineDirection', 'paddedBlock', 'onDoubleClick', 'onTouchStart', 'onTouchMove', 'onTouchCancel', 'onTouchEnd', 'onMouseDown', 'onMouseUp', 'onMouseOver', 'onMouseLeave', 'ink', 'inlineIndicator', 'toolbar', 'icon', 'passwordIconChildren', 'passwordIconClassName', 'label', 'placeholder', 'error', 'active', 'floating', 'leftIcon', 'rightIcon', 'onClick', 'onChange', 'onBlur', 'onFocus', 'resize', 'adjustMinWidth', 'floatingLabel']);
+
+        var _props4 = this.props,
+            label = _props4.label,
+            placeholder = _props4.placeholder,
+            error = _props4.error,
+            active = _props4.active,
+            floating = _props4.floating,
+            leftIcon = _props4.leftIcon,
+            rightIcon = _props4.rightIcon;
+
+        active = active || this.state.active;
+        error = error || this.state.error;
+        floating = floating || this.state.floating;
+
+        if (required) {
+          if (label) {
+            label = (0, _addSuffix2.default)(label, '*');
+          }
+
+          if (placeholder && !label) {
+            placeholder = (0, _addSuffix2.default)(placeholder, '*');
+          }
+        }
+
+        if (label && !floating) {
+          placeholder = null;
+        }
+
+        leftIcon = this._cloneIcon(icon || leftIcon, active, error, disabled, leftIconStateful, block, 'left');
+        if (type === 'password' && !disabled) {
+          rightIcon = _react2.default.createElement(_PasswordButton2.default, {
+            key: 'password-btn',
+            onClick: this._togglePasswordField,
+            active: active,
+            passwordVisible: passwordVisible,
+            icon: (0, _getDeprecatedIcon2.default)(passwordIconClassName, passwordIconChildren, passwordIcon),
+            block: block,
+            floating: !!label
+          });
+        } else if (inlineIndicator) {
+          var el = _react.Children.only(inlineIndicator);
+          rightIcon = (0, _react.cloneElement)(inlineIndicator, {
+            key: 'icon-right',
+            className: (0, _classnames2.default)('md-text-field-inline-indicator', {
+              'md-text-field-inline-indicator--floating': label,
+              'md-text-field-inline-indicator--block': block
+            }, el.props.className)
+          });
+        } else {
+          rightIcon = this._cloneIcon(rightIcon, active, error, disabled, rightIconStateful, block, 'right');
+        }
+        var rightIconed = !!rightIcon && type !== 'password' && !inlineIndicator;
+
+        var floatingLabel = _react2.default.createElement(_FloatingLabel2.default, {
+          key: 'label',
+          label: label,
+          htmlFor: id,
+          active: active,
+          error: error,
+          floating: floating,
+          customSize: customSize,
+          disabled: disabled,
+          iconOffset: !!leftIcon
+        });
+
+        var message = _react2.default.createElement(_TextFieldMessage2.default, {
+          key: 'message',
+          active: active,
+          error: error,
+          errorText: errorText,
+          helpText: helpText,
+          helpOnFocus: helpOnFocus,
+          block: block,
+          maxLength: maxLength,
+          leftIcon: !!leftIcon,
+          rightIcon: !!rightIcon,
+          currentLength: currentLength
+        });
+
+        var field = _react2.default.createElement(_InputField2.default, _extends({}, props, {
+          key: 'field',
+          ref: this._setField,
+          id: id,
+          type: type,
+          label: label,
+          style: inputStyle,
+          className: (0, _classnames2.default)({ 'md-text-field--toolbar': toolbar }, inputClassName),
+          disabled: disabled,
+          customSize: customSize,
+          fullWidth: fullWidth,
+          passwordVisible: passwordVisible,
+          placeholder: placeholder,
+          block: block,
+          onFocus: this._handleFocus,
+          onBlur: this._handleBlur,
+          onChange: this._handleChange,
+          inlineIndicator: !!inlineIndicator
+        }));
+
+        var divider = void 0;
+        if (!block) {
+          divider = _react2.default.createElement(_TextFieldDivider2.default, {
+            key: 'text-divider',
+            active: active,
+            error: error,
+            lineDirection: lineDirection
+          });
+        }
+
+        var children = void 0;
+        if (leftIcon || rightIconed) {
+          children = _react2.default.createElement(
+            'div',
+            { key: 'icon-divider', className: 'md-text-field-icon-container' },
+            leftIcon,
+            _react2.default.createElement(
+              'div',
+              {
+                key: 'divider-container',
+                className: (0, _classnames2.default)('md-text-field-divider-container', {
+                  'md-text-field-divider-container--grow': fullWidth
+                })
+              },
+              field,
+              divider
+            ),
+            rightIcon
+          );
+        } else {
+          children = [leftIcon, field, divider, rightIcon];
+        }
+
+        children = [floatingLabel, children, message];
+
+        var multiline = typeof props.rows !== 'undefined';
+        return _react2.default.createElement(
+          'div',
+          {
+            style: _extends({ width: width }, style),
+            className: (0, _classnames2.default)('md-text-field-container', {
+              'md-inline-block': !fullWidth && !block,
+              'md-full-width': block || fullWidth,
+              'md-text-field-container--disabled': disabled,
+              'md-text-field-container--input': !multiline,
+              'md-text-field-container--input-block': block && !multiline,
+              'md-text-field-container--multiline': multiline,
+              'md-text-field-container--multiline-block': multiline && block,
+              'md-text-field-container--padded-block': block && paddedBlock
+            }, className),
+            onClick: this._handleContainerClick,
+            onDoubleClick: onDoubleClick,
+            onMouseOver: onMouseOver,
+            onMouseLeave: onMouseLeave,
+            onMouseDown: onMouseDown,
+            onMouseUp: onMouseUp,
+            onTouchStart: onTouchStart,
+            onTouchEnd: onTouchEnd,
+            onTouchCancel: onTouchCancel,
+            onTouchMove: onTouchMove
+          },
+          ink,
+          children
+        );
+      }
+    }, {
+      key: 'value',
+      get: function get() {
+        return this.getField().value;
+      }
+    }]);
+
+    return TextField;
+  }(_react.PureComponent);
+
+  TextField.propTypes = {
+    /**
+     * The id for a text field. This is required when using the `label` prop for accessibility,
+     * but normally a good idea to include one anyways.
+     */
+    id: (0, _isRequiredForA11y2.default)(_propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string])),
+
+    /**
+     * An optional style to apply to the text field's container.
+     */
+    style: _propTypes2.default.object,
+
+    /**
+     * An optional className to apply to the text field's container.
+     */
+    className: _propTypes2.default.string,
+
+    /**
+     * An optional style to apply to the `input` or `textarea` tag.
+     */
+    inputStyle: _propTypes2.default.object,
+
+    /**
+     * An optional className to apply to the `input` or `textarea` tag.
+     */
+    inputClassName: _propTypes2.default.string,
+
+    /**
+     * An optional value to apply to the text field. This will make the component
+     * controlled and require the `onChange` prop.
+     */
+    value: (0, _controlled2.default)(_propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]), 'onChange'),
+
+    /**
+     * An optional default value for the text field.
+     */
+    defaultValue: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+
+    /**
+     * Boolean if the text field should be displayed as a `block`. This is equivalent to
+     * the `full width` text field in the Material Design specs. This view will disable
+     * floating labels and remove the text divider from the component.
+     */
+    block: _propTypes2.default.bool,
+
+    /**
+     * Boolean if the `block` text field should include padding to the left and right of
+     * the text field.
+     */
+    paddedBlock: _propTypes2.default.bool,
+
+    /**
+     * Boolean if the text field is currently disabled.
+     */
+    disabled: _propTypes2.default.bool,
+
+    /**
+     * An optional label to display with the text field. This will convert the text field
+     * into a floating label text field. You can make it single line by only using the
+     * `placeholder` prop.
+     */
+    label: (0, _invalidIf2.default)(_propTypes2.default.node, 'block'),
+
+    /**
+     * An optional placeholder text to display in the text field. If there is no `label` prop,
+     * the text field will be displayed as a single line text field. If there is a `label` prop,
+     * this will only be visible when there is no value and the user focused the text field.
+     */
+    placeholder: _propTypes2.default.string,
+
+    /**
+     * The type for the text field. This is one of the most import props for mobile accessibility
+     * as it will update the keyboard for the text type. This does not get applied on multiline
+     * text fields.
+     */
+    type: _propTypes2.default.oneOf(['text', 'number', 'email', 'search', 'tel', 'url', 'password']).isRequired,
+
+    /**
+     * An optional function to call when the text field's container triggers the `click` event.
+     */
+    onClick: _propTypes2.default.func,
+
+    /**
+     * An optional function to call when the text field's container triggers the `doubleclick`
+     * event.
+     */
+    onDoubleClick: _propTypes2.default.func,
+
+    /**
+     * An optional function to call when the text field's container triggers the `touchstart`
+     * event.
+     */
+    onTouchStart: _propTypes2.default.func,
+
+    /**
+     * An optional function to call when the text field's container triggers the `touchmove`
+     * event.
+     */
+    onTouchMove: _propTypes2.default.func,
+
+    /**
+     * An optional function to call when the text field's container triggers the `touchcancel`
+     * event.
+     */
+    onTouchCancel: _propTypes2.default.func,
+
+    /**
+     * An optional function to call when the text field's container triggers the `touchend`
+     * event.
+     */
+    onTouchEnd: _propTypes2.default.func,
+
+    /**
+     * An optional function to call when the text field's container triggers the `mousedown`
+     * event.
+     */
+    onMouseDown: _propTypes2.default.func,
+
+    /**
+     * An optional function to call when the text field's container triggers the `mouseup`
+     * event.
+     */
+    onMouseUp: _propTypes2.default.func,
+
+    /**
+     * An optional function to call when the text field's container triggers the `mouseover`
+     * event.
+     */
+    onMouseOver: _propTypes2.default.func,
+
+    /**
+     * An optional function to call when the text field's container triggers the `mouseleave`
+     * event.
+     */
+    onMouseLeave: _propTypes2.default.func,
+
+    /**
+     * An optional onChange function to call. If the `value` prop is defined, this is
+     * required.
+     *
+     * When the value changes in the text field, this will be called with the new text
+     * field's value and the change event.
+     *
+     * ```js
+     * onChange(e.target.value, e);
+     * ```
+     */
+    onChange: _propTypes2.default.func,
+
+    /**
+     * An optional function to call when the text field is blurred.
+     */
+    onBlur: _propTypes2.default.func,
+
+    /**
+     * An optional function to call when the text field is focused.
+     */
+    onFocus: _propTypes2.default.func,
+
+    /**
+     * An optional boolean if the `active` state of the text field can be externally
+     * modified as well. The text field is usually considered active when it gains focus.
+     *
+     * If this prop is set, it will check both the active prop and the active state to
+     * determine if one is true.
+     */
+    active: _propTypes2.default.bool,
+
+    /**
+     * An optional boolean if the `error` state of the text field can be externally
+     * modified as well. The text field is usually considered errored when it is required
+     * and there is no value or the current length of the text field's value is greater
+     * than the `maxLength` prop.
+     *
+     * If this prop is set, it will check both the error prop and the error state to
+     * determine if one is true.
+     */
+    error: _propTypes2.default.bool,
+
+    /**
+     * An optional boolean if the `floating` state of the text field's floating label can be
+     * externally modified as well. The floating state is true when the text field gains focus
+     * or there is a value in the text field.
+     *
+     * If this prop is set, it will check both the floating prop and the floating state to
+     * determine if one is true.
+     */
+    floating: _propTypes2.default.bool,
+
+    /**
+     * Boolean if the text field is required. If the user blurs the text field while there is
+     * no value and it is required, the `error` state will be set to true.
+     */
+    required: _propTypes2.default.bool,
+
+    /**
+     * The direction that the underline should appear from.
+     */
+    lineDirection: _propTypes2.default.oneOf(['left', 'center', 'right']).isRequired,
+
+    /**
+     * An optional icon to place to the left of the text field.
+     */
+    leftIcon: _propTypes2.default.element,
+
+    /**
+     * Boolean if the left icon should be stateful. This means that the icon will
+     * gain the active or error colors with the text field.
+     */
+    leftIconStateful: _propTypes2.default.bool,
+
+    /**
+     * An optional icon to place to the right of the text field.
+     */
+    rightIcon: _propTypes2.default.element,
+
+    /**
+     * Boolean if the right icon should be stateful. This means that the icon will
+     * gain the active or error colors with the text field.
+     */
+    rightIconStateful: _propTypes2.default.bool,
+
+    /**
+     * The icon to use for a password text field.
+     */
+    passwordIcon: _propTypes2.default.element,
+
+    /**
+     * Boolean if the password is initially visible.
+     */
+    passwordInitiallyVisible: _propTypes2.default.bool,
+
+    /**
+     * Boolean if the text field should be displayed as full width.
+     */
+    fullWidth: _propTypes2.default.bool,
+
+    /**
+     * The number of rows for the `multiline` text field. This value must be greater than
+     * or equal to 1. When this value is set, the text field will be converted to a multiline
+     * field.
+     */
+    rows: (0, _minNumber2.default)(1, false),
+
+    /**
+     * The maximum number of rows for a `multiline` text field. If this value is
+     * `undefined`, `0`, or a number less than `0`, the multiline text field will
+     * infinitely expand.
+     */
+    maxRows: _propTypes2.default.number,
+
+    /**
+     * An optional custom size to apply to the text field. This is used along with
+     * the `$md-text-field-custom-sizes` variable. It basically applies a className of
+     * `md-text-field--NAME`.
+     */
+    customSize: _propTypes2.default.string,
+
+    /**
+     * An optional error text to display below the text field. This will only appear when
+     * the text field has the `error` state through the `error` prop, the current length
+     * of the text field's value is greater than the `maxLength` prop, or the field is
+     * required and the user blurs the text field with no value.
+     */
+    errorText: _propTypes2.default.node,
+
+    /**
+     * An optional help text to display below the text field. This will always be visible
+     * unless the `helpOnFocus` prop is set to true. Otherwise it will appear on focus.
+     */
+    helpText: _propTypes2.default.node,
+
+    /**
+     * Boolean if the help text should display on focus only.
+     */
+    helpOnFocus: _propTypes2.default.bool,
+
+    /**
+     * An optional max length for the text field. This will insert a counter underneath the
+     * text field that appears on focus.
+     */
+    maxLength: _propTypes2.default.number,
+
+    /**
+     * The ink when there is an injectInk above the text field. Used from the SelectField.
+     *
+     * @access private
+     */
+    ink: _propTypes2.default.node,
+
+    /**
+     * An optional element to display inside of the `TextField` to the farthest right. This will
+     * position the indicator absolutely and add some additional padding to the `TextField`.
+     */
+    inlineIndicator: _propTypes2.default.element,
+
+    /**
+     * This prop allows the text field to resize its width to stay between the min and max sizes provided. By
+     * default, the field will expand and collapse based on the amount of text provided. The collapsing can
+     * be disabled by providing `disableShrink` to the configuration object.
+     *
+     * If the `min` prop is not provided, it will default to `180` which is about the same size as a default
+     * text field.
+     */
+    resize: _propTypes2.default.shape({
+      min: _propTypes2.default.number,
+      max: _propTypes2.default.number.isRequired,
+      disableShrink: _propTypes2.default.bool
+    }),
+
+    /**
+     * Boolean if the TextField is in a toolbar and acting as a title. This will apply additional styles to the
+     * text field to make it look like the toolbar's title.
+     */
+    toolbar: _propTypes2.default.bool,
+
+    passwordIconChildren: (0, _deprecated2.default)(_propTypes2.default.node, 'Use the `passwordIcon` prop instead'),
+    passwordIconClassName: (0, _deprecated2.default)(_propTypes2.default.string, 'Use the `passwordIcon` prop instead'),
+    icon: (0, _deprecated2.default)(_propTypes2.default.node, 'Use the `leftIcon` or `rightIcon` prop instead'),
+    floatingLabel: (0, _deprecated2.default)(_propTypes2.default.bool, 'The `label` prop is now always floating. To create a non-floating text field, only use the `placeholder` prop'),
+    adjustMinWidth: (0, _deprecated2.default)(_propTypes2.default.bool, 'Manually add a min width style instead')
+  };
+  TextField.defaultProps = {
+    type: 'text',
+    lineDirection: 'left',
+    passwordIcon: _react2.default.createElement(
+      _FontIcon2.default,
+      null,
+      'remove_red_eye'
+    ),
+    leftIconStateful: true,
+    rightIconStateful: true,
+    fullWidth: true
+  };
+
+  var _initialiseProps = function _initialiseProps() {
+    var _this2 = this;
+
+    this.getField = function () {
+      return _this2._field.getField();
+    };
+
+    this.focus = function () {
+      _this2._field.focus();
+    };
+
+    this._isValued = function (v) {
+      return v === 0 || !!v;
+    };
+
+    this._getLength = function (v) {
+      if (_this2._isValued(v)) {
+        return String(v).length;
+      }
+
+      return 0;
+    };
+
+    this._setField = function (field) {
+      if (field !== null) {
+        _this2._field = field;
+      }
+    };
+
+    this._calcWidth = function (value) {
+      var width = (0, _getTextWidth2.default)(value, _this2._field && _this2._field.getField());
+      if (width === null) {
+        // some error happened, don't do other logic
+        return width;
+      }
+
+      var max = _this2.props.resize.max;
+
+      var min = (0, _getField2.default)(_this2.props.resize, { min: DEFAULT_TEXT_FIELD_SIZE }, 'min');
+
+      return Math.min(max, Math.max(min, width));
+    };
+
+    this._handleContainerClick = function (e) {
+      if (_this2.props.onClick) {
+        _this2.props.onClick(e);
+      }
+
+      if (!_this2.props.disabled) {
+        _this2.focus();
+      }
+    };
+
+    this._handleBlur = function (e) {
+      var _props5 = _this2.props,
+          required = _props5.required,
+          maxLength = _props5.maxLength,
+          onBlur = _props5.onBlur;
+
+      if (onBlur) {
+        onBlur(e);
+      }
+
+      var value = e.target.value;
+
+      var state = {
+        active: false,
+        error: required && !_this2._isValued(value) || maxLength && String(value).length > maxLength
+      };
+
+      if (!_this2.props.block) {
+        state.floating = _this2._isValued(value);
+      }
+
+      _this2.setState(state);
+    };
+
+    this._handleFocus = function (e) {
+      var _props6 = _this2.props,
+          onFocus = _props6.onFocus,
+          block = _props6.block;
+
+      if (onFocus) {
+        onFocus(e);
+      }
+
+      var state = { active: true };
+      if (!block) {
+        state.floating = true;
+      }
+
+      _this2.setState(state);
+    };
+
+    this._handleChange = function (e) {
+      var _props7 = _this2.props,
+          onChange = _props7.onChange,
+          maxLength = _props7.maxLength,
+          required = _props7.required,
+          resize = _props7.resize;
+      var value = e.target.value;
+
+      if (onChange) {
+        onChange(e.target.value, e);
+      }
+
+      var currentLength = value.length;
+      var state = void 0;
+      if (typeof maxLength !== 'undefined') {
+        state = { currentLength: currentLength, error: currentLength > maxLength };
+      } else if (required && _this2.state.error) {
+        state = { error: !currentLength };
+      }
+
+      if (typeof _this2.props.value === 'undefined' && resize) {
+        var width = _this2._calcWidth(value);
+        if (!resize.disableShrink || width > _this2.state.width) {
+          state = state || {};
+          state.width = _this2._calcWidth(value);
+        }
+      }
+
+      if (state) {
+        _this2.setState(state);
+      }
+    };
+
+    this._togglePasswordField = function () {
+      _this2.setState({ passwordVisible: !_this2.state.passwordVisible }, _this2.focus);
+    };
+  };
+
+  exports.default = TextField;
+});
+//# sourceMappingURL=TextField.js.map
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = isRequiredForA11y;
+function isRequiredForA11y(validator) {
+  return function validate(props, propName, componentName, location, propFullName) {
+    var componentNameSafe = componentName || '<<anonymous>>';
+    var propFullNameSafe = propFullName || propName;
+
+    if (props[propName] == null) {
+      return new Error('The ' + location + ' `' + propFullNameSafe + '` is required to make ' + ('`' + componentNameSafe + '` accessible for users of assistive ') + 'technologies such as screen readers.');
+    }
+
+    for (var _len = arguments.length, args = Array(_len > 5 ? _len - 5 : 0), _key = 5; _key < _len; _key++) {
+      args[_key - 5] = arguments[_key];
+    }
+
+    return validator.apply(undefined, [props, propName, componentName, location, propFullName].concat(args));
+  };
+}
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports);
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports);
+    global.getTextWidth = mod.exports;
+  }
+})(this, function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = getTextWidth;
+  /** @module utils/Positioning/getTextWidth */
+
+  var cachedCanvas = void 0;
+
+  /**
+   * A utility function to measure the width (in px) of any text. It will require a canvas
+   * and an element to use to determine the current fonts to apply since different fonts will
+   * have different widths.
+   *
+   * This isn't fully accurate since some browsers handle the calculations a bit differently so
+   * they are off by a 0-3px
+   *
+   * @param {String} text - The text to measure the width
+   * @param {HTMLElement} el - The element to use to determine the current font for the text.
+   * @param {HTMLElement=} canvas - An optional canvas to use for doing the calculations. If this
+   *    is omitted, it will just use the locally created canvas to do the calculations.
+   * @return {number} this will either return null if there is a problem calculating the width or
+   *    the length (in px) of the text.
+   */
+  function getTextWidth(text, el, canvas) {
+    if (!el) {
+      return null;
+    }
+
+    if (!canvas) {
+      if (!cachedCanvas) {
+        cachedCanvas = document.createElement('canvas');
+      }
+
+      canvas = cachedCanvas;
+    }
+
+    var context = canvas.getContext('2d');
+    if (!context) {
+      // context doesn't exist in testing without complicated mocks
+      return null;
+    }
+
+    var styles = window.getComputedStyle(el);
+    var font = styles.font;
+    // Some browsers do not actually supply the font style since they are on an older version of CSSProperties,
+    // so the font string needs to be made manually.
+    if (!font) {
+      // font-style font-variant font-weight font-size/line-height font-family
+      var sizing = styles.fontSize + ' / ' + styles.lineHeight + ' ' + styles.fontFamily;
+      font = styles.fontStyle + ' ' + styles.fontVariant + ' ' + styles.fontWeight + ' ' + sizing;
+    }
+
+    context.font = font;
+    return context.measureText(text).width;
+  }
+});
+//# sourceMappingURL=getTextWidth.js.map
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('prop-types'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.propTypes);
+    global.controlled = mod.exports;
+  }
+})(this, function (exports, _propTypes) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = controlled;
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  /**
+   * Validates the a component is fully controlled or uncontrolled.  If the given prop is not
+   * `undefined`, it will check if the `funcName` is defined and a function. A missing function
+   * will generate an error similar to the built-in React controlled validation message.
+   *
+   * @param {String} funcName - The function name to use for additional validation.
+   * @param {function} validator - The PropTypes validator to use for the given prop.
+   * @return {Error} an error or null.
+   */
+  function controlled(validator, funcName) {
+    var fallbackPropName = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'defaultValue';
+
+    return function validate(props, propName, componentName, location, propFullName) {
+      var componentNameSafe = componentName || '<<anonymous>>';
+      var propFullNameSafe = propFullName || propName;
+
+      for (var _len = arguments.length, args = Array(_len > 5 ? _len - 5 : 0), _key = 5; _key < _len; _key++) {
+        args[_key - 5] = arguments[_key];
+      }
+
+      var err = validator.apply(undefined, [props, propName, componentName, location, propFullName].concat(args));
+      if (!err && typeof props[propName] !== 'undefined' && !props.readOnly && !props.disabled) {
+        var _PropTypes$func;
+
+        var funcError = (_PropTypes$func = _propTypes2.default.func).isRequired.apply(_PropTypes$func, [props, funcName, componentName, location, propFullName].concat(args));
+        if (funcError) {
+          err = new Error('You provided a `' + propFullNameSafe + '` ' + location + ' to the ' + componentNameSafe + ' without a ' + ('`' + funcName + '` handler. This will render a read only field. Set either the `' + funcName + '` ') + ('or use the `' + fallbackPropName + '` instead.'));
+        }
+      }
+
+      return err;
+    };
+  } /** @module utils/PropTypes/controlled */
+});
+//# sourceMappingURL=controlled.js.map
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('prop-types'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.propTypes);
+    global.minNumber = mod.exports;
+  }
+})(this, function (exports, _propTypes) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = minNumber;
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  /**
+   * Validates the a prop's value is greater than or equal to the minimum value.
+   *
+   * @param {Number} min - the minimum value for the prop.
+   * @param {Boolean} required - Boolean if the prop is required.
+   * @return {Error} an error or null.
+   */
+  function minNumber(min, required) {
+    return function validate(props, propName, componentName, location, propFullName) {
+      var componentNameSafe = componentName || '<<anonymous>>';
+      var propFullNameSafe = propFullName || propName;
+
+      var validator = _propTypes2.default.number;
+      if (required) {
+        validator = validator.isRequired;
+      }
+
+      for (var _len = arguments.length, args = Array(_len > 5 ? _len - 5 : 0), _key = 5; _key < _len; _key++) {
+        args[_key - 5] = arguments[_key];
+      }
+
+      var err = validator.apply(undefined, [props, propName, componentName, location, propFullName].concat(args));
+      if (!required && !err && props[propName] < min) {
+        err = new Error('The ' + location + ' `' + propFullNameSafe + '` must be greater than or equal to the min value ' + ('`' + min + '` but received `' + props[propName] + '` for the `' + componentNameSafe + '` component.'));
+      }
+
+      return err;
+    };
+  } /** @module utils/PropTypes/minNumber */
+});
+//# sourceMappingURL=minNumber.js.map
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports);
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports);
+    global.addSuffix = mod.exports;
+  }
+})(this, function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = addSuffix;
+  /** @module utils/StringUtils/addSuffix */
+
+  /**
+   * Optionally adds a suffix to a string if it does
+   * not already contain that string.
+   *
+   * @param {String} str - The string to modify
+   * @param {String} suffix - The suffix to add
+   *
+   * @return {String} the string with a suffix
+   */
+  function addSuffix(str, suffix) {
+    if (!str || typeof str !== 'string') {
+      return str;
+    }
+
+    return str.indexOf(suffix) === -1 ? str.trim() + ' ' + suffix : str;
+  }
+});
+//# sourceMappingURL=addSuffix.js.map
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(45)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('../FontIcons/FontIcon'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.FontIcon);
+    global.getDeprecatedIcon = mod.exports;
+  }
+})(this, function (exports, _react, _FontIcon) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = getDeprecatedIcon;
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _FontIcon2 = _interopRequireDefault(_FontIcon);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  function getDeprecatedIcon(className, children, icon) {
+    if (className || children) {
+      return _react2.default.createElement(
+        _FontIcon2.default,
+        { iconClassName: className },
+        children
+      );
+    }
+
+    return icon;
+  }
+});
+//# sourceMappingURL=getDeprecatedIcon.js.map
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(15)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('prop-types'), require('classnames'), require('../utils/themeColors'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.propTypes, global.classnames, global.themeColors);
+    global.FloatingLabel = mod.exports;
+  }
+})(this, function (exports, _react, _propTypes, _classnames, _themeColors) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _classnames2 = _interopRequireDefault(_classnames);
+
+  var _themeColors2 = _interopRequireDefault(_themeColors);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  function _defineProperty(obj, key, value) {
+    if (key in obj) {
+      Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+    } else {
+      obj[key] = value;
+    }
+
+    return obj;
+  }
+
+  function _objectWithoutProperties(obj, keys) {
+    var target = {};
+
+    for (var i in obj) {
+      if (keys.indexOf(i) >= 0) continue;
+      if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+      target[i] = obj[i];
+    }
+
+    return target;
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var FloatingLabel = function (_PureComponent) {
+    _inherits(FloatingLabel, _PureComponent);
+
+    function FloatingLabel() {
+      _classCallCheck(this, FloatingLabel);
+
+      return _possibleConstructorReturn(this, (FloatingLabel.__proto__ || Object.getPrototypeOf(FloatingLabel)).apply(this, arguments));
+    }
+
+    _createClass(FloatingLabel, [{
+      key: 'render',
+      value: function render() {
+        var _cn;
+
+        var _props = this.props,
+            label = _props.label,
+            htmlFor = _props.htmlFor,
+            className = _props.className,
+            floating = _props.floating,
+            active = _props.active,
+            error = _props.error,
+            disabled = _props.disabled,
+            iconOffset = _props.iconOffset,
+            customSize = _props.customSize,
+            props = _objectWithoutProperties(_props, ['label', 'htmlFor', 'className', 'floating', 'active', 'error', 'disabled', 'iconOffset', 'customSize']);
+
+        if (!label) {
+          return null;
+        }
+
+        return _react2.default.createElement(
+          'label',
+          _extends({}, props, {
+            htmlFor: htmlFor,
+            className: (0, _classnames2.default)('md-floating-label', (_cn = {
+              'md-floating-label--inactive': !floating,
+              'md-floating-label--inactive-sized': !floating && !customSize
+            }, _defineProperty(_cn, 'md-floating-label--' + customSize, customSize), _defineProperty(_cn, 'md-floating-label--inactive-' + customSize, customSize && !floating), _defineProperty(_cn, 'md-floating-label--floating', floating), _defineProperty(_cn, 'md-floating-label--icon-offset', iconOffset), _cn), (0, _themeColors2.default)({
+              disabled: disabled,
+              error: error,
+              hint: !active,
+              primary: active
+            }, className))
+          }),
+          label
+        );
+      }
+    }]);
+
+    return FloatingLabel;
+  }(_react.PureComponent);
+
+  FloatingLabel.propTypes = {
+    style: _propTypes2.default.object,
+    className: _propTypes2.default.string,
+    label: _propTypes2.default.node,
+    floating: _propTypes2.default.bool,
+    error: _propTypes2.default.bool,
+    active: _propTypes2.default.bool,
+    disabled: _propTypes2.default.bool,
+    iconOffset: _propTypes2.default.bool,
+    customSize: _propTypes2.default.string,
+    htmlFor: _propTypes2.default.string
+  };
+  exports.default = FloatingLabel;
+});
+//# sourceMappingURL=FloatingLabel.js.map
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(15), __webpack_require__(83)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('prop-types'), require('classnames'), require('../utils/themeColors'), require('./Message'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.propTypes, global.classnames, global.themeColors, global.Message);
+    global.TextFieldMessage = mod.exports;
+  }
+})(this, function (exports, _react, _propTypes, _classnames, _themeColors, _Message) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _classnames2 = _interopRequireDefault(_classnames);
+
+  var _themeColors2 = _interopRequireDefault(_themeColors);
+
+  var _Message2 = _interopRequireDefault(_Message);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var TextFieldMessage = function (_PureComponent) {
+    _inherits(TextFieldMessage, _PureComponent);
+
+    function TextFieldMessage(props) {
+      _classCallCheck(this, TextFieldMessage);
+
+      var _this = _possibleConstructorReturn(this, (TextFieldMessage.__proto__ || Object.getPrototypeOf(TextFieldMessage)).call(this, props));
+
+      _this.state = {
+        message: props.error && props.errorText || props.helpText || props.errorText,
+        isMessageVisible: _this._isMessageVisible(props)
+      };
+      return _this;
+    }
+
+    _createClass(TextFieldMessage, [{
+      key: 'componentWillReceiveProps',
+      value: function componentWillReceiveProps(nextProps) {
+        var keys = ['active', 'error', 'helpOnFocus', 'helpText', 'errorText'];
+        if (this._anyChanges(keys, this.props, nextProps)) {
+          this.setState({
+            isMessageVisible: this._isMessageVisible(nextProps),
+            message: nextProps.error && nextProps.errorText || nextProps.helpText || nextProps.errorText
+          });
+        }
+      }
+    }, {
+      key: '_anyChanges',
+      value: function _anyChanges(keys, p1, p2) {
+        var changed = false;
+        keys.some(function (key) {
+          if (p1[key] !== p2[key]) {
+            changed = true;
+          }
+
+          return changed;
+        });
+
+        return changed;
+      }
+    }, {
+      key: '_isMessageVisible',
+      value: function _isMessageVisible(props) {
+        var error = props.error,
+            errorText = props.errorText,
+            helpText = props.helpText,
+            helpOnFocus = props.helpOnFocus,
+            active = props.active;
+
+        if (error && errorText) {
+          return true;
+        }
+
+        return !!(helpText && (!helpOnFocus || active));
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var _props = this.props,
+            maxLength = _props.maxLength,
+            error = _props.error,
+            className = _props.className,
+            errorText = _props.errorText,
+            helpText = _props.helpText,
+            currentLength = _props.currentLength,
+            leftIcon = _props.leftIcon,
+            rightIcon = _props.rightIcon,
+            block = _props.block,
+            active = _props.active;
+        var _state = this.state,
+            isMessageVisible = _state.isMessageVisible,
+            message = _state.message;
+
+
+        if (currentLength === 'undefined' || !helpText && !errorText && !maxLength) {
+          return null;
+        }
+
+        return _react2.default.createElement(
+          'div',
+          {
+            className: (0, _classnames2.default)('md-text-field-message-container', {
+              'md-text-field-message-container--count-only': !message || !isMessageVisible,
+              'md-text-field-message-container--left-icon-offset': leftIcon,
+              'md-text-field-message-container--right-icon-offset': rightIcon,
+              'md-full-width': !block
+            }, (0, _themeColors2.default)({ error: error, disabled: !error }), className)
+          },
+          _react2.default.createElement(
+            _Message2.default,
+            { key: 'message', active: isMessageVisible },
+            message
+          ),
+          _react2.default.createElement(
+            _Message2.default,
+            { key: 'counter', className: 'md-text-field-message--counter', active: active },
+            maxLength ? currentLength + ' / ' + maxLength : null
+          )
+        );
+      }
+    }]);
+
+    return TextFieldMessage;
+  }(_react.PureComponent);
+
+  TextFieldMessage.propTypes = {
+    className: _propTypes2.default.string,
+    error: _propTypes2.default.bool,
+    helpText: _propTypes2.default.node,
+    errorText: _propTypes2.default.node,
+    active: _propTypes2.default.bool,
+    helpOnFocus: _propTypes2.default.bool,
+    maxLength: _propTypes2.default.number,
+    currentLength: _propTypes2.default.number,
+    leftIcon: _propTypes2.default.bool,
+    rightIcon: _propTypes2.default.bool,
+    block: _propTypes2.default.bool
+  };
+  exports.default = TextFieldMessage;
+});
+//# sourceMappingURL=TextFieldMessage.js.map
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(2), __webpack_require__(3)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('prop-types'), require('classnames'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.propTypes, global.classnames);
+    global.Message = mod.exports;
+  }
+})(this, function (exports, _react, _propTypes, _classnames) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _classnames2 = _interopRequireDefault(_classnames);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var Message = function (_PureComponent) {
+    _inherits(Message, _PureComponent);
+
+    function Message() {
+      _classCallCheck(this, Message);
+
+      return _possibleConstructorReturn(this, (Message.__proto__ || Object.getPrototypeOf(Message)).apply(this, arguments));
+    }
+
+    _createClass(Message, [{
+      key: 'render',
+      value: function render() {
+        var _props = this.props,
+            active = _props.active,
+            children = _props.children,
+            className = _props.className;
+
+
+        if (!children) {
+          return null;
+        }
+
+        return _react2.default.createElement(
+          'div',
+          {
+            'aria-hidden': !active,
+            className: (0, _classnames2.default)('md-text-field-message', 'md-text-field-message--' + (active ? '' : 'in') + 'active', className)
+          },
+          children
+        );
+      }
+    }]);
+
+    return Message;
+  }(_react.PureComponent);
+
+  Message.propTypes = {
+    active: _propTypes2.default.bool,
+    className: _propTypes2.default.string,
+    children: _propTypes2.default.node
+  };
+  exports.default = Message;
+});
+//# sourceMappingURL=Message.js.map
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(9), __webpack_require__(15)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('prop-types'), require('classnames'), require('../constants/keyCodes'), require('../utils/themeColors'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.propTypes, global.classnames, global.keyCodes, global.themeColors);
+    global.PasswordButton = mod.exports;
+  }
+})(this, function (exports, _react, _propTypes, _classnames, _keyCodes, _themeColors) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _classnames2 = _interopRequireDefault(_classnames);
+
+  var _themeColors2 = _interopRequireDefault(_themeColors);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  function _objectWithoutProperties(obj, keys) {
+    var target = {};
+
+    for (var i in obj) {
+      if (keys.indexOf(i) >= 0) continue;
+      if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+      target[i] = obj[i];
+    }
+
+    return target;
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var PasswordButton = function (_PureComponent) {
+    _inherits(PasswordButton, _PureComponent);
+
+    function PasswordButton() {
+      var _ref;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, PasswordButton);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PasswordButton.__proto__ || Object.getPrototypeOf(PasswordButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = { keyboardFocus: false }, _this._handleOutsideClick = function (e) {
+        if (_this._button && !_this._button.contains(e.target)) {
+          window.removeEventListener('click', _this._handleOutsideClick);
+          _this.setState({ keyboardFocus: false });
+        }
+      }, _this._handleBlur = function () {
+        if (_this.state.keyboardFocus) {
+          _this.setState({ keyboardFocus: false });
+        }
+      }, _this._handleKeyUp = function (e) {
+        var key = e.which || e.keyCode;
+        if (key === _keyCodes.TAB) {
+          _this.setState({ keyboardFocus: true });
+        }
+      }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(PasswordButton, [{
+      key: 'render',
+      value: function render() {
+        var keyboardFocus = this.state.keyboardFocus;
+
+        var _props = this.props,
+            active = _props.active,
+            passwordVisible = _props.passwordVisible,
+            block = _props.block,
+            floating = _props.floating,
+            icon = _props.icon,
+            props = _objectWithoutProperties(_props, ['active', 'passwordVisible', 'block', 'floating', 'icon']);
+
+        return _react2.default.createElement(
+          'button',
+          _extends({}, props, {
+            onBlur: this._handleBlur,
+            onKeyUp: this._handleKeyUp,
+            type: 'button',
+            className: (0, _classnames2.default)('md-text-field-inline-indicator md-password-btn md-pointer--hover', {
+              'md-password-btn--focus': keyboardFocus,
+              'md-password-btn--invisible': active && !passwordVisible,
+              'md-text-field-inline-indicator--floating': floating,
+              'md-text-field-inline-indicator--block': block
+            }, (0, _themeColors2.default)({ disabled: !active, hint: active }))
+          }),
+          icon
+        );
+      }
+    }]);
+
+    return PasswordButton;
+  }(_react.PureComponent);
+
+  PasswordButton.propTypes = {
+    active: _propTypes2.default.bool,
+    passwordVisible: _propTypes2.default.bool,
+    icon: _propTypes2.default.element,
+    block: _propTypes2.default.bool,
+    floating: _propTypes2.default.bool
+  };
+  exports.default = PasswordButton;
+});
+//# sourceMappingURL=PasswordButton.js.map
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(15), __webpack_require__(86)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('prop-types'), require('classnames'), require('../utils/themeColors'), require('./TextArea'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.propTypes, global.classnames, global.themeColors, global.TextArea);
+    global.InputField = mod.exports;
+  }
+})(this, function (exports, _react, _propTypes, _classnames, _themeColors, _TextArea) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _classnames2 = _interopRequireDefault(_classnames);
+
+  var _themeColors2 = _interopRequireDefault(_themeColors);
+
+  var _TextArea2 = _interopRequireDefault(_TextArea);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  function _defineProperty(obj, key, value) {
+    if (key in obj) {
+      Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+    } else {
+      obj[key] = value;
+    }
+
+    return obj;
+  }
+
+  var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  function _objectWithoutProperties(obj, keys) {
+    var target = {};
+
+    for (var i in obj) {
+      if (keys.indexOf(i) >= 0) continue;
+      if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+      target[i] = obj[i];
+    }
+
+    return target;
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var InputField = function (_PureComponent) {
+    _inherits(InputField, _PureComponent);
+
+    function InputField() {
+      var _ref;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, InputField);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = InputField.__proto__ || Object.getPrototypeOf(InputField)).call.apply(_ref, [this].concat(args))), _this), _this.getField = function () {
+        // eslint-disable-line arrow-body-style
+        return typeof _this.props.rows === 'undefined' ? _this._field : _this._field.getField();
+      }, _this.getValue = function () {
+        if (typeof _this.props.rows === 'undefined') {
+          return _this._field.value;
+        }
+
+        return _this._field.getValue();
+      }, _this.focus = function () {
+        _this._field.focus();
+      }, _this.blur = function () {
+        _this._field.blur();
+      }, _this._setField = function (field) {
+        _this._field = field;
+      }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(InputField, [{
+      key: 'render',
+      value: function render() {
+        var _cn;
+
+        var _props = this.props,
+            className = _props.className,
+            rows = _props.rows,
+            label = _props.label,
+            customSize = _props.customSize,
+            fullWidth = _props.fullWidth,
+            type = _props.type,
+            passwordVisible = _props.passwordVisible,
+            block = _props.block,
+            inlineIndicator = _props.inlineIndicator,
+            maxRows = _props.maxRows,
+            props = _objectWithoutProperties(_props, ['className', 'rows', 'label', 'customSize', 'fullWidth', 'type', 'passwordVisible', 'block', 'inlineIndicator', 'maxRows']);
+
+        var multiline = typeof rows !== 'undefined';
+        var Component = multiline ? _TextArea2.default : 'input';
+        if (!multiline) {
+          props.type = passwordVisible ? 'text' : type;
+        } else {
+          props.label = label;
+          props.block = block;
+          props.maxRows = maxRows;
+        }
+
+        return (0, _react.createElement)(Component, _extends({}, props, {
+          rows: rows,
+          ref: this._setField,
+          className: (0, _classnames2.default)('md-text-field', (_cn = {
+            'md-text-field--inline-indicator': inlineIndicator || !multiline && type === 'password',
+            'md-text-field--multiline': multiline,
+            'md-text-field--margin': !block && !multiline && !label,
+            'md-text-field--floating-margin': !block && !multiline && label
+          }, _defineProperty(_cn, 'md-text-field--' + customSize, customSize), _defineProperty(_cn, 'md-full-width', fullWidth), _cn), (0, _themeColors2.default)({ disabled: props.disabled, text: !props.disabled }, className))
+        }));
+      }
+    }]);
+
+    return InputField;
+  }(_react.PureComponent);
+
+  InputField.propTypes = {
+    id: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+    style: _propTypes2.default.object,
+    className: _propTypes2.default.string,
+    type: _propTypes2.default.string,
+    placeholder: _propTypes2.default.string,
+    block: _propTypes2.default.bool,
+    disabled: _propTypes2.default.bool,
+    rows: _propTypes2.default.number,
+    maxRows: _propTypes2.default.number,
+    label: _propTypes2.default.node,
+    fullWidth: _propTypes2.default.bool,
+    customSize: _propTypes2.default.string,
+    passwordVisible: _propTypes2.default.bool,
+    inlineIndicator: _propTypes2.default.bool
+  };
+  exports.default = InputField;
+});
+//# sourceMappingURL=InputField.js.map
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(87)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('prop-types'), require('classnames'), require('../Helpers/ResizeObserver'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.propTypes, global.classnames, global.ResizeObserver);
+    global.TextArea = mod.exports;
+  }
+})(this, function (exports, _react, _propTypes, _classnames, _ResizeObserver) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _classnames2 = _interopRequireDefault(_classnames);
+
+  var _ResizeObserver2 = _interopRequireDefault(_ResizeObserver);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  function _objectWithoutProperties(obj, keys) {
+    var target = {};
+
+    for (var i in obj) {
+      if (keys.indexOf(i) >= 0) continue;
+      if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+      target[i] = obj[i];
+    }
+
+    return target;
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var TextArea = function (_PureComponent) {
+    _inherits(TextArea, _PureComponent);
+
+    function TextArea() {
+      var _ref;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, TextArea);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = TextArea.__proto__ || Object.getPrototypeOf(TextArea)).call.apply(_ref, [this].concat(args))), _this), _this.state = { height: null }, _this.getField = function () {
+        return _this._field;
+      }, _this.getValue = function () {
+        return _this._field.value;
+      }, _this.focus = function () {
+        _this._field.focus();
+      }, _this.blur = function () {
+        _this._field.blur();
+      }, _this._calcRowHeight = function () {
+        var _ref2 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _this.props,
+            rows = _ref2.rows;
+
+        if (!_this._field) {
+          return 19;
+        }
+
+        var height = _this._field.style.height;
+        _this._field.style.height = 'auto';
+        var rowHeight = _this._field.offsetHeight / rows;
+        _this._field.style.height = height;
+        return rowHeight;
+      }, _this._setMask = function (mask) {
+        _this._mask = mask;
+      }, _this._setField = function (field) {
+        _this._field = field;
+      }, _this._handleResize = function () {
+        _this._rowHeight = _this._calcRowHeight();
+        _this._syncHeightWithMask();
+      }, _this._syncHeightWithMask = function (value) {
+        // The mask is always null in snapshot teseting
+        if (!_this._mask) {
+          return;
+        }
+
+        if (value !== undefined) {
+          _this._mask.value = value;
+        }
+
+        var height = _this._mask.scrollHeight;
+        if (height === undefined) {
+          return;
+        }
+
+        var _this$props = _this.props,
+            rows = _this$props.rows,
+            maxRows = _this$props.maxRows;
+
+        if (maxRows && maxRows > 0) {
+          height = Math.min(height, _this._rowHeight * maxRows);
+        }
+
+        height = Math.max(_this._rowHeight * rows, height);
+        _this.setState({ height: height });
+      }, _this._handleChange = function (e) {
+        _this._syncHeightWithMask(e.target.value, e);
+
+        if (_this.props.onChange) {
+          _this.props.onChange(e);
+        }
+      }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(TextArea, [{
+      key: 'componentDidMount',
+      value: function componentDidMount() {
+        this._rowHeight = this._calcRowHeight();
+        this._syncHeightWithMask();
+      }
+    }, {
+      key: 'componentWillReceiveProps',
+      value: function componentWillReceiveProps(nextProps) {
+        if (this.props.rows !== nextProps.rows) {
+          this._rowHeight = this._calcRowHeight(nextProps);
+        }
+
+        if (this.props.value !== nextProps.value || this.props.maxRows !== nextProps.maxRows) {
+          this._syncHeightWithMask(nextProps.value);
+        }
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var height = this.state.height;
+
+        var _props = this.props,
+            style = _props.style,
+            defaultValue = _props.defaultValue,
+            value = _props.value,
+            className = _props.className,
+            label = _props.label,
+            block = _props.block,
+            maxRows = _props.maxRows,
+            onChange = _props.onChange,
+            props = _objectWithoutProperties(_props, ['style', 'defaultValue', 'value', 'className', 'label', 'block', 'maxRows', 'onChange']);
+
+        return _react2.default.createElement(
+          'div',
+          {
+            style: { height: height && height + 5 },
+            className: (0, _classnames2.default)('md-text-field-multiline-container', {
+              'md-text-field--margin': !label && !block,
+              'md-text-field--floating-margin': label && !block
+            })
+          },
+          _react2.default.createElement(_ResizeObserver2.default, { watchWidth: true, onResize: this._handleResize }),
+          _react2.default.createElement('textarea', {
+            ref: this._setMask,
+            className: (0, _classnames2.default)(className, 'md-text-field--multiline-mask'),
+            readOnly: true,
+            rows: props.rows,
+            tabIndex: -1,
+            style: style,
+            defaultValue: defaultValue,
+            'aria-hidden': true,
+            value: value
+          }),
+          _react2.default.createElement('textarea', _extends({}, props, {
+            ref: this._setField,
+            style: Object.assign({}, style, { height: height }),
+            className: className,
+            defaultValue: defaultValue,
+            value: value,
+            onChange: this._handleChange
+          }))
+        );
+      }
+    }]);
+
+    return TextArea;
+  }(_react.PureComponent);
+
+  TextArea.propTypes = {
+    id: _propTypes2.default.string,
+    style: _propTypes2.default.object,
+    className: _propTypes2.default.string,
+    rows: _propTypes2.default.number.isRequired,
+    maxRows: _propTypes2.default.number,
+    onChange: _propTypes2.default.func,
+    defaultValue: _propTypes2.default.string,
+    floatingLabel: _propTypes2.default.bool,
+    value: _propTypes2.default.string,
+    block: _propTypes2.default.bool,
+    label: _propTypes2.default.node
+  };
+  exports.default = TextArea;
+});
+//# sourceMappingURL=TextArea.js.map
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(2), __webpack_require__(88)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('prop-types'), require('resize-observer-polyfill'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.propTypes, global.resizeObserverPolyfill);
+    global.ResizeObserver = mod.exports;
+  }
+})(this, function (exports, _react, _propTypes, _resizeObserverPolyfill) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _resizeObserverPolyfill2 = _interopRequireDefault(_resizeObserverPolyfill);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var ResizeObserver = function (_PureComponent) {
+    _inherits(ResizeObserver, _PureComponent);
+
+    function ResizeObserver() {
+      var _ref;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, ResizeObserver);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ResizeObserver.__proto__ || Object.getPrototypeOf(ResizeObserver)).call.apply(_ref, [this].concat(args))), _this), _this._container = null, _this._target = null, _this._observer = null, _this._height = null, _this._width = null, _this._scrollHeight = null, _this._scrollWidth = null, _this._measure = function (entries) {
+        if (!_this._observer || !_this._target) {
+          return;
+        }
+
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+          for (var _iterator = entries[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var entry = _step.value;
+
+            if (!entry) {
+              return;
+            }
+
+            var _entry$contentRect = entry.contentRect,
+                height = _entry$contentRect.height,
+                width = _entry$contentRect.width;
+            var _entry$target = entry.target,
+                scrollHeight = _entry$target.scrollHeight,
+                scrollWidth = _entry$target.scrollWidth;
+
+            if (_this._isHeightChange(height, scrollHeight) || _this._isWidthChange(width, scrollWidth)) {
+              _this._height = height;
+              _this._width = width;
+              _this._scrollHeight = scrollHeight;
+              _this._scrollWidth = scrollWidth;
+              _this.props.onResize({ height: height, width: width, scrollHeight: scrollHeight, scrollWidth: scrollWidth, el: entry.target });
+            }
+          }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+              _iterator.return();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
+          }
+        }
+      }, _this._isHeightChange = function (height, scrollHeight) {
+        return _this.props.watchHeight && (height !== _this._height || scrollHeight !== _this._scrollHeight);
+      }, _this._isWidthChange = function (width, scrollWidth) {
+        return _this.props.watchWidth && (width !== _this._width || scrollWidth !== _this._scrollWidth);
+      }, _this._handleRef = function (container) {
+        if (container) {
+          _this._container = container;
+          _this._target = _this._getTarget(container, _this.props.target);
+          _this._observer = new _resizeObserverPolyfill2.default(_this._measure);
+
+          if (_this._target) {
+            _this._observer.observe(_this._target);
+          }
+        } else {
+          if (_this._observer) {
+            _this._observer.disconnect();
+          }
+
+          _this._container = null;
+          _this._target = null;
+          _this._observer = null;
+          _this._height = null;
+          _this._width = null;
+          _this._scrollHeight = null;
+          _this._scrollWidth = null;
+        }
+
+        if (_this.props.elRef) {
+          _this.props.elRef(_this._target);
+        }
+      }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(ResizeObserver, [{
+      key: 'componentWillReceiveProps',
+      value: function componentWillReceiveProps(nextProps) {
+        var target = this.props.target;
+
+        var nextTarget = nextProps.target;
+        if (target === nextTarget) {
+          return;
+        } else if (nextTarget) {
+          if (this._target) {
+            this._observer.unobserve(this._target);
+          }
+          this._target = this._getTarget(this._container, nextTarget);
+          this._observer.observe(this._target);
+        }
+      }
+    }, {
+      key: '_getTarget',
+      value: function _getTarget(container, target) {
+        if (target === null || target && typeof target !== 'string') {
+          return target;
+        }
+
+        var t = null;
+        if (target) {
+          t = document.getElementById(target) || document.querySelector(target);
+        } else {
+          t = container.parentNode;
+        }
+
+        if (!t) {
+          throw new Error('An HTMLDOMNode is required as the `ResizeObserver`\'s watch target but none were provided/found. ' + ('Please update the target prop to find a valid node since the provided target is invalid. `' + target + '`.'));
+        }
+
+        return t;
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var Component = this.props.component;
+
+        return _react2.default.createElement(Component, { ref: this._handleRef, 'aria-hidden': true });
+      }
+    }]);
+
+    return ResizeObserver;
+  }(_react.PureComponent);
+
+  ResizeObserver.propTypes = {
+    /**
+     * Boolean if the height should be watched for the resize target.
+     */
+    watchHeight: _propTypes2.default.bool,
+
+    /**
+     * Boolean if the width should be watched for the resize target.
+     */
+    watchWidth: _propTypes2.default.bool,
+
+    /**
+     * An optional target that should be used for detecting resize events. This can either
+     * be a HTMLDOMNode or a string to use with `document.getElementById` or `document.querySelector`.
+     *
+     * If this prop is not provided and not null, it will default to the parent node of this component.
+     * If the provided `target={null}`, the observer will not begin until the `target` is `undefined` or
+     * it has been correctly passed a target string or object.
+     */
+    target: _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.string]),
+
+    /**
+     * The component to be rendered as. This should normally just be the default `span`, but there are cases
+     * where the component should be switched to something else for valid html.
+     */
+    component: _propTypes2.default.string,
+
+    /**
+     * A function to call when the height or width has been changed and that attribute is being watched.
+     * The callback will include the current height, width, scrollHeight and scrollWidth of the target.
+     *
+     * ```js
+     * onResize({ height: nextHeight, width: nextWidth, scrollHeight: nextScrollHeight, scrollWidth: nextScrollWidth });
+     * ```
+     */
+    onResize: _propTypes2.default.func.isRequired,
+
+    /**
+     * An optional ref callback that will include the `target` or the parent node of the resize observer. Just
+     * like other refs, this will provide null when it unmounts.
+     */
+    elRef: _propTypes2.default.func
+  };
+  ResizeObserver.defaultProps = {
+    watchHeight: false,
+    watchWidth: false,
+    component: 'span'
+  };
+  exports.default = ResizeObserver;
+});
+//# sourceMappingURL=ResizeObserver.js.map
+
+/***/ }),
+/* 88 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/**
+ * A collection of shims that provide minimal functionality of the ES6 collections.
+ *
+ * These implementations are not meant to be used outside of the ResizeObserver
+ * modules as they cover only a limited range of use cases.
+ */
+/* eslint-disable require-jsdoc, valid-jsdoc */
+var MapShim = (function () {
+    if (typeof Map != 'undefined') {
+        return Map;
+    }
+
+    /**
+     * Returns index in provided array that matches the specified key.
+     *
+     * @param {Array<Array>} arr
+     * @param {*} key
+     * @returns {number}
+     */
+    function getIndex(arr, key) {
+        var result = -1;
+
+        arr.some(function (entry, index) {
+            if (entry[0] === key) {
+                result = index;
+
+                return true;
+            }
+
+            return false;
+        });
+
+        return result;
+    }
+
+    return (function () {
+        function anonymous() {
+            this.__entries__ = [];
+        }
+
+        var prototypeAccessors = { size: {} };
+
+        /**
+         * @returns {boolean}
+         */
+        prototypeAccessors.size.get = function () {
+            return this.__entries__.length;
+        };
+
+        /**
+         * @param {*} key
+         * @returns {*}
+         */
+        anonymous.prototype.get = function (key) {
+            var index = getIndex(this.__entries__, key);
+            var entry = this.__entries__[index];
+
+            return entry && entry[1];
+        };
+
+        /**
+         * @param {*} key
+         * @param {*} value
+         * @returns {void}
+         */
+        anonymous.prototype.set = function (key, value) {
+            var index = getIndex(this.__entries__, key);
+
+            if (~index) {
+                this.__entries__[index][1] = value;
+            } else {
+                this.__entries__.push([key, value]);
+            }
+        };
+
+        /**
+         * @param {*} key
+         * @returns {void}
+         */
+        anonymous.prototype.delete = function (key) {
+            var entries = this.__entries__;
+            var index = getIndex(entries, key);
+
+            if (~index) {
+                entries.splice(index, 1);
+            }
+        };
+
+        /**
+         * @param {*} key
+         * @returns {void}
+         */
+        anonymous.prototype.has = function (key) {
+            return !!~getIndex(this.__entries__, key);
+        };
+
+        /**
+         * @returns {void}
+         */
+        anonymous.prototype.clear = function () {
+            this.__entries__.splice(0);
+        };
+
+        /**
+         * @param {Function} callback
+         * @param {*} [ctx=null]
+         * @returns {void}
+         */
+        anonymous.prototype.forEach = function (callback, ctx) {
+            if ( ctx === void 0 ) ctx = null;
+
+            for (var i = 0, list = this.__entries__; i < list.length; i += 1) {
+                var entry = list[i];
+
+                callback.call(ctx, entry[1], entry[0]);
+            }
+        };
+
+        Object.defineProperties( anonymous.prototype, prototypeAccessors );
+
+        return anonymous;
+    }());
+})();
+
+/**
+ * Detects whether window and document objects are available in current environment.
+ */
+var isBrowser = typeof window != 'undefined' && typeof document != 'undefined' && window.document === document;
+
+/**
+ * A shim for the requestAnimationFrame which falls back to the setTimeout if
+ * first one is not supported.
+ *
+ * @returns {number} Requests' identifier.
+ */
+var requestAnimationFrame$1 = (function () {
+    if (typeof requestAnimationFrame === 'function') {
+        return requestAnimationFrame;
+    }
+
+    return function (callback) { return setTimeout(function () { return callback(Date.now()); }, 1000 / 60); };
+})();
+
+// Defines minimum timeout before adding a trailing call.
+var trailingTimeout = 2;
+
+/**
+ * Creates a wrapper function which ensures that provided callback will be
+ * invoked only once during the specified delay period.
+ *
+ * @param {Function} callback - Function to be invoked after the delay period.
+ * @param {number} delay - Delay after which to invoke callback.
+ * @returns {Function}
+ */
+var throttle = function (callback, delay) {
+    var leadingCall = false,
+        trailingCall = false,
+        lastCallTime = 0;
+
+    /**
+     * Invokes the original callback function and schedules new invocation if
+     * the "proxy" was called during current request.
+     *
+     * @returns {void}
+     */
+    function resolvePending() {
+        if (leadingCall) {
+            leadingCall = false;
+
+            callback();
+        }
+
+        if (trailingCall) {
+            proxy();
+        }
+    }
+
+    /**
+     * Callback invoked after the specified delay. It will further postpone
+     * invocation of the original function delegating it to the
+     * requestAnimationFrame.
+     *
+     * @returns {void}
+     */
+    function timeoutCallback() {
+        requestAnimationFrame$1(resolvePending);
+    }
+
+    /**
+     * Schedules invocation of the original function.
+     *
+     * @returns {void}
+     */
+    function proxy() {
+        var timeStamp = Date.now();
+
+        if (leadingCall) {
+            // Reject immediately following calls.
+            if (timeStamp - lastCallTime < trailingTimeout) {
+                return;
+            }
+
+            // Schedule new call to be in invoked when the pending one is resolved.
+            // This is important for "transitions" which never actually start
+            // immediately so there is a chance that we might miss one if change
+            // happens amids the pending invocation.
+            trailingCall = true;
+        } else {
+            leadingCall = true;
+            trailingCall = false;
+
+            setTimeout(timeoutCallback, delay);
+        }
+
+        lastCallTime = timeStamp;
+    }
+
+    return proxy;
+};
+
+// Minimum delay before invoking the update of observers.
+var REFRESH_DELAY = 20;
+
+// A list of substrings of CSS properties used to find transition events that
+// might affect dimensions of observed elements.
+var transitionKeys = ['top', 'right', 'bottom', 'left', 'width', 'height', 'size', 'weight'];
+
+// Detect whether running in IE 11 (facepalm).
+var isIE11 = typeof navigator != 'undefined' && /Trident\/.*rv:11/.test(navigator.userAgent);
+
+// MutationObserver should not be used if running in Internet Explorer 11 as it's
+// implementation is unreliable. Example: https://jsfiddle.net/x2r3jpuz/2/
+//
+// It's a real bummer that there is no other way to check for this issue but to
+// use the UA information.
+var mutationObserverSupported = typeof MutationObserver != 'undefined' && !isIE11;
+
+/**
+ * Singleton controller class which handles updates of ResizeObserver instances.
+ */
+var ResizeObserverController = function() {
+    /**
+     * Indicates whether DOM listeners have been added.
+     *
+     * @private {boolean}
+     */
+    this.connected_ = false;
+
+    /**
+     * Tells that controller has subscribed for Mutation Events.
+     *
+     * @private {boolean}
+     */
+    this.mutationEventsAdded_ = false;
+
+    /**
+     * Keeps reference to the instance of MutationObserver.
+     *
+     * @private {MutationObserver}
+     */
+    this.mutationsObserver_ = null;
+
+    /**
+     * A list of connected observers.
+     *
+     * @private {Array<ResizeObserverSPI>}
+     */
+    this.observers_ = [];
+
+    this.onTransitionEnd_ = this.onTransitionEnd_.bind(this);
+    this.refresh = throttle(this.refresh.bind(this), REFRESH_DELAY);
+};
+
+/**
+ * Adds observer to observers list.
+ *
+ * @param {ResizeObserverSPI} observer - Observer to be added.
+ * @returns {void}
+ */
+ResizeObserverController.prototype.addObserver = function (observer) {
+    if (!~this.observers_.indexOf(observer)) {
+        this.observers_.push(observer);
+    }
+
+    // Add listeners if they haven't been added yet.
+    if (!this.connected_) {
+        this.connect_();
+    }
+};
+
+/**
+ * Removes observer from observers list.
+ *
+ * @param {ResizeObserverSPI} observer - Observer to be removed.
+ * @returns {void}
+ */
+ResizeObserverController.prototype.removeObserver = function (observer) {
+    var observers = this.observers_;
+    var index = observers.indexOf(observer);
+
+    // Remove observer if it's present in registry.
+    if (~index) {
+        observers.splice(index, 1);
+    }
+
+    // Remove listeners if controller has no connected observers.
+    if (!observers.length && this.connected_) {
+        this.disconnect_();
+    }
+};
+
+/**
+ * Invokes the update of observers. It will continue running updates insofar
+ * it detects changes.
+ *
+ * @returns {void}
+ */
+ResizeObserverController.prototype.refresh = function () {
+    var changesDetected = this.updateObservers_();
+
+    // Continue running updates if changes have been detected as there might
+    // be future ones caused by CSS transitions.
+    if (changesDetected) {
+        this.refresh();
+    }
+};
+
+/**
+ * Updates every observer from observers list and notifies them of queued
+ * entries.
+ *
+ * @private
+ * @returns {boolean} Returns "true" if any observer has detected changes in
+ *  dimensions of it's elements.
+ */
+ResizeObserverController.prototype.updateObservers_ = function () {
+    // Collect observers that have active observations.
+    var activeObservers = this.observers_.filter(function (observer) {
+        return observer.gatherActive(), observer.hasActive();
+    });
+
+    // Deliver notifications in a separate cycle in order to avoid any
+    // collisions between observers, e.g. when multiple instances of
+    // ResizeObserver are tracking the same element and the callback of one
+    // of them changes content dimensions of the observed target. Sometimes
+    // this may result in notifications being blocked for the rest of observers.
+    activeObservers.forEach(function (observer) { return observer.broadcastActive(); });
+
+    return activeObservers.length > 0;
+};
+
+/**
+ * Initializes DOM listeners.
+ *
+ * @private
+ * @returns {void}
+ */
+ResizeObserverController.prototype.connect_ = function () {
+    // Do nothing if running in a non-browser environment or if listeners
+    // have been already added.
+    if (!isBrowser || this.connected_) {
+        return;
+    }
+
+    // Subscription to the "Transitionend" event is used as a workaround for
+    // delayed transitions. This way it's possible to capture at least the
+    // final state of an element.
+    document.addEventListener('transitionend', this.onTransitionEnd_);
+
+    window.addEventListener('resize', this.refresh);
+
+    if (mutationObserverSupported) {
+        this.mutationsObserver_ = new MutationObserver(this.refresh);
+
+        this.mutationsObserver_.observe(document, {
+            attributes: true,
+            childList: true,
+            characterData: true,
+            subtree: true
+        });
+    } else {
+        document.addEventListener('DOMSubtreeModified', this.refresh);
+
+        this.mutationEventsAdded_ = true;
+    }
+
+    this.connected_ = true;
+};
+
+/**
+ * Removes DOM listeners.
+ *
+ * @private
+ * @returns {void}
+ */
+ResizeObserverController.prototype.disconnect_ = function () {
+    // Do nothing if running in a non-browser environment or if listeners
+    // have been already removed.
+    if (!isBrowser || !this.connected_) {
+        return;
+    }
+
+    document.removeEventListener('transitionend', this.onTransitionEnd_);
+    window.removeEventListener('resize', this.refresh);
+
+    if (this.mutationsObserver_) {
+        this.mutationsObserver_.disconnect();
+    }
+
+    if (this.mutationEventsAdded_) {
+        document.removeEventListener('DOMSubtreeModified', this.refresh);
+    }
+
+    this.mutationsObserver_ = null;
+    this.mutationEventsAdded_ = false;
+    this.connected_ = false;
+};
+
+/**
+ * "Transitionend" event handler.
+ *
+ * @private
+ * @param {TransitionEvent} event
+ * @returns {void}
+ */
+ResizeObserverController.prototype.onTransitionEnd_ = function (ref) {
+        var propertyName = ref.propertyName;
+
+    // Detect whether transition may affect dimensions of an element.
+    var isReflowProperty = transitionKeys.some(function (key) {
+        return !!~propertyName.indexOf(key);
+    });
+
+    if (isReflowProperty) {
+        this.refresh();
+    }
+};
+
+/**
+ * Returns instance of the ResizeObserverController.
+ *
+ * @returns {ResizeObserverController}
+ */
+ResizeObserverController.getInstance = function () {
+    if (!this.instance_) {
+        this.instance_ = new ResizeObserverController();
+    }
+
+    return this.instance_;
+};
+
+/**
+ * Holds reference to the controller's instance.
+ *
+ * @private {ResizeObserverController}
+ */
+ResizeObserverController.instance_ = null;
+
+/**
+ * Defines non-writable/enumerable properties of the provided target object.
+ *
+ * @param {Object} target - Object for which to define properties.
+ * @param {Object} props - Properties to be defined.
+ * @returns {Object} Target object.
+ */
+var defineConfigurable = (function (target, props) {
+    for (var i = 0, list = Object.keys(props); i < list.length; i += 1) {
+        var key = list[i];
+
+        Object.defineProperty(target, key, {
+            value: props[key],
+            enumerable: false,
+            writable: false,
+            configurable: true
+        });
+    }
+
+    return target;
+});
+
+// Placeholder of an empty content rectangle.
+var emptyRect = createRectInit(0, 0, 0, 0);
+
+/**
+ * Converts provided string to a number.
+ *
+ * @param {number|string} value
+ * @returns {number}
+ */
+function toFloat(value) {
+    return parseFloat(value) || 0;
+}
+
+/**
+ * Extracts borders size from provided styles.
+ *
+ * @param {CSSStyleDeclaration} styles
+ * @param {...string} positions - Borders positions (top, right, ...)
+ * @returns {number}
+ */
+function getBordersSize(styles) {
+    var positions = Array.prototype.slice.call(arguments, 1);
+
+    return positions.reduce(function (size, position) {
+        var value = styles['border-' + position + '-width'];
+
+        return size + toFloat(value);
+    }, 0);
+}
+
+/**
+ * Extracts paddings sizes from provided styles.
+ *
+ * @param {CSSStyleDeclaration} styles
+ * @returns {Object} Paddings box.
+ */
+function getPaddings(styles) {
+    var positions = ['top', 'right', 'bottom', 'left'];
+    var paddings = {};
+
+    for (var i = 0, list = positions; i < list.length; i += 1) {
+        var position = list[i];
+
+        var value = styles['padding-' + position];
+
+        paddings[position] = toFloat(value);
+    }
+
+    return paddings;
+}
+
+/**
+ * Calculates content rectangle of provided SVG element.
+ *
+ * @param {SVGGraphicsElement} target - Element content rectangle of which needs
+ *      to be calculated.
+ * @returns {DOMRectInit}
+ */
+function getSVGContentRect(target) {
+    var bbox = target.getBBox();
+
+    return createRectInit(0, 0, bbox.width, bbox.height);
+}
+
+/**
+ * Calculates content rectangle of provided HTMLElement.
+ *
+ * @param {HTMLElement} target - Element for which to calculate the content rectangle.
+ * @returns {DOMRectInit}
+ */
+function getHTMLElementContentRect(target) {
+    // Client width & height properties can't be
+    // used exclusively as they provide rounded values.
+    var clientWidth = target.clientWidth;
+    var clientHeight = target.clientHeight;
+
+    // By this condition we can catch all non-replaced inline, hidden and
+    // detached elements. Though elements with width & height properties less
+    // than 0.5 will be discarded as well.
+    //
+    // Without it we would need to implement separate methods for each of
+    // those cases and it's not possible to perform a precise and performance
+    // effective test for hidden elements. E.g. even jQuery's ':visible' filter
+    // gives wrong results for elements with width & height less than 0.5.
+    if (!clientWidth && !clientHeight) {
+        return emptyRect;
+    }
+
+    var styles = getComputedStyle(target);
+    var paddings = getPaddings(styles);
+    var horizPad = paddings.left + paddings.right;
+    var vertPad = paddings.top + paddings.bottom;
+
+    // Computed styles of width & height are being used because they are the
+    // only dimensions available to JS that contain non-rounded values. It could
+    // be possible to utilize the getBoundingClientRect if only it's data wasn't
+    // affected by CSS transformations let alone paddings, borders and scroll bars.
+    var width = toFloat(styles.width),
+        height = toFloat(styles.height);
+
+    // Width & height include paddings and borders when the 'border-box' box
+    // model is applied (except for IE).
+    if (styles.boxSizing === 'border-box') {
+        // Following conditions are required to handle Internet Explorer which
+        // doesn't include paddings and borders to computed CSS dimensions.
+        //
+        // We can say that if CSS dimensions + paddings are equal to the "client"
+        // properties then it's either IE, and thus we don't need to subtract
+        // anything, or an element merely doesn't have paddings/borders styles.
+        if (Math.round(width + horizPad) !== clientWidth) {
+            width -= getBordersSize(styles, 'left', 'right') + horizPad;
+        }
+
+        if (Math.round(height + vertPad) !== clientHeight) {
+            height -= getBordersSize(styles, 'top', 'bottom') + vertPad;
+        }
+    }
+
+    // Following steps can't be applied to the document's root element as its
+    // client[Width/Height] properties represent viewport area of the window.
+    // Besides, it's as well not necessary as the <html> itself neither has
+    // rendered scroll bars nor it can be clipped.
+    if (!isDocumentElement(target)) {
+        // In some browsers (only in Firefox, actually) CSS width & height
+        // include scroll bars size which can be removed at this step as scroll
+        // bars are the only difference between rounded dimensions + paddings
+        // and "client" properties, though that is not always true in Chrome.
+        var vertScrollbar = Math.round(width + horizPad) - clientWidth;
+        var horizScrollbar = Math.round(height + vertPad) - clientHeight;
+
+        // Chrome has a rather weird rounding of "client" properties.
+        // E.g. for an element with content width of 314.2px it sometimes gives
+        // the client width of 315px and for the width of 314.7px it may give
+        // 314px. And it doesn't happen all the time. So just ignore this delta
+        // as a non-relevant.
+        if (Math.abs(vertScrollbar) !== 1) {
+            width -= vertScrollbar;
+        }
+
+        if (Math.abs(horizScrollbar) !== 1) {
+            height -= horizScrollbar;
+        }
+    }
+
+    return createRectInit(paddings.left, paddings.top, width, height);
+}
+
+/**
+ * Checks whether provided element is an instance of the SVGGraphicsElement.
+ *
+ * @param {Element} target - Element to be checked.
+ * @returns {boolean}
+ */
+var isSVGGraphicsElement = (function () {
+    // Some browsers, namely IE and Edge, don't have the SVGGraphicsElement
+    // interface.
+    if (typeof SVGGraphicsElement != 'undefined') {
+        return function (target) { return target instanceof SVGGraphicsElement; };
+    }
+
+    // If it's so, then check that element is at least an instance of the
+    // SVGElement and that it has the "getBBox" method.
+    // eslint-disable-next-line no-extra-parens
+    return function (target) { return target instanceof SVGElement && typeof target.getBBox === 'function'; };
+})();
+
+/**
+ * Checks whether provided element is a document element (<html>).
+ *
+ * @param {Element} target - Element to be checked.
+ * @returns {boolean}
+ */
+function isDocumentElement(target) {
+    return target === document.documentElement;
+}
+
+/**
+ * Calculates an appropriate content rectangle for provided html or svg element.
+ *
+ * @param {Element} target - Element content rectangle of which needs to be calculated.
+ * @returns {DOMRectInit}
+ */
+function getContentRect(target) {
+    if (!isBrowser) {
+        return emptyRect;
+    }
+
+    if (isSVGGraphicsElement(target)) {
+        return getSVGContentRect(target);
+    }
+
+    return getHTMLElementContentRect(target);
+}
+
+/**
+ * Creates rectangle with an interface of the DOMRectReadOnly.
+ * Spec: https://drafts.fxtf.org/geometry/#domrectreadonly
+ *
+ * @param {DOMRectInit} rectInit - Object with rectangle's x/y coordinates and dimensions.
+ * @returns {DOMRectReadOnly}
+ */
+function createReadOnlyRect(ref) {
+    var x = ref.x;
+    var y = ref.y;
+    var width = ref.width;
+    var height = ref.height;
+
+    // If DOMRectReadOnly is available use it as a prototype for the rectangle.
+    var Constr = typeof DOMRectReadOnly != 'undefined' ? DOMRectReadOnly : Object;
+    var rect = Object.create(Constr.prototype);
+
+    // Rectangle's properties are not writable and non-enumerable.
+    defineConfigurable(rect, {
+        x: x, y: y, width: width, height: height,
+        top: y,
+        right: x + width,
+        bottom: height + y,
+        left: x
+    });
+
+    return rect;
+}
+
+/**
+ * Creates DOMRectInit object based on the provided dimensions and the x/y coordinates.
+ * Spec: https://drafts.fxtf.org/geometry/#dictdef-domrectinit
+ *
+ * @param {number} x - X coordinate.
+ * @param {number} y - Y coordinate.
+ * @param {number} width - Rectangle's width.
+ * @param {number} height - Rectangle's height.
+ * @returns {DOMRectInit}
+ */
+function createRectInit(x, y, width, height) {
+    return { x: x, y: y, width: width, height: height };
+}
+
+/**
+ * Class that is responsible for computations of the content rectangle of
+ * provided DOM element and for keeping track of it's changes.
+ */
+var ResizeObservation = function(target) {
+    /**
+     * Broadcasted width of content rectangle.
+     *
+     * @type {number}
+     */
+    this.broadcastWidth = 0;
+
+    /**
+     * Broadcasted height of content rectangle.
+     *
+     * @type {number}
+     */
+    this.broadcastHeight = 0;
+
+    /**
+     * Reference to the last observed content rectangle.
+     *
+     * @private {DOMRectInit}
+     */
+    this.contentRect_ = createRectInit(0, 0, 0, 0);
+
+    /**
+     * Reference to the observed element.
+     *
+     * @type {Element}
+     */
+    this.target = target;
+};
+
+/**
+ * Updates content rectangle and tells whether it's width or height properties
+ * have changed since the last broadcast.
+ *
+ * @returns {boolean}
+ */
+ResizeObservation.prototype.isActive = function () {
+    var rect = getContentRect(this.target);
+
+    this.contentRect_ = rect;
+
+    return rect.width !== this.broadcastWidth || rect.height !== this.broadcastHeight;
+};
+
+/**
+ * Updates 'broadcastWidth' and 'broadcastHeight' properties with a data
+ * from the corresponding properties of the last observed content rectangle.
+ *
+ * @returns {DOMRectInit} Last observed content rectangle.
+ */
+ResizeObservation.prototype.broadcastRect = function () {
+    var rect = this.contentRect_;
+
+    this.broadcastWidth = rect.width;
+    this.broadcastHeight = rect.height;
+
+    return rect;
+};
+
+var ResizeObserverEntry = function(target, rectInit) {
+    var contentRect = createReadOnlyRect(rectInit);
+
+    // According to the specification following properties are not writable
+    // and are also not enumerable in the native implementation.
+    //
+    // Property accessors are not being used as they'd require to define a
+    // private WeakMap storage which may cause memory leaks in browsers that
+    // don't support this type of collections.
+    defineConfigurable(this, { target: target, contentRect: contentRect });
+};
+
+var ResizeObserverSPI = function(callback, controller, callbackCtx) {
+    if (typeof callback !== 'function') {
+        throw new TypeError('The callback provided as parameter 1 is not a function.');
+    }
+
+    /**
+     * Collection of resize observations that have detected changes in dimensions
+     * of elements.
+     *
+     * @private {Array<ResizeObservation>}
+     */
+    this.activeObservations_ = [];
+
+    /**
+     * Registry of the ResizeObservation instances.
+     *
+     * @private {Map<Element, ResizeObservation>}
+     */
+    this.observations_ = new MapShim();
+
+    /**
+     * Reference to the callback function.
+     *
+     * @private {ResizeObserverCallback}
+     */
+    this.callback_ = callback;
+
+    /**
+     * Reference to the associated ResizeObserverController.
+     *
+     * @private {ResizeObserverController}
+     */
+    this.controller_ = controller;
+
+    /**
+     * Public ResizeObserver instance which will be passed to the callback
+     * function and used as a value of it's "this" binding.
+     *
+     * @private {ResizeObserver}
+     */
+    this.callbackCtx_ = callbackCtx;
+};
+
+/**
+ * Starts observing provided element.
+ *
+ * @param {Element} target - Element to be observed.
+ * @returns {void}
+ */
+ResizeObserverSPI.prototype.observe = function (target) {
+    if (!arguments.length) {
+        throw new TypeError('1 argument required, but only 0 present.');
+    }
+
+    // Do nothing if current environment doesn't have the Element interface.
+    if (typeof Element === 'undefined' || !(Element instanceof Object)) {
+        return;
+    }
+
+    if (!(target instanceof Element)) {
+        throw new TypeError('parameter 1 is not of type "Element".');
+    }
+
+    var observations = this.observations_;
+
+    // Do nothing if element is already being observed.
+    if (observations.has(target)) {
+        return;
+    }
+
+    observations.set(target, new ResizeObservation(target));
+
+    this.controller_.addObserver(this);
+
+    // Force the update of observations.
+    this.controller_.refresh();
+};
+
+/**
+ * Stops observing provided element.
+ *
+ * @param {Element} target - Element to stop observing.
+ * @returns {void}
+ */
+ResizeObserverSPI.prototype.unobserve = function (target) {
+    if (!arguments.length) {
+        throw new TypeError('1 argument required, but only 0 present.');
+    }
+
+    // Do nothing if current environment doesn't have the Element interface.
+    if (typeof Element === 'undefined' || !(Element instanceof Object)) {
+        return;
+    }
+
+    if (!(target instanceof Element)) {
+        throw new TypeError('parameter 1 is not of type "Element".');
+    }
+
+    var observations = this.observations_;
+
+    // Do nothing if element is not being observed.
+    if (!observations.has(target)) {
+        return;
+    }
+
+    observations.delete(target);
+
+    if (!observations.size) {
+        this.controller_.removeObserver(this);
+    }
+};
+
+/**
+ * Stops observing all elements.
+ *
+ * @returns {void}
+ */
+ResizeObserverSPI.prototype.disconnect = function () {
+    this.clearActive();
+    this.observations_.clear();
+    this.controller_.removeObserver(this);
+};
+
+/**
+ * Collects observation instances the associated element of which has changed
+ * it's content rectangle.
+ *
+ * @returns {void}
+ */
+ResizeObserverSPI.prototype.gatherActive = function () {
+        var this$1 = this;
+
+    this.clearActive();
+
+    this.observations_.forEach(function (observation) {
+        if (observation.isActive()) {
+            this$1.activeObservations_.push(observation);
+        }
+    });
+};
+
+/**
+ * Invokes initial callback function with a list of ResizeObserverEntry
+ * instances collected from active resize observations.
+ *
+ * @returns {void}
+ */
+ResizeObserverSPI.prototype.broadcastActive = function () {
+    // Do nothing if observer doesn't have active observations.
+    if (!this.hasActive()) {
+        return;
+    }
+
+    var ctx = this.callbackCtx_;
+
+    // Create ResizeObserverEntry instance for every active observation.
+    var entries = this.activeObservations_.map(function (observation) {
+        return new ResizeObserverEntry(observation.target, observation.broadcastRect());
+    });
+
+    this.callback_.call(ctx, entries, ctx);
+    this.clearActive();
+};
+
+/**
+ * Clears the collection of active observations.
+ *
+ * @returns {void}
+ */
+ResizeObserverSPI.prototype.clearActive = function () {
+    this.activeObservations_.splice(0);
+};
+
+/**
+ * Tells whether observer has active observations.
+ *
+ * @returns {boolean}
+ */
+ResizeObserverSPI.prototype.hasActive = function () {
+    return this.activeObservations_.length > 0;
+};
+
+// Registry of internal observers. If WeakMap is not available use current shim
+// for the Map collection as it has all required methods and because WeakMap
+// can't be fully polyfilled anyway.
+var observers = typeof WeakMap != 'undefined' ? new WeakMap() : new MapShim();
+
+/**
+ * ResizeObserver API. Encapsulates the ResizeObserver SPI implementation
+ * exposing only those methods and properties that are defined in the spec.
+ */
+var ResizeObserver$1 = function(callback) {
+    if (!(this instanceof ResizeObserver$1)) {
+        throw new TypeError('Cannot call a class as a function');
+    }
+
+    if (!arguments.length) {
+        throw new TypeError('1 argument required, but only 0 present.');
+    }
+
+    var controller = ResizeObserverController.getInstance();
+    var observer = new ResizeObserverSPI(callback, controller, this);
+
+    observers.set(this, observer);
+};
+
+// Expose public methods of ResizeObserver.
+['observe', 'unobserve', 'disconnect'].forEach(function (method) {
+    ResizeObserver$1.prototype[method] = function () {
+        return (ref = observers.get(this))[method].apply(ref, arguments);
+        var ref;
+    };
+});
+
+var index = (function () {
+    // Export existing implementation if available.
+    if (typeof ResizeObserver != 'undefined') {
+        // eslint-disable-next-line no-undef
+        return ResizeObserver;
+    }
+
+    return ResizeObserver$1;
+})();
+
+/* harmony default export */ __webpack_exports__["default"] = (index);
+
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(2), __webpack_require__(3), __webpack_require__(90)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('prop-types'), require('classnames'), require('../Dividers/Divider'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.propTypes, global.classnames, global.Divider);
+    global.TextFieldDivider = mod.exports;
+  }
+})(this, function (exports, _react, _propTypes, _classnames, _Divider) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _classnames2 = _interopRequireDefault(_classnames);
+
+  var _Divider2 = _interopRequireDefault(_Divider);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  function _objectWithoutProperties(obj, keys) {
+    var target = {};
+
+    for (var i in obj) {
+      if (keys.indexOf(i) >= 0) continue;
+      if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+      target[i] = obj[i];
+    }
+
+    return target;
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var TextFieldDivider = function (_PureComponent) {
+    _inherits(TextFieldDivider, _PureComponent);
+
+    function TextFieldDivider() {
+      _classCallCheck(this, TextFieldDivider);
+
+      return _possibleConstructorReturn(this, (TextFieldDivider.__proto__ || Object.getPrototypeOf(TextFieldDivider)).apply(this, arguments));
+    }
+
+    _createClass(TextFieldDivider, [{
+      key: 'render',
+      value: function render() {
+        var _props = this.props,
+            active = _props.active,
+            error = _props.error,
+            lineDirection = _props.lineDirection,
+            className = _props.className,
+            props = _objectWithoutProperties(_props, ['active', 'error', 'lineDirection', 'className']);
+
+        return _react2.default.createElement(_Divider2.default, _extends({}, props, {
+          className: (0, _classnames2.default)('md-divider--text-field md-divider--expand-from-' + lineDirection, {
+            'md-divider--text-field-expanded': active,
+            'md-divider--text-field-active': !error && active,
+            'md-divider--text-field-error': error
+          }, className)
+        }));
+      }
+    }]);
+
+    return TextFieldDivider;
+  }(_react.PureComponent);
+
+  TextFieldDivider.propTypes = {
+    style: _propTypes2.default.object,
+    className: _propTypes2.default.string,
+    active: _propTypes2.default.bool,
+    error: _propTypes2.default.bool,
+    lineDirection: _propTypes2.default.oneOf(['left', 'center', 'right'])
+  };
+  exports.default = TextFieldDivider;
+});
+//# sourceMappingURL=TextFieldDivider.js.map
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(2), __webpack_require__(3)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('prop-types'), require('classnames'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.propTypes, global.classnames);
+    global.Divider = mod.exports;
+  }
+})(this, function (exports, _react, _propTypes, _classnames) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _classnames2 = _interopRequireDefault(_classnames);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  function _objectWithoutProperties(obj, keys) {
+    var target = {};
+
+    for (var i in obj) {
+      if (keys.indexOf(i) >= 0) continue;
+      if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+      target[i] = obj[i];
+    }
+
+    return target;
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var Divider = function (_PureComponent) {
+    _inherits(Divider, _PureComponent);
+
+    function Divider() {
+      _classCallCheck(this, Divider);
+
+      return _possibleConstructorReturn(this, (Divider.__proto__ || Object.getPrototypeOf(Divider)).apply(this, arguments));
+    }
+
+    _createClass(Divider, [{
+      key: 'render',
+      value: function render() {
+        var _props = this.props,
+            className = _props.className,
+            inset = _props.inset,
+            vertical = _props.vertical,
+            props = _objectWithoutProperties(_props, ['className', 'inset', 'vertical']);
+
+        var Component = vertical ? 'div' : 'hr';
+
+        return _react2.default.createElement(Component, _extends({}, props, {
+          className: (0, _classnames2.default)('md-divider', {
+            'md-divider--vertical': vertical,
+            'md-divider--inset': inset
+          }, className)
+        }));
+      }
+    }]);
+
+    return Divider;
+  }(_react.PureComponent);
+
+  Divider.propTypes = {
+    /*
+     * An optional style to apply to the divider.
+     */
+    style: _propTypes2.default.object,
+
+    /**
+     * An optional className to apply to the divider.
+     */
+    className: _propTypes2.default.string,
+
+    /**
+     * Boolean if this divider should be inset relative to it's container
+     * component. This means that if it is in a `List` with `Avatar`, it
+     * will start the divider  to the left of the main text in the list.
+     */
+    inset: _propTypes2.default.bool,
+
+    /**
+     * Boolean if the divider should be vertical instead of horizontal.
+     */
+    vertical: _propTypes2.default.bool
+  };
+  exports.default = Divider;
+});
+//# sourceMappingURL=Divider.js.map
 
 /***/ })
 /******/ ]);
