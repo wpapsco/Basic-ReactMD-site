@@ -16,6 +16,7 @@ class Layout extends React.Component {
         return (
             <div id="layout">
                 <Toolbar
+                    themed
                     title="Test Site!"
                 >
                 </Toolbar>
