@@ -6,6 +6,8 @@ import Toolbar from 'react-md/lib/Toolbars';
 import PersonDataForm from './components/PersonDataForm'
 import UserDataForm from './components/UserDataForm'
 import UserTypeDataForm from './components/UserTypeDataForm'
+import PatientDataForm from './components/PatientDataForm'
+import PatientDemographicFactorsDataForm from './components/PatientDemographicFactorsDataForm'
 import TitleMenu from './components/TitleMenu'
 
 webfontloader.load({
@@ -39,6 +41,12 @@ class Layout extends React.Component {
                 break;
             case "UserType":
                 form = (<UserTypeDataForm />);
+                break;
+            case "Patient":
+                form = (<PatientDataForm />);
+                break;
+            case "PatientDemographicFactors":
+                form = (<PatientDemographicFactorsDataForm />);
                 break;
         }
 
