@@ -54,6 +54,7 @@ export default class PatientDataForm extends React.Component {
                     className="md-cell"
                     label="Person ID"
                     type="number"
+                    required
                     onChange={this.handleChange.bind(this, 'person_id')}
                 />
                 <TextField
@@ -61,12 +62,14 @@ export default class PatientDataForm extends React.Component {
                     className="md-cell"
                     label="Forum Pseudonym"
                     maxLength={16}
+                    required
                     onChange={this.handleChange.bind(this, 'forum_pseudonym')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Primary Physician's Name"
+                    maxLength={64}
                     onChange={this.handleChange.bind(this, 'primary_physician')}
                 />
                 <TextField
@@ -80,7 +83,9 @@ export default class PatientDataForm extends React.Component {
                     id="select-field-1"
                     label="Care Buddy == Emergency Contact?"
                     className="md-cell"
+                    defaultValue="0"
                     menuItems={['Yes', 'No']}
+                    required
                     onChange={this.handleChange.bind(this, 'care_buddy_emergency_same')}
                 />
                 {careBuddyId}

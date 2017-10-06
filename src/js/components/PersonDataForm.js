@@ -71,24 +71,28 @@ export default class PersonDataForm extends React.Component {
                     id="floating-center-title"
                     className="md-cell"
                     label="First Name"
+                    maxLength={64}
                     onChange={this.handleChange.bind(this, 'first_name')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Middle Name"
+                    maxLength={64}
                     onChange={this.handleChange.bind(this, 'middle_name')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Last Name"
+                    maxLength={64}
                     onChange={this.handleChange.bind(this, 'last_name')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Nickname"
+                    maxLength={64}
                     onChange={this.handleChange.bind(this, 'nick_name')}
                 />
                 <TextField

@@ -8,6 +8,10 @@ import UserDataForm from './components/UserDataForm'
 import UserTypeDataForm from './components/UserTypeDataForm'
 import PatientDataForm from './components/PatientDataForm'
 import PatientDemographicFactorsDataForm from './components/PatientDemographicFactorsDataForm'
+import PatientSportsDataForm from './components/PatientSportsDataForm'
+import PatientSupportersDataForm from './components/PatientSupportersDataForm'
+import PatientDrugUseDataForm from './components/PatientDrugUseDataForm'
+import PatientSocioEconomicFactorsDataForm from './components/PatientSocioEconomicFactorsDataForm'
 import TitleMenu from './components/TitleMenu'
 
 webfontloader.load({
@@ -20,35 +24,32 @@ class Layout extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            form: "Person"
+            form: "Person",
+            formIndex: 0
         }
     }
 
     onFormUpdate = (name, value) => {
+        console.log(value);
         this.setState({
-            'form' : name
+            'form' : name,
+            'formIndex' : value
         });
     }
 
     render() {
         var form = (<div />);
-        switch (this.state.form) {
-            case "Person":
-                form = (<PersonDataForm />);
-                break;
-            case "User":
-                form = (<UserDataForm />);
-                break;
-            case "UserType":
-                form = (<UserTypeDataForm />);
-                break;
-            case "Patient":
-                form = (<PatientDataForm />);
-                break;
-            case "PatientDemographicFactors":
-                form = (<PatientDemographicFactorsDataForm />);
-                break;
-        }
+        var forms = [
+            (<PersonDataForm />), 
+            (<UserDataForm />), 
+            (<UserTypeDataForm />), 
+            (<PatientDataForm />), 
+            (<PatientDemographicFactorsDataForm />),
+            (<PatientSportsDataForm />),
+            (<PatientSupportersDataForm />),
+            (<PatientDrugUseDataForm />),
+            (<PatientSocioEconomicFactorsDataForm />)
+        ]
 
         return (
             <div id="layout">
@@ -61,7 +62,7 @@ class Layout extends React.Component {
                 >
                 </Toolbar>
                 <Paper id="main">
-                    {form}
+                    {forms[this.state.formIndex]}
                 </Paper>
             </div>
         );

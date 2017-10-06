@@ -4,7 +4,7 @@ import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 
-export default class UserDataForm extends React.Component {
+export default class PatientSupportersDataForm extends React.Component {
 
     constructor(props) {
         super(props);
@@ -21,7 +21,7 @@ export default class UserDataForm extends React.Component {
         for (var param in this.state) {
             obj[param] = this.state[param];
         }
-        obj.page = "Users";
+        obj.page = "PatientSupporters";
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "http://www.localhost:3000/save", true);
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -38,55 +38,38 @@ export default class UserDataForm extends React.Component {
     render() {
         return (
             <form className="md-grid text-fields__application" onSubmit={this.handleSubmit.bind(this)}>
-                <h1 className="md-cell md-cell--12">User Table Data Entry Form</h1>
+                <h1 className="md-cell md-cell--12">Patient Supporters Table Data Entry Form</h1>
                 <br />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="User Type ID"
-                    maxLength={2}
-                    required
-                    onChange={this.handleChange.bind(this, 'user_type_id')}
-                />
-                <TextField
-                    id="floating-center-title"
-                    className="md-cell"
-                    label="Fourm Pseudonym"
-                    maxLength={64}
-                    required
-                    onChange={this.handleChange.bind(this, 'pseudonym')}
-                />
-                <TextField
-                    id="floating-center-title"
-                    className="md-cell"
-                    label="Attached Person ID"
+                    label="Patient ID"
                     type="number"
                     required
-                    onChange={this.handleChange.bind(this, 'person_id')}
+                    onChange={this.handleChange.bind(this, 'patient_id')}
                 />
-                <TextField
-                    id="floating-center-title"
+                <SelectField
+                    id="supporter-select"
+                    label="Supporter Type"
                     className="md-cell"
-                    label="Time Zone"
-                    maxLength={2}
+                    menuItems={["Spouse", "Descendants", "Dependents", "Parents", "Siblings", "Friends", "Coworkers", "Roommates", "Other"]}
                     required
-                    onChange={this.handleChange.bind(this, 'time_zone')}
+                    onChange={this.handleChange.bind(this, 'supporter_type')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Date Format"
-                    maxLength={1}
-                    onChange={this.handleChange.bind(this, 'date_format')}
+                    label="Other Description"
+                    maxLength={128}
+                    onChange={this.handleChange.bind(this, 'other_description')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Time Format"
-                    type="number"
-                    defaultValue="1"
-                    maxLength={1}
-                    onChange={this.handleChange.bind(this, 'time_format')}
+                    label="Supporter Name"
+                    maxLength={128}
+                    required
+                    onChange={this.handleChange.bind(this, 'supporter_name')}
                 />
                 <Button flat
                     id=""

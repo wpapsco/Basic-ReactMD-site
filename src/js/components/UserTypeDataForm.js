@@ -50,13 +50,16 @@ export default class UserTypeDataForm extends React.Component {
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="User Type"
+                    label="Unique User Type Identifier"
+                    maxLength={64}
+                    required
                     onChange={this.handleChange.bind(this, 'user_type')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="User Type Description"
+                    maxLength={256}
                     onChange={this.handleChange.bind(this, 'user_type_description')}
                 />
                 <Button flat

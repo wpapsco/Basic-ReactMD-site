@@ -1067,32 +1067,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-exports.__esModule = true;
-exports.default = isRequiredForA11y;
-function isRequiredForA11y(validator) {
-  return function validate(props, propName, componentName, location, propFullName) {
-    var componentNameSafe = componentName || '<<anonymous>>';
-    var propFullNameSafe = propFullName || propName;
-
-    if (props[propName] == null) {
-      return new Error('The ' + location + ' `' + propFullNameSafe + '` is required to make ' + ('`' + componentNameSafe + '` accessible for users of assistive ') + 'technologies such as screen readers.');
-    }
-
-    for (var _len = arguments.length, args = Array(_len > 5 ? _len - 5 : 0), _key = 5; _key < _len; _key++) {
-      args[_key - 5] = arguments[_key];
-    }
-
-    return validator.apply(undefined, [props, propName, componentName, location, propFullName].concat(args));
-  };
-}
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(7), __webpack_require__(6), __webpack_require__(14), __webpack_require__(118), __webpack_require__(30), __webpack_require__(33), __webpack_require__(11), __webpack_require__(56), __webpack_require__(57), __webpack_require__(115)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
@@ -1808,6 +1782,32 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=Button.js.map
 
 /***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = isRequiredForA11y;
+function isRequiredForA11y(validator) {
+  return function validate(props, propName, componentName, location, propFullName) {
+    var componentNameSafe = componentName || '<<anonymous>>';
+    var propFullNameSafe = propFullName || propName;
+
+    if (props[propName] == null) {
+      return new Error('The ' + location + ' `' + propFullNameSafe + '` is required to make ' + ('`' + componentNameSafe + '` accessible for users of assistive ') + 'technologies such as screen readers.');
+    }
+
+    for (var _len = arguments.length, args = Array(_len > 5 ? _len - 5 : 0), _key = 5; _key < _len; _key++) {
+      args[_key - 5] = arguments[_key];
+    }
+
+    return validator.apply(undefined, [props, propName, componentName, location, propFullName].concat(args));
+  };
+}
+
+/***/ }),
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1838,6 +1838,46 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 /* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(156)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('./SelectField'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.SelectField);
+    global.index = mod.exports;
+  }
+})(this, function (exports, _SelectField2) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.SelectField = undefined;
+
+  var _SelectField3 = _interopRequireDefault(_SelectField2);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  exports.default = _SelectField3.default;
+  exports.SelectField = _SelectField3.default;
+});
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1934,361 +1974,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
-  if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(156)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if (typeof exports !== "undefined") {
-    factory(exports, require('./SelectField'));
-  } else {
-    var mod = {
-      exports: {}
-    };
-    factory(mod.exports, global.SelectField);
-    global.index = mod.exports;
-  }
-})(this, function (exports, _SelectField2) {
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.SelectField = undefined;
-
-  var _SelectField3 = _interopRequireDefault(_SelectField2);
-
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-      default: obj
-    };
-  }
-
-  exports.default = _SelectField3.default;
-  exports.SelectField = _SelectField3.default;
-});
-//# sourceMappingURL=index.js.map
-
-/***/ }),
 /* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
-  if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(1)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if (typeof exports !== "undefined") {
-    factory(exports, require('prop-types'));
-  } else {
-    var mod = {
-      exports: {}
-    };
-    factory(mod.exports, global.propTypes);
-    global.fixedToShape = mod.exports;
-  }
-})(this, function (exports, _propTypes) {
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-
-  var _propTypes2 = _interopRequireDefault(_propTypes);
-
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-      default: obj
-    };
-  }
-
-  exports.default = _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.shape({
-    x: _propTypes2.default.object,
-    y: _propTypes2.default.object
-  })]);
-});
-//# sourceMappingURL=fixedToShape.js.map
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-var emptyObject = {};
-
-if (process.env.NODE_ENV !== 'production') {
-  Object.freeze(emptyObject);
-}
-
-module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-var emptyFunction = __webpack_require__(8);
-
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
-
-var warning = emptyFunction;
-
-if (process.env.NODE_ENV !== 'production') {
-  var printWarning = function printWarning(format) {
-    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
-
-    var argIndex = 0;
-    var message = 'Warning: ' + format.replace(/%s/g, function () {
-      return args[argIndex++];
-    });
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-
-  warning = function warning(condition, format) {
-    if (format === undefined) {
-      throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
-    }
-
-    if (format.indexOf('Failed Composite propType: ') === 0) {
-      return; // Ignore CompositeComponent proptype check.
-    }
-
-    if (!condition) {
-      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-        args[_key2 - 2] = arguments[_key2];
-      }
-
-      printWarning.apply(undefined, [format].concat(args));
-    }
-  };
-}
-
-module.exports = warning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
-  if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(47)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('prop-types'), require('classnames'), require('../utils/PropTypes/between'));
-  } else {
-    var mod = {
-      exports: {}
-    };
-    factory(mod.exports, global.react, global.propTypes, global.classnames, global.between);
-    global.Paper = mod.exports;
-  }
-})(this, function (exports, _react, _propTypes, _classnames, _between) {
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-
-  var _react2 = _interopRequireDefault(_react);
-
-  var _propTypes2 = _interopRequireDefault(_propTypes);
-
-  var _classnames2 = _interopRequireDefault(_classnames);
-
-  var _between2 = _interopRequireDefault(_between);
-
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-      default: obj
-    };
-  }
-
-  var _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  function _objectWithoutProperties(obj, keys) {
-    var target = {};
-
-    for (var i in obj) {
-      if (keys.indexOf(i) >= 0) continue;
-      if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
-      target[i] = obj[i];
-    }
-
-    return target;
-  }
-
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
-  }
-
-  var _createClass = function () {
-    function defineProperties(target, props) {
-      for (var i = 0; i < props.length; i++) {
-        var descriptor = props[i];
-        descriptor.enumerable = descriptor.enumerable || false;
-        descriptor.configurable = true;
-        if ("value" in descriptor) descriptor.writable = true;
-        Object.defineProperty(target, descriptor.key, descriptor);
-      }
-    }
-
-    return function (Constructor, protoProps, staticProps) {
-      if (protoProps) defineProperties(Constructor.prototype, protoProps);
-      if (staticProps) defineProperties(Constructor, staticProps);
-      return Constructor;
-    };
-  }();
-
-  function _possibleConstructorReturn(self, call) {
-    if (!self) {
-      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    }
-
-    return call && (typeof call === "object" || typeof call === "function") ? call : self;
-  }
-
-  function _inherits(subClass, superClass) {
-    if (typeof superClass !== "function" && superClass !== null) {
-      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-    }
-
-    subClass.prototype = Object.create(superClass && superClass.prototype, {
-      constructor: {
-        value: subClass,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
-    });
-    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-  }
-
-  var Paper = function (_PureComponent) {
-    _inherits(Paper, _PureComponent);
-
-    function Paper() {
-      _classCallCheck(this, Paper);
-
-      return _possibleConstructorReturn(this, (Paper.__proto__ || Object.getPrototypeOf(Paper)).apply(this, arguments));
-    }
-
-    _createClass(Paper, [{
-      key: 'render',
-      value: function render() {
-        var _props = this.props,
-            Component = _props.component,
-            zDepth = _props.zDepth,
-            className = _props.className,
-            raiseOnHover = _props.raiseOnHover,
-            props = _objectWithoutProperties(_props, ['component', 'zDepth', 'className', 'raiseOnHover']);
-
-        return _react2.default.createElement(Component, _extends({}, props, {
-          className: (0, _classnames2.default)('md-paper md-paper--' + zDepth, {
-            'md-paper--0-hover': zDepth === 0 && raiseOnHover
-          }, className)
-        }));
-      }
-    }]);
-
-    return Paper;
-  }(_react.PureComponent);
-
-  Paper.propTypes = {
-    /**
-     * The component to render the paper as.
-     */
-    component: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]).isRequired,
-
-    /**
-     * An optional className to apply.
-     */
-    className: _propTypes2.default.string,
-
-    /**
-     * The depth of the paper. This should be a number between 0 - 5. If
-     * the depth is 0, it will raise to a depth of 3 on hover.
-     */
-    zDepth: (0, _between2.default)(_propTypes2.default.number.isRequired, 0, 5),
-
-    /**
-     * Any children to display in the paper.
-     */
-    children: _propTypes2.default.node,
-
-    /**
-     * Boolean if the paper should raise to the `zDepth` of `3` on hover when the initial
-     * `zDepth` is `0`.
-     */
-    raiseOnHover: _propTypes2.default.bool
-  };
-  Paper.defaultProps = {
-    zDepth: 1,
-    component: 'div'
-  };
-  exports.default = Paper;
-});
-//# sourceMappingURL=Paper.js.map
-
-/***/ }),
-/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -2328,83 +2014,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 22 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(1)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if (typeof exports !== "undefined") {
-    factory(exports, require('prop-types'));
-  } else {
-    var mod = {
-      exports: {}
-    };
-    factory(mod.exports, global.propTypes);
-    global.controlled = mod.exports;
-  }
-})(this, function (exports, _propTypes) {
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = controlled;
-
-  var _propTypes2 = _interopRequireDefault(_propTypes);
-
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-      default: obj
-    };
-  }
-
-  /**
-   * Validates the a component is fully controlled or uncontrolled.  If the given prop is not
-   * `undefined`, it will check if the `funcName` is defined and a function. A missing function
-   * will generate an error similar to the built-in React controlled validation message.
-   *
-   * @param {String} funcName - The function name to use for additional validation.
-   * @param {function} validator - The PropTypes validator to use for the given prop.
-   * @return {Error} an error or null.
-   */
-  function controlled(validator, funcName) {
-    var fallbackPropName = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'defaultValue';
-
-    return function validate(props, propName, componentName, location, propFullName) {
-      var componentNameSafe = componentName || '<<anonymous>>';
-      var propFullNameSafe = propFullName || propName;
-
-      for (var _len = arguments.length, args = Array(_len > 5 ? _len - 5 : 0), _key = 5; _key < _len; _key++) {
-        args[_key - 5] = arguments[_key];
-      }
-
-      var err = validator.apply(undefined, [props, propName, componentName, location, propFullName].concat(args));
-      if (!err && typeof props[propName] !== 'undefined' && !props.readOnly && !props.disabled) {
-        var _PropTypes$func;
-
-        var funcError = (_PropTypes$func = _propTypes2.default.func).isRequired.apply(_PropTypes$func, [props, funcName, componentName, location, propFullName].concat(args));
-        if (funcError) {
-          err = new Error('You provided a `' + propFullNameSafe + '` ' + location + ' to the ' + componentNameSafe + ' without a ' + ('`' + funcName + '` handler. This will render a read only field. Set either the `' + funcName + '` ') + ('or use the `' + fallbackPropName + '` instead.'));
-        }
-      }
-
-      return err;
-    };
-  } /** @module utils/PropTypes/controlled */
-});
-//# sourceMappingURL=controlled.js.map
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
-  if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(12), __webpack_require__(7), __webpack_require__(6), __webpack_require__(9), __webpack_require__(62), __webpack_require__(24), __webpack_require__(22), __webpack_require__(120), __webpack_require__(35), __webpack_require__(121), __webpack_require__(63), __webpack_require__(11), __webpack_require__(31), __webpack_require__(50), __webpack_require__(131), __webpack_require__(145)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(13), __webpack_require__(7), __webpack_require__(6), __webpack_require__(9), __webpack_require__(62), __webpack_require__(24), __webpack_require__(23), __webpack_require__(120), __webpack_require__(35), __webpack_require__(121), __webpack_require__(63), __webpack_require__(11), __webpack_require__(31), __webpack_require__(50), __webpack_require__(131), __webpack_require__(145)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -3495,6 +3110,391 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=DatePickerContainer.js.map
 
 /***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(1)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('prop-types'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.propTypes);
+    global.fixedToShape = mod.exports;
+  }
+})(this, function (exports, _propTypes) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  exports.default = _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.shape({
+    x: _propTypes2.default.object,
+    y: _propTypes2.default.object
+  })]);
+});
+//# sourceMappingURL=fixedToShape.js.map
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+
+
+var emptyObject = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  Object.freeze(emptyObject);
+}
+
+module.exports = emptyObject;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+
+
+var emptyFunction = __webpack_require__(8);
+
+/**
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+
+var warning = emptyFunction;
+
+if (process.env.NODE_ENV !== 'production') {
+  var printWarning = function printWarning(format) {
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    var argIndex = 0;
+    var message = 'Warning: ' + format.replace(/%s/g, function () {
+      return args[argIndex++];
+    });
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+
+  warning = function warning(condition, format) {
+    if (format === undefined) {
+      throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
+    }
+
+    if (format.indexOf('Failed Composite propType: ') === 0) {
+      return; // Ignore CompositeComponent proptype check.
+    }
+
+    if (!condition) {
+      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+        args[_key2 - 2] = arguments[_key2];
+      }
+
+      printWarning.apply(undefined, [format].concat(args));
+    }
+  };
+}
+
+module.exports = warning;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(47)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('react'), require('prop-types'), require('classnames'), require('../utils/PropTypes/between'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.react, global.propTypes, global.classnames, global.between);
+    global.Paper = mod.exports;
+  }
+})(this, function (exports, _react, _propTypes, _classnames, _between) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _classnames2 = _interopRequireDefault(_classnames);
+
+  var _between2 = _interopRequireDefault(_between);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  function _objectWithoutProperties(obj, keys) {
+    var target = {};
+
+    for (var i in obj) {
+      if (keys.indexOf(i) >= 0) continue;
+      if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+      target[i] = obj[i];
+    }
+
+    return target;
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var Paper = function (_PureComponent) {
+    _inherits(Paper, _PureComponent);
+
+    function Paper() {
+      _classCallCheck(this, Paper);
+
+      return _possibleConstructorReturn(this, (Paper.__proto__ || Object.getPrototypeOf(Paper)).apply(this, arguments));
+    }
+
+    _createClass(Paper, [{
+      key: 'render',
+      value: function render() {
+        var _props = this.props,
+            Component = _props.component,
+            zDepth = _props.zDepth,
+            className = _props.className,
+            raiseOnHover = _props.raiseOnHover,
+            props = _objectWithoutProperties(_props, ['component', 'zDepth', 'className', 'raiseOnHover']);
+
+        return _react2.default.createElement(Component, _extends({}, props, {
+          className: (0, _classnames2.default)('md-paper md-paper--' + zDepth, {
+            'md-paper--0-hover': zDepth === 0 && raiseOnHover
+          }, className)
+        }));
+      }
+    }]);
+
+    return Paper;
+  }(_react.PureComponent);
+
+  Paper.propTypes = {
+    /**
+     * The component to render the paper as.
+     */
+    component: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]).isRequired,
+
+    /**
+     * An optional className to apply.
+     */
+    className: _propTypes2.default.string,
+
+    /**
+     * The depth of the paper. This should be a number between 0 - 5. If
+     * the depth is 0, it will raise to a depth of 3 on hover.
+     */
+    zDepth: (0, _between2.default)(_propTypes2.default.number.isRequired, 0, 5),
+
+    /**
+     * Any children to display in the paper.
+     */
+    children: _propTypes2.default.node,
+
+    /**
+     * Boolean if the paper should raise to the `zDepth` of `3` on hover when the initial
+     * `zDepth` is `0`.
+     */
+    raiseOnHover: _propTypes2.default.bool
+  };
+  Paper.defaultProps = {
+    zDepth: 1,
+    component: 'div'
+  };
+  exports.default = Paper;
+});
+//# sourceMappingURL=Paper.js.map
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(1)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require('prop-types'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.propTypes);
+    global.controlled = mod.exports;
+  }
+})(this, function (exports, _propTypes) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = controlled;
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  /**
+   * Validates the a component is fully controlled or uncontrolled.  If the given prop is not
+   * `undefined`, it will check if the `funcName` is defined and a function. A missing function
+   * will generate an error similar to the built-in React controlled validation message.
+   *
+   * @param {String} funcName - The function name to use for additional validation.
+   * @param {function} validator - The PropTypes validator to use for the given prop.
+   * @return {Error} an error or null.
+   */
+  function controlled(validator, funcName) {
+    var fallbackPropName = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'defaultValue';
+
+    return function validate(props, propName, componentName, location, propFullName) {
+      var componentNameSafe = componentName || '<<anonymous>>';
+      var propFullNameSafe = propFullName || propName;
+
+      for (var _len = arguments.length, args = Array(_len > 5 ? _len - 5 : 0), _key = 5; _key < _len; _key++) {
+        args[_key - 5] = arguments[_key];
+      }
+
+      var err = validator.apply(undefined, [props, propName, componentName, location, propFullName].concat(args));
+      if (!err && typeof props[propName] !== 'undefined' && !props.readOnly && !props.disabled) {
+        var _PropTypes$func;
+
+        var funcError = (_PropTypes$func = _propTypes2.default.func).isRequired.apply(_PropTypes$func, [props, funcName, componentName, location, propFullName].concat(args));
+        if (funcError) {
+          err = new Error('You provided a `' + propFullNameSafe + '` ' + location + ' to the ' + componentNameSafe + ' without a ' + ('`' + funcName + '` handler. This will render a read only field. Set either the `' + funcName + '` ') + ('or use the `' + fallbackPropName + '` instead.'));
+        }
+      }
+
+      return err;
+    };
+  } /** @module utils/PropTypes/controlled */
+});
+//# sourceMappingURL=controlled.js.map
+
+/***/ }),
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3677,7 +3677,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(10);
-  var warning = __webpack_require__(19);
+  var warning = __webpack_require__(21);
   var ReactPropTypesSecret = __webpack_require__(28);
   var loggedTypeFailures = {};
 }
@@ -5292,7 +5292,7 @@ module.exports = warning;
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(7), __webpack_require__(12), __webpack_require__(9), __webpack_require__(51), __webpack_require__(22), __webpack_require__(30), __webpack_require__(100), __webpack_require__(52), __webpack_require__(11), __webpack_require__(31), __webpack_require__(53), __webpack_require__(54), __webpack_require__(102), __webpack_require__(103), __webpack_require__(55)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(7), __webpack_require__(13), __webpack_require__(9), __webpack_require__(51), __webpack_require__(23), __webpack_require__(30), __webpack_require__(100), __webpack_require__(52), __webpack_require__(11), __webpack_require__(31), __webpack_require__(53), __webpack_require__(54), __webpack_require__(102), __webpack_require__(103), __webpack_require__(55)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -8323,7 +8323,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(13)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(12)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -8851,7 +8851,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(4), __webpack_require__(2), __webpack_require__(7), __webpack_require__(12), __webpack_require__(14), __webpack_require__(9), __webpack_require__(24), __webpack_require__(26), __webpack_require__(17), __webpack_require__(41), __webpack_require__(158), __webpack_require__(77)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(4), __webpack_require__(2), __webpack_require__(7), __webpack_require__(13), __webpack_require__(14), __webpack_require__(9), __webpack_require__(24), __webpack_require__(26), __webpack_require__(19), __webpack_require__(41), __webpack_require__(158), __webpack_require__(77)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -9561,7 +9561,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(4), __webpack_require__(2), __webpack_require__(7), __webpack_require__(9), __webpack_require__(17), __webpack_require__(164)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(4), __webpack_require__(2), __webpack_require__(7), __webpack_require__(9), __webpack_require__(19), __webpack_require__(164)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -9905,11 +9905,27 @@ var _PatientDataForm = __webpack_require__(175);
 
 var _PatientDataForm2 = _interopRequireDefault(_PatientDataForm);
 
-var _PatientDemographicFactorsDataForm = __webpack_require__(177);
+var _PatientDemographicFactorsDataForm = __webpack_require__(176);
 
 var _PatientDemographicFactorsDataForm2 = _interopRequireDefault(_PatientDemographicFactorsDataForm);
 
-var _TitleMenu = __webpack_require__(176);
+var _PatientSportsDataForm = __webpack_require__(178);
+
+var _PatientSportsDataForm2 = _interopRequireDefault(_PatientSportsDataForm);
+
+var _PatientSupportersDataForm = __webpack_require__(179);
+
+var _PatientSupportersDataForm2 = _interopRequireDefault(_PatientSupportersDataForm);
+
+var _PatientDrugUseDataForm = __webpack_require__(180);
+
+var _PatientDrugUseDataForm2 = _interopRequireDefault(_PatientDrugUseDataForm);
+
+var _PatientSocioEconomicFactorsDataForm = __webpack_require__(181);
+
+var _PatientSocioEconomicFactorsDataForm2 = _interopRequireDefault(_PatientSocioEconomicFactorsDataForm);
+
+var _TitleMenu = __webpack_require__(177);
 
 var _TitleMenu2 = _interopRequireDefault(_TitleMenu);
 
@@ -9936,13 +9952,16 @@ var Layout = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).call(this, props));
 
         _this.onFormUpdate = function (name, value) {
+            console.log(value);
             _this.setState({
-                'form': name
+                'form': name,
+                'formIndex': value
             });
         };
 
         _this.state = {
-            form: "Person"
+            form: "Person",
+            formIndex: 0
         };
         return _this;
     }
@@ -9951,23 +9970,7 @@ var Layout = function (_React$Component) {
         key: "render",
         value: function render() {
             var form = _react2.default.createElement("div", null);
-            switch (this.state.form) {
-                case "Person":
-                    form = _react2.default.createElement(_PersonDataForm2.default, null);
-                    break;
-                case "User":
-                    form = _react2.default.createElement(_UserDataForm2.default, null);
-                    break;
-                case "UserType":
-                    form = _react2.default.createElement(_UserTypeDataForm2.default, null);
-                    break;
-                case "Patient":
-                    form = _react2.default.createElement(_PatientDataForm2.default, null);
-                    break;
-                case "PatientDemographicFactors":
-                    form = _react2.default.createElement(_PatientDemographicFactorsDataForm2.default, null);
-                    break;
-            }
+            var forms = [_react2.default.createElement(_PersonDataForm2.default, null), _react2.default.createElement(_UserDataForm2.default, null), _react2.default.createElement(_UserTypeDataForm2.default, null), _react2.default.createElement(_PatientDataForm2.default, null), _react2.default.createElement(_PatientDemographicFactorsDataForm2.default, null), _react2.default.createElement(_PatientSportsDataForm2.default, null), _react2.default.createElement(_PatientSupportersDataForm2.default, null), _react2.default.createElement(_PatientDrugUseDataForm2.default, null), _react2.default.createElement(_PatientSocioEconomicFactorsDataForm2.default, null)];
 
             return _react2.default.createElement(
                 "div",
@@ -9981,7 +9984,7 @@ var Layout = function (_React$Component) {
                 _react2.default.createElement(
                     _Papers2.default,
                     { id: "main" },
-                    form
+                    forms[this.state.formIndex]
                 )
             );
         }
@@ -10007,7 +10010,7 @@ _reactDom2.default.render(_react2.default.createElement(Layout, null), app);
  This source code is licensed under the MIT license found in the
  LICENSE file in the root directory of this source tree.
 */
-var f=__webpack_require__(15),p=__webpack_require__(18);__webpack_require__(10);var r=__webpack_require__(8);
+var f=__webpack_require__(16),p=__webpack_require__(20);__webpack_require__(10);var r=__webpack_require__(8);
 function t(a){for(var b=arguments.length-1,d="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,e=0;e<b;e++)d+="\x26args[]\x3d"+encodeURIComponent(arguments[e+1]);b=Error(d+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var u={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function v(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}v.prototype.isReactComponent={};v.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?t("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};v.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function w(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}function x(){}x.prototype=v.prototype;var y=w.prototype=new x;y.constructor=w;f(y,v.prototype);y.isPureReactComponent=!0;function z(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}var A=z.prototype=new x;A.constructor=z;f(A,v.prototype);A.unstable_isAsyncReactComponent=!0;A.render=function(){return this.props.children};
@@ -10044,9 +10047,9 @@ if (process.env.NODE_ENV !== "production") {
 
 'use strict';
 
-var objectAssign$1 = __webpack_require__(15);
-var require$$0 = __webpack_require__(19);
-var emptyObject = __webpack_require__(18);
+var objectAssign$1 = __webpack_require__(16);
+var require$$0 = __webpack_require__(21);
+var emptyObject = __webpack_require__(20);
 var invariant = __webpack_require__(10);
 var emptyFunction = __webpack_require__(8);
 var checkPropTypes = __webpack_require__(27);
@@ -11744,7 +11747,7 @@ module.exports = ReactEntry;
  LICENSE file in the root directory of this source tree.
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0);__webpack_require__(10);var l=__webpack_require__(29),n=__webpack_require__(15),ba=__webpack_require__(42),ca=__webpack_require__(8),da=__webpack_require__(18),ea=__webpack_require__(43),fa=__webpack_require__(44),ha=__webpack_require__(45),ia=__webpack_require__(46);
+var aa=__webpack_require__(0);__webpack_require__(10);var l=__webpack_require__(29),n=__webpack_require__(16),ba=__webpack_require__(42),ca=__webpack_require__(8),da=__webpack_require__(20),ea=__webpack_require__(43),fa=__webpack_require__(44),ha=__webpack_require__(45),ia=__webpack_require__(46);
 function w(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:w("227");
 function ja(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}
 var ka={Namespaces:{html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"},getIntrinsicNamespace:ja,getChildNamespace:function(a,b){return null==a||"http://www.w3.org/1999/xhtml"===a?ja(b):"http://www.w3.org/2000/svg"===a&&"foreignObject"===b?"http://www.w3.org/1999/xhtml":a}},la=null,oa={};
@@ -12072,15 +12075,15 @@ if (process.env.NODE_ENV !== "production") {
 var react = __webpack_require__(0);
 var invariant = __webpack_require__(10);
 var ExecutionEnvironment = __webpack_require__(29);
-var _assign = __webpack_require__(15);
+var _assign = __webpack_require__(16);
 var EventListener = __webpack_require__(42);
-var require$$0 = __webpack_require__(19);
+var require$$0 = __webpack_require__(21);
 var hyphenateStyleName = __webpack_require__(86);
 var emptyFunction = __webpack_require__(8);
 var camelizeStyleName = __webpack_require__(88);
 var performanceNow = __webpack_require__(90);
 var propTypes = __webpack_require__(1);
-var emptyObject = __webpack_require__(18);
+var emptyObject = __webpack_require__(20);
 var checkPropTypes = __webpack_require__(27);
 var shallowEqual = __webpack_require__(43);
 var containsNode = __webpack_require__(44);
@@ -29512,8 +29515,8 @@ module.exports = performance || {};
 
 var emptyFunction = __webpack_require__(8);
 var invariant = __webpack_require__(10);
-var warning = __webpack_require__(19);
-var assign = __webpack_require__(15);
+var warning = __webpack_require__(21);
+var assign = __webpack_require__(16);
 
 var ReactPropTypesSecret = __webpack_require__(28);
 var checkPropTypes = __webpack_require__(27);
@@ -30141,7 +30144,7 @@ g,0<d.length&&(d=za[d[0]])&&(a.c[e]=d))}a.c[e]||(d=za[e])&&(a.c[e]=d);for(d=0;d<
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(20)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(22)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -30221,7 +30224,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(7), __webpack_require__(30), __webpack_require__(47), __webpack_require__(20), __webpack_require__(98)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(7), __webpack_require__(30), __webpack_require__(47), __webpack_require__(22), __webpack_require__(98)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -30786,19 +30789,19 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(21);
+var _TextFields = __webpack_require__(17);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
-var _Button = __webpack_require__(13);
+var _Button = __webpack_require__(12);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(23);
+var _DatePickerContainer = __webpack_require__(18);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
-var _SelectFields = __webpack_require__(16);
+var _SelectFields = __webpack_require__(15);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
@@ -30886,24 +30889,28 @@ var PersonDataForm = function (_React$Component) {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'First Name',
+                    maxLength: 64,
                     onChange: this.handleChange.bind(this, 'first_name')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Middle Name',
+                    maxLength: 64,
                     onChange: this.handleChange.bind(this, 'middle_name')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Last Name',
+                    maxLength: 64,
                     onChange: this.handleChange.bind(this, 'last_name')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Nickname',
+                    maxLength: 64,
                     onChange: this.handleChange.bind(this, 'nick_name')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
@@ -36454,7 +36461,7 @@ module.exports = exports['default'];
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(4), __webpack_require__(65), __webpack_require__(2), __webpack_require__(7), __webpack_require__(12), __webpack_require__(6), __webpack_require__(14), __webpack_require__(9), __webpack_require__(138), __webpack_require__(68), __webpack_require__(139), __webpack_require__(144)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(4), __webpack_require__(65), __webpack_require__(2), __webpack_require__(7), __webpack_require__(13), __webpack_require__(6), __webpack_require__(14), __webpack_require__(9), __webpack_require__(138), __webpack_require__(68), __webpack_require__(139), __webpack_require__(144)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -37730,7 +37737,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(4), __webpack_require__(2), __webpack_require__(12), __webpack_require__(68), __webpack_require__(140), __webpack_require__(32), __webpack_require__(20), __webpack_require__(143), __webpack_require__(69)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(4), __webpack_require__(2), __webpack_require__(13), __webpack_require__(68), __webpack_require__(140), __webpack_require__(32), __webpack_require__(22), __webpack_require__(143), __webpack_require__(69)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -40547,7 +40554,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(5), __webpack_require__(153), __webpack_require__(71), __webpack_require__(35), __webpack_require__(13)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(5), __webpack_require__(153), __webpack_require__(71), __webpack_require__(35), __webpack_require__(12)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -41218,7 +41225,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(4), __webpack_require__(2), __webpack_require__(7), __webpack_require__(12), __webpack_require__(6), __webpack_require__(157), __webpack_require__(9), __webpack_require__(48), __webpack_require__(24), __webpack_require__(22), __webpack_require__(11), __webpack_require__(26), __webpack_require__(17), __webpack_require__(41), __webpack_require__(75), __webpack_require__(166), __webpack_require__(171)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(4), __webpack_require__(2), __webpack_require__(7), __webpack_require__(13), __webpack_require__(6), __webpack_require__(157), __webpack_require__(9), __webpack_require__(48), __webpack_require__(24), __webpack_require__(23), __webpack_require__(11), __webpack_require__(26), __webpack_require__(19), __webpack_require__(41), __webpack_require__(75), __webpack_require__(166), __webpack_require__(171)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -42558,7 +42565,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /* WEBPACK VAR INJECTION */(function(process) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(4), __webpack_require__(1), __webpack_require__(65), __webpack_require__(2), __webpack_require__(62), __webpack_require__(159), __webpack_require__(161), __webpack_require__(163), __webpack_require__(162), __webpack_require__(26), __webpack_require__(17), __webpack_require__(41), __webpack_require__(72), __webpack_require__(73), __webpack_require__(74), __webpack_require__(32)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(4), __webpack_require__(1), __webpack_require__(65), __webpack_require__(2), __webpack_require__(62), __webpack_require__(159), __webpack_require__(161), __webpack_require__(163), __webpack_require__(162), __webpack_require__(26), __webpack_require__(19), __webpack_require__(41), __webpack_require__(72), __webpack_require__(73), __webpack_require__(74), __webpack_require__(32)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -44431,7 +44438,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(4), __webpack_require__(2), __webpack_require__(7), __webpack_require__(5), __webpack_require__(167), __webpack_require__(9), __webpack_require__(22), __webpack_require__(6), __webpack_require__(26), __webpack_require__(17), __webpack_require__(78), __webpack_require__(63), __webpack_require__(11), __webpack_require__(31), __webpack_require__(169), __webpack_require__(170), __webpack_require__(77), __webpack_require__(75)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(4), __webpack_require__(2), __webpack_require__(7), __webpack_require__(5), __webpack_require__(167), __webpack_require__(9), __webpack_require__(23), __webpack_require__(6), __webpack_require__(26), __webpack_require__(19), __webpack_require__(78), __webpack_require__(63), __webpack_require__(11), __webpack_require__(31), __webpack_require__(169), __webpack_require__(170), __webpack_require__(77), __webpack_require__(75)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -46240,7 +46247,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(14), __webpack_require__(5), __webpack_require__(11), __webpack_require__(78), __webpack_require__(56), __webpack_require__(20), __webpack_require__(55)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(14), __webpack_require__(5), __webpack_require__(11), __webpack_require__(78), __webpack_require__(56), __webpack_require__(22), __webpack_require__(55)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -46560,19 +46567,19 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(21);
+var _TextFields = __webpack_require__(17);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
-var _Button = __webpack_require__(13);
+var _Button = __webpack_require__(12);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(23);
+var _DatePickerContainer = __webpack_require__(18);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
-var _SelectFields = __webpack_require__(16);
+var _SelectFields = __webpack_require__(15);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
@@ -46596,7 +46603,6 @@ var UserDataForm = function (_React$Component) {
 
         _this.handleSubmit = function (e) {
             e.preventDefault();
-            console.log(_this.state.birthdate);
             alert("Data submitted!");
 
             var obj = {};
@@ -46638,12 +46644,15 @@ var UserDataForm = function (_React$Component) {
                     className: 'md-cell',
                     label: 'User Type ID',
                     maxLength: 2,
+                    required: true,
                     onChange: this.handleChange.bind(this, 'user_type_id')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Fourm Pseudonym',
+                    maxLength: 64,
+                    required: true,
                     onChange: this.handleChange.bind(this, 'pseudonym')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
@@ -46651,6 +46660,7 @@ var UserDataForm = function (_React$Component) {
                     className: 'md-cell',
                     label: 'Attached Person ID',
                     type: 'number',
+                    required: true,
                     onChange: this.handleChange.bind(this, 'person_id')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
@@ -46658,6 +46668,7 @@ var UserDataForm = function (_React$Component) {
                     className: 'md-cell',
                     label: 'Time Zone',
                     maxLength: 2,
+                    required: true,
                     onChange: this.handleChange.bind(this, 'time_zone')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
@@ -46673,6 +46684,7 @@ var UserDataForm = function (_React$Component) {
                     label: 'Time Format',
                     type: 'number',
                     defaultValue: '1',
+                    maxLength: 1,
                     onChange: this.handleChange.bind(this, 'time_format')
                 }),
                 _react2.default.createElement(
@@ -46709,19 +46721,19 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(21);
+var _TextFields = __webpack_require__(17);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
-var _Button = __webpack_require__(13);
+var _Button = __webpack_require__(12);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(23);
+var _DatePickerContainer = __webpack_require__(18);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
-var _SelectFields = __webpack_require__(16);
+var _SelectFields = __webpack_require__(15);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
@@ -46790,13 +46802,16 @@ var UserTypeDataForm = function (_React$Component) {
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'User Type',
+                    label: 'Unique User Type Identifier',
+                    maxLength: 64,
+                    required: true,
                     onChange: this.handleChange.bind(this, 'user_type')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'User Type Description',
+                    maxLength: 256,
                     onChange: this.handleChange.bind(this, 'user_type_description')
                 }),
                 _react2.default.createElement(
@@ -46833,19 +46848,19 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(21);
+var _TextFields = __webpack_require__(17);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
-var _Button = __webpack_require__(13);
+var _Button = __webpack_require__(12);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(23);
+var _DatePickerContainer = __webpack_require__(18);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
-var _SelectFields = __webpack_require__(16);
+var _SelectFields = __webpack_require__(15);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
@@ -46918,6 +46933,7 @@ var PatientDataForm = function (_React$Component) {
                     className: 'md-cell',
                     label: 'Person ID',
                     type: 'number',
+                    required: true,
                     onChange: this.handleChange.bind(this, 'person_id')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
@@ -46925,12 +46941,14 @@ var PatientDataForm = function (_React$Component) {
                     className: 'md-cell',
                     label: 'Forum Pseudonym',
                     maxLength: 16,
+                    required: true,
                     onChange: this.handleChange.bind(this, 'forum_pseudonym')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Primary Physician\'s Name',
+                    maxLength: 64,
                     onChange: this.handleChange.bind(this, 'primary_physician')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
@@ -46944,7 +46962,9 @@ var PatientDataForm = function (_React$Component) {
                     id: 'select-field-1',
                     label: 'Care Buddy == Emergency Contact?',
                     className: 'md-cell',
+                    defaultValue: '0',
                     menuItems: ['Yes', 'No'],
+                    required: true,
                     onChange: this.handleChange.bind(this, 'care_buddy_emergency_same')
                 }),
                 careBuddyId,
@@ -46976,69 +46996,25 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(1);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _SelectFields = __webpack_require__(16);
-
-var _SelectFields2 = _interopRequireDefault(_SelectFields);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var TitleMenu = function TitleMenu(props) {
-    return _react2.default.createElement(_SelectFields2.default, props);
-};
-
-TitleMenu.propTypes = {
-    id: _propTypes2.default.string.isRequired,
-
-    // Injected by the Toolbar component
-    className: _propTypes2.default.string,
-    toolbar: _propTypes2.default.bool,
-    position: _propTypes2.default.string
-};
-
-TitleMenu.defaultProps = {
-    defaultValue: 'Person',
-    menuItems: ['Person', 'User', 'UserType', 'Patient', 'PatientDemographicFactors']
-};
-exports.default = TitleMenu;
-
-/***/ }),
-/* 177 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(21);
+var _TextFields = __webpack_require__(17);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
-var _Button = __webpack_require__(13);
+var _Button = __webpack_require__(12);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(23);
+var _DatePickerContainer = __webpack_require__(18);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
-var _SelectFields = __webpack_require__(16);
+var _SelectFields = __webpack_require__(15);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
@@ -47107,6 +47083,7 @@ var PatientDemographicFactorsDataForm = function (_React$Component) {
                     className: 'md-cell',
                     label: 'Patient ID',
                     type: 'number',
+                    required: true,
                     onChange: this.handleChange.bind(this, 'patient_id')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
@@ -47203,6 +47180,7 @@ var PatientDemographicFactorsDataForm = function (_React$Component) {
                     id: 'select-field-2',
                     label: 'Travelling During Treatment?',
                     className: 'md-cell',
+                    defaultValue: 'No',
                     menuItems: ['Yes', 'No'],
                     onChange: this.handleChange.bind(this, 'treatment_travel')
                 }),
@@ -47229,6 +47207,477 @@ var PatientDemographicFactorsDataForm = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = PatientDemographicFactorsDataForm;
+
+/***/ }),
+/* 177 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _SelectFields = __webpack_require__(15);
+
+var _SelectFields2 = _interopRequireDefault(_SelectFields);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var TitleMenu = function TitleMenu(props) {
+    return _react2.default.createElement(_SelectFields2.default, props);
+};
+
+TitleMenu.propTypes = {
+    id: _propTypes2.default.string.isRequired,
+
+    // Injected by the Toolbar component
+    className: _propTypes2.default.string,
+    toolbar: _propTypes2.default.bool,
+    position: _propTypes2.default.string
+};
+
+TitleMenu.defaultProps = {
+    defaultValue: 'Person',
+    menuItems: ['Person', 'User', 'UserType', 'Patient', 'PatientDemographicFactors', 'PatientSports', 'PatientSupporters', 'PatientDrugUse', 'PatientPsychoSocialFactors']
+};
+exports.default = TitleMenu;
+
+/***/ }),
+/* 178 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _TextFields = __webpack_require__(17);
+
+var _TextFields2 = _interopRequireDefault(_TextFields);
+
+var _Button = __webpack_require__(12);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _DatePickerContainer = __webpack_require__(18);
+
+var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
+
+var _SelectFields = __webpack_require__(15);
+
+var _SelectFields2 = _interopRequireDefault(_SelectFields);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PatientSportsDataForm = function (_React$Component) {
+    _inherits(PatientSportsDataForm, _React$Component);
+
+    function PatientSportsDataForm(props) {
+        _classCallCheck(this, PatientSportsDataForm);
+
+        var _this = _possibleConstructorReturn(this, (PatientSportsDataForm.__proto__ || Object.getPrototypeOf(PatientSportsDataForm)).call(this, props));
+
+        _this.handleSubmit = function (e) {
+            e.preventDefault();
+            alert("Data submitted!");
+
+            var obj = {};
+            for (var param in _this.state) {
+                obj[param] = _this.state[param];
+            }
+            obj.page = "PatientSports";
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://www.localhost:3000/save", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.send(JSON.stringify(obj));
+        };
+
+        _this.handleChange = function (name, value) {
+            _this.setState(_defineProperty({}, name, value));
+            console.log(value);
+        };
+
+        _this.state = {};
+        return _this;
+    }
+
+    _createClass(PatientSportsDataForm, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'form',
+                { className: 'md-grid text-fields__application', onSubmit: this.handleSubmit.bind(this) },
+                _react2.default.createElement(
+                    'h1',
+                    { className: 'md-cell md-cell--12' },
+                    'Patient Sports Table Data Entry Form'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Patient ID',
+                    type: 'number',
+                    required: true,
+                    onChange: this.handleChange.bind(this, 'patient_id')
+                }),
+                _react2.default.createElement(_SelectFields2.default, {
+                    id: 'age-select',
+                    label: 'Age group',
+                    defaultValue: 'Adult',
+                    className: 'md-cell',
+                    menuItems: ["Adult", "Teenager", "Child"],
+                    onChange: this.handleChange.bind(this, 'age_group')
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Sport Description',
+                    maxLength: 128,
+                    onChange: this.handleChange.bind(this, 'sport_description')
+                }),
+                _react2.default.createElement(
+                    _Button2.default,
+                    { flat: true,
+                        id: '',
+                        className: 'md-cell md-cell--12 md-cell--bottom md-cell--right',
+                        onClick: this.handleSubmit.bind(this) },
+                    'Submit'
+                )
+            );
+        }
+    }]);
+
+    return PatientSportsDataForm;
+}(_react2.default.Component);
+
+exports.default = PatientSportsDataForm;
+
+/***/ }),
+/* 179 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _TextFields = __webpack_require__(17);
+
+var _TextFields2 = _interopRequireDefault(_TextFields);
+
+var _Button = __webpack_require__(12);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _DatePickerContainer = __webpack_require__(18);
+
+var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
+
+var _SelectFields = __webpack_require__(15);
+
+var _SelectFields2 = _interopRequireDefault(_SelectFields);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PatientSupportersDataForm = function (_React$Component) {
+    _inherits(PatientSupportersDataForm, _React$Component);
+
+    function PatientSupportersDataForm(props) {
+        _classCallCheck(this, PatientSupportersDataForm);
+
+        var _this = _possibleConstructorReturn(this, (PatientSupportersDataForm.__proto__ || Object.getPrototypeOf(PatientSupportersDataForm)).call(this, props));
+
+        _this.handleSubmit = function (e) {
+            e.preventDefault();
+            alert("Data submitted!");
+
+            var obj = {};
+            for (var param in _this.state) {
+                obj[param] = _this.state[param];
+            }
+            obj.page = "PatientSupporters";
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://www.localhost:3000/save", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.send(JSON.stringify(obj));
+        };
+
+        _this.handleChange = function (name, value) {
+            _this.setState(_defineProperty({}, name, value));
+            console.log(value);
+        };
+
+        _this.state = {
+            time_format: 1
+        };
+        return _this;
+    }
+
+    _createClass(PatientSupportersDataForm, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'form',
+                { className: 'md-grid text-fields__application', onSubmit: this.handleSubmit.bind(this) },
+                _react2.default.createElement(
+                    'h1',
+                    { className: 'md-cell md-cell--12' },
+                    'Patient Supporters Table Data Entry Form'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Patient ID',
+                    type: 'number',
+                    required: true,
+                    onChange: this.handleChange.bind(this, 'patient_id')
+                }),
+                _react2.default.createElement(_SelectFields2.default, {
+                    id: 'supporter-select',
+                    label: 'Supporter Type',
+                    className: 'md-cell',
+                    menuItems: ["Spouse", "Descendants", "Dependents", "Parents", "Siblings", "Friends", "Coworkers", "Roommates", "Other"],
+                    required: true,
+                    onChange: this.handleChange.bind(this, 'supporter_type')
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Other Description',
+                    maxLength: 128,
+                    onChange: this.handleChange.bind(this, 'other_description')
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Supporter Name',
+                    maxLength: 128,
+                    required: true,
+                    onChange: this.handleChange.bind(this, 'supporter_name')
+                }),
+                _react2.default.createElement(
+                    _Button2.default,
+                    { flat: true,
+                        id: '',
+                        className: 'md-cell md-cell--12 md-cell--bottom md-cell--right',
+                        onClick: this.handleSubmit.bind(this) },
+                    'Submit'
+                )
+            );
+        }
+    }]);
+
+    return PatientSupportersDataForm;
+}(_react2.default.Component);
+
+exports.default = PatientSupportersDataForm;
+
+/***/ }),
+/* 180 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _TextFields = __webpack_require__(17);
+
+var _TextFields2 = _interopRequireDefault(_TextFields);
+
+var _Button = __webpack_require__(12);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _DatePickerContainer = __webpack_require__(18);
+
+var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
+
+var _SelectFields = __webpack_require__(15);
+
+var _SelectFields2 = _interopRequireDefault(_SelectFields);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PatientDrugUseDataForm = function (_React$Component) {
+    _inherits(PatientDrugUseDataForm, _React$Component);
+
+    function PatientDrugUseDataForm(props) {
+        _classCallCheck(this, PatientDrugUseDataForm);
+
+        var _this = _possibleConstructorReturn(this, (PatientDrugUseDataForm.__proto__ || Object.getPrototypeOf(PatientDrugUseDataForm)).call(this, props));
+
+        _this.handleSubmit = function (e) {
+            e.preventDefault();
+            alert("Data submitted!");
+
+            var obj = {};
+            for (var param in _this.state) {
+                obj[param] = _this.state[param];
+            }
+            obj.page = "PatientDrugUse";
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://www.localhost:3000/save", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.send(JSON.stringify(obj));
+        };
+
+        _this.handleChange = function (name, value) {
+            _this.setState(_defineProperty({}, name, value));
+            console.log(value);
+        };
+
+        _this.state = {};
+        return _this;
+    }
+
+    _createClass(PatientDrugUseDataForm, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'form',
+                { className: 'md-grid text-fields__application', onSubmit: this.handleSubmit.bind(this) },
+                _react2.default.createElement(
+                    'h1',
+                    { className: 'md-cell md-cell--12' },
+                    'Patient Drug Use Table Data Entry Form'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Patient ID',
+                    type: 'number',
+                    required: true,
+                    onChange: this.handleChange.bind(this, 'patient_id')
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Drug Name',
+                    maxLength: 128,
+                    required: true,
+                    onChange: this.handleChange.bind(this, 'drug_name')
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Drug Use Count Per Frequency',
+                    defaultValue: '0',
+                    type: 'number',
+                    required: true,
+                    onChange: this.handleChange.bind(this, 'drug_count')
+                }),
+                _react2.default.createElement(_SelectFields2.default, {
+                    id: 'age-select',
+                    label: 'Drug Use Frequency',
+                    className: 'md-cell',
+                    defaultValue: 'PerMonth',
+                    menuItems: ['PerDay', 'PerHour', 'PerWeek', 'PerMonth', 'PerQuarter', 'PerYear'],
+                    required: true,
+                    onChange: this.handleChange.bind(this, 'drug_frequency')
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'How Long Since This Was Taken',
+                    defaultValue: '0',
+                    type: 'number',
+                    required: true,
+                    onChange: this.handleChange.bind(this, 'since_length')
+                }),
+                _react2.default.createElement(_SelectFields2.default, {
+                    id: 'age-select',
+                    label: 'Since Unit',
+                    className: 'md-cell',
+                    defaultValue: 'Years',
+                    menuItems: ['Hours', 'Days', 'Weeks', 'Months', 'Quarters', 'Years'],
+                    required: true,
+                    onChange: this.handleChange.bind(this, 'since_unit')
+                }),
+                _react2.default.createElement(
+                    _Button2.default,
+                    { flat: true,
+                        id: '',
+                        className: 'md-cell md-cell--12 md-cell--bottom md-cell--right',
+                        onClick: this.handleSubmit.bind(this) },
+                    'Submit'
+                )
+            );
+        }
+    }]);
+
+    return PatientDrugUseDataForm;
+}(_react2.default.Component);
+
+exports.default = PatientDrugUseDataForm;
+
+/***/ }),
+/* 181 */
+/***/ (function(module, exports) {
+
+"use strict";
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'C:\\Users\\William\\Source\\Repos\\basic-react-app\\src\\js\\components\\PatientSocioEconomicFactorsDataForm.js'\n    at Error (native)");
 
 /***/ })
 /******/ ]);

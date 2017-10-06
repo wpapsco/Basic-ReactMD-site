@@ -49,6 +49,7 @@ export default class PatientDemographicFactorsDataForm extends React.Component {
                     className="md-cell"
                     label="Patient ID"
                     type="number"
+                    required
                     onChange={this.handleChange.bind(this, 'patient_id')}
                 />
                 <TextField
@@ -146,6 +147,7 @@ export default class PatientDemographicFactorsDataForm extends React.Component {
                     id="select-field-2"
                     label="Travelling During Treatment?"
                     className="md-cell"
+                    defaultValue="No"
                     menuItems={['Yes', 'No']}
                     onChange={this.handleChange.bind(this, 'treatment_travel')}
                 />

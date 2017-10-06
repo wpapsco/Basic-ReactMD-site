@@ -15,6 +15,16 @@ TitleMenu.propTypes = {
 
 TitleMenu.defaultProps = {
     defaultValue: 'Person',
-    menuItems: ['Person', 'User', 'UserType', 'Patient', 'PatientDemographicFactors'],
+    menuItems: [
+        'Person',
+        'User',
+        'UserType',
+        'Patient',
+        'PatientDemographicFactors',
+        'PatientSports',
+        'PatientSupporters',
+        'PatientDrugUse',
+        'PatientPsychoSocialFactors'
+    ],
 };
 export default TitleMenu;
