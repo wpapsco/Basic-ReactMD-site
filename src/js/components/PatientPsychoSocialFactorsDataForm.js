@@ -3,8 +3,9 @@ import TextField from 'react-md/lib/TextFields';
 import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
+import YesNoSelect from './YesNoSelect';
 
-export default class PatientSocioEconomicFactorsDataForm extends React.Component {
+export default class PatientPsychoSocialFactorsDataForm extends React.Component {
 
     constructor(props) {
         super(props);
@@ -20,7 +21,7 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
         for (var param in this.state) {
             obj[param] = this.state[param];
         }
-        obj.page = "PatientSocioEconomicFactors";
+        obj.page = "PatientPsychoSocialFactors";
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "http://www.localhost:3000/save", true);
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -37,7 +38,7 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
     render() {
         return (
             <form className="md-grid text-fields__application" onSubmit={this.handleSubmit.bind(this)}>
-                <h1 className="md-cell md-cell--12">Patient SocioEconomic Factors Table Data Entry Form</h1>
+                <h1 className="md-cell md-cell--12">Patient Psycho-Social Factors Table Data Entry Form</h1>
                 <br />
                 <TextField
                     id="floating-center-title"
@@ -63,11 +64,9 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     maxLength={2}
                     onChange={this.handleChange.bind(this, 'shared_meal_frequency')}
                 />
-                <SelectField
+                <YesNoSelect
                     id="auto-select"
                     label="Do you have your own car?"
-                    className="md-cell"
-                    menuItems={['Yes', 'No']}
                     onChange={this.handleChange.bind(this, 'transportation_auto')}
                 />
                 <TextField
@@ -176,11 +175,9 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     type="number"
                     onChange={this.handleChange.bind(this, 'household_monthly_expenses')}
                 />
-                <SelectField
+                <YesNoSelect
                     id="auto-select"
                     label="Do your expenses improve your health?"
-                    className="md-cell"
-                    menuItems={['Yes', 'No']}
                     onChange={this.handleChange.bind(this, 'expenses_improve_health')}
                 />
                 <TextField
@@ -214,11 +211,9 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     maxLength={32}
                     onChange={this.handleChange.bind(this, 'distance_to_clinic_units')}
                 />
-                <SelectField
+                <YesNoSelect
                     id="clinic-ease-select"
                     label="Is the clinic easy to use?"
-                    className="md-cell"
-                    menuItems={['Yes', 'No']}
                     onChange={this.handleChange.bind(this, 'clinic_ease_of_use')}
                 />
                 <TextField
@@ -237,11 +232,9 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     menuItems={['Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months']}
                     onChange={this.handleChange.bind(this, 'clinic_wait_time_unit')}
                 />
-                <SelectField
+                <YesNoSelect
                     id="proximity-select"
                     label="Does your health care need to be proximitous?"
-                    className="md-cell"
-                    menuItems={['Yes', 'No']}
                     onChange={this.handleChange.bind(this, 'need_proximity')}
                 />
                 <TextField

@@ -3,6 +3,7 @@ import TextField from 'react-md/lib/TextFields';
 import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
+import YesNoSelect from './YesNoSelect'
 
 export default class PatientDataForm extends React.Component {
 
@@ -33,6 +34,7 @@ export default class PatientDataForm extends React.Component {
         this.setState({
             [name]: value
         });
+        console.log(name);
         console.log(value);
     }
 

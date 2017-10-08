@@ -11,7 +11,10 @@ import PatientDemographicFactorsDataForm from './components/PatientDemographicFa
 import PatientSportsDataForm from './components/PatientSportsDataForm'
 import PatientSupportersDataForm from './components/PatientSupportersDataForm'
 import PatientDrugUseDataForm from './components/PatientDrugUseDataForm'
+import PatientPsychoSocialFactorsDataForm from './components/PatientPsychoSocialFactorsDataForm'
 import PatientSocioEconomicFactorsDataForm from './components/PatientSocioEconomicFactorsDataForm'
+import PatientTherapyRelatedFactorsDataForm from './components/PatientTherapyRelatedFactorsDataForm'
+import PatientMedicationsDataForm from './components/PatientMedicationsDataForm'
 import TitleMenu from './components/TitleMenu'
 
 webfontloader.load({
@@ -48,7 +51,10 @@ class Layout extends React.Component {
             (<PatientSportsDataForm />),
             (<PatientSupportersDataForm />),
             (<PatientDrugUseDataForm />),
-            (<PatientSocioEconomicFactorsDataForm />)
+            (<PatientSocioEconomicFactorsDataForm />),
+            (<PatientPsychoSocialFactorsDataForm />),
+            (<PatientTherapyRelatedFactorsDataForm />),
+            (<PatientMedicationsDataForm />)
         ]
 
         return (

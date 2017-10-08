@@ -5,7 +5,7 @@ import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import YesNoSelect from './YesNoSelect';
 
-export default class PatientDemographicFactorsDataForm extends React.Component {
+export default class PatientMedicationsDataForm extends React.Component {
 
     constructor(props) {
         super(props);
@@ -15,18 +15,13 @@ export default class PatientDemographicFactorsDataForm extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        alert("Data submitted!");
+
         var obj = {}
         for (var param in this.state) {
-            if (param == 'treatment_travel') {
-                obj.treatment_travel = this.state[param] == 'Yes';
-            } else {
-                obj[param] = this.state[param];
-            }
+            obj[param] = this.state[param];
         }
-        if (!obj.treatment_travel) {
-            obj.travel_plans = null;
-        }
-        obj.page = "PatientDemographicFactors";
+        obj.page = "PatientMedications";
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "http://www.localhost:3000/save", true);
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -43,7 +38,7 @@ export default class PatientDemographicFactorsDataForm extends React.Component {
     render() {
         return (
             <form className="md-grid text-fields__application" onSubmit={this.handleSubmit.bind(this)}>
-                <h1 className="md-cell md-cell--12">Patient Demographic Factors Table Data Entry Form</h1>
+                <h1 className="md-cell md-cell--12">Patient Medications Table Data Entry Form</h1>
                 <br />
                 <TextField
                     id="floating-center-title"
@@ -56,105 +51,86 @@ export default class PatientDemographicFactorsDataForm extends React.Component {
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Employer Name"
+                    label="CuraCast Location"
+                    maxLength={32}
+                    onChange={this.handleChange.bind(this, 'curacast_location')}
+                />
+                <TextField
+                    id="floating-center-title"
+                    className="md-cell"
+                    label="CuraCast Location Other"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'employer_name')}
+                    onChange={this.handleChange.bind(this, 'curacast_location_other')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Supervisor Name"
+                    label="Mobile Phone Brand And Model"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'supervisor_name')}
+                    onChange={this.handleChange.bind(this, 'mobile_phone_brand_and_model')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Occupation"
+                    label="Mobile Phone Carrier"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'occupation')}
-                />
-                <TextField //Should probably be a selectfield
-                    id="floating-center-title"
-                    className="md-cell"
-                    label="Race"
-                    maxLength={64}
-                    onChange={this.handleChange.bind(this, 'race')}
+                    onChange={this.handleChange.bind(this, 'mobile_phone_carrier')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Race Other"
+                    label="Mobile Phone Carrier Account"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'race_other')}
-                />
-                <TextField
-                    id="floating-center-title" //Should also be a select field prolly
-                    className="md-cell"
-                    label="Ethnicity"
-                    maxLength={64}
-                    onChange={this.handleChange.bind(this, 'ethnicity')}
+                    onChange={this.handleChange.bind(this, 'mobile_phone_carrier_account')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Ethnicity Other"
+                    label="Electricity Provider"
+                    maxLength={64}
+                    onChange={this.handleChange.bind(this, 'electricity_provider')}
+                />
+                <TextField
+                    id="floating-center-title"
+                    className="md-cell"
+                    label="Electricity Account"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'ethnicity_other')}
+                    onChange={this.handleChange.bind(this, 'electricity_account')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Mobile Device Brand"
+                    label="Internet Provider"
                     maxLength={64}
-                    onChange={this.handleChange.bind(this, 'mobile_device_brand')}
+                    onChange={this.handleChange.bind(this, 'internet_provider')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Mobile Device Model"
-                    maxLength={64}
-                    onChange={this.handleChange.bind(this, 'mobile_device_model')}
-                />
-                <SelectField
-                    id="select-field-1"
-                    label="Mobile Phone Style"
-                    className="md-cell"
-                    menuItems={['Touchscreen style', 'Flip style']}
-                    onChange={this.handleChange.bind(this, 'mobile_phone_style')}
-                />
-                <TextField
-                    id="floating-center-title"
-                    className="md-cell"
-                    label="Mobile Device Carrier"
-                    maxLength={64}
-                    onChange={this.handleChange.bind(this, 'mobile_device_carrier')}
-                />
-                <TextField
-                    id="floating-center-title" //again maybe needs a selectfield
-                    className="md-cell"
-                    label="Curacast Device Placement"
-                    maxLength={64}
-                    onChange={this.handleChange.bind(this, 'curacast_device_placement')}
-                />
-                <TextField
-                    id="floating-center-title"
-                    className="md-cell"
-                    label="Curacast Device Placement Other"
+                    label="Internet Account"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'curacast_device_placement_other')}
+                    onChange={this.handleChange.bind(this, 'internet_account')}
+                />
+                <TextField
+                    id="floating-center-title"
+                    className="md-cell"
+                    label="Children Under 18"
+                    maxLength={2}
+                    type="number"
+                    onChange={this.handleChange.bind(this, 'children_under_18')}
                 />
                 <YesNoSelect
-                    id="select-field-2"
-                    label="Travelling During Treatment?"
-                    onChange={this.handleChange.bind(this, 'treatment_travel')}
+                    id="pet-select"
+                    label="Do you have pets?"
+                    onChange={this.handleChange.bind(this, 'has_pets')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Travel Plans"
-                    maxLength={512}
-                    onChange={this.handleChange.bind(this, 'travel_plans')}
+                    label="Individuals In Household"
+                    maxLength={2}
+                    type="number"
+                    onChange={this.handleChange.bind(this, 'individuals_count')}
                 />
                 <Button flat
                     id=""

@@ -24,7 +24,10 @@ TitleMenu.defaultProps = {
         'PatientSports',
         'PatientSupporters',
         'PatientDrugUse',
-        'PatientPsychoSocialFactors'
+        'PatientSocioEconomicFactors',
+        'PatientPsychoSocialFactors',
+        'PatientTherapyRelatedFactors',
+        'PatientMedications'
     ],
 };
 export default TitleMenu;
