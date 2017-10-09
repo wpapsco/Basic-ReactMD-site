@@ -15,7 +15,11 @@ import PatientPsychoSocialFactorsDataForm from './components/PatientPsychoSocial
 import PatientSocioEconomicFactorsDataForm from './components/PatientSocioEconomicFactorsDataForm'
 import PatientTherapyRelatedFactorsDataForm from './components/PatientTherapyRelatedFactorsDataForm'
 import PatientMedicationsDataForm from './components/PatientMedicationsDataForm'
+import EmployersDataForm from './components/EmployersDataForm'
+import CohortsDataForm from './components/CohortsDataForm'
+import CohortsPatientsDataForm from './components/CohortsPatientsDataForm'
 import TitleMenu from './components/TitleMenu'
+import DataForm from './components/DataForm'
 
 webfontloader.load({
     google: {
@@ -35,18 +39,22 @@ class Layout extends React.Component {
     onFormUpdate = (name, value) => {
         console.log(value);
         this.setState({
-            'form' : name,
-            'formIndex' : value
+            'form': name,
+            'formIndex': value
         });
     }
 
+    handleChange = (value, e) => {
+        console.log(e.target.name);
+        console.log(value);
+    }
+
     render() {
-        var form = (<div />);
         var forms = [
-            (<PersonDataForm />), 
-            (<UserDataForm />), 
-            (<UserTypeDataForm />), 
-            (<PatientDataForm />), 
+            (<PersonDataForm />),
+            (<UserDataForm />),
+            (<UserTypeDataForm />),
+            (<PatientDataForm />),
             (<PatientDemographicFactorsDataForm />),
             (<PatientSportsDataForm />),
             (<PatientSupportersDataForm />),
@@ -54,7 +62,10 @@ class Layout extends React.Component {
             (<PatientSocioEconomicFactorsDataForm />),
             (<PatientPsychoSocialFactorsDataForm />),
             (<PatientTherapyRelatedFactorsDataForm />),
-            (<PatientMedicationsDataForm />)
+            (<PatientMedicationsDataForm />),
+            (<EmployersDataForm />),
+            (<CohortsDataForm onChange={this.handleChange.bind(this)} />),
+            (<CohortsPatientsDataForm onChange={this.handleChange.bind(this)} />)
         ]
 
         return (

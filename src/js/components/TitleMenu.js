@@ -27,7 +27,10 @@ TitleMenu.defaultProps = {
         'PatientSocioEconomicFactors',
         'PatientPsychoSocialFactors',
         'PatientTherapyRelatedFactors',
-        'PatientMedications'
+        'PatientMedications', 
+        'Employers',
+        'Cohorts',
+        'CohortsPatients'
     ],
 };
 export default TitleMenu;
