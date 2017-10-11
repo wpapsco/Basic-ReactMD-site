@@ -6,7 +6,7 @@ import SelectField from 'react-md/lib/SelectFields';
 import YesNoSelect from './YesNoSelect';
 import DataForm from './DataForm';
 
-export default class CohortsDataForm extends React.Component {
+export default class DevicesDataForm extends React.Component {
 
     constructor(props) {
         super(props);
@@ -16,45 +16,40 @@ export default class CohortsDataForm extends React.Component {
     
     render() {
         return (
-            <DataForm tableName="Cohorts">
+            <DataForm tableName="Devices">
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Cohort Description"
-                    name="cohort_description"
-                    maxLength={512}
+                    label="Device Serial"
+                    name="device_serial"
+                    maxLength={10}
+                    required
                     onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Cohort Clinic"
-                    maxLength={128}
-                    name="cohort_clinic"
+                    label="Cell Modem IMEI"
+                    name="cell_modem_imei"
+                    type="number"
+                    required
                     onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Cohort Payer"
-                    maxLength={128}
-                    name="cohort_payer"
+                    label="SIM Card ICCID"
+                    name="sim_card_iccid"
+                    type="number"
                     onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Cohort Provider"
-                    maxLength={128}
-                    name="cohort_provider"
-                    onChange={this.props.onChange}
-                />
-                <TextField
-                    id="floating-center-title"
-                    className="md-cell"
-                    label="Cohort Case Manager"
-                    maxLength={128}
-                    name="cohort_case_manager"
+                    label="Model Number"
+                    name="model_number"
+                    maxLength={10}
+                    required
                     onChange={this.props.onChange}
                 />
             </DataForm>

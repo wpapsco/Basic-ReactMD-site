@@ -20,6 +20,11 @@ import CohortsDataForm from './components/CohortsDataForm'
 import CohortsPatientsDataForm from './components/CohortsPatientsDataForm'
 import TitleMenu from './components/TitleMenu'
 import DataForm from './components/DataForm'
+import DevicesDataForm from './components/DevicesDataForm'
+import DeviceFirmwareDataForm from './components/DeviceFirmwareDataForm'
+import DevicesToPatientsDataForm from './components/DevicesToPatientsDataForm'
+import DeviceLifecycleStatesDataForm from './components/DeviceLifecycleStatesDataForm'
+import DeviceLifecycleHistoryDataForm from './components/DeviceLifecycleHistoryDataForm'
 
 webfontloader.load({
     google: {
@@ -44,8 +49,15 @@ class Layout extends React.Component {
         });
     }
 
-    handleChange = (value, e) => {
-        console.log(e.target.name);
+    handleChange = (value, e, extra) => {
+        if (e.target) {
+            console.log(e.target.name);
+        } else {
+            console.log(e);
+        }
+        if (extra) {
+            console.log(extra.target.name);
+        }
         console.log(value);
     }
 
@@ -65,7 +77,12 @@ class Layout extends React.Component {
             (<PatientMedicationsDataForm />),
             (<EmployersDataForm />),
             (<CohortsDataForm onChange={this.handleChange.bind(this)} />),
-            (<CohortsPatientsDataForm onChange={this.handleChange.bind(this)} />)
+            (<CohortsPatientsDataForm onChange={this.handleChange.bind(this)} />),
+            (<DevicesDataForm onChange={this.handleChange.bind(this)} />),
+            (<DeviceFirmwareDataForm onChange={this.handleChange.bind(this)} />),
+            (<DevicesToPatientsDataForm onChange={this.handleChange.bind(this)} />),
+            (<DeviceLifecycleStatesDataForm onChange={this.handleChange.bind(this)} />),
+            (<DeviceLifecycleHistoryDataForm onChange={this.handleChange.bind(this)} />)
         ]
 
         return (

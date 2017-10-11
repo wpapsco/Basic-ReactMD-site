@@ -30,7 +30,12 @@ TitleMenu.defaultProps = {
         'PatientMedications', 
         'Employers',
         'Cohorts',
-        'CohortsPatients'
+        'CohortsPatients',
+        'Devices',
+        'DeviceFirmware',
+        'DevicesToPatients',
+        'DeviceLifecycleStates',
+        'DeviceLifecycleHistoryDataForm'
     ],
 };
 export default TitleMenu;
