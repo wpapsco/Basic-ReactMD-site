@@ -1,30 +1,52 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import webfontloader from "webfontloader";
+
 import Paper from 'react-md/lib/Papers';
 import Toolbar from 'react-md/lib/Toolbars';
+
+import TitleMenu from './components/TitleMenu'
+import DataForm from './components/DataForm'
+
 import PersonDataForm from './components/PersonDataForm'
 import UserDataForm from './components/UserDataForm'
 import UserTypeDataForm from './components/UserTypeDataForm'
-import PatientDataForm from './components/PatientDataForm'
-import PatientDemographicFactorsDataForm from './components/PatientDemographicFactorsDataForm'
-import PatientSportsDataForm from './components/PatientSportsDataForm'
-import PatientSupportersDataForm from './components/PatientSupportersDataForm'
-import PatientDrugUseDataForm from './components/PatientDrugUseDataForm'
-import PatientPsychoSocialFactorsDataForm from './components/PatientPsychoSocialFactorsDataForm'
-import PatientSocioEconomicFactorsDataForm from './components/PatientSocioEconomicFactorsDataForm'
-import PatientTherapyRelatedFactorsDataForm from './components/PatientTherapyRelatedFactorsDataForm'
-import PatientMedicationsDataForm from './components/PatientMedicationsDataForm'
 import EmployersDataForm from './components/EmployersDataForm'
 import CohortsDataForm from './components/CohortsDataForm'
 import CohortsPatientsDataForm from './components/CohortsPatientsDataForm'
-import TitleMenu from './components/TitleMenu'
-import DataForm from './components/DataForm'
-import DevicesDataForm from './components/DevicesDataForm'
-import DeviceFirmwareDataForm from './components/DeviceFirmwareDataForm'
-import DevicesToPatientsDataForm from './components/DevicesToPatientsDataForm'
-import DeviceLifecycleStatesDataForm from './components/DeviceLifecycleStatesDataForm'
-import DeviceLifecycleHistoryDataForm from './components/DeviceLifecycleHistoryDataForm'
+import {
+    PatientDataForm,
+    PatientDemographicFactorsDataForm,
+    PatientSportsDataForm,
+    PatientSupportersDataForm,
+    PatientDrugUseDataForm,
+    PatientPsychoSocialFactorsDataForm,
+    PatientSocioEconomicFactorsDataForm,
+    PatientTherapyRelatedFactorsDataForm,
+    PatientMedicationsDataForm
+} from './components/PatientsTable';
+import {
+    DeviceFirmwareDataForm,
+    DeviceLifecycleHistoryDataForm,
+    DeviceLifecycleStatesDataForm,
+    DevicesDataForm,
+    DevicesToPatientsDataForm
+} from './components/DevicesTable';
+import {
+    ManifestsDataForm,
+    PackagesDataForm,
+    MedicationTracksDataForm,
+    WellsDataForm,
+    RegimensDataForm
+} from './components/RegimensTable';
+import {
+    AddressesDataForm,
+    AddressTypeDataForm,
+    PhonesDataForm,
+    PhoneTypeDataForm,
+    EmailsDataForm,
+    EmailTypeDataForm
+} from './components/AddressesTable';
 
 webfontloader.load({
     google: {
@@ -50,15 +72,13 @@ class Layout extends React.Component {
     }
 
     handleChange = (value, e, extra) => {
-        if (e.target) {
-            console.log(e.target.name);
-        } else {
-            console.log(e);
-        }
-        if (extra) {
-            console.log(extra.target.name);
-        }
         console.log(value);
+        console.log(e.target.name);
+        console.log(extra);
+    }
+
+    onSubmit = (e) => {
+        console.log(e.target.name);
     }
 
     render() {
@@ -82,7 +102,18 @@ class Layout extends React.Component {
             (<DeviceFirmwareDataForm onChange={this.handleChange.bind(this)} />),
             (<DevicesToPatientsDataForm onChange={this.handleChange.bind(this)} />),
             (<DeviceLifecycleStatesDataForm onChange={this.handleChange.bind(this)} />),
-            (<DeviceLifecycleHistoryDataForm onChange={this.handleChange.bind(this)} />)
+            (<DeviceLifecycleHistoryDataForm onChange={this.handleChange.bind(this)} />),
+            (<ManifestsDataForm onChange={this.handleChange.bind(this)} />),
+            (<PackagesDataForm onChange={this.handleChange.bind(this)} />),
+            (<MedicationTracksDataForm onChange={this.handleChange.bind(this)} />),
+            (<WellsDataForm onChange={this.handleChange.bind(this)} />),
+            (<RegimensDataForm onChange={this.handleChange.bind(this)} />),
+            (<AddressTypeDataForm onChange={this.handleChange.bind(this)} />),
+            (<EmailTypeDataForm onChange={this.handleChange.bind(this)} />),
+            (<PhoneTypeDataForm onChange={this.handleChange.bind(this)} />),
+            (<AddressesDataForm onChange={this.handleChange.bind(this)} />),
+            (<EmailsDataForm onChange={this.handleChange.bind(this)} />),
+            (<PhonesDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />)
         ]
 
         return (

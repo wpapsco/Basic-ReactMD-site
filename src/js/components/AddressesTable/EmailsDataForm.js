@@ -4,25 +4,25 @@ import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
-import YesNoSelect from './YesNoSelect';
-import DataForm from './DataForm';
+import YesNoSelect from '../YesNoSelect';
+import DataForm from '../DataForm';
 
-export default class DeviceFirmwareDataForm extends React.Component {
+export default class EmailsDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
         }
     }
-    
+
     render() {
         return (
-            <DataForm tableName="DeviceFirmware">
+            <DataForm tableName="Emails">
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Device ID"
-                    name="device_id"
+                    label="Person ID"
+                    name="person_id"
                     type="number"
                     required
                     onChange={this.props.onChange}
@@ -30,26 +30,25 @@ export default class DeviceFirmwareDataForm extends React.Component {
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Firmware Version"
-                    name="firmware_version"
-                    maxLength={16}
+                    label="Email Address"
+                    name="email_address"
+                    maxLength={256}
                     required
                     onChange={this.props.onChange}
                 />
-                <TimePicker
-                    id="appointment-time-auto"
+                <TextField
+                    id="floating-center-title"
                     className="md-cell"
-                    label="Firmware Install Time"
-                    name="firmware_install_time"
+                    label="Email Type ID"
+                    name="email_type_id"
+                    type="number"
                     required
                     onChange={this.props.onChange}
                 />
-                <DatePicker
-                    id="appointment-date-auto"
-                    label="Firmware Install Date"
-                    name="firmware_install_date"
-                    className="md-cell"
-                    required
+                <YesNoSelect
+                    id="contact-select"
+                    label="Primary Email Address"
+                    name="primary_email_address"
                     onChange={this.props.onChange}
                 />
             </DataForm>

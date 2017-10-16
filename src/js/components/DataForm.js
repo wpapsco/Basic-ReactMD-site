@@ -4,7 +4,20 @@ import Button from 'react-md/lib/Buttons/Button';
 export default class DataForm extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.props.children);
+        console.log(this.props);
+    }
+
+    componentWillMount() {
+        console.log(this.props.onSubmit)
+        if (!this.props.onSubmit) {
+            this.setState({
+                onSubmit: this.handleSubmit.bind(this)
+            });
+        } else {
+            this.setState({
+                onSubmit: this.props.onSubmit
+            });
+        }
     }
 
     handleSubmit = (e) => {
@@ -29,14 +42,15 @@ export default class DataForm extends React.Component {
 
     render() {
         return (
-            <form className="md-grid text-fields__application" onSubmit={this.props.onSubmit || this.handleSubmit.bind(this)}>
+            <form className="md-grid text-fields__application" onSubmit={this.state.onSubmit}>
                 <h1 className="md-cell md-cell--12">{this.props.tableName} Table Data Entry Form</h1>
                 <br />
                 {this.props.children}
                 <Button flat
-                    id=""
+                    id={this.props.tableName}
+                    name={this.props.tableName}
                     className="md-cell md-cell--12 md-cell--bottom md-cell--right"
-                    onClick={this.props.onSubmit || this.handleSubmit.bind(this)} >
+                    onClick={this.state.onSubmit} >
                     Submit
                 </Button>
             </form>

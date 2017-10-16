@@ -35,7 +35,18 @@ TitleMenu.defaultProps = {
         'DeviceFirmware',
         'DevicesToPatients',
         'DeviceLifecycleStates',
-        'DeviceLifecycleHistoryDataForm'
+        'DeviceLifecycleHistoryDataForm',
+        'ManifestsDataForm',
+        'Packages',
+        'MedicationTracks',
+        'WellsDataForm',
+        'Regimens',
+        'AddressType',
+        'EmailType',
+        'PhoneType',
+        'Addresses',
+        'Emails',
+        'Phones'
     ],
 };
 export default TitleMenu;

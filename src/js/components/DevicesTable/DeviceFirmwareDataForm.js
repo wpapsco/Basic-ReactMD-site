@@ -3,10 +3,11 @@ import TextField from 'react-md/lib/TextFields';
 import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
-import YesNoSelect from './YesNoSelect';
-import DataForm from './DataForm';
+import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
+import YesNoSelect from '../YesNoSelect';
+import DataForm from '../DataForm';
 
-export default class DevicesDataForm extends React.Component {
+export default class DeviceFirmwareDataForm extends React.Component {
 
     constructor(props) {
         super(props);
@@ -16,21 +17,12 @@ export default class DevicesDataForm extends React.Component {
     
     render() {
         return (
-            <DataForm tableName="Devices">
+            <DataForm tableName="DeviceFirmware">
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="Device Serial"
-                    name="device_serial"
-                    maxLength={10}
-                    required
-                    onChange={this.props.onChange}
-                />
-                <TextField
-                    id="floating-center-title"
-                    className="md-cell"
-                    label="Cell Modem IMEI"
-                    name="cell_modem_imei"
+                    label="Device ID"
+                    name="device_id"
                     type="number"
                     required
                     onChange={this.props.onChange}
@@ -38,17 +30,25 @@ export default class DevicesDataForm extends React.Component {
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
-                    label="SIM Card ICCID"
-                    name="sim_card_iccid"
-                    type="number"
+                    label="Firmware Version"
+                    name="firmware_version"
+                    maxLength={16}
+                    required
                     onChange={this.props.onChange}
                 />
-                <TextField
-                    id="floating-center-title"
+                <TimePicker
+                    id="appointment-time-auto"
                     className="md-cell"
-                    label="Model Number"
-                    name="model_number"
-                    maxLength={10}
+                    label="Firmware Install Time"
+                    name="firmware_install_time"
+                    required
+                    onChange={this.props.onChange}
+                />
+                <DatePicker
+                    id="appointment-date-auto"
+                    label="Firmware Install Date"
+                    name="firmware_install_date"
+                    className="md-cell"
                     required
                     onChange={this.props.onChange}
                 />

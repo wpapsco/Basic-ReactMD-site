@@ -8,7 +8,7 @@ export default class YesNoSelect extends React.Component {
     }
 
     handleChange(e) {
-        this.props.onChange(e=='Yes');
+        this.props.onChange(e=='Yes', {target:{name:this.props.id}});
     }
 
     render() {
@@ -18,6 +18,7 @@ export default class YesNoSelect extends React.Component {
                 label={this.props.label}
                 className="md-cell"
                 menuItems={['Yes', 'No']}
+                name={this.props.id}
                 onChange={this.handleChange.bind(this)}
             />
         );
