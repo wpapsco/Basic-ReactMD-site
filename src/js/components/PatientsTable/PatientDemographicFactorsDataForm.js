@@ -4,6 +4,7 @@ import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import YesNoSelect from '../YesNoSelect';
+import DataForm from '../DataForm';
 
 export default class PatientDemographicFactorsDataForm extends React.Component {
 
@@ -13,156 +14,137 @@ export default class PatientDemographicFactorsDataForm extends React.Component {
         }
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        var obj = {}
-        for (var param in this.state) {
-            if (param == 'treatment_travel') {
-                obj.treatment_travel = this.state[param] == 'Yes';
-            } else {
-                obj[param] = this.state[param];
-            }
-        }
-        if (!obj.treatment_travel) {
-            obj.travel_plans = null;
-        }
-        obj.page = "PatientDemographicFactors";
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://www.localhost:3000/save", true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.send(JSON.stringify(obj));
-    }
-
-    handleChange = (name, value) => {
-        this.setState({
-            [name]: value
-        });
-        console.log(value);
-    }
-
     render() {
         return (
-            <form className="md-grid text-fields__application" onSubmit={this.handleSubmit.bind(this)}>
-                <h1 className="md-cell md-cell--12">Patient Demographic Factors Table Data Entry Form</h1>
-                <br />
+            <DataForm tableName="PatientDemographicFactors" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Patient ID"
                     type="number"
                     required
-                    onChange={this.handleChange.bind(this, 'patient_id')}
+                    name='patient_id'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer Name"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'employer_name')}
+                    name='employer_name'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Supervisor Name"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'supervisor_name')}
+                    name='supervisor_name'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Occupation"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'occupation')}
+                    name='occupation'
+                    onChange={this.props.onChange}
                 />
                 <TextField //Should probably be a selectfield
                     id="floating-center-title"
                     className="md-cell"
                     label="Race"
                     maxLength={64}
-                    onChange={this.handleChange.bind(this, 'race')}
+                    name='race'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Race Other"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'race_other')}
+                    name='race_other'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title" //Should also be a select field prolly
                     className="md-cell"
                     label="Ethnicity"
                     maxLength={64}
-                    onChange={this.handleChange.bind(this, 'ethnicity')}
+                    name='ethnicity'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Ethnicity Other"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'ethnicity_other')}
+                    name='ethnicity_other'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Mobile Device Brand"
                     maxLength={64}
-                    onChange={this.handleChange.bind(this, 'mobile_device_brand')}
+                    name='mobile_device_brand'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Mobile Device Model"
                     maxLength={64}
-                    onChange={this.handleChange.bind(this, 'mobile_device_model')}
+                    name='mobile_device_model'
+                    onChange={this.props.onChange}
                 />
                 <SelectField
                     id="select-field-1"
                     label="Mobile Phone Style"
                     className="md-cell"
                     menuItems={['Touchscreen style', 'Flip style']}
-                    onChange={this.handleChange.bind(this, 'mobile_phone_style')}
+                    name='mobile_phone_style'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Mobile Device Carrier"
                     maxLength={64}
-                    onChange={this.handleChange.bind(this, 'mobile_device_carrier')}
+                    name='mobile_device_carrier'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title" //again maybe needs a selectfield
                     className="md-cell"
                     label="Curacast Device Placement"
                     maxLength={64}
-                    onChange={this.handleChange.bind(this, 'curacast_device_placement')}
+                    name='curacast_device_placement'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Curacast Device Placement Other"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'curacast_device_placement_other')}
+                    name='curacast_device_placement_other'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="select-field-2"
                     label="Travelling During Treatment?"
-                    onChange={this.handleChange.bind(this, 'treatment_travel')}
+                    name='treatment_travel'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Travel Plans"
                     maxLength={512}
-                    onChange={this.handleChange.bind(this, 'travel_plans')}
+                    name='travel_plans'
+                    onChange={this.props.onChange}
                 />
-                <Button flat
-                    id=""
-                    className="md-cell md-cell--12 md-cell--bottom md-cell--right"
-                    onClick={this.handleSubmit.bind(this)} >
-                    Submit
-                </Button>
-            </form>
+            </DataForm>
         );
     }
 }

@@ -3,6 +3,7 @@ import TextField from 'react-md/lib/TextFields';
 import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
+import DataForm from '../DataForm';
 
 export default class PatientSportsDataForm extends React.Component {
 
@@ -11,41 +12,18 @@ export default class PatientSportsDataForm extends React.Component {
         this.state = {
         }
     }
-
-    handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Data submitted!");
-
-        var obj = {}
-        for (var param in this.state) {
-            obj[param] = this.state[param];
-        }
-        obj.page = "PatientSports";
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://www.localhost:3000/save", true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.send(JSON.stringify(obj));
-    }
-
-    handleChange = (name, value) => {
-        this.setState({
-            [name]: value
-        });
-        console.log(value);
-    }
-
+    
     render() {
         return (
-            <form className="md-grid text-fields__application" onSubmit={this.handleSubmit.bind(this)}>
-                <h1 className="md-cell md-cell--12">Patient Sports Table Data Entry Form</h1>
-                <br />
+            <DataForm tableName="PatientSports" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Patient ID"
                     type="number"
                     required
-                    onChange={this.handleChange.bind(this, 'patient_id')}
+                    name='patient_id'
+                    onChange={this.props.onChange}
                 />
                 <SelectField
                     id="age-select"
@@ -53,22 +31,18 @@ export default class PatientSportsDataForm extends React.Component {
                     defaultValue='Adult'
                     className="md-cell"
                     menuItems={["Adult", "Teenager", "Child"]}
-                    onChange={this.handleChange.bind(this, 'age_group')}
+                    name='age_group'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Sport Description"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'sport_description')}
+                    name='sport_description'
+                    onChange={this.props.onChange}
                 />
-                <Button flat
-                    id=""
-                    className="md-cell md-cell--12 md-cell--bottom md-cell--right"
-                    onClick={this.handleSubmit.bind(this)} >
-                    Submit
-                </Button>
-            </form>
+            </DataForm>
         );
     }
 }

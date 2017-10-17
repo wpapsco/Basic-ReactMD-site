@@ -17,7 +17,7 @@ export default class DeviceLifecycleHistoryDataForm extends React.Component {
 
     render() {
         return (
-            <DataForm tableName="DeviceLifecycleHistory">
+            <DataForm tableName="DeviceLifecycleHistory" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"

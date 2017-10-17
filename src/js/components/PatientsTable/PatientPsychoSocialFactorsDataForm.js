@@ -4,6 +4,7 @@ import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import YesNoSelect from '../YesNoSelect';
+import DataForm from '../DataForm';
 
 export default class PatientPsychoSocialFactorsDataForm extends React.Component {
 
@@ -13,40 +14,17 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
         }
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Data submitted!");
-
-        var obj = {}
-        for (var param in this.state) {
-            obj[param] = this.state[param];
-        }
-        obj.page = "PatientPsychoSocialFactors";
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://www.localhost:3000/save", true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.send(JSON.stringify(obj));
-    }
-
-    handleChange = (name, value) => {
-        this.setState({
-            [name]: value
-        });
-        console.log(value);
-    }
-
     render() {
         return (
-            <form className="md-grid text-fields__application" onSubmit={this.handleSubmit.bind(this)}>
-                <h1 className="md-cell md-cell--12">Patient Psycho-Social Factors Table Data Entry Form</h1>
-                <br />
+            <DataForm tableName="PsychoSocialFactors" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Patient ID"
                     type="number"
                     required
-                    onChange={this.handleChange.bind(this, 'patient_id')}
+                    name='patient_id'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -54,7 +32,8 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Meal Frequency"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'meal_frequency')}
+                    name='meal_frequency'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -62,12 +41,14 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Shared Meal Frequency"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'shared_meal_frequency')}
+                    name='shared_meal_frequency'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="auto-select"
                     label="Do you have your own car?"
-                    onChange={this.handleChange.bind(this, 'transportation_auto')}
+                    name='transportation_auto'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -75,7 +56,8 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Public Transportation Frequency"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'public_transportation_frequency')}
+                    name='public_transportation_frequency'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -83,7 +65,8 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Transportation Difficulty"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'transportation_difficulty')}
+                    name='transportation_difficulty'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -91,7 +74,8 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Hours At Home Per Day"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'hours_at_home_day')}
+                    name='hours_at_home_day'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -99,7 +83,8 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Nights At Home Per Week"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'nights_home_week')}
+                    name='nights_home_week'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -107,7 +92,8 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Productivity"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'productivity')}
+                    name='productivity'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -115,42 +101,48 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Nights Spent With Family Per Week"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'family_nights_week')}
+                    name='family_nights_week'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Favorite Activity 1"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'favorite_activity_1')}
+                    name='favorite_activity_1'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Favorite Activity 2"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'favorite_activity_2')}
+                    name='favorite_activity_2'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Favorite Activity 3"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'favorite_activity_3')}
+                    name='favorite_activity_3'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Responsibility Family Vs Friends"
                     maxLength={64}
-                    onChange={this.handleChange.bind(this, 'responsibility_family_friends')}
+                    name='responsibility_family_friends'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Responsibility Work Vs Home"
                     maxLength={64}
-                    onChange={this.handleChange.bind(this, 'responsibility_work_home')}
+                    name='responsibility_work_home'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -158,7 +150,8 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Relationship With Doctor"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'relationship_doctor')}
+                    name='relationship_doctor'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -166,19 +159,22 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Trust With Doctor"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'trust_doctor')}
+                    name='trust_doctor'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Household Healthcare Expenses Per Month"
                     type="number"
-                    onChange={this.handleChange.bind(this, 'household_monthly_expenses')}
+                    name='household_monthly_expenses'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="auto-select"
                     label="Do your expenses improve your health?"
-                    onChange={this.handleChange.bind(this, 'expenses_improve_health')}
+                    name='expenses_improve_health'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -186,7 +182,8 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Time To Clinic"
                     type="number"
                     maxLength={10}
-                    onChange={this.handleChange.bind(this, 'time_to_clinic')}
+                    name='time_to_clinic'
+                    onChange={this.props.onChange}
                 />
                 <SelectField
                     id="clinic-unit-select"
@@ -194,7 +191,8 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     className="md-cell"
                     defaultValue="Hours"
                     menuItems={['Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months']}
-                    onChange={this.handleChange.bind(this, 'time_to_clinic_unit')}
+                    name='time_to_clinic_unit'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -202,19 +200,22 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Distance To Clinic"
                     type="number"
                     maxLength={10}
-                    onChange={this.handleChange.bind(this, 'distance_to_clinic')}
+                    name='distance_to_clinic'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Distance To Clinic Units"
                     maxLength={32}
-                    onChange={this.handleChange.bind(this, 'distance_to_clinic_units')}
+                    name='distance_to_clinic_units'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="clinic-ease-select"
                     label="Is the clinic easy to use?"
-                    onChange={this.handleChange.bind(this, 'clinic_ease_of_use')}
+                    name='clinic_ease_of_use'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -222,7 +223,8 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Clinic Wait Time"
                     type="number"
                     maxLength={10}
-                    onChange={this.handleChange.bind(this, 'clinic_wait_time')}
+                    name='clinic_wait_time'
+                    onChange={this.props.onChange}
                 />
                 <SelectField
                     id="clinic-wait-unit-select"
@@ -230,12 +232,14 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     className="md-cell"
                     defaultValue="Hours"
                     menuItems={['Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months']}
-                    onChange={this.handleChange.bind(this, 'clinic_wait_time_unit')}
+                    name='clinic_wait_time_unit'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="proximity-select"
                     label="Does your health care need to be proximitous?"
-                    onChange={this.handleChange.bind(this, 'need_proximity')}
+                    name='need_proximity'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -243,7 +247,8 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Time To Pharmacy"
                     type="number"
                     maxLength={10}
-                    onChange={this.handleChange.bind(this, 'time_to_pharmacy')}
+                    name='time_to_pharmacy'
+                    onChange={this.props.onChange}
                 />
                 <SelectField
                     id="clinic-wait-unit-select"
@@ -251,7 +256,8 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     className="md-cell"
                     defaultValue="Hours"
                     menuItems={['Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months']}
-                    onChange={this.handleChange.bind(this, 'time_to_pharmacy_unit')}
+                    name='time_to_pharmacy_unit'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -259,14 +265,16 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Distance To Pharmacy"
                     type="number"
                     maxLength={10}
-                    onChange={this.handleChange.bind(this, 'distance_to_pharmacy')}
+                    name='distance_to_pharmacy'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Distance To Clinic Units"
                     maxLength={32}
-                    onChange={this.handleChange.bind(this, 'distance_to_pharmacy_units')}
+                    name='distance_to_pharmacy_units'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -274,7 +282,8 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     label="Pharmacy Wait Time"
                     type="number"
                     maxLength={10}
-                    onChange={this.handleChange.bind(this, 'pharmacy_wait_time')}
+                    name='pharmacy_wait_time'
+                    onChange={this.props.onChange}
                 />
                 <SelectField
                     id="clinic-wait-unit-select"
@@ -282,15 +291,10 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     className="md-cell"
                     defaultValue="Hours"
                     menuItems={['Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months']}
-                    onChange={this.handleChange.bind(this, 'pharmacy_wait_time_unit')}
+                    name='pharmacy_wait_time_unit'
+                    onChange={this.props.onChange}
                 />
-                <Button flat
-                    id=""
-                    className="md-cell md-cell--12 md-cell--bottom md-cell--right"
-                    onClick={this.handleSubmit.bind(this)} >
-                    Submit
-                </Button>
-            </form>
+            </DataForm>
         );
     }
 }

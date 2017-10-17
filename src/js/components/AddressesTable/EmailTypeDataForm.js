@@ -17,7 +17,7 @@ export default class EmailTypeDataForm extends React.Component {
 
     render() {
         return (
-            <DataForm tableName="EmailType">
+            <DataForm tableName="EmailType" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"

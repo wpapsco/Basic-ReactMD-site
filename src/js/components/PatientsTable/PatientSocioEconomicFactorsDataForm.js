@@ -4,6 +4,7 @@ import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import YesNoSelect from '../YesNoSelect';
+import DataForm from '../DataForm';
 
 export default class PatientSocioEconomicFactorsDataForm extends React.Component {
 
@@ -13,68 +14,49 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
         }
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Data submitted!");
-
-        var obj = {}
-        for (var param in this.state) {
-            obj[param] = this.state[param];
-        }
-        obj.page = "PatientSocioEconomicFactors";
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://www.localhost:3000/save", true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.send(JSON.stringify(obj));
-    }
-
-    handleChange = (name, value) => {
-        this.setState({
-            [name]: value
-        });
-        console.log(value);
-    }
-
     render() {
         return (
-            <form className="md-grid text-fields__application" onSubmit={this.handleSubmit.bind(this)}>
-                <h1 className="md-cell md-cell--12">Patient Socio-Economic Factors Table Data Entry Form</h1>
-                <br />
+            <DataForm tableName="SocioEconomicFactors" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Patient ID"
                     type="number"
                     required
-                    onChange={this.handleChange.bind(this, 'patient_id')}
+                    name='patient_id'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Relationship Status"
                     maxLength={64}
-                    onChange={this.handleChange.bind(this, 'relationship_status')}
+                    name='relationship_status'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Relationship Status Other"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'relationship_other')}
+                    name='relationship_other'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employment Status"
                     maxLength={64}
-                    onChange={this.handleChange.bind(this, 'employment_status')}
+                    name='employment_status'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Job Description"
                     maxLength={512}
-                    onChange={this.handleChange.bind(this, 'job_description')}
+                    name='job_description'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -82,7 +64,8 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     label="Job Enjoyment"
                     maxLength={2}
                     type="number"
-                    onChange={this.handleChange.bind(this, 'job_enjoyment')}
+                    name='job_enjoyment'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -90,7 +73,8 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     label="Job Ease Of Time Off"
                     maxLength={2}
                     type="number"
-                    onChange={this.handleChange.bind(this, 'job_ease_of_time_off')}
+                    name='job_ease_of_time_off'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -98,28 +82,32 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     label="Job Income Adequacy"
                     maxLength={2}
                     type="number"
-                    onChange={this.handleChange.bind(this, 'job_income_adequacy')}
+                    name='job_income_adequacy'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Average Household Income"
                     type="number"
-                    onChange={this.handleChange.bind(this, 'household_income')}
+                    name='household_income'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Education Completed"
                     maxLength={64}
-                    onChange={this.handleChange.bind(this, 'education_completed')}
+                    name='education_completed'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Grade Scored"
                     maxLength={1}
-                    onChange={this.handleChange.bind(this, 'grade_score')}
+                    name='grade_score'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -127,7 +115,8 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     label="Homework Difficulty"
                     maxLength={2}
                     type="number"
-                    onChange={this.handleChange.bind(this, 'homework_difficulty')}
+                    name='homework_difficulty'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -135,64 +124,74 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     label="Test Difficulty"
                     maxLength={2}
                     type="number"
-                    onChange={this.handleChange.bind(this, 'test_difficulty')}
+                    name='test_difficulty'
+                    onChange={this.props.onChange}
                 />
                 <SelectField
                     id="religion-select"
                     label="Are you religious?"
                     className="md-cell"
                     menuItems={['Yes', 'No']}
-                    onChange={this.handleChange.bind(this, 'is_religious')}
+                    name='is_religious'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Religion Title"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'religion')}
+                    name='religion'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Religious Services Attended Per Month"
                     type="number"
-                    onChange={this.handleChange.bind(this, 'services_per_month')}
+                    name='services_per_month'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="religion-select"
                     label="Are you spiritual?"
-                    onChange={this.handleChange.bind(this, 'is_spiritual')}
+                    name='is_spiritual'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="How often are you spiritual?"
                     type="number"
-                    onChange={this.handleChange.bind(this, 'spiritual_per_month')}
+                    name='spiritual_per_month'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="religion-select"
                     label="Do you have physical difficulties?"
-                    onChange={this.handleChange.bind(this, 'physical_difficulty')}
+                    name='physical_difficulty'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Physical Difficulty Description"
                     maxLength={256}
-                    onChange={this.handleChange.bind(this, 'physical_difficulty_description')}
+                    name='physical_difficulty_description'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="religion-select"
                     label="Do you exercise?"
-                    onChange={this.handleChange.bind(this, 'does_exercise')}
+                    name='does_exercise'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Favorite Exercise"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'favorite_exercise')}
+                    name='favorite_exercise'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -200,90 +199,98 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     label="Excercise Days Per Week"
                     maxLength={2}
                     type="number"
-                    onChange={this.handleChange.bind(this, 'exercise_days_per_week')}
+                    name='exercise_days_per_week'
+                    onChange={this.props.onChange}
                 />
                 <SelectField
                     id="religion-select"
                     label="Did you do sports as a kid?"
                     className="md-cell"
                     menuItems={['Yes', 'No']}
-                    onChange={this.handleChange.bind(this, 'kid_does_exercise')}
+                    name='kid_does_exercise'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="religion-select"
                     label="Did you do sports as a teenager?"
-                    onChange={this.handleChange.bind(this, 'teenager_does_exercise')}
+                    name='teenager_does_exercise'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="religion-select"
                     label="Do you do sports as a adult?"
-                    onChange={this.handleChange.bind(this, 'adult_does_exercise')}
+                    name='adult_does_exercise'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="religion-select"
                     label="Do you smoke?"
-                    onChange={this.handleChange.bind(this, 'is_smoker')}
+                    name='is_smoker'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="religion-select"
                     label="Did you ever smoke?"
-                    onChange={this.handleChange.bind(this, 'was_smoker')}
+                    name='was_smoker'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Smoking Frequency"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'smoking_frequency')}
+                    name='smoking_frequency'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="How long ago did you smoke?"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'smoking_how_long_ago')}
+                    name='smoking_how_long_ago'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="religion-select"
                     label="Do you drink alcohol?"
-                    onChange={this.handleChange.bind(this, 'is_drinker')}
+                    name='is_drinker'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="religion-select"
                     label="Did you ever drink alcohol?"
-                    onChange={this.handleChange.bind(this, 'was_drinker')}
+                    name='was_drinker'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Drinking Frequency"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'drinking_frequency')}
+                    name='drinking_frequency'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="religion-select"
                     label="Do you use drugs?"
-                    onChange={this.handleChange.bind(this, 'is_drugger')}
+                    name='is_drugger'
+                    onChange={this.props.onChange}
                 />
                 <YesNoSelect
                     id="religion-select"
                     label="Have you ever used drugs?"
-                    onChange={this.handleChange.bind(this, 'was_drugger')}
+                    name='was_drugger'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Drug use Frequency"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'drug_frequency')}
+                    name='drug_frequency'
+                    onChange={this.props.onChange}
                 />
-                <Button flat
-                    id=""
-                    className="md-cell md-cell--12 md-cell--bottom md-cell--right"
-                    onClick={this.handleSubmit.bind(this)} >
-                    Submit
-                </Button>
-            </form>
+            </DataForm>
         );
     }
 }

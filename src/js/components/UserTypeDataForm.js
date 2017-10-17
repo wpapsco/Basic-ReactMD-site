@@ -3,6 +3,7 @@ import TextField from 'react-md/lib/TextFields';
 import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
+import DataForm from './DataForm';
 
 export default class UserTypeDataForm extends React.Component {
 
@@ -12,40 +13,16 @@ export default class UserTypeDataForm extends React.Component {
         }
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(this.state.birthdate);
-        alert("Data submitted!");
-
-        var obj = {}
-        for (var param in this.state) {
-            obj[param] = this.state[param];
-        }
-        obj.page = "UserType";
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://www.localhost:3000/save", true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.send(JSON.stringify(obj));
-    }
-
-    handleChange = (name, value) => {
-        this.setState({
-            [name]: value
-        });
-        console.log(value);
-    }
-
     render() {
         return (
-            <form className="md-grid text-fields__application" onSubmit={this.handleSubmit.bind(this)}>
-                <h1 className="md-cell md-cell--12">User Type Table Data Entry Form</h1>
-                <br />
+            <DataForm tableName="UserType" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="User Type ID"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'user_type_id')}
+                    name='user_type_id'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -53,22 +30,18 @@ export default class UserTypeDataForm extends React.Component {
                     label="Unique User Type Identifier"
                     maxLength={64}
                     required
-                    onChange={this.handleChange.bind(this, 'user_type')}
+                    name='user_type'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="User Type Description"
                     maxLength={256}
-                    onChange={this.handleChange.bind(this, 'user_type_description')}
+                    name='user_type_description'
+                    onChange={this.props.onChange}
                 />
-                <Button flat
-                    id=""
-                    className="md-cell md-cell--12 md-cell--bottom md-cell--right"
-                    onClick={this.handleSubmit.bind(this)} >
-                    Submit
-                </Button>
-            </form>
+            </DataForm>
         );
     }
 }

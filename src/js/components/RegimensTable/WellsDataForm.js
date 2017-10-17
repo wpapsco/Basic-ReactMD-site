@@ -17,7 +17,7 @@ export default class WellsDataForm extends React.Component {
 
     render() {
         return (
-            <DataForm tableName="Wells">
+            <DataForm tableName="Wells" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"

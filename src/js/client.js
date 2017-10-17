@@ -59,7 +59,8 @@ class Layout extends React.Component {
         super(props);
         this.state = {
             form: "Person",
-            formIndex: 0
+            formIndex: 0,
+            data: {}
         }
     }
 
@@ -67,53 +68,64 @@ class Layout extends React.Component {
         console.log(value);
         this.setState({
             'form': name,
-            'formIndex': value
+            'formIndex': value,
+            'data': {}
         });
     }
 
     handleChange = (value, e, extra) => {
         console.log(value);
         console.log(e.target.name);
+        var name = e.target.name;
         console.log(extra);
+        this.setState(prevState => ({
+            "data": {
+                ...prevState.data,
+                [this.state.form]: {
+                    ...prevState.data[this.state.form],
+                    [name]:value
+                }
+            }
+        }));
     }
 
     onSubmit = (e) => {
-        console.log(e.target.name);
+        alert(JSON.stringify(this.state.data[this.state.form]));
     }
 
     render() {
         var forms = [
             (<PersonDataForm />),
-            (<UserDataForm />),
-            (<UserTypeDataForm />),
-            (<PatientDataForm />),
-            (<PatientDemographicFactorsDataForm />),
-            (<PatientSportsDataForm />),
-            (<PatientSupportersDataForm />),
-            (<PatientDrugUseDataForm />),
-            (<PatientSocioEconomicFactorsDataForm />),
-            (<PatientPsychoSocialFactorsDataForm />),
-            (<PatientTherapyRelatedFactorsDataForm />),
-            (<PatientMedicationsDataForm />),
-            (<EmployersDataForm />),
-            (<CohortsDataForm onChange={this.handleChange.bind(this)} />),
-            (<CohortsPatientsDataForm onChange={this.handleChange.bind(this)} />),
-            (<DevicesDataForm onChange={this.handleChange.bind(this)} />),
-            (<DeviceFirmwareDataForm onChange={this.handleChange.bind(this)} />),
-            (<DevicesToPatientsDataForm onChange={this.handleChange.bind(this)} />),
-            (<DeviceLifecycleStatesDataForm onChange={this.handleChange.bind(this)} />),
-            (<DeviceLifecycleHistoryDataForm onChange={this.handleChange.bind(this)} />),
-            (<ManifestsDataForm onChange={this.handleChange.bind(this)} />),
-            (<PackagesDataForm onChange={this.handleChange.bind(this)} />),
-            (<MedicationTracksDataForm onChange={this.handleChange.bind(this)} />),
-            (<WellsDataForm onChange={this.handleChange.bind(this)} />),
-            (<RegimensDataForm onChange={this.handleChange.bind(this)} />),
-            (<AddressTypeDataForm onChange={this.handleChange.bind(this)} />),
-            (<EmailTypeDataForm onChange={this.handleChange.bind(this)} />),
-            (<PhoneTypeDataForm onChange={this.handleChange.bind(this)} />),
-            (<AddressesDataForm onChange={this.handleChange.bind(this)} />),
-            (<EmailsDataForm onChange={this.handleChange.bind(this)} />),
-            (<PhonesDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />)
+            (<UserDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<UserTypeDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<PatientDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<PatientDemographicFactorsDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<PatientSportsDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<PatientSupportersDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<PatientDrugUseDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<PatientSocioEconomicFactorsDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<PatientPsychoSocialFactorsDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<PatientTherapyRelatedFactorsDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<PatientMedicationsDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<EmployersDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<CohortsDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<CohortsPatientsDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<DevicesDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<DeviceFirmwareDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<DevicesToPatientsDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<DeviceLifecycleStatesDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<DeviceLifecycleHistoryDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<ManifestsDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<PackagesDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<MedicationTracksDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<WellsDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<RegimensDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<AddressTypeDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<EmailTypeDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<PhoneTypeDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<AddressesDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<EmailsDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
+            (<PhonesDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />) //hooray for multiple cursors! Or not hooray depending on who you ask...
         ]
 
         return (

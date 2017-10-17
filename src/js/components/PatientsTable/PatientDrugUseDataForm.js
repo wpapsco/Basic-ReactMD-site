@@ -4,6 +4,7 @@ import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import YesNoSelect from '../YesNoSelect';
+import DataForm from '../DataForm';
 
 export default class PatientDrugUseDataForm extends React.Component {
 
@@ -13,40 +14,17 @@ export default class PatientDrugUseDataForm extends React.Component {
         }
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Data submitted!");
-
-        var obj = {}
-        for (var param in this.state) {
-            obj[param] = this.state[param];
-        }
-        obj.page = "PatientDrugUse";
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://www.localhost:3000/save", true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.send(JSON.stringify(obj));
-    }
-
-    handleChange = (name, value) => {
-        this.setState({
-            [name]: value
-        });
-        console.log(value);
-    }
-
     render() {
         return (
-            <form className="md-grid text-fields__application" onSubmit={this.handleSubmit.bind(this)}>
-                <h1 className="md-cell md-cell--12">Patient Drug Use Table Data Entry Form</h1>
-                <br />
+            <DataForm tableName="PatientDrugUse" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Patient ID"
                     type="number"
                     required
-                    onChange={this.handleChange.bind(this, 'patient_id')}
+                    name='patient_id'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -54,7 +32,8 @@ export default class PatientDrugUseDataForm extends React.Component {
                     label="Drug Name"
                     maxLength={128}
                     required
-                    onChange={this.handleChange.bind(this, 'drug_name')}
+                    name='drug_name'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -63,7 +42,8 @@ export default class PatientDrugUseDataForm extends React.Component {
                     defaultValue="0"
                     type="number"
                     required
-                    onChange={this.handleChange.bind(this, 'drug_count')}
+                    name='drug_count'
+                    onChange={this.props.onChange}
                 />
                 <SelectField
                     id="age-select"
@@ -72,7 +52,8 @@ export default class PatientDrugUseDataForm extends React.Component {
                     defaultValue="PerMonth"
                     menuItems={['PerDay', 'PerHour', 'PerWeek', 'PerMonth', 'PerQuarter', 'PerYear']}
                     required
-                    onChange={this.handleChange.bind(this, 'drug_frequency')}
+                    name='drug_frequency'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -81,7 +62,8 @@ export default class PatientDrugUseDataForm extends React.Component {
                     defaultValue="0"
                     type="number"
                     required
-                    onChange={this.handleChange.bind(this, 'since_length')}
+                    name='since_length'
+                    onChange={this.props.onChange}
                 />
                 <SelectField
                     id="age-select"
@@ -90,15 +72,10 @@ export default class PatientDrugUseDataForm extends React.Component {
                     defaultValue="Years"
                     menuItems={['Hours', 'Days', 'Weeks', 'Months', 'Quarters', 'Years']}
                     required
-                    onChange={this.handleChange.bind(this, 'since_unit')}
+                    name='since_unit'
+                    onChange={this.props.onChange}
                 />
-                <Button flat
-                    id=""
-                    className="md-cell md-cell--12 md-cell--bottom md-cell--right"
-                    onClick={this.handleSubmit.bind(this)} >
-                    Submit
-                </Button>
-            </form>
+            </DataForm>
         );
     }
 }

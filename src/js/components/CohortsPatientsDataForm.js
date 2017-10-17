@@ -16,7 +16,7 @@ export default class CohortsPatientsDataForm extends React.Component {
     
     render() {
         return (
-            <DataForm tableName="CohortsPatients">
+            <DataForm tableName="CohortsPatients" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"

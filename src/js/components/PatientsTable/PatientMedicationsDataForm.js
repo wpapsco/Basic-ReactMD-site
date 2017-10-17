@@ -4,6 +4,7 @@ import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
+import DataForm from '../DataForm';
 
 export default class PatientMedicationsDataForm extends React.Component {
 
@@ -13,53 +14,32 @@ export default class PatientMedicationsDataForm extends React.Component {
         }
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Data submitted!");
-
-        var obj = {}
-        for (var param in this.state) {
-            obj[param] = this.state[param];
-        }
-        obj.page = "PatientMedications";
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://www.localhost:3000/save", true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.send(JSON.stringify(obj));
-    }
-
-    handleChange = (name, value) => {
-        this.setState({
-            [name]: value
-        });
-        console.log(value);
-    }
-
     render() {
         return (
-            <form className="md-grid text-fields__application" onSubmit={this.handleSubmit.bind(this)}>
-                <h1 className="md-cell md-cell--12">Patient Medications Table Data Entry Form</h1>
-                <br />
+            <DataForm tableName="PatientMedications" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Patient Therapy-Related Factors ID"
                     type="number"
-                    onChange={this.handleChange.bind(this, 'patient_id')}
+                    name='patient_id'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Medication Scientific Name"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'medication_scientific_name')}
+                    name='medication_scientific_name'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Medication Generic Name"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'medication_generic_name')}
+                    name='medication_generic_name'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -67,75 +47,79 @@ export default class PatientMedicationsDataForm extends React.Component {
                     label="Medication Dosage"
                     maxLength={10}
                     type="number"
-                    onChange={this.handleChange.bind(this, 'medication_dosage')}
+                    name='medication_dosage'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Medication Dosage Units"
                     maxLength={32}
-                    onChange={this.handleChange.bind(this, 'medication_dosage_units')}
+                    name='medication_dosage_units'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Medication Route"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_route')}
+                    name='medication_route'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Medication Frequency"
                     maxLength={3}
-                    onChange={this.handleChange.bind(this, 'medication_freuqnecy')}
+                    name='medication_freuqnecy'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Medication Duration"
                     type="number"
-                    onChange={this.handleChange.bind(this, 'medication_duration')}
+                    name='medication_duration'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Medication Duration Units"
                     maxLength={32}
-                    onChange={this.handleChange.bind(this, 'medication_duration_units')}
+                    name='medication_duration_units'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Medication Previous Treatments"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'medication_previous_treatments')}
+                    name='medication_previous_treatments'
+                    onChange={this.props.onChange}
                 />
                 <TimePicker
                     id="appointment-time-auto"
                     label="Preferred Dosage Time 1"
                     className="md-cell"
-                    onChange={this.handleChange.bind(this, 'preferred_dose_time_1')}
+                    name='preferred_dose_time_1'
+                    onChange={this.props.onChange}
                 />
                 <TimePicker
                     id="appointment-time-auto"
                     label="Preferred Dosage Time 2"
                     className="md-cell"
-                    onChange={this.handleChange.bind(this, 'preferred_dose_time_2')}
+                    name='preferred_dose_time_2'
+                    onChange={this.props.onChange}
                 />
                 <TimePicker
                     id="appointment-time-auto"
                     label="Preferred Dosage Time 3"
                     className="md-cell"
-                    onChange={this.handleChange.bind(this, 'preferred_dose_time_3')}
+                    name='preferred_dose_time_3'
+                    onChange={this.props.onChange}
                 />
-                <Button flat
-                    id=""
-                    className="md-cell md-cell--12 md-cell--bottom md-cell--right"
-                    onClick={this.handleSubmit.bind(this)} >
-                    Submit
-                </Button>
-            </form>
+            </DataForm>
         );
     }
 }

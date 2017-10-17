@@ -17,7 +17,7 @@ export default class ManifestsDataForm extends React.Component {
 
     render() {
         return (
-            <DataForm tableName="Manifests">
+            <DataForm tableName="Manifests" onSubmit={this.props.onSubmit}>
                 <TimePicker
                     id="appointment-time-auto"
                     className="md-cell"

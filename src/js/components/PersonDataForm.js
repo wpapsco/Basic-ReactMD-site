@@ -3,6 +3,7 @@ import TextField from 'react-md/lib/TextFields';
 import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
+import DataForm from './DataForm';
 
 export default class PersonDataForm extends React.Component {
 

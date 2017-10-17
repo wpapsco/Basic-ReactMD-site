@@ -4,6 +4,7 @@ import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import YesNoSelect from './YesNoSelect';
+import DataForm from './DataForm';
 
 export default class EmployersDataForm extends React.Component {
 
@@ -13,104 +14,83 @@ export default class EmployersDataForm extends React.Component {
         }
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Data submitted!");
-
-        var obj = {}
-        for (var param in this.state) {
-            obj[param] = this.state[param];
-        }
-        obj.page = "Employers";
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://www.localhost:3000/save", true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.send(JSON.stringify(obj));
-    }
-
-    handleChange = (name, value) => {
-        this.setState({
-            [name]: value
-        });
-        console.log(value);
-    }
-
     render() {
         return (
-            <form className="md-grid text-fields__application" onSubmit={this.handleSubmit.bind(this)}>
-                <h1 className="md-cell md-cell--12">Employers Table Data Entry Form</h1>
-                <br />
+            <DataForm tableName="Employers" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer Name"
                     maxLength={128}
+                    name='employer_name'
                     required
-                    onChange={this.handleChange.bind(this, 'employer_name')}
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer Description"
                     maxLength={512}
-                    onChange={this.handleChange.bind(this, 'employer_description')}
+                    name='employer_description'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer Street Address"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'employer_street_address')}
+                    name='employer_street_address'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer Street Address 2"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'employer_street_address_2')}
+                    name='employer_street_address_2'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer City"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'employer_city')}
+                    name='employer_city'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer State/Province"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'employer_state_province')}
+                    name='employer_state_province'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer County"
                     maxLength={128}
-                    onChange={this.handleChange.bind(this, 'employer_county')}
+                    name='employer_county'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer Country"
                     maxLength={3}
-                    onChange={this.handleChange.bind(this, 'employer_country')}
+                    name='employer_country'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer Zip Code"
                     maxLength={16}
-                    onChange={this.handleChange.bind(this, 'employer_zip')}
+                    name='employer_zip'
+                    onChange={this.props.onChange}
                 />
-                <Button flat
-                    id=""
-                    className="md-cell md-cell--12 md-cell--bottom md-cell--right"
-                    onClick={this.handleSubmit.bind(this)} >
-                    Submit
-                </Button>
-            </form>
+            </DataForm>
         );
     }
 }

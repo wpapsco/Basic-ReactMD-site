@@ -17,7 +17,7 @@ export default class DeviceFirmwareDataForm extends React.Component {
     
     render() {
         return (
-            <DataForm tableName="DeviceFirmware">
+            <DataForm tableName="DeviceFirmware" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"

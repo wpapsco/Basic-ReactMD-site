@@ -3,6 +3,7 @@ import TextField from 'react-md/lib/TextFields';
 import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
+import DataForm from '../DataForm';
 
 export default class PatientTherapyRelatedFactorsDataForm extends React.Component {
 
@@ -12,40 +13,17 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
         }
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Data submitted!");
-
-        var obj = {}
-        for (var param in this.state) {
-            obj[param] = this.state[param];
-        }
-        obj.page = "TherapyRelatedFactors";
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://www.localhost:3000/save", true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.send(JSON.stringify(obj));
-    }
-
-    handleChange = (name, value) => {
-        this.setState({
-            [name]: value
-        });
-        console.log(value);
-    }
-
     render() {
         return (
-            <form className="md-grid text-fields__application" onSubmit={this.handleSubmit.bind(this)}>
-                <h1 className="md-cell md-cell--12">Patient Therapy-Related Factors Table Data Entry Form</h1>
-                <br />
+            <DataForm tableName="TherapyRelatedFactors" onSubmit={this.props.onSubmit}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Patient ID"
                     type="number"
                     required
-                    onChange={this.handleChange.bind(this, 'patient_id')}
+                    name='patient_id'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -53,7 +31,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Side Effects Frequency"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'side_effects_freq')}
+                    name='side_effects_freq'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -61,7 +40,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Side Effect Previous Frequency"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'side_effect_prev_freq')}
+                    name='side_effect_prev_freq'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -69,7 +49,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Nedication Bad Taste"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_bad_taste')}
+                    name='medication_bad_taste'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -77,7 +58,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Medication GI Upset"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_gi_upset')}
+                    name='medication_gi_upset'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -85,7 +67,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Medication Acne"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_acne')}
+                    name='medication_acne'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -93,7 +76,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Medication Changes Skin Color"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_change_skin_color')}
+                    name='medication_change_skin_color'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -101,7 +85,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Medication Sleep Excessive"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_sleep_excessive')}
+                    name='medication_sleep_excessive'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -109,7 +94,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Medication Nightmares"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_nightmares')}
+                    name='medication_nightmares'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -117,7 +103,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Medication Grip Weak"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_grip_weak')}
+                    name='medication_grip_weak'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -125,7 +112,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Medication Headaches"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_headaches')}
+                    name='medication_headaches'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -133,7 +121,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Medication 3AM"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_3am')}
+                    name='medication_3am'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -141,7 +130,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Medication Cold"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_cold')}
+                    name='medication_cold'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -149,7 +139,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Medication Guest Bath"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_guest_bath')}
+                    name='medication_guest_bath'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -157,7 +148,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Medication 50 Miles"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_50_miles')}
+                    name='medication_50_miles'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -165,7 +157,8 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Medication Improves Symptoms"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_improves_symptoms')}
+                    name='medication_improves_symptoms'
+                    onChange={this.props.onChange}
                 />
                 <TextField
                     id="floating-center-title"
@@ -173,15 +166,10 @@ export default class PatientTherapyRelatedFactorsDataForm extends React.Componen
                     label="Medication Makes No Difference"
                     type="number"
                     maxLength={2}
-                    onChange={this.handleChange.bind(this, 'medication_makes_no_difference')}
+                    name='medication_makes_no_difference'
+                    onChange={this.props.onChange}
                 />
-                <Button flat
-                    id=""
-                    className="md-cell md-cell--12 md-cell--bottom md-cell--right"
-                    onClick={this.handleSubmit.bind(this)} >
-                    Submit
-                </Button>
-            </form>
+            </DataForm>
         );
     }
 }
