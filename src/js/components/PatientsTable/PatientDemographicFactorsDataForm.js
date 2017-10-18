@@ -131,7 +131,7 @@ export default class PatientDemographicFactorsDataForm extends React.Component {
                     onChange={this.props.onChange}
                 />
                 <YesNoSelect
-                    id="select-field-2"
+                    id="treatment_travel"
                     label="Travelling During Treatment?"
                     name='treatment_travel'
                     onChange={this.props.onChange}

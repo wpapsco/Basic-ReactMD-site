@@ -73,11 +73,16 @@ class Layout extends React.Component {
         });
     }
 
-    handleChange = (value, e, extra) => {
+    handleChange = (value, e, garbage, selectfield_e) => { //I can't believe I have to check which argument contains the data I want. Why would react prepend data? It just shifts all of the variables and now since I use this funtion for multiple things I have to add in extra logic just because react-md passes extra data to this function from a selectfield.
+        var name = '';
+        if (e.target) {
+            name = e.target.name;
+            console.log(e.target.name);
+        } else {
+            name = selectfield_e.name;
+            console.log(e);
+        }
         console.log(value);
-        console.log(e.target.name);
-        var name = e.target.name;
-        console.log(extra);
         this.setState(prevState => ({
             "data": {
                 ...prevState.data,
@@ -95,7 +100,7 @@ class Layout extends React.Component {
 
     render() {
         var forms = [
-            (<PersonDataForm />),
+            (<PersonDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
             (<UserDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
             (<UserTypeDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),
             (<PatientDataForm onChange={this.handleChange.bind(this)} onSubmit={this.onSubmit.bind(this)} />),

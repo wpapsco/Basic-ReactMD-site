@@ -127,11 +127,9 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     name='test_difficulty'
                     onChange={this.props.onChange}
                 />
-                <SelectField
+                <YesNoSelect
                     id="religion-select"
                     label="Are you religious?"
-                    className="md-cell"
-                    menuItems={['Yes', 'No']}
                     name='is_religious'
                     onChange={this.props.onChange}
                 />
@@ -202,12 +200,17 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     name='exercise_days_per_week'
                     onChange={this.props.onChange}
                 />
-                <SelectField
+                <YesNoSelect
                     id="religion-select"
                     label="Did you do sports as a kid?"
                     className="md-cell"
-                    menuItems={['Yes', 'No']}
                     name='kid_does_exercise'
+                    onChange={this.props.onChange}
+                />
+                <YesNoSelect
+                    id="religion-select"
+                    label="Are you spiritual?"
+                    name='is_spiritual'
                     onChange={this.props.onChange}
                 />
                 <YesNoSelect

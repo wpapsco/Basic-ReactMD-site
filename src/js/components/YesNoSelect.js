@@ -8,17 +8,17 @@ export default class YesNoSelect extends React.Component {
     }
 
     handleChange(e) {
-        this.props.onChange(e=='Yes', {target:{name:this.props.id}});
+        this.props.onChange(e=='Yes', {target:{name:this.props.name}});
     }
 
     render() {
         return (
             <SelectField
-                id={this.props.id}
+                id={this.props.name}
                 label={this.props.label}
                 className="md-cell"
                 menuItems={['Yes', 'No']}
-                name={this.props.id}
+                name={this.props.name}
                 onChange={this.handleChange.bind(this)}
             />
         );

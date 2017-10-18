@@ -76,7 +76,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(90);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 1 */
@@ -111,7 +111,7 @@ if (process.env.NODE_ENV !== 'production') {
   module.exports = __webpack_require__(102)();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 2 */
@@ -930,6 +930,113 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Button = __webpack_require__(3);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DataForm = function (_React$Component) {
+    _inherits(DataForm, _React$Component);
+
+    function DataForm(props) {
+        _classCallCheck(this, DataForm);
+
+        var _this = _possibleConstructorReturn(this, (DataForm.__proto__ || Object.getPrototypeOf(DataForm)).call(this, props));
+
+        _this.handleSubmit = function (e) {
+            e.preventDefault();
+            alert("Data submitted from DataForm.js!");
+
+            var obj = {};
+            for (var param in _this.state) {
+                obj[param] = _this.state[param];
+            }
+            obj.page = _this.props.tableName;
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://www.localhost:3000/save", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.send(JSON.stringify(obj));
+        };
+
+        _this.handleChange = function (name, value) {
+            console.log('using this one!!');
+            console.log(name, value);
+        };
+
+        console.log(_this.props);
+        return _this;
+    }
+
+    _createClass(DataForm, [{
+        key: "componentWillMount",
+        value: function componentWillMount() {
+            console.log(this.props.onSubmit);
+            if (!this.props.onSubmit) {
+                this.setState({
+                    onSubmit: this.handleSubmit.bind(this)
+                });
+            } else {
+                this.setState({
+                    onSubmit: this.props.onSubmit
+                });
+            }
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "form",
+                { className: "md-grid text-fields__application", onSubmit: this.state.onSubmit },
+                _react2.default.createElement(
+                    "h1",
+                    { className: "md-cell md-cell--12" },
+                    this.props.tableName,
+                    " Table Data Entry Form"
+                ),
+                _react2.default.createElement("br", null),
+                this.props.children,
+                _react2.default.createElement(
+                    _Button2.default,
+                    { flat: true,
+                        id: this.props.tableName,
+                        name: this.props.tableName,
+                        className: "md-cell md-cell--12 md-cell--bottom md-cell--right",
+                        onClick: this.state.onSubmit },
+                    "Submit"
+                )
+            );
+        }
+    }]);
+
+    return DataForm;
+}(_react2.default.Component);
+
+exports.default = DataForm;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(47)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
@@ -967,7 +1074,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -2063,7 +2170,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=DatePickerContainer.js.map
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2107,17 +2214,17 @@ var YesNoSelect = function (_React$Component) {
     _createClass(YesNoSelect, [{
         key: "handleChange",
         value: function handleChange(e) {
-            this.props.onChange(e == 'Yes', { target: { name: this.props.id } });
+            this.props.onChange(e == 'Yes', { target: { name: this.props.name } });
         }
     }, {
         key: "render",
         value: function render() {
             return _react2.default.createElement(_SelectFields2.default, {
-                id: this.props.id,
+                id: this.props.name,
                 label: this.props.label,
                 className: "md-cell",
                 menuItems: ['Yes', 'No'],
-                name: this.props.id,
+                name: this.props.name,
                 onChange: this.handleChange.bind(this)
             });
         }
@@ -2129,7 +2236,7 @@ var YesNoSelect = function (_React$Component) {
 exports.default = YesNoSelect;
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -2317,113 +2424,6 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Button = __webpack_require__(3);
-
-var _Button2 = _interopRequireDefault(_Button);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var DataForm = function (_React$Component) {
-    _inherits(DataForm, _React$Component);
-
-    function DataForm(props) {
-        _classCallCheck(this, DataForm);
-
-        var _this = _possibleConstructorReturn(this, (DataForm.__proto__ || Object.getPrototypeOf(DataForm)).call(this, props));
-
-        _this.handleSubmit = function (e) {
-            e.preventDefault();
-            alert("Data submitted from DataForm.js!");
-
-            var obj = {};
-            for (var param in _this.state) {
-                obj[param] = _this.state[param];
-            }
-            obj.page = _this.props.tableName;
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://www.localhost:3000/save", true);
-            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-            xhr.send(JSON.stringify(obj));
-        };
-
-        _this.handleChange = function (name, value) {
-            console.log('using this one!!');
-            console.log(name, value);
-        };
-
-        console.log(_this.props);
-        return _this;
-    }
-
-    _createClass(DataForm, [{
-        key: "componentWillMount",
-        value: function componentWillMount() {
-            console.log(this.props.onSubmit);
-            if (!this.props.onSubmit) {
-                this.setState({
-                    onSubmit: this.handleSubmit.bind(this)
-                });
-            } else {
-                this.setState({
-                    onSubmit: this.props.onSubmit
-                });
-            }
-        }
-    }, {
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "form",
-                { className: "md-grid text-fields__application", onSubmit: this.state.onSubmit },
-                _react2.default.createElement(
-                    "h1",
-                    { className: "md-cell md-cell--12" },
-                    this.props.tableName,
-                    " Table Data Entry Form"
-                ),
-                _react2.default.createElement("br", null),
-                this.props.children,
-                _react2.default.createElement(
-                    _Button2.default,
-                    { flat: true,
-                        id: this.props.tableName,
-                        name: this.props.tableName,
-                        className: "md-cell md-cell--12 md-cell--bottom md-cell--right",
-                        onClick: this.state.onSubmit },
-                    "Submit"
-                )
-            );
-        }
-    }]);
-
-    return DataForm;
-}(_react2.default.Component);
-
-exports.default = DataForm;
 
 /***/ }),
 /* 10 */
@@ -3298,7 +3298,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(94);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 12 */
@@ -3957,7 +3957,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 19 */
@@ -4340,7 +4340,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 26 */
@@ -4409,7 +4409,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = warning;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 27 */
@@ -5065,7 +5065,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
 module.exports = checkPropTypes;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 33 */
@@ -5511,7 +5511,7 @@ TransitionGroup.defaultProps = defaultProps;
 
 exports.default = TransitionGroup;
 module.exports = exports['default'];
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 38 */
@@ -6050,7 +6050,7 @@ module.exports = exports["default"];
 
 }).call(this);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 44 */
@@ -7718,7 +7718,7 @@ var EventListener = {
 };
 
 module.exports = EventListener;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 52 */
@@ -8078,7 +8078,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = warning;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 59 */
@@ -9106,7 +9106,7 @@ CSSTransitionGroup.defaultProps = defaultProps;
 
 exports.default = CSSTransitionGroup;
 module.exports = exports['default'];
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 65 */
@@ -9293,7 +9293,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   }
 });
 //# sourceMappingURL=getScreenSize.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 69 */
@@ -12005,7 +12005,7 @@ var _TitleMenu = __webpack_require__(108);
 
 var _TitleMenu2 = _interopRequireDefault(_TitleMenu);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -12074,11 +12074,17 @@ var Layout = function (_React$Component) {
             });
         };
 
-        _this.handleChange = function (value, e, extra) {
+        _this.handleChange = function (value, e, garbage, selectfield_e) {
+            //I can't believe I have to check which argument contains the data I want. Why would react prepend data? It just shifts all of the variables and now since I use this funtion for multiple things I have to add in extra logic just because react-md passes extra data to this function from a selectfield.
+            var name = '';
+            if (e.target) {
+                name = e.target.name;
+                console.log(e.target.name);
+            } else {
+                name = selectfield_e.name;
+                console.log(e);
+            }
             console.log(value);
-            console.log(e.target.name);
-            var name = e.target.name;
-            console.log(extra);
             _this.setState(function (prevState) {
                 return {
                     "data": _extends({}, prevState.data, _defineProperty({}, _this.state.form, _extends({}, prevState.data[_this.state.form], _defineProperty({}, name, value))))
@@ -12101,7 +12107,7 @@ var Layout = function (_React$Component) {
     _createClass(Layout, [{
         key: "render",
         value: function render() {
-            var forms = [_react2.default.createElement(_PersonDataForm2.default, null), _react2.default.createElement(_UserDataForm2.default, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_UserTypeDataForm2.default, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientDemographicFactorsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientSportsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientSupportersDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientDrugUseDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientSocioEconomicFactorsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientPsychoSocialFactorsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientTherapyRelatedFactorsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientMedicationsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_EmployersDataForm2.default, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_CohortsDataForm2.default, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_CohortsPatientsDataForm2.default, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_DevicesTable.DevicesDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_DevicesTable.DeviceFirmwareDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_DevicesTable.DevicesToPatientsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_DevicesTable.DeviceLifecycleStatesDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_DevicesTable.DeviceLifecycleHistoryDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_RegimensTable.ManifestsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_RegimensTable.PackagesDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_RegimensTable.MedicationTracksDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_RegimensTable.WellsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_RegimensTable.RegimensDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_AddressesTable.AddressTypeDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_AddressesTable.EmailTypeDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_AddressesTable.PhoneTypeDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_AddressesTable.AddressesDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_AddressesTable.EmailsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_AddressesTable.PhonesDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) })];
+            var forms = [_react2.default.createElement(_PersonDataForm2.default, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_UserDataForm2.default, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_UserTypeDataForm2.default, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientDemographicFactorsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientSportsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientSupportersDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientDrugUseDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientSocioEconomicFactorsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientPsychoSocialFactorsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientTherapyRelatedFactorsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_PatientsTable.PatientMedicationsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_EmployersDataForm2.default, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_CohortsDataForm2.default, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_CohortsPatientsDataForm2.default, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_DevicesTable.DevicesDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_DevicesTable.DeviceFirmwareDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_DevicesTable.DevicesToPatientsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_DevicesTable.DeviceLifecycleStatesDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_DevicesTable.DeviceLifecycleHistoryDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_RegimensTable.ManifestsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_RegimensTable.PackagesDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_RegimensTable.MedicationTracksDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_RegimensTable.WellsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_RegimensTable.RegimensDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_AddressesTable.AddressTypeDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_AddressesTable.EmailTypeDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_AddressesTable.PhoneTypeDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_AddressesTable.AddressesDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_AddressesTable.EmailsDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) }), _react2.default.createElement(_AddressesTable.PhonesDataForm, { onChange: this.handleChange.bind(this), onSubmit: this.onSubmit.bind(this) })];
 
             return _react2.default.createElement(
                 "div",
@@ -13861,7 +13867,7 @@ module.exports = ReactEntry;
 })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 91 */
@@ -31409,7 +31415,7 @@ module.exports = ReactDOMFiberEntry;
 })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 95 */
@@ -32178,7 +32184,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   return ReactPropTypes;
 };
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 102 */
@@ -35640,7 +35646,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   exports.default = Layover;
 });
 //# sourceMappingURL=Layover.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 113 */
@@ -35999,7 +36005,7 @@ CSSTransitionGroupChild.propTypes = process.env.NODE_ENV !== "production" ? prop
 
 exports.default = CSSTransitionGroupChild;
 module.exports = exports['default'];
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 116 */
@@ -40217,7 +40223,7 @@ module.exports = g;
 
 //# sourceMappingURL=performance-now.js.map
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 140 */
@@ -41206,7 +41212,7 @@ function reorderKeys() {
 }
 
 module.exports = exports['default'];
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 145 */
@@ -43267,7 +43273,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -43275,7 +43281,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -43283,13 +43289,11 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -43305,48 +43309,26 @@ var PersonDataForm = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (PersonDataForm.__proto__ || Object.getPrototypeOf(PersonDataForm)).call(this, props));
 
-        _this.handleSubmit = function (e) {
-            e.preventDefault();
-            console.log(_this.state.birthdate);
-            alert("Data submitted!");
-
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://www.localhost:3000/save", true);
-            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-            xhr.send(JSON.stringify({
-                'page': "Persons",
-                first_name: _this.state.first_name,
-                middle_name: _this.state.middle_name,
-                last_name: _this.state.last_name,
-                nick_name: _this.state.nick_name,
-                ssn: _this.state.ssn,
-                gender: _this.state.gender,
-                birthdate: _this.state.birthdate
-            }));
-        };
-
         _this.handleChange = function (name, value) {
             if (name == 'ssn') {
                 var ssn = value.replace(/[^0-9.]/g, "");
+                if (ssn.length > 9) {
+                    ssn = ssn.slice(0, 9);
+                }
                 _this.setState({
                     "ssn": ssn
                 });
                 var display_ssn = ssn;
                 if (ssn.length > 5) {
                     display_ssn = ssn.slice(0, 3) + "-" + ssn.slice(3, 5) + "-" + ssn.slice(5, 9);
-                    console.log('test2');
                 } else if (ssn.length > 3) {
                     display_ssn = ssn.slice(0, 3) + "-" + ssn.slice(3);
-                    console.log('test');
                 }
                 _this.setState({
                     "display_ssn": display_ssn
                 });
-            } else {
-                _this.setState(_defineProperty({}, name, value));
+                _this.props.onChange(ssn, { target: { name: 'ssn' } });
             }
-
-            console.log(value);
         };
 
         _this.state = {
@@ -43359,47 +43341,46 @@ var PersonDataForm = function (_React$Component) {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
-                'form',
-                { className: 'md-grid text-fields__application', onSubmit: this.handleSubmit.bind(this) },
-                _react2.default.createElement(
-                    'h1',
-                    { className: 'md-cell md-cell--12' },
-                    'Person Table Data Entry Form'
-                ),
-                _react2.default.createElement('br', null),
+                _DataForm2.default,
+                { tableName: 'Person', onSubmit: this.props.onSubmit },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'First Name',
                     maxLength: 64,
-                    onChange: this.handleChange.bind(this, 'first_name')
+                    name: 'first_name',
+                    onChange: this.props.onChange
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Middle Name',
                     maxLength: 64,
-                    onChange: this.handleChange.bind(this, 'middle_name')
+                    name: 'middle_name',
+                    onChange: this.props.onChange
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Last Name',
                     maxLength: 64,
-                    onChange: this.handleChange.bind(this, 'last_name')
+                    name: 'last_name',
+                    onChange: this.props.onChange
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Nickname',
                     maxLength: 64,
-                    onChange: this.handleChange.bind(this, 'nick_name')
+                    name: 'nick_name',
+                    onChange: this.props.onChange
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     value: this.state.display_ssn,
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'SSN',
+                    name: 'ssn',
                     onChange: this.handleChange.bind(this, 'ssn')
                 }),
                 _react2.default.createElement(_SelectFields2.default, {
@@ -43408,22 +43389,15 @@ var PersonDataForm = function (_React$Component) {
                     placeholder: 'Gender',
                     className: 'md-cell',
                     menuItems: ["Male", "Female", "Prefer not to answer/Other"],
-                    onChange: this.handleChange.bind(this, 'gender')
+                    name: 'gender',
+                    onChange: this.props.onChange
                 }),
                 _react2.default.createElement(_DatePickerContainer2.default, {
-                    id: 'appointment-date-auto',
                     label: 'Birthdate',
                     className: 'md-cell',
-                    onChange: this.handleChange.bind(this, 'birthdate')
-                }),
-                _react2.default.createElement(
-                    _Button2.default,
-                    { flat: true,
-                        id: '',
-                        className: 'md-cell md-cell--12 md-cell--bottom md-cell--right',
-                        onClick: this.handleSubmit.bind(this) },
-                    'Submit'
-                )
+                    id: 'birthdate',
+                    onChange: this.props.onChange
+                })
             );
         }
     }]);
@@ -45286,7 +45260,7 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
 /* 165 */
@@ -47680,7 +47654,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -47688,7 +47662,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -47696,7 +47670,7 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -47805,7 +47779,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -47813,7 +47787,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -47821,7 +47795,7 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -47902,7 +47876,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -47910,7 +47884,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -47918,11 +47892,11 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -48051,7 +48025,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -48059,7 +48033,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -48067,11 +48041,11 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -48167,7 +48141,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -48175,7 +48149,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -48183,11 +48157,11 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -48319,7 +48293,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -48327,7 +48301,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -48335,11 +48309,11 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -48445,7 +48419,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -48453,7 +48427,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -48461,11 +48435,11 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -48609,7 +48583,7 @@ var PatientDemographicFactorsDataForm = function (_React$Component) {
                     onChange: this.props.onChange
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
-                    id: 'select-field-2',
+                    id: 'treatment_travel',
                     label: 'Travelling During Treatment?',
                     name: 'treatment_travel',
                     onChange: this.props.onChange
@@ -48648,7 +48622,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -48656,7 +48630,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -48664,7 +48638,7 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -48746,7 +48720,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -48754,7 +48728,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -48762,7 +48736,7 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -48855,7 +48829,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -48863,7 +48837,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -48871,11 +48845,11 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -48989,7 +48963,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -48997,7 +48971,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -49005,11 +48979,11 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -49342,7 +49316,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -49350,7 +49324,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -49358,11 +49332,11 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -49502,11 +49476,9 @@ var PatientSocioEconomicFactorsDataForm = function (_React$Component) {
                     name: 'test_difficulty',
                     onChange: this.props.onChange
                 }),
-                _react2.default.createElement(_SelectFields2.default, {
+                _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Are you religious?',
-                    className: 'md-cell',
-                    menuItems: ['Yes', 'No'],
                     name: 'is_religious',
                     onChange: this.props.onChange
                 }),
@@ -49577,12 +49549,17 @@ var PatientSocioEconomicFactorsDataForm = function (_React$Component) {
                     name: 'exercise_days_per_week',
                     onChange: this.props.onChange
                 }),
-                _react2.default.createElement(_SelectFields2.default, {
+                _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Did you do sports as a kid?',
                     className: 'md-cell',
-                    menuItems: ['Yes', 'No'],
                     name: 'kid_does_exercise',
+                    onChange: this.props.onChange
+                }),
+                _react2.default.createElement(_YesNoSelect2.default, {
+                    id: 'religion-select',
+                    label: 'Are you spiritual?',
+                    name: 'is_spiritual',
                     onChange: this.props.onChange
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
@@ -49691,7 +49668,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -49699,7 +49676,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -49707,7 +49684,7 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -49916,7 +49893,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -49924,7 +49901,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -49936,7 +49913,7 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -51808,7 +51785,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -51816,7 +51793,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -51824,11 +51801,11 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -51919,7 +51896,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -51927,7 +51904,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -51939,11 +51916,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -52033,7 +52010,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -52041,7 +52018,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -52053,11 +52030,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -52170,7 +52147,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -52178,7 +52155,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -52190,11 +52167,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -52277,7 +52254,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -52285,7 +52262,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -52297,11 +52274,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -52430,7 +52407,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -52438,7 +52415,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -52450,11 +52427,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -52568,7 +52545,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -52576,7 +52553,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -52588,11 +52565,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -52670,7 +52647,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -52678,7 +52655,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -52690,11 +52667,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -52780,7 +52757,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -52788,7 +52765,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -52800,11 +52777,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -52896,7 +52873,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -52904,7 +52881,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -52916,11 +52893,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -53078,7 +53055,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -53086,7 +53063,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -53098,11 +53075,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -53167,7 +53144,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -53175,7 +53152,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -53187,11 +53164,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -53256,7 +53233,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -53264,7 +53241,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -53276,11 +53253,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -53345,7 +53322,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -53353,7 +53330,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -53365,11 +53342,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -53497,7 +53474,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -53505,7 +53482,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -53517,11 +53494,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
@@ -53610,7 +53587,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(5);
+var _TextFields = __webpack_require__(6);
 
 var _TextFields2 = _interopRequireDefault(_TextFields);
 
@@ -53618,7 +53595,7 @@ var _Button = __webpack_require__(3);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _DatePickerContainer = __webpack_require__(6);
+var _DatePickerContainer = __webpack_require__(7);
 
 var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
 
@@ -53630,11 +53607,11 @@ var _TimePickerContainer = __webpack_require__(10);
 
 var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
 
-var _YesNoSelect = __webpack_require__(7);
+var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
 
-var _DataForm = __webpack_require__(9);
+var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
