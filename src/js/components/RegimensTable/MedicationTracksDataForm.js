@@ -6,47 +6,49 @@ import SelectField from 'react-md/lib/SelectFields';
 import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
 import YesNoSelect from '../YesNoSelect';
 import DataForm from '../DataForm';
+var functions = require('../../DataFormFunctions').default;
 
 export default class MedicationTracksDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            'tableName': 'MedicationTracks'
         }
     }
 
     render() {
         return (
-            <DataForm tableName="MedicationTracks" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Manifest ID"
-                    name="manifest_id"
+                    onChange={functions.onChange.bind(this, "manifest_id")}
                     type="number"
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Medication Track Ruleset ID"
-                    name="manifest_id"
+                    onChange={functions.onChange.bind(this, "manifest_id")}
                     type="number"
-                    onChange={this.props.onChange}
+                    
                 />
                 <TimePicker
                     id="appointment-time-auto"
                     className="md-cell"
                     label="Medication Track Zero Time"
-                    name="medication_track_zero_time"
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, "medication_track_zero_time")}
+                    
                 />
                 <DatePicker
                     id="appointment-date-auto"
                     label="Medication Track Zero Date"
-                    name="medication_track_zero_date"
+                    onChange={functions.onChange.bind(this, "medication_track_zero_date")}
                     className="md-cell"
-                    onChange={this.props.onChange}
+                    
                 />
             </DataForm>
         );

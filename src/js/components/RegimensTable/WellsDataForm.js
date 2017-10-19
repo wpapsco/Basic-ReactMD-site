@@ -6,53 +6,55 @@ import SelectField from 'react-md/lib/SelectFields';
 import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
 import YesNoSelect from '../YesNoSelect';
 import DataForm from '../DataForm';
+var functions = require('../../DataFormFunctions').default;
 
 export default class WellsDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            'tableName': 'Wells'
         }
     }
 
     render() {
         return (
-            <DataForm tableName="Wells" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Medication Track ID"
-                    name="medication_track_id"
+                    onChange={functions.onChange.bind(this, "medication_track_id")}
                     type="number"
                     maxLength={2}
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Well Row Number"
-                    name="well_row_number"
+                    onChange={functions.onChange.bind(this, "well_row_number")}
                     type="number"
                     maxLength={2}
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Well Column Number"
-                    name="well_column_number"
+                    onChange={functions.onChange.bind(this, "well_column_number")}
                     type="number"
                     maxLength={2}
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Well Number"
-                    name="well_number"
+                    onChange={functions.onChange.bind(this, "well_number")}
                     type="number"
                     maxLength={2}
-                    onChange={this.props.onChange}
+                    
                 />
             </DataForm>
         );

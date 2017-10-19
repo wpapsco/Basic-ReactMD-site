@@ -95,7 +95,8 @@ class Layout extends React.Component {
     }
 
     onSubmit = (e) => {
-        alert(JSON.stringify(this.state.data[this.state.form]));
+        //alert(JSON.stringify(this.state.data[this.state.form]));
+        alert(JSON.stringify(e));
     }
 
     render() {

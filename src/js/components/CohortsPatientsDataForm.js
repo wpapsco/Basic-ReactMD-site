@@ -5,33 +5,35 @@ import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import YesNoSelect from './YesNoSelect';
 import DataForm from './DataForm';
+var functions = require('../DataFormFunctions').default;
 
 export default class CohortsPatientsDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            'tableName': 'CohortsPatients'
         }
     }
     
     render() {
         return (
-            <DataForm tableName="CohortsPatients" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Cohort ID"
-                    name="cohort_id"
+                    onChange={functions.onChange.bind(this, "cohort_id")}
                     required
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Patient ID"
-                    name="patient_id"
+                    onChange={functions.onChange.bind(this, "patient_id")}
                     required
-                    onChange={this.props.onChange}
+                    
                 />
             </DataForm>
         );

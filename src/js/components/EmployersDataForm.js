@@ -5,90 +5,83 @@ import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import YesNoSelect from './YesNoSelect';
 import DataForm from './DataForm';
+var functions = require('../DataFormFunctions').default;
 
 export default class EmployersDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            'tableName': 'Employers'
         }
     }
 
     render() {
         return (
-            <DataForm tableName="Employers" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer Name"
                     maxLength={128}
-                    name='employer_name'
                     required
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'employer_name')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer Description"
                     maxLength={512}
-                    name='employer_description'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'employer_description')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer Street Address"
                     maxLength={128}
-                    name='employer_street_address'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'employer_street_address')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer Street Address 2"
                     maxLength={128}
-                    name='employer_street_address_2'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'employer_street_address_2')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer City"
                     maxLength={128}
-                    name='employer_city'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'employer_city')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer State/Province"
                     maxLength={2}
-                    name='employer_state_province'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'employer_state_province')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer County"
                     maxLength={128}
-                    name='employer_county'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'employer_county')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer Country"
                     maxLength={3}
-                    name='employer_country'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'employer_country')}
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Employer Zip Code"
                     maxLength={16}
-                    name='employer_zip'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'employer_zip')}
                 />
             </DataForm>
         );

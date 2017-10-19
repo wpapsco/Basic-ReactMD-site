@@ -6,44 +6,46 @@ import SelectField from 'react-md/lib/SelectFields';
 import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
 import YesNoSelect from '../YesNoSelect';
 import DataForm from '../DataForm';
+var functions = require('../../DataFormFunctions').default;
 
 export default class DeviceLifecycleStatesDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            'tableName': 'DeviceLifecycleStates'
         }
     }
     
     render() {
         return (
-            <DataForm tableName="DeviceLifecycleStates" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Device Lifecycle Status"
-                    name="device_lifecycle_status"
+                    onChange={functions.onChange.bind(this, "device_lifecycle_status")}
                     maxLength={24}
                     required
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Device Lifecycle Description"
-                    name="device_lifecycle_description"
+                    onChange={functions.onChange.bind(this, "device_lifecycle_description")}
                     maxLength={255}
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Device Lifecycle Ordinal"
-                    name="device_lifecycle_ordinal"
+                    onChange={functions.onChange.bind(this, "device_lifecycle_ordinal")}
                     type="number"
                     maxLength={4}
                     required
-                    onChange={this.props.onChange}
+                    
                 />
             </DataForm>
         );

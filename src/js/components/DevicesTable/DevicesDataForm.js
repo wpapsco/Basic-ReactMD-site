@@ -5,52 +5,54 @@ import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import YesNoSelect from '../YesNoSelect';
 import DataForm from '../DataForm';
+var functions = require('../../DataFormFunctions').default;
 
 export default class DevicesDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            'tableName': 'Devices'
         }
     }
     
     render() {
         return (
-            <DataForm tableName="Devices" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Device Serial"
-                    name="device_serial"
+                    onChange={functions.onChange.bind(this, "device_serial")}
                     maxLength={10}
                     required
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Cell Modem IMEI"
-                    name="cell_modem_imei"
+                    onChange={functions.onChange.bind(this, "cell_modem_imei")}
                     type="number"
                     required
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="SIM Card ICCID"
-                    name="sim_card_iccid"
+                    onChange={functions.onChange.bind(this, "sim_card_iccid")}
                     type="number"
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Model Number"
-                    name="model_number"
+                    onChange={functions.onChange.bind(this, "model_number")}
                     maxLength={10}
                     required
-                    onChange={this.props.onChange}
+                    
                 />
             </DataForm>
         );

@@ -6,50 +6,52 @@ import SelectField from 'react-md/lib/SelectFields';
 import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
 import YesNoSelect from '../YesNoSelect';
 import DataForm from '../DataForm';
+var functions = require('../../DataFormFunctions').default;
 
 export default class DeviceLifecycleHistoryDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            'tableName': 'DeviceLifecycleHistory'
         }
     }
 
     render() {
         return (
-            <DataForm tableName="DeviceLifecycleHistory" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Device ID"
-                    name="device_id"
+                    onChange={functions.onChange.bind(this, "device_id")}
                     type="number"
                     required
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Device Lifecycle Status ID"
-                    name="device_lifecycle_status_id"
+                    onChange={functions.onChange.bind(this, "device_lifecycle_status_id")}
                     maxLength={3}
-                    onChange={this.props.onChange}
+                    
                 />
                 <TimePicker
                     id="appointment-time-auto"
                     className="md-cell"
                     label="Lifecycle Start Time"
-                    name="lifecycle_start_time"
+                    onChange={functions.onChange.bind(this, "lifecycle_start_time")}
                     required
-                    onChange={this.props.onChange}
+                    
                 />
                 <DatePicker
                     id="appointment-date-auto"
                     label="Lifecycle Start Date"
-                    name="lifecycle_start_date"
+                    onChange={functions.onChange.bind(this, "lifecycle_start_date")}
                     className="md-cell"
                     required
-                    onChange={this.props.onChange}
+                    
                 />
             </DataForm>
         );

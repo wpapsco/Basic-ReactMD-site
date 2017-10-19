@@ -4,13 +4,15 @@ import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import DataForm from './DataForm';
+var functions = require('../DataFormFunctions').default;
 
 export default class PersonDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            display_ssn: ''
+            display_ssn: '',
+            'tableName': 'Person'
         }
     }
 
@@ -38,45 +40,44 @@ export default class PersonDataForm extends React.Component {
 
     render() {
         return (
-            <DataForm tableName="Person" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="First Name"
                     maxLength={64}
-                    name='first_name'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'first_name')}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Middle Name"
                     maxLength={64}
-                    name='middle_name'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'middle_name')}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Last Name"
                     maxLength={64}
-                    name='last_name'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'last_name')}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Nickname"
                     maxLength={64}
-                    name='nick_name'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'nick_name')}
+                    
                 />
                 <TextField
                     value={this.state.display_ssn}
                     id="floating-center-title"
                     className="md-cell"
                     label="SSN"
-                    name='ssn'
                     onChange={this.handleChange.bind(this, 'ssn')}
                 />
                 <SelectField
@@ -85,14 +86,14 @@ export default class PersonDataForm extends React.Component {
                     placeholder="Gender"
                     className="md-cell"
                     menuItems={["Male", "Female", "Prefer not to answer/Other"]}
-                    name='gender'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'gender')}
+                    
                 />
                 <DatePicker
                     label="Birthdate"
                     className="md-cell"
                     id='birthdate'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'birthdate')}
                 />
             </DataForm>
         );

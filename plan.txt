@@ -1,0 +1,28 @@
+what I want:
+
+client.js
+<PersonDataForm onSubmit={this.onsubmit.bind(this)}>
+
+onSubmit (data) = {
+	send(data)
+}
+
+PersonDataForm.js
+<DataForm onSubmit={(function defined somewhere else).bind(this)}
+<element
+	name='wow'
+	onChange={(function defined somewhere else).bind(this, 'wow')}
+	etc
+/>
+
+functiondefinition.js
+onChange(name, value) = {
+	this.setState({
+		etc...
+	});
+}
+
+onSubmit(callback) = {
+	this.props.onSubmit(this.state);
+}
+

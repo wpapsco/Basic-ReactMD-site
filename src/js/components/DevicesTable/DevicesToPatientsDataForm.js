@@ -6,74 +6,76 @@ import SelectField from 'react-md/lib/SelectFields';
 import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
 import YesNoSelect from '../YesNoSelect';
 import DataForm from '../DataForm';
+var functions = require('../../DataFormFunctions').default;
 
 export default class DeviceFirmwareDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            'tableName': 'DeviceFirmware'
         }
     }
     
     render() {
         return (
-            <DataForm tableName="DevicesToPatients" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Device ID"
-                    name="device_id"
+                    onChange={functions.onChange.bind(this, "device_id")}
                     type="number"
                     required
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Patient ID"
-                    name="patient_id"
+                    onChange={functions.onChange.bind(this, "patient_id")}
                     type="number"
                     required
-                    onChange={this.props.onChange}
+                    
                 />
                 <TimePicker
                     id="appointment-time-auto"
                     className="md-cell"
                     label="Start Time"
-                    name="start_time"
+                    onChange={functions.onChange.bind(this, "start_time")}
                     required
-                    onChange={this.props.onChange}
+                    
                 />
                 <DatePicker
                     id="appointment-date-auto"
                     label="Start Date"
-                    name="start_date"
+                    onChange={functions.onChange.bind(this, "start_date")}
                     className="md-cell"
                     required
-                    onChange={this.props.onChange}
+                    
                 />
                 <TimePicker
                     id="appointment-time-auto"
                     className="md-cell"
                     label="End Time"
-                    name="end_time"
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, "end_time")}
+                    
                 />
                 <DatePicker
                     id="appointment-date-auto"
                     label="End Date"
-                    name="end_date"
+                    onChange={functions.onChange.bind(this, "end_date")}
                     className="md-cell"
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Assigned To Patient By User Id"
-                    name="assigning_user_id"
+                    onChange={functions.onChange.bind(this, "assigning_user_id")}
                     type="number"
                     required
-                    onChange={this.props.onChange}
+                    
                 />
             </DataForm>
         );

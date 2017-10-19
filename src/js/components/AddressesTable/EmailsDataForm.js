@@ -6,50 +6,52 @@ import SelectField from 'react-md/lib/SelectFields';
 import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
 import YesNoSelect from '../YesNoSelect';
 import DataForm from '../DataForm';
+var functions = require('../../DataFormFunctions').default;
 
 export default class EmailsDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            'tableName': 'Emails'
         }
     }
 
     render() {
         return (
-            <DataForm tableName="Emails" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Person ID"
-                    name="person_id"
+                    onChange={functions.onChange.bind(this, "person_id")}
                     type="number"
                     required
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Email Address"
-                    name="email_address"
+                    onChange={functions.onChange.bind(this, "email_address")}
                     maxLength={256}
                     required
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Email Type ID"
-                    name="email_type_id"
+                    onChange={functions.onChange.bind(this, "email_type_id")}
                     type="number"
                     required
-                    onChange={this.props.onChange}
+                    
                 />
                 <YesNoSelect
                     id="contact-select"
                     label="Primary Email Address"
-                    name="primary_email_address"
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, "primary_email_address")}
+                    
                 />
             </DataForm>
         );

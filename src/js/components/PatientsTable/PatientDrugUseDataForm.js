@@ -5,26 +5,28 @@ import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import YesNoSelect from '../YesNoSelect';
 import DataForm from '../DataForm';
+var functions = require('../../DataFormFunctions').default;
 
 export default class PatientDrugUseDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            'tableName': 'PatientDrugUse'
         }
     }
 
     render() {
         return (
-            <DataForm tableName="PatientDrugUse" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Patient ID"
                     type="number"
                     required
-                    name='patient_id'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'patient_id')}
+                    
                 />
                 <TextField
                     id="floating-center-title"
@@ -32,8 +34,8 @@ export default class PatientDrugUseDataForm extends React.Component {
                     label="Drug Name"
                     maxLength={128}
                     required
-                    name='drug_name'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'drug_name')}
+                    
                 />
                 <TextField
                     id="floating-center-title"
@@ -42,8 +44,8 @@ export default class PatientDrugUseDataForm extends React.Component {
                     defaultValue="0"
                     type="number"
                     required
-                    name='drug_count'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'drug_count')}
+                    
                 />
                 <SelectField
                     id="age-select"
@@ -52,8 +54,8 @@ export default class PatientDrugUseDataForm extends React.Component {
                     defaultValue="PerMonth"
                     menuItems={['PerDay', 'PerHour', 'PerWeek', 'PerMonth', 'PerQuarter', 'PerYear']}
                     required
-                    name='drug_frequency'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'drug_frequency')}
+                    
                 />
                 <TextField
                     id="floating-center-title"
@@ -62,8 +64,8 @@ export default class PatientDrugUseDataForm extends React.Component {
                     defaultValue="0"
                     type="number"
                     required
-                    name='since_length'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'since_length')}
+                    
                 />
                 <SelectField
                     id="age-select"
@@ -72,8 +74,8 @@ export default class PatientDrugUseDataForm extends React.Component {
                     defaultValue="Years"
                     menuItems={['Hours', 'Days', 'Weeks', 'Months', 'Quarters', 'Years']}
                     required
-                    name='since_unit'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'since_unit')}
+                    
                 />
             </DataForm>
         );

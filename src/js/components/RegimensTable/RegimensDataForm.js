@@ -6,74 +6,76 @@ import SelectField from 'react-md/lib/SelectFields';
 import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
 import YesNoSelect from '../YesNoSelect';
 import DataForm from '../DataForm';
+var functions = require('../../DataFormFunctions').default;
 
 export default class RegimensDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            'tableName': 'Regimens'
         }
     }
 
     render() {
         return (
-            <DataForm tableName="Regimens" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Well ID"
-                    name="well_id"
+                    onChange={functions.onChange.bind(this, "well_id")}
                     type="number"
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Drug's Scientific Name"
-                    name="drug_scientific_name"
+                    onChange={functions.onChange.bind(this, "drug_scientific_name")}
                     maxLength={128}
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Drug's Generic Name"
-                    name="drug_generic_name"
+                    onChange={functions.onChange.bind(this, "drug_generic_name")}
                     maxLength={128}
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Dosage"
-                    name="regimen_dosage"
+                    onChange={functions.onChange.bind(this, "regimen_dosage")}
                     maxLength={10}
                     type="number"
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Route"
-                    name="regimen_route"
+                    onChange={functions.onChange.bind(this, "regimen_route")}
                     maxLength={2}
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Frequency"
-                    name="regimen_frequency"
+                    onChange={functions.onChange.bind(this, "regimen_frequency")}
                     maxLength={3}
-                    onChange={this.props.onChange}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Medication NDC"
-                    name="regimen_medication_ndc"
+                    onChange={functions.onChange.bind(this, "regimen_medication_ndc")}
                     maxLength={13}
-                    onChange={this.props.onChange}
+                    
                 />
             </DataForm>
         );

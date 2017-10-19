@@ -6,89 +6,91 @@ import SelectField from 'react-md/lib/SelectFields';
 import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
 import YesNoSelect from '../YesNoSelect';
 import DataForm from '../DataForm';
+var functions = require('../../DataFormFunctions').default;
 
 export default class AddressesDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            'tableName': 'Addresses'
         }
     }
 
     render() {
         return (
-            <DataForm tableName="Addresses" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Person ID"
-                    name="person_id"
+                    onChange={functions.onChange.bind(this, "person_id")}
                     type="number"
                     required
-                    onChange={this.props.onChange}
+
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Address Type ID"
-                    name="address_type_id"
+                    onChange={functions.onChange.bind(this, "address_type_id")}
                     type="number"
                     required
-                    onChange={this.props.onChange}
+
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Street Address"
-                    name="street_address"
+                    onChange={functions.onChange.bind(this, "street_address")}
                     maxLength={128}
-                    onChange={this.props.onChange}
+
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Street Address 2"
-                    name="street_address 2"
+                    onChange={functions.onChange.bind(this, "street_address 2")}
                     maxLength={128}
-                    onChange={this.props.onChange}
+
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="City"
-                    name="city"
+                    onChange={functions.onChange.bind(this, "city")}
                     maxLength={64}
-                    onChange={this.props.onChange}
+
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="State/Province"
-                    name="state_province"
+                    onChange={functions.onChange.bind(this, "state_province")}
                     maxLength={64}
-                    onChange={this.props.onChange}
+
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="County"
-                    name="county"
+                    onChange={functions.onChange.bind(this, "county")}
                     maxLength={3}
-                    onChange={this.props.onChange}
+
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Country"
-                    name="country"
+                    onChange={functions.onChange.bind(this, "country")}
                     maxLength={2}
-                    onChange={this.props.onChange}
+
                 />
                 <YesNoSelect
                     id="contact-select"
                     label="Primary Contact Address"
-                    name="primary_contact_address"
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, "primary_contact_address")}
+
                 />
             </DataForm>
         );

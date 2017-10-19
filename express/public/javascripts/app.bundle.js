@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 88);
+/******/ 	return __webpack_require__(__webpack_require__.s = 89);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,9 +71,9 @@
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(89);
-} else {
   module.exports = __webpack_require__(90);
+} else {
+  module.exports = __webpack_require__(91);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
@@ -104,11 +104,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(101)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(102)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(102)();
+  module.exports = __webpack_require__(103)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
@@ -174,7 +174,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(14), __webpack_require__(12), __webpack_require__(20), __webpack_require__(154), __webpack_require__(35), __webpack_require__(30), __webpack_require__(17), __webpack_require__(80), __webpack_require__(71), __webpack_require__(151)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(14), __webpack_require__(12), __webpack_require__(20), __webpack_require__(155), __webpack_require__(35), __webpack_require__(30), __webpack_require__(17), __webpack_require__(80), __webpack_require__(71), __webpack_require__(152)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -892,7 +892,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(109)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(110)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -1079,7 +1079,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(19), __webpack_require__(14), __webpack_require__(12), __webpack_require__(15), __webpack_require__(38), __webpack_require__(22), __webpack_require__(23), __webpack_require__(160), __webpack_require__(48), __webpack_require__(82), __webpack_require__(40), __webpack_require__(17), __webpack_require__(46), __webpack_require__(47), __webpack_require__(83), __webpack_require__(168)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(19), __webpack_require__(14), __webpack_require__(12), __webpack_require__(15), __webpack_require__(38), __webpack_require__(22), __webpack_require__(23), __webpack_require__(161), __webpack_require__(48), __webpack_require__(82), __webpack_require__(40), __webpack_require__(17), __webpack_require__(46), __webpack_require__(47), __webpack_require__(83), __webpack_require__(169)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -2431,7 +2431,7 @@ process.umask = function() { return 0; };
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(19), __webpack_require__(14), __webpack_require__(12), __webpack_require__(15), __webpack_require__(38), __webpack_require__(22), __webpack_require__(23), __webpack_require__(82), __webpack_require__(87), __webpack_require__(193), __webpack_require__(83), __webpack_require__(17), __webpack_require__(47), __webpack_require__(40), __webpack_require__(194)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(19), __webpack_require__(14), __webpack_require__(12), __webpack_require__(15), __webpack_require__(38), __webpack_require__(22), __webpack_require__(23), __webpack_require__(82), __webpack_require__(88), __webpack_require__(194), __webpack_require__(83), __webpack_require__(17), __webpack_require__(47), __webpack_require__(40), __webpack_require__(195)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -3293,9 +3293,9 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(91);
+  module.exports = __webpack_require__(92);
 } else {
-  module.exports = __webpack_require__(94);
+  module.exports = __webpack_require__(95);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
@@ -4117,7 +4117,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(12), __webpack_require__(111), __webpack_require__(59)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(12), __webpack_require__(112), __webpack_require__(59)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -4642,7 +4642,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(125)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(126)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -5248,7 +5248,7 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _chainFunction = __webpack_require__(113);
+var _chainFunction = __webpack_require__(114);
 
 var _chainFunction2 = _interopRequireDefault(_chainFunction);
 
@@ -5264,7 +5264,7 @@ var _warning = __webpack_require__(58);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _ChildMapping = __webpack_require__(114);
+var _ChildMapping = __webpack_require__(115);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5677,7 +5677,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(136)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(137)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -6056,7 +6056,7 @@ module.exports = exports["default"];
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(139)
+/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(140)
   , root = typeof window === 'undefined' ? global : window
   , vendors = ['moz', 'webkit']
   , suffix = 'AnimationFrame'
@@ -6129,7 +6129,7 @@ module.exports.polyfill = function() {
   root.cancelAnimationFrame = caf
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(138)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(139)))
 
 /***/ }),
 /* 45 */
@@ -6225,7 +6225,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(14), __webpack_require__(19), __webpack_require__(15), __webpack_require__(67), __webpack_require__(23), __webpack_require__(35), __webpack_require__(156), __webpack_require__(77), __webpack_require__(17), __webpack_require__(46), __webpack_require__(78), __webpack_require__(79), __webpack_require__(157), __webpack_require__(158), __webpack_require__(81)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(14), __webpack_require__(19), __webpack_require__(15), __webpack_require__(67), __webpack_require__(23), __webpack_require__(35), __webpack_require__(157), __webpack_require__(77), __webpack_require__(17), __webpack_require__(46), __webpack_require__(78), __webpack_require__(79), __webpack_require__(158), __webpack_require__(159), __webpack_require__(81)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -7807,7 +7807,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(92);
+var isTextNode = __webpack_require__(93);
 
 /*eslint-disable no-bitwise */
 
@@ -8342,7 +8342,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(2), __webpack_require__(14), __webpack_require__(19), __webpack_require__(20), __webpack_require__(15), __webpack_require__(22), __webpack_require__(28), __webpack_require__(24), __webpack_require__(36), __webpack_require__(112), __webpack_require__(69)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(2), __webpack_require__(14), __webpack_require__(19), __webpack_require__(20), __webpack_require__(15), __webpack_require__(22), __webpack_require__(28), __webpack_require__(24), __webpack_require__(36), __webpack_require__(113), __webpack_require__(69)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -9030,7 +9030,7 @@ var _TransitionGroup = __webpack_require__(37);
 
 var _TransitionGroup2 = _interopRequireDefault(_TransitionGroup);
 
-var _CSSTransitionGroupChild = __webpack_require__(115);
+var _CSSTransitionGroupChild = __webpack_require__(116);
 
 var _CSSTransitionGroupChild2 = _interopRequireDefault(_CSSTransitionGroupChild);
 
@@ -9301,7 +9301,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(2), __webpack_require__(14), __webpack_require__(15), __webpack_require__(24), __webpack_require__(127)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(2), __webpack_require__(14), __webpack_require__(15), __webpack_require__(24), __webpack_require__(128)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -9566,7 +9566,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(131), __webpack_require__(71)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(132), __webpack_require__(71)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -9606,7 +9606,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(15), __webpack_require__(72), __webpack_require__(132), __webpack_require__(135)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(15), __webpack_require__(72), __webpack_require__(133), __webpack_require__(136)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -10386,7 +10386,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(13), __webpack_require__(148)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(13), __webpack_require__(149)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -10810,7 +10810,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(150)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(151)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -11053,7 +11053,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(64), __webpack_require__(2), __webpack_require__(14), __webpack_require__(19), __webpack_require__(12), __webpack_require__(20), __webpack_require__(15), __webpack_require__(161), __webpack_require__(84), __webpack_require__(162), __webpack_require__(167)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(64), __webpack_require__(2), __webpack_require__(14), __webpack_require__(19), __webpack_require__(12), __webpack_require__(20), __webpack_require__(15), __webpack_require__(162), __webpack_require__(84), __webpack_require__(163), __webpack_require__(168)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -11932,6 +11932,34 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+exports.default = {
+    onChange: function onChange(name, value) {
+        console.log('DataFormFunctions onChange');
+        console.log(name);
+        console.log(value);
+        this.setState(_defineProperty({}, name, value));
+        console.log(this.state);
+    },
+    onSubmit: function onSubmit() {
+        console.log('DataFormFunctions onSubmit');
+        console.log(this.state);
+        this.props.onSubmit(this.state);
+    }
+};
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
@@ -11971,7 +11999,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=formatTime.js.map
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11989,19 +12017,19 @@ var _reactDom = __webpack_require__(11);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _webfontloader = __webpack_require__(103);
+var _webfontloader = __webpack_require__(104);
 
 var _webfontloader2 = _interopRequireDefault(_webfontloader);
 
-var _Papers = __webpack_require__(104);
+var _Papers = __webpack_require__(105);
 
 var _Papers2 = _interopRequireDefault(_Papers);
 
-var _Toolbars = __webpack_require__(105);
+var _Toolbars = __webpack_require__(106);
 
 var _Toolbars2 = _interopRequireDefault(_Toolbars);
 
-var _TitleMenu = __webpack_require__(108);
+var _TitleMenu = __webpack_require__(109);
 
 var _TitleMenu2 = _interopRequireDefault(_TitleMenu);
 
@@ -12009,37 +12037,37 @@ var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
 
-var _PersonDataForm = __webpack_require__(155);
+var _PersonDataForm = __webpack_require__(156);
 
 var _PersonDataForm2 = _interopRequireDefault(_PersonDataForm);
 
-var _UserDataForm = __webpack_require__(178);
+var _UserDataForm = __webpack_require__(179);
 
 var _UserDataForm2 = _interopRequireDefault(_UserDataForm);
 
-var _UserTypeDataForm = __webpack_require__(179);
+var _UserTypeDataForm = __webpack_require__(180);
 
 var _UserTypeDataForm2 = _interopRequireDefault(_UserTypeDataForm);
 
-var _EmployersDataForm = __webpack_require__(180);
+var _EmployersDataForm = __webpack_require__(181);
 
 var _EmployersDataForm2 = _interopRequireDefault(_EmployersDataForm);
 
-var _CohortsDataForm = __webpack_require__(181);
+var _CohortsDataForm = __webpack_require__(182);
 
 var _CohortsDataForm2 = _interopRequireDefault(_CohortsDataForm);
 
-var _CohortsPatientsDataForm = __webpack_require__(182);
+var _CohortsPatientsDataForm = __webpack_require__(183);
 
 var _CohortsPatientsDataForm2 = _interopRequireDefault(_CohortsPatientsDataForm);
 
-var _PatientsTable = __webpack_require__(183);
+var _PatientsTable = __webpack_require__(184);
 
-var _DevicesTable = __webpack_require__(202);
+var _DevicesTable = __webpack_require__(203);
 
-var _RegimensTable = __webpack_require__(208);
+var _RegimensTable = __webpack_require__(209);
 
-var _AddressesTable = __webpack_require__(214);
+var _AddressesTable = __webpack_require__(215);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12093,7 +12121,8 @@ var Layout = function (_React$Component) {
         };
 
         _this.onSubmit = function (e) {
-            alert(JSON.stringify(_this.state.data[_this.state.form]));
+            //alert(JSON.stringify(this.state.data[this.state.form]));
+            alert(JSON.stringify(e));
         };
 
         _this.state = {
@@ -12134,7 +12163,7 @@ var app = document.getElementById('app');
 _reactDom2.default.render(_react2.default.createElement(Layout, null), app);
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12164,7 +12193,7 @@ module.exports={Children:{map:S.map,forEach:S.forEach,count:S.count,toArray:S.to
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13870,7 +13899,7 @@ module.exports = ReactEntry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14133,7 +14162,7 @@ unstable_deferredUpdates:Xj.deferredUpdates,flushSync:Xj.flushSync,__SECRET_INTE
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14148,7 +14177,7 @@ unstable_deferredUpdates:Xj.deferredUpdates,flushSync:Xj.flushSync,__SECRET_INTE
  * @typechecks
  */
 
-var isNode = __webpack_require__(93);
+var isNode = __webpack_require__(94);
 
 /**
  * @param {*} object The object to check.
@@ -14161,7 +14190,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14189,7 +14218,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14215,10 +14244,10 @@ var ExecutionEnvironment = __webpack_require__(34);
 var _assign = __webpack_require__(21);
 var EventListener = __webpack_require__(51);
 var require$$0 = __webpack_require__(26);
-var hyphenateStyleName = __webpack_require__(95);
+var hyphenateStyleName = __webpack_require__(96);
 var emptyFunction = __webpack_require__(16);
-var camelizeStyleName = __webpack_require__(97);
-var performanceNow = __webpack_require__(99);
+var camelizeStyleName = __webpack_require__(98);
+var performanceNow = __webpack_require__(100);
 var propTypes = __webpack_require__(1);
 var emptyObject = __webpack_require__(25);
 var checkPropTypes = __webpack_require__(32);
@@ -31418,7 +31447,7 @@ module.exports = ReactDOMFiberEntry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31433,7 +31462,7 @@ module.exports = ReactDOMFiberEntry;
 
 
 
-var hyphenate = __webpack_require__(96);
+var hyphenate = __webpack_require__(97);
 
 var msPattern = /^ms-/;
 
@@ -31460,7 +31489,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31496,7 +31525,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31511,7 +31540,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(98);
+var camelize = __webpack_require__(99);
 
 var msPattern = /^-ms-/;
 
@@ -31539,7 +31568,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31574,7 +31603,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31589,7 +31618,7 @@ module.exports = camelize;
  * @typechecks
  */
 
-var performance = __webpack_require__(100);
+var performance = __webpack_require__(101);
 
 var performanceNow;
 
@@ -31611,7 +31640,7 @@ if (performance.now) {
 module.exports = performanceNow;
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31637,7 +31666,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = performance || {};
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32187,7 +32216,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32252,7 +32281,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/* Web Font Loader v1.6.28 - (c) Adobe Systems, Google. License: Apache 2.0 */(function(){function aa(a,b,c){return a.call.apply(a.bind,arguments)}function ba(a,b,c){if(!a)throw Error();if(2<arguments.length){var d=Array.prototype.slice.call(arguments,2);return function(){var c=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(c,d);return a.apply(b,c)}}return function(){return a.apply(b,arguments)}}function p(a,b,c){p=Function.prototype.bind&&-1!=Function.prototype.bind.toString().indexOf("native code")?aa:ba;return p.apply(null,arguments)}var q=Date.now||function(){return+new Date};function ca(a,b){this.a=a;this.o=b||a;this.c=this.o.document}var da=!!window.FontFace;function t(a,b,c,d){b=a.c.createElement(b);if(c)for(var e in c)c.hasOwnProperty(e)&&("style"==e?b.style.cssText=c[e]:b.setAttribute(e,c[e]));d&&b.appendChild(a.c.createTextNode(d));return b}function u(a,b,c){a=a.c.getElementsByTagName(b)[0];a||(a=document.documentElement);a.insertBefore(c,a.lastChild)}function v(a){a.parentNode&&a.parentNode.removeChild(a)}
@@ -32276,7 +32305,7 @@ g,0<d.length&&(d=za[d[0]])&&(a.c[e]=d))}a.c[e]||(d=za[e])&&(a.c[e]=d);for(d=0;d<
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -32316,12 +32345,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(106)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(107)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -32356,12 +32385,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(14), __webpack_require__(35), __webpack_require__(56), __webpack_require__(27), __webpack_require__(107)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(14), __webpack_require__(35), __webpack_require__(56), __webpack_require__(27), __webpack_require__(108)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -32739,7 +32768,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=Toolbar.js.map
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -32910,7 +32939,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=ToolbarTitle.js.map
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32954,12 +32983,12 @@ TitleMenu.defaultProps = {
 exports.default = TitleMenu;
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(2), __webpack_require__(14), __webpack_require__(19), __webpack_require__(12), __webpack_require__(110), __webpack_require__(15), __webpack_require__(57), __webpack_require__(22), __webpack_require__(23), __webpack_require__(17), __webpack_require__(28), __webpack_require__(24), __webpack_require__(36), __webpack_require__(63), __webpack_require__(129), __webpack_require__(147)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(2), __webpack_require__(14), __webpack_require__(19), __webpack_require__(12), __webpack_require__(111), __webpack_require__(15), __webpack_require__(57), __webpack_require__(22), __webpack_require__(23), __webpack_require__(17), __webpack_require__(28), __webpack_require__(24), __webpack_require__(36), __webpack_require__(63), __webpack_require__(130), __webpack_require__(148)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -34241,7 +34270,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=SelectField.js.map
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -34294,7 +34323,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=omit.js.map
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -34351,12 +34380,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=closest.js.map
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(11), __webpack_require__(1), __webpack_require__(64), __webpack_require__(2), __webpack_require__(38), __webpack_require__(121), __webpack_require__(123), __webpack_require__(126), __webpack_require__(124), __webpack_require__(28), __webpack_require__(24), __webpack_require__(36), __webpack_require__(60), __webpack_require__(61), __webpack_require__(62), __webpack_require__(29)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(11), __webpack_require__(1), __webpack_require__(64), __webpack_require__(2), __webpack_require__(38), __webpack_require__(122), __webpack_require__(124), __webpack_require__(127), __webpack_require__(125), __webpack_require__(28), __webpack_require__(24), __webpack_require__(36), __webpack_require__(60), __webpack_require__(61), __webpack_require__(62), __webpack_require__(29)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -35649,7 +35678,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports) {
 
 
@@ -35675,7 +35704,7 @@ module.exports = function chain(){
 
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35772,7 +35801,7 @@ function mergeChildMappings(prev, next) {
 }
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35782,19 +35811,19 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _addClass = __webpack_require__(116);
+var _addClass = __webpack_require__(117);
 
 var _addClass2 = _interopRequireDefault(_addClass);
 
-var _removeClass = __webpack_require__(118);
+var _removeClass = __webpack_require__(119);
 
 var _removeClass2 = _interopRequireDefault(_removeClass);
 
-var _requestAnimationFrame = __webpack_require__(119);
+var _requestAnimationFrame = __webpack_require__(120);
 
 var _requestAnimationFrame2 = _interopRequireDefault(_requestAnimationFrame);
 
-var _properties = __webpack_require__(120);
+var _properties = __webpack_require__(121);
 
 var _react = __webpack_require__(0);
 
@@ -36008,7 +36037,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36019,7 +36048,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = addClass;
 
-var _hasClass = __webpack_require__(117);
+var _hasClass = __webpack_require__(118);
 
 var _hasClass2 = _interopRequireDefault(_hasClass);
 
@@ -36031,7 +36060,7 @@ function addClass(element, className) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36047,7 +36076,7 @@ function hasClass(element, className) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36058,7 +36087,7 @@ module.exports = function removeClass(element, className) {
 };
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36117,7 +36146,7 @@ exports.default = compatRaf;
 module.exports = exports['default'];
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36233,12 +36262,12 @@ function getTransitionProperties() {
 }
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(122), __webpack_require__(67)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(123), __webpack_require__(67)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -36331,7 +36360,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=getSelectedTextPosition.js.map
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -36369,7 +36398,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=getSelectedText.js.map
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -36417,7 +36446,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=getScroll.js.map
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -36511,7 +36540,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=isOutOfBounds.js.map
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37536,7 +37565,7 @@ var index = (function () {
 
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -37597,12 +37626,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=viewport.js.map
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(128)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(129)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -37637,7 +37666,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -37833,12 +37862,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=Subheader.js.map
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(2), __webpack_require__(14), __webpack_require__(13), __webpack_require__(130), __webpack_require__(15), __webpack_require__(23), __webpack_require__(12), __webpack_require__(28), __webpack_require__(24), __webpack_require__(70), __webpack_require__(40), __webpack_require__(17), __webpack_require__(46), __webpack_require__(145), __webpack_require__(146), __webpack_require__(69), __webpack_require__(63)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(2), __webpack_require__(14), __webpack_require__(13), __webpack_require__(131), __webpack_require__(15), __webpack_require__(23), __webpack_require__(12), __webpack_require__(28), __webpack_require__(24), __webpack_require__(70), __webpack_require__(40), __webpack_require__(17), __webpack_require__(46), __webpack_require__(146), __webpack_require__(147), __webpack_require__(69), __webpack_require__(63)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -38621,7 +38650,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=ListItem.js.map
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -38692,7 +38721,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=getCollapserStyles.js.map
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -39059,12 +39088,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=AccessibleFakeButton.js.map
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(37), __webpack_require__(2), __webpack_require__(12), __webpack_require__(59), __webpack_require__(73), __webpack_require__(75), __webpack_require__(39), __webpack_require__(30), __webpack_require__(133), __webpack_require__(134)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(37), __webpack_require__(2), __webpack_require__(12), __webpack_require__(59), __webpack_require__(73), __webpack_require__(75), __webpack_require__(39), __webpack_require__(30), __webpack_require__(134), __webpack_require__(135)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -39508,7 +39537,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=InkContainer.js.map
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -39549,7 +39578,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=calculateHypotenuse.js.map
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -39801,7 +39830,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=Ink.js.map
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -39842,7 +39871,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=inkContextTypes.js.map
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39852,19 +39881,19 @@ exports.__esModule = true;
 
 function _interopRequire(obj) { return obj && obj.__esModule ? obj['default'] : obj; }
 
-var _Motion = __webpack_require__(137);
+var _Motion = __webpack_require__(138);
 
 exports.Motion = _interopRequire(_Motion);
 
-var _StaggeredMotion = __webpack_require__(140);
+var _StaggeredMotion = __webpack_require__(141);
 
 exports.StaggeredMotion = _interopRequire(_StaggeredMotion);
 
-var _TransitionMotion = __webpack_require__(141);
+var _TransitionMotion = __webpack_require__(142);
 
 exports.TransitionMotion = _interopRequire(_TransitionMotion);
 
-var _spring = __webpack_require__(143);
+var _spring = __webpack_require__(144);
 
 exports.spring = _interopRequire(_spring);
 
@@ -39878,12 +39907,12 @@ exports.stripStyle = _interopRequire(_stripStyle);
 
 // deprecated, dummy warning function
 
-var _reorderKeys = __webpack_require__(144);
+var _reorderKeys = __webpack_require__(145);
 
 exports.reorderKeys = _interopRequire(_reorderKeys);
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40156,7 +40185,7 @@ module.exports = exports['default'];
 // config)
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, exports) {
 
 var g;
@@ -40183,7 +40212,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {// Generated by CoffeeScript 1.12.2
@@ -40226,7 +40255,7 @@ module.exports = g;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40520,7 +40549,7 @@ module.exports = exports['default'];
 // config)
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40550,7 +40579,7 @@ var _stepper3 = __webpack_require__(42);
 
 var _stepper4 = _interopRequireDefault(_stepper3);
 
-var _mergeDiff = __webpack_require__(142);
+var _mergeDiff = __webpack_require__(143);
 
 var _mergeDiff2 = _interopRequireDefault(_mergeDiff);
 
@@ -41048,7 +41077,7 @@ module.exports = exports['default'];
 // In reality currentStyle should be 400
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41162,7 +41191,7 @@ module.exports = exports['default'];
 // to loop through and find a key's index each time), but I no longer care
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41191,7 +41220,7 @@ function spring(val, config) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41215,7 +41244,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -41376,7 +41405,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=TileAddon.js.map
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -41571,12 +41600,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=ListItemText.js.map
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(77), __webpack_require__(78), __webpack_require__(79), __webpack_require__(149)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(77), __webpack_require__(78), __webpack_require__(79), __webpack_require__(150)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -41798,7 +41827,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=SelectFieldToggle.js.map
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -41929,7 +41958,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=Message.js.map
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -42238,7 +42267,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=SelectFieldInput.js.map
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -42409,12 +42438,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=Divider.js.map
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(72), __webpack_require__(152)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(72), __webpack_require__(153)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -42636,12 +42665,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=injectTooltip.js.map
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(11), __webpack_require__(1), __webpack_require__(37), __webpack_require__(2), __webpack_require__(12), __webpack_require__(30), __webpack_require__(39), __webpack_require__(153)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(11), __webpack_require__(1), __webpack_require__(37), __webpack_require__(2), __webpack_require__(12), __webpack_require__(30), __webpack_require__(39), __webpack_require__(154)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -42928,7 +42957,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=TooltipContainer.js.map
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -43152,7 +43181,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=Tooltip.js.map
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -43257,7 +43286,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=getBtnStyles.js.map
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43301,6 +43330,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var functions = __webpack_require__(87).default;
+
 var PersonDataForm = function (_React$Component) {
     _inherits(PersonDataForm, _React$Component);
 
@@ -43332,7 +43363,8 @@ var PersonDataForm = function (_React$Component) {
         };
 
         _this.state = {
-            display_ssn: ''
+            display_ssn: '',
+            'tableName': 'Person'
         };
         return _this;
     }
@@ -43342,45 +43374,44 @@ var PersonDataForm = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'Person', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'First Name',
                     maxLength: 64,
-                    name: 'first_name',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'first_name')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Middle Name',
                     maxLength: 64,
-                    name: 'middle_name',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'middle_name')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Last Name',
                     maxLength: 64,
-                    name: 'last_name',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'last_name')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Nickname',
                     maxLength: 64,
-                    name: 'nick_name',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'nick_name')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     value: this.state.display_ssn,
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'SSN',
-                    name: 'ssn',
                     onChange: this.handleChange.bind(this, 'ssn')
                 }),
                 _react2.default.createElement(_SelectFields2.default, {
@@ -43389,14 +43420,14 @@ var PersonDataForm = function (_React$Component) {
                     placeholder: 'Gender',
                     className: 'md-cell',
                     menuItems: ["Male", "Female", "Prefer not to answer/Other"],
-                    name: 'gender',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'gender')
+
                 }),
                 _react2.default.createElement(_DatePickerContainer2.default, {
                     label: 'Birthdate',
                     className: 'md-cell',
                     id: 'birthdate',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'birthdate')
                 })
             );
         }
@@ -43408,7 +43439,7 @@ var PersonDataForm = function (_React$Component) {
 exports.default = PersonDataForm;
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -43475,7 +43506,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=minNumber.js.map
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -43665,12 +43696,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=PasswordButton.js.map
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(13), __webpack_require__(159)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(13), __webpack_require__(160)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -43890,7 +43921,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=InputField.js.map
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -44166,7 +44197,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=TextArea.js.map
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -44214,7 +44245,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=isDateEqual.js.map
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -44301,12 +44332,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=toggleScroll.js.map
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(2), __webpack_require__(19), __webpack_require__(84), __webpack_require__(163), __webpack_require__(29), __webpack_require__(27), __webpack_require__(166), __webpack_require__(49)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(2), __webpack_require__(19), __webpack_require__(84), __webpack_require__(164), __webpack_require__(29), __webpack_require__(27), __webpack_require__(167), __webpack_require__(49)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -44869,12 +44900,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=Dialog.js.map
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(164), __webpack_require__(165)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(11), __webpack_require__(165), __webpack_require__(166)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -45204,7 +45235,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=FocusContainer.js.map
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45263,7 +45294,7 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -45306,7 +45337,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=isValidFocusKeypress.js.map
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -45459,7 +45490,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=DialogTitle.js.map
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -45700,12 +45731,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=Portal.js.map
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(49), __webpack_require__(169), __webpack_require__(170), __webpack_require__(176)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(49), __webpack_require__(170), __webpack_require__(171), __webpack_require__(177)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -46037,7 +46068,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=DatePicker.js.map
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -46228,12 +46259,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=DatePickerHeader.js.map
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(171), __webpack_require__(174)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(172), __webpack_require__(175)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -46448,12 +46479,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=DatePickerCalendar.js.map
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(48), __webpack_require__(85), __webpack_require__(172), __webpack_require__(86), __webpack_require__(173)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(48), __webpack_require__(85), __webpack_require__(173), __webpack_require__(86), __webpack_require__(174)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -46707,7 +46738,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=CalendarMonth.js.map
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -46747,7 +46778,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=getLastDay.js.map
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -46967,12 +46998,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=CalendarDate.js.map
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(13), __webpack_require__(175), __webpack_require__(86), __webpack_require__(48), __webpack_require__(3)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(13), __webpack_require__(176), __webpack_require__(86), __webpack_require__(48), __webpack_require__(3)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -47222,7 +47253,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=CalendarHeader.js.map
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -47276,12 +47307,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=isMonthBefore.js.map
 
 /***/ }),
-/* 176 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(177)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(178)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -47485,7 +47516,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=YearPicker.js.map
 
 /***/ }),
-/* 177 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -47638,131 +47669,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=Year.js.map
 
 /***/ }),
-/* 178 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _TextFields = __webpack_require__(6);
-
-var _TextFields2 = _interopRequireDefault(_TextFields);
-
-var _Button = __webpack_require__(3);
-
-var _Button2 = _interopRequireDefault(_Button);
-
-var _DatePickerContainer = __webpack_require__(7);
-
-var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
-
-var _SelectFields = __webpack_require__(4);
-
-var _SelectFields2 = _interopRequireDefault(_SelectFields);
-
-var _DataForm = __webpack_require__(5);
-
-var _DataForm2 = _interopRequireDefault(_DataForm);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var UserDataForm = function (_React$Component) {
-    _inherits(UserDataForm, _React$Component);
-
-    function UserDataForm(props) {
-        _classCallCheck(this, UserDataForm);
-
-        var _this = _possibleConstructorReturn(this, (UserDataForm.__proto__ || Object.getPrototypeOf(UserDataForm)).call(this, props));
-
-        _this.state = {};
-        return _this;
-    }
-
-    _createClass(UserDataForm, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                _DataForm2.default,
-                { tableName: 'User', onSubmit: this.props.onSubmit },
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'User Type ID',
-                    maxLength: 2,
-                    required: true,
-                    name: 'user_type_id',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Fourm Pseudonym',
-                    maxLength: 64,
-                    required: true,
-                    name: 'pseudonym',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Attached Person ID',
-                    type: 'number',
-                    required: true,
-                    name: 'person_id',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Time Zone',
-                    maxLength: 2,
-                    required: true,
-                    name: 'time_zone',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Date Format',
-                    maxLength: 1,
-                    name: 'date_format',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Time Format',
-                    type: 'number',
-                    maxLength: 1,
-                    name: 'time_format',
-                    onChange: this.props.onChange
-                })
-            );
-        }
-    }]);
-
-    return UserDataForm;
-}(_react2.default.Component);
-
-exports.default = UserDataForm;
-
-/***/ }),
 /* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -47807,57 +47713,89 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var UserTypeDataForm = function (_React$Component) {
-    _inherits(UserTypeDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function UserTypeDataForm(props) {
-        _classCallCheck(this, UserTypeDataForm);
+var UserDataForm = function (_React$Component) {
+    _inherits(UserDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (UserTypeDataForm.__proto__ || Object.getPrototypeOf(UserTypeDataForm)).call(this, props));
+    function UserDataForm(props) {
+        _classCallCheck(this, UserDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (UserDataForm.__proto__ || Object.getPrototypeOf(UserDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'User'
+        };
         return _this;
     }
 
-    _createClass(UserTypeDataForm, [{
+    _createClass(UserDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'UserType', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'User Type ID',
                     maxLength: 2,
-                    name: 'user_type_id',
-                    onChange: this.props.onChange
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'user_type_id')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Unique User Type Identifier',
+                    label: 'Fourm Pseudonym',
                     maxLength: 64,
                     required: true,
-                    name: 'user_type',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'pseudonym')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'User Type Description',
-                    maxLength: 256,
-                    name: 'user_type_description',
-                    onChange: this.props.onChange
+                    label: 'Attached Person ID',
+                    type: 'number',
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'person_id')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Time Zone',
+                    maxLength: 2,
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'time_zone')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Date Format',
+                    maxLength: 1,
+                    onChange: functions.onChange.bind(this, 'date_format')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Time Format',
+                    type: 'number',
+                    maxLength: 1,
+                    onChange: functions.onChange.bind(this, 'time_format')
+
                 })
             );
         }
     }]);
 
-    return UserTypeDataForm;
+    return UserDataForm;
 }(_react2.default.Component);
 
-exports.default = UserTypeDataForm;
+exports.default = UserDataForm;
 
 /***/ }),
 /* 180 */
@@ -47892,10 +47830,6 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _YesNoSelect = __webpack_require__(8);
-
-var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
-
 var _DataForm = __webpack_require__(5);
 
 var _DataForm2 = _interopRequireDefault(_DataForm);
@@ -47908,105 +47842,61 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var EmployersDataForm = function (_React$Component) {
-    _inherits(EmployersDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function EmployersDataForm(props) {
-        _classCallCheck(this, EmployersDataForm);
+var UserTypeDataForm = function (_React$Component) {
+    _inherits(UserTypeDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (EmployersDataForm.__proto__ || Object.getPrototypeOf(EmployersDataForm)).call(this, props));
+    function UserTypeDataForm(props) {
+        _classCallCheck(this, UserTypeDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (UserTypeDataForm.__proto__ || Object.getPrototypeOf(UserTypeDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'UserType'
+        };
         return _this;
     }
 
-    _createClass(EmployersDataForm, [{
+    _createClass(UserTypeDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'Employers', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Employer Name',
-                    maxLength: 128,
-                    name: 'employer_name',
-                    required: true,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Employer Description',
-                    maxLength: 512,
-                    name: 'employer_description',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Employer Street Address',
-                    maxLength: 128,
-                    name: 'employer_street_address',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Employer Street Address 2',
-                    maxLength: 128,
-                    name: 'employer_street_address_2',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Employer City',
-                    maxLength: 128,
-                    name: 'employer_city',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Employer State/Province',
+                    label: 'User Type ID',
                     maxLength: 2,
-                    name: 'employer_state_province',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'user_type_id')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Employer County',
-                    maxLength: 128,
-                    name: 'employer_county',
-                    onChange: this.props.onChange
+                    label: 'Unique User Type Identifier',
+                    maxLength: 64,
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'user_type')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Employer Country',
-                    maxLength: 3,
-                    name: 'employer_country',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Employer Zip Code',
-                    maxLength: 16,
-                    name: 'employer_zip',
-                    onChange: this.props.onChange
+                    label: 'User Type Description',
+                    maxLength: 256,
+                    onChange: functions.onChange.bind(this, 'user_type_description')
+
                 })
             );
         }
     }]);
 
-    return EmployersDataForm;
+    return UserTypeDataForm;
 }(_react2.default.Component);
 
-exports.default = EmployersDataForm;
+exports.default = UserTypeDataForm;
 
 /***/ }),
 /* 181 */
@@ -48057,72 +47947,100 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var CohortsDataForm = function (_React$Component) {
-    _inherits(CohortsDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function CohortsDataForm(props) {
-        _classCallCheck(this, CohortsDataForm);
+var EmployersDataForm = function (_React$Component) {
+    _inherits(EmployersDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (CohortsDataForm.__proto__ || Object.getPrototypeOf(CohortsDataForm)).call(this, props));
+    function EmployersDataForm(props) {
+        _classCallCheck(this, EmployersDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (EmployersDataForm.__proto__ || Object.getPrototypeOf(EmployersDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'Employers'
+        };
         return _this;
     }
 
-    _createClass(CohortsDataForm, [{
+    _createClass(EmployersDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'Cohorts', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Cohort Description',
-                    name: 'cohort_description',
+                    label: 'Employer Name',
+                    maxLength: 128,
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'employer_name')
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Employer Description',
                     maxLength: 512,
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'employer_description')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Cohort Clinic',
+                    label: 'Employer Street Address',
                     maxLength: 128,
-                    name: 'cohort_clinic',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'employer_street_address')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Cohort Payer',
+                    label: 'Employer Street Address 2',
                     maxLength: 128,
-                    name: 'cohort_payer',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'employer_street_address_2')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Cohort Provider',
+                    label: 'Employer City',
                     maxLength: 128,
-                    name: 'cohort_provider',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'employer_city')
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Cohort Case Manager',
+                    label: 'Employer State/Province',
+                    maxLength: 2,
+                    onChange: functions.onChange.bind(this, 'employer_state_province')
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Employer County',
                     maxLength: 128,
-                    name: 'cohort_case_manager',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'employer_county')
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Employer Country',
+                    maxLength: 3,
+                    onChange: functions.onChange.bind(this, 'employer_country')
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Employer Zip Code',
+                    maxLength: 16,
+                    onChange: functions.onChange.bind(this, 'employer_zip')
                 })
             );
         }
     }]);
 
-    return CohortsDataForm;
+    return EmployersDataForm;
 }(_react2.default.Component);
 
-exports.default = CohortsDataForm;
+exports.default = EmployersDataForm;
 
 /***/ }),
 /* 182 */
@@ -48173,111 +48091,79 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var CohortsPatientsDataForm = function (_React$Component) {
-    _inherits(CohortsPatientsDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function CohortsPatientsDataForm(props) {
-        _classCallCheck(this, CohortsPatientsDataForm);
+var CohortsDataForm = function (_React$Component) {
+    _inherits(CohortsDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (CohortsPatientsDataForm.__proto__ || Object.getPrototypeOf(CohortsPatientsDataForm)).call(this, props));
+    function CohortsDataForm(props) {
+        _classCallCheck(this, CohortsDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (CohortsDataForm.__proto__ || Object.getPrototypeOf(CohortsDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'Cohorts'
+        };
         return _this;
     }
 
-    _createClass(CohortsPatientsDataForm, [{
+    _createClass(CohortsDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'CohortsPatients', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Cohort ID',
-                    name: 'cohort_id',
-                    required: true,
-                    onChange: this.props.onChange
+                    label: 'Cohort Description',
+                    onChange: functions.onChange.bind(this, "cohort_description"),
+                    maxLength: 512
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Patient ID',
-                    name: 'patient_id',
-                    required: true,
-                    onChange: this.props.onChange
+                    label: 'Cohort Clinic',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, "cohort_clinic")
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Cohort Payer',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, "cohort_payer")
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Cohort Provider',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, "cohort_provider")
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Cohort Case Manager',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, "cohort_case_manager")
+
                 })
             );
         }
     }]);
 
-    return CohortsPatientsDataForm;
+    return CohortsDataForm;
 }(_react2.default.Component);
 
-exports.default = CohortsPatientsDataForm;
+exports.default = CohortsDataForm;
 
 /***/ }),
 /* 183 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.PatientTherapyRelatedFactorsDataForm = exports.PatientSupportersDataForm = exports.PatientSportsDataForm = exports.PatientSocioEconomicFactorsDataForm = exports.PatientPsychoSocialFactorsDataForm = exports.PatientMedicationsDataForm = exports.PatientDrugUseDataForm = exports.PatientDemographicFactorsDataForm = exports.PatientDataForm = undefined;
-
-var _PatientDataForm = __webpack_require__(184);
-
-var _PatientDataForm2 = _interopRequireDefault(_PatientDataForm);
-
-var _PatientDemographicFactorsDataForm = __webpack_require__(185);
-
-var _PatientDemographicFactorsDataForm2 = _interopRequireDefault(_PatientDemographicFactorsDataForm);
-
-var _PatientSportsDataForm = __webpack_require__(186);
-
-var _PatientSportsDataForm2 = _interopRequireDefault(_PatientSportsDataForm);
-
-var _PatientSupportersDataForm = __webpack_require__(187);
-
-var _PatientSupportersDataForm2 = _interopRequireDefault(_PatientSupportersDataForm);
-
-var _PatientDrugUseDataForm = __webpack_require__(188);
-
-var _PatientDrugUseDataForm2 = _interopRequireDefault(_PatientDrugUseDataForm);
-
-var _PatientPsychoSocialFactorsDataForm = __webpack_require__(189);
-
-var _PatientPsychoSocialFactorsDataForm2 = _interopRequireDefault(_PatientPsychoSocialFactorsDataForm);
-
-var _PatientSocioEconomicFactorsDataForm = __webpack_require__(190);
-
-var _PatientSocioEconomicFactorsDataForm2 = _interopRequireDefault(_PatientSocioEconomicFactorsDataForm);
-
-var _PatientTherapyRelatedFactorsDataForm = __webpack_require__(191);
-
-var _PatientTherapyRelatedFactorsDataForm2 = _interopRequireDefault(_PatientTherapyRelatedFactorsDataForm);
-
-var _PatientMedicationsDataForm = __webpack_require__(192);
-
-var _PatientMedicationsDataForm2 = _interopRequireDefault(_PatientMedicationsDataForm);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.PatientDataForm = _PatientDataForm2.default;
-exports.PatientDemographicFactorsDataForm = _PatientDemographicFactorsDataForm2.default;
-exports.PatientDrugUseDataForm = _PatientDrugUseDataForm2.default;
-exports.PatientMedicationsDataForm = _PatientMedicationsDataForm2.default;
-exports.PatientPsychoSocialFactorsDataForm = _PatientPsychoSocialFactorsDataForm2.default;
-exports.PatientSocioEconomicFactorsDataForm = _PatientSocioEconomicFactorsDataForm2.default;
-exports.PatientSportsDataForm = _PatientSportsDataForm2.default;
-exports.PatientSupportersDataForm = _PatientSupportersDataForm2.default;
-exports.PatientTherapyRelatedFactorsDataForm = _PatientTherapyRelatedFactorsDataForm2.default;
-
-/***/ }),
-/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48325,82 +48211,112 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PatientDataForm = function (_React$Component) {
-    _inherits(PatientDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function PatientDataForm(props) {
-        _classCallCheck(this, PatientDataForm);
+var CohortsPatientsDataForm = function (_React$Component) {
+    _inherits(CohortsPatientsDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (PatientDataForm.__proto__ || Object.getPrototypeOf(PatientDataForm)).call(this, props));
+    function CohortsPatientsDataForm(props) {
+        _classCallCheck(this, CohortsPatientsDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (CohortsPatientsDataForm.__proto__ || Object.getPrototypeOf(CohortsPatientsDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'CohortsPatients'
+        };
         return _this;
     }
 
-    _createClass(PatientDataForm, [{
+    _createClass(CohortsPatientsDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'Patient', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Person ID',
-                    type: 'number',
-                    required: true,
-                    name: 'person_id',
-                    onChange: this.props.onChange
+                    label: 'Cohort ID',
+                    onChange: functions.onChange.bind(this, "cohort_id"),
+                    required: true
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Forum Pseudonym',
-                    maxLength: 16,
-                    required: true,
-                    name: 'forum_pseudonym',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Primary Physician\'s Name',
-                    maxLength: 64,
-                    name: 'primary_physician',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    type: 'number',
-                    label: 'Emergency Contact Person ID',
-                    name: 'emergency_contact_id',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_YesNoSelect2.default, {
-                    id: 'select-field-1',
-                    label: 'Care Buddy == Emergency Contact?',
-                    className: 'md-cell',
-                    name: 'care_buddy_emergency_same',
-                    required: true,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Care Buddy Person ID',
-                    type: 'number',
-                    name: 'care_buddy_id',
-                    onChange: this.props.onChange
+                    label: 'Patient ID',
+                    onChange: functions.onChange.bind(this, "patient_id"),
+                    required: true
+
                 })
             );
         }
     }]);
 
-    return PatientDataForm;
+    return CohortsPatientsDataForm;
 }(_react2.default.Component);
 
-exports.default = PatientDataForm;
+exports.default = CohortsPatientsDataForm;
+
+/***/ }),
+/* 184 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.PatientTherapyRelatedFactorsDataForm = exports.PatientSupportersDataForm = exports.PatientSportsDataForm = exports.PatientSocioEconomicFactorsDataForm = exports.PatientPsychoSocialFactorsDataForm = exports.PatientMedicationsDataForm = exports.PatientDrugUseDataForm = exports.PatientDemographicFactorsDataForm = exports.PatientDataForm = undefined;
+
+var _PatientDataForm = __webpack_require__(185);
+
+var _PatientDataForm2 = _interopRequireDefault(_PatientDataForm);
+
+var _PatientDemographicFactorsDataForm = __webpack_require__(186);
+
+var _PatientDemographicFactorsDataForm2 = _interopRequireDefault(_PatientDemographicFactorsDataForm);
+
+var _PatientSportsDataForm = __webpack_require__(187);
+
+var _PatientSportsDataForm2 = _interopRequireDefault(_PatientSportsDataForm);
+
+var _PatientSupportersDataForm = __webpack_require__(188);
+
+var _PatientSupportersDataForm2 = _interopRequireDefault(_PatientSupportersDataForm);
+
+var _PatientDrugUseDataForm = __webpack_require__(189);
+
+var _PatientDrugUseDataForm2 = _interopRequireDefault(_PatientDrugUseDataForm);
+
+var _PatientPsychoSocialFactorsDataForm = __webpack_require__(190);
+
+var _PatientPsychoSocialFactorsDataForm2 = _interopRequireDefault(_PatientPsychoSocialFactorsDataForm);
+
+var _PatientSocioEconomicFactorsDataForm = __webpack_require__(191);
+
+var _PatientSocioEconomicFactorsDataForm2 = _interopRequireDefault(_PatientSocioEconomicFactorsDataForm);
+
+var _PatientTherapyRelatedFactorsDataForm = __webpack_require__(192);
+
+var _PatientTherapyRelatedFactorsDataForm2 = _interopRequireDefault(_PatientTherapyRelatedFactorsDataForm);
+
+var _PatientMedicationsDataForm = __webpack_require__(193);
+
+var _PatientMedicationsDataForm2 = _interopRequireDefault(_PatientMedicationsDataForm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.PatientDataForm = _PatientDataForm2.default;
+exports.PatientDemographicFactorsDataForm = _PatientDemographicFactorsDataForm2.default;
+exports.PatientDrugUseDataForm = _PatientDrugUseDataForm2.default;
+exports.PatientMedicationsDataForm = _PatientMedicationsDataForm2.default;
+exports.PatientPsychoSocialFactorsDataForm = _PatientPsychoSocialFactorsDataForm2.default;
+exports.PatientSocioEconomicFactorsDataForm = _PatientSocioEconomicFactorsDataForm2.default;
+exports.PatientSportsDataForm = _PatientSportsDataForm2.default;
+exports.PatientSupportersDataForm = _PatientSupportersDataForm2.default;
+exports.PatientTherapyRelatedFactorsDataForm = _PatientTherapyRelatedFactorsDataForm2.default;
 
 /***/ }),
 /* 185 */
@@ -48451,369 +48367,89 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PatientDemographicFactorsDataForm = function (_React$Component) {
-    _inherits(PatientDemographicFactorsDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function PatientDemographicFactorsDataForm(props) {
-        _classCallCheck(this, PatientDemographicFactorsDataForm);
+var PatientDataForm = function (_React$Component) {
+    _inherits(PatientDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (PatientDemographicFactorsDataForm.__proto__ || Object.getPrototypeOf(PatientDemographicFactorsDataForm)).call(this, props));
+    function PatientDataForm(props) {
+        _classCallCheck(this, PatientDataForm);
 
-        _this.state = {};
-        return _this;
-    }
-
-    _createClass(PatientDemographicFactorsDataForm, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                _DataForm2.default,
-                { tableName: 'PatientDemographicFactors', onSubmit: this.props.onSubmit },
-                _react2.default.createElement(_TextFields2.default //Should probably be a selectfield
-                , {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Patient ID',
-                    type: 'number',
-                    required: true,
-                    name: 'patient_id',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Employer Name',
-                    maxLength: 128,
-                    name: 'employer_name',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Supervisor Name',
-                    maxLength: 128,
-                    name: 'supervisor_name',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Occupation',
-                    maxLength: 128,
-                    name: 'occupation',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, { id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Race',
-                    maxLength: 64,
-                    name: 'race',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Race Other',
-                    maxLength: 128,
-                    name: 'race_other',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title' //Should also be a select field prolly
-                    , className: 'md-cell',
-                    label: 'Ethnicity',
-                    maxLength: 64,
-                    name: 'ethnicity',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Ethnicity Other',
-                    maxLength: 128,
-                    name: 'ethnicity_other',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Mobile Device Brand',
-                    maxLength: 64,
-                    name: 'mobile_device_brand',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Mobile Device Model',
-                    maxLength: 64,
-                    name: 'mobile_device_model',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_SelectFields2.default, {
-                    id: 'select-field-1',
-                    label: 'Mobile Phone Style',
-                    className: 'md-cell',
-                    menuItems: ['Touchscreen style', 'Flip style'],
-                    name: 'mobile_phone_style',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Mobile Device Carrier',
-                    maxLength: 64,
-                    name: 'mobile_device_carrier',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title' //again maybe needs a selectfield
-                    , className: 'md-cell',
-                    label: 'Curacast Device Placement',
-                    maxLength: 64,
-                    name: 'curacast_device_placement',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Curacast Device Placement Other',
-                    maxLength: 128,
-                    name: 'curacast_device_placement_other',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_YesNoSelect2.default, {
-                    id: 'treatment_travel',
-                    label: 'Travelling During Treatment?',
-                    name: 'treatment_travel',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Travel Plans',
-                    maxLength: 512,
-                    name: 'travel_plans',
-                    onChange: this.props.onChange
-                })
-            );
-        }
-    }]);
-
-    return PatientDemographicFactorsDataForm;
-}(_react2.default.Component);
-
-exports.default = PatientDemographicFactorsDataForm;
-
-/***/ }),
-/* 186 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _TextFields = __webpack_require__(6);
-
-var _TextFields2 = _interopRequireDefault(_TextFields);
-
-var _Button = __webpack_require__(3);
-
-var _Button2 = _interopRequireDefault(_Button);
-
-var _DatePickerContainer = __webpack_require__(7);
-
-var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
-
-var _SelectFields = __webpack_require__(4);
-
-var _SelectFields2 = _interopRequireDefault(_SelectFields);
-
-var _DataForm = __webpack_require__(5);
-
-var _DataForm2 = _interopRequireDefault(_DataForm);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var PatientSportsDataForm = function (_React$Component) {
-    _inherits(PatientSportsDataForm, _React$Component);
-
-    function PatientSportsDataForm(props) {
-        _classCallCheck(this, PatientSportsDataForm);
-
-        var _this = _possibleConstructorReturn(this, (PatientSportsDataForm.__proto__ || Object.getPrototypeOf(PatientSportsDataForm)).call(this, props));
-
-        _this.state = {};
-        return _this;
-    }
-
-    _createClass(PatientSportsDataForm, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                _DataForm2.default,
-                { tableName: 'PatientSports', onSubmit: this.props.onSubmit },
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Patient ID',
-                    type: 'number',
-                    required: true,
-                    name: 'patient_id',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_SelectFields2.default, {
-                    id: 'age-select',
-                    label: 'Age group',
-                    defaultValue: 'Adult',
-                    className: 'md-cell',
-                    menuItems: ["Adult", "Teenager", "Child"],
-                    name: 'age_group',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Sport Description',
-                    maxLength: 128,
-                    name: 'sport_description',
-                    onChange: this.props.onChange
-                })
-            );
-        }
-    }]);
-
-    return PatientSportsDataForm;
-}(_react2.default.Component);
-
-exports.default = PatientSportsDataForm;
-
-/***/ }),
-/* 187 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _TextFields = __webpack_require__(6);
-
-var _TextFields2 = _interopRequireDefault(_TextFields);
-
-var _Button = __webpack_require__(3);
-
-var _Button2 = _interopRequireDefault(_Button);
-
-var _DatePickerContainer = __webpack_require__(7);
-
-var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
-
-var _SelectFields = __webpack_require__(4);
-
-var _SelectFields2 = _interopRequireDefault(_SelectFields);
-
-var _DataForm = __webpack_require__(5);
-
-var _DataForm2 = _interopRequireDefault(_DataForm);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var PatientSupportersDataForm = function (_React$Component) {
-    _inherits(PatientSupportersDataForm, _React$Component);
-
-    function PatientSupportersDataForm(props) {
-        _classCallCheck(this, PatientSupportersDataForm);
-
-        var _this = _possibleConstructorReturn(this, (PatientSupportersDataForm.__proto__ || Object.getPrototypeOf(PatientSupportersDataForm)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (PatientDataForm.__proto__ || Object.getPrototypeOf(PatientDataForm)).call(this, props));
 
         _this.state = {
-            time_format: 1
+            'tableName': 'Patient'
         };
         return _this;
     }
 
-    _createClass(PatientSupportersDataForm, [{
+    _createClass(PatientDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'PatientSupporters', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Patient ID',
+                    label: 'Person ID',
                     type: 'number',
                     required: true,
-                    name: 'patient_id',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_SelectFields2.default, {
-                    id: 'supporter-select',
-                    label: 'Supporter Type',
-                    className: 'md-cell',
-                    menuItems: ["Spouse", "Descendants", "Dependents", "Parents", "Siblings", "Friends", "Coworkers", "Roommates", "Other"],
-                    required: true,
-                    name: 'supporter_type',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'person_id')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Other Description',
-                    maxLength: 128,
-                    name: 'other_description',
-                    onChange: this.props.onChange
+                    label: 'Forum Pseudonym',
+                    maxLength: 16,
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'forum_pseudonym')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Supporter Name',
-                    maxLength: 128,
-                    required: true,
-                    name: 'supporter_name',
-                    onChange: this.props.onChange
+                    label: 'Primary Physician\'s Name',
+                    maxLength: 64,
+                    onChange: functions.onChange.bind(this, 'primary_physician')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    type: 'number',
+                    label: 'Emergency Contact Person ID',
+                    onChange: functions.onChange.bind(this, 'emergency_contact_id')
+
+                }),
+                _react2.default.createElement(_YesNoSelect2.default, {
+                    id: 'select-field-1',
+                    label: 'Care Buddy == Emergency Contact?',
+                    className: 'md-cell',
+                    onChange: functions.onChange.bind(this, 'care_buddy_emergency_same'),
+                    required: true
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Care Buddy Person ID',
+                    type: 'number',
+                    onChange: functions.onChange.bind(this, 'care_buddy_id')
+
                 })
             );
         }
     }]);
 
-    return PatientSupportersDataForm;
+    return PatientDataForm;
 }(_react2.default.Component);
 
-exports.default = PatientSupportersDataForm;
+exports.default = PatientDataForm;
 
 /***/ }),
-/* 188 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48861,90 +48497,377 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PatientDrugUseDataForm = function (_React$Component) {
-    _inherits(PatientDrugUseDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function PatientDrugUseDataForm(props) {
-        _classCallCheck(this, PatientDrugUseDataForm);
+var PatientDemographicFactorsDataForm = function (_React$Component) {
+    _inherits(PatientDemographicFactorsDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (PatientDrugUseDataForm.__proto__ || Object.getPrototypeOf(PatientDrugUseDataForm)).call(this, props));
+    function PatientDemographicFactorsDataForm(props) {
+        _classCallCheck(this, PatientDemographicFactorsDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (PatientDemographicFactorsDataForm.__proto__ || Object.getPrototypeOf(PatientDemographicFactorsDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'PatientDemographicFactors'
+        };
         return _this;
     }
 
-    _createClass(PatientDrugUseDataForm, [{
+    _createClass(PatientDemographicFactorsDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'PatientDrugUse', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
+                _react2.default.createElement(_TextFields2.default //Should probably be a selectfield
+                , {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Patient ID',
+                    type: 'number',
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'patient_id')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Employer Name',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, 'employer_name')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Supervisor Name',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, 'supervisor_name')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Occupation',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, 'occupation')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, { id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Race',
+                    maxLength: 64,
+                    onChange: functions.onChange.bind(this, 'race')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Race Other',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, 'race_other')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title' //Should also be a select field prolly
+                    , className: 'md-cell',
+                    label: 'Ethnicity',
+                    maxLength: 64,
+                    onChange: functions.onChange.bind(this, 'ethnicity')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Ethnicity Other',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, 'ethnicity_other')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Mobile Device Brand',
+                    maxLength: 64,
+                    onChange: functions.onChange.bind(this, 'mobile_device_brand')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Mobile Device Model',
+                    maxLength: 64,
+                    onChange: functions.onChange.bind(this, 'mobile_device_model')
+
+                }),
+                _react2.default.createElement(_SelectFields2.default, {
+                    id: 'select-field-1',
+                    label: 'Mobile Phone Style',
+                    className: 'md-cell',
+                    menuItems: ['Touchscreen style', 'Flip style'],
+                    onChange: functions.onChange.bind(this, 'mobile_phone_style')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Mobile Device Carrier',
+                    maxLength: 64,
+                    onChange: functions.onChange.bind(this, 'mobile_device_carrier')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title' //again maybe needs a selectfield
+                    , className: 'md-cell',
+                    label: 'Curacast Device Placement',
+                    maxLength: 64,
+                    onChange: functions.onChange.bind(this, 'curacast_device_placement')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Curacast Device Placement Other',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, 'curacast_device_placement_other')
+
+                }),
+                _react2.default.createElement(_YesNoSelect2.default, {
+                    id: 'treatment_travel',
+                    label: 'Travelling During Treatment?',
+                    onChange: functions.onChange.bind(this, 'treatment_travel')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Travel Plans',
+                    maxLength: 512,
+                    onChange: functions.onChange.bind(this, 'travel_plans')
+
+                })
+            );
+        }
+    }]);
+
+    return PatientDemographicFactorsDataForm;
+}(_react2.default.Component);
+
+exports.default = PatientDemographicFactorsDataForm;
+
+/***/ }),
+/* 187 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _TextFields = __webpack_require__(6);
+
+var _TextFields2 = _interopRequireDefault(_TextFields);
+
+var _Button = __webpack_require__(3);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _DatePickerContainer = __webpack_require__(7);
+
+var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
+
+var _SelectFields = __webpack_require__(4);
+
+var _SelectFields2 = _interopRequireDefault(_SelectFields);
+
+var _DataForm = __webpack_require__(5);
+
+var _DataForm2 = _interopRequireDefault(_DataForm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var functions = __webpack_require__(87).default;
+
+var PatientSportsDataForm = function (_React$Component) {
+    _inherits(PatientSportsDataForm, _React$Component);
+
+    function PatientSportsDataForm(props) {
+        _classCallCheck(this, PatientSportsDataForm);
+
+        var _this = _possibleConstructorReturn(this, (PatientSportsDataForm.__proto__ || Object.getPrototypeOf(PatientSportsDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'PatientSports'
+        };
+        return _this;
+    }
+
+    _createClass(PatientSportsDataForm, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _DataForm2.default,
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Patient ID',
                     type: 'number',
                     required: true,
-                    name: 'patient_id',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'patient_id')
+
+                }),
+                _react2.default.createElement(_SelectFields2.default, {
+                    id: 'age-select',
+                    label: 'Age group',
+                    defaultValue: 'Adult',
+                    className: 'md-cell',
+                    menuItems: ["Adult", "Teenager", "Child"],
+                    onChange: functions.onChange.bind(this, 'age_group')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Drug Name',
+                    label: 'Sport Description',
                     maxLength: 128,
-                    required: true,
-                    name: 'drug_name',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Drug Use Count Per Frequency',
-                    defaultValue: '0',
-                    type: 'number',
-                    required: true,
-                    name: 'drug_count',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_SelectFields2.default, {
-                    id: 'age-select',
-                    label: 'Drug Use Frequency',
-                    className: 'md-cell',
-                    defaultValue: 'PerMonth',
-                    menuItems: ['PerDay', 'PerHour', 'PerWeek', 'PerMonth', 'PerQuarter', 'PerYear'],
-                    required: true,
-                    name: 'drug_frequency',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'How Long Since This Was Taken',
-                    defaultValue: '0',
-                    type: 'number',
-                    required: true,
-                    name: 'since_length',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_SelectFields2.default, {
-                    id: 'age-select',
-                    label: 'Since Unit',
-                    className: 'md-cell',
-                    defaultValue: 'Years',
-                    menuItems: ['Hours', 'Days', 'Weeks', 'Months', 'Quarters', 'Years'],
-                    required: true,
-                    name: 'since_unit',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'sport_description')
+
                 })
             );
         }
     }]);
 
-    return PatientDrugUseDataForm;
+    return PatientSportsDataForm;
 }(_react2.default.Component);
 
-exports.default = PatientDrugUseDataForm;
+exports.default = PatientSportsDataForm;
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _TextFields = __webpack_require__(6);
+
+var _TextFields2 = _interopRequireDefault(_TextFields);
+
+var _Button = __webpack_require__(3);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _DatePickerContainer = __webpack_require__(7);
+
+var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
+
+var _SelectFields = __webpack_require__(4);
+
+var _SelectFields2 = _interopRequireDefault(_SelectFields);
+
+var _DataForm = __webpack_require__(5);
+
+var _DataForm2 = _interopRequireDefault(_DataForm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var functions = __webpack_require__(87).default;
+
+var PatientSupportersDataForm = function (_React$Component) {
+    _inherits(PatientSupportersDataForm, _React$Component);
+
+    function PatientSupportersDataForm(props) {
+        _classCallCheck(this, PatientSupportersDataForm);
+
+        var _this = _possibleConstructorReturn(this, (PatientSupportersDataForm.__proto__ || Object.getPrototypeOf(PatientSupportersDataForm)).call(this, props));
+
+        _this.state = {
+            time_format: 1,
+            'tableName': 'PatientSupporters'
+        };
+        return _this;
+    }
+
+    _createClass(PatientSupportersDataForm, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _DataForm2.default,
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Patient ID',
+                    type: 'number',
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'patient_id')
+
+                }),
+                _react2.default.createElement(_SelectFields2.default, {
+                    id: 'supporter-select',
+                    label: 'Supporter Type',
+                    className: 'md-cell',
+                    menuItems: ["Spouse", "Descendants", "Dependents", "Parents", "Siblings", "Friends", "Coworkers", "Roommates", "Other"],
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'supporter_type')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Other Description',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, 'other_description')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Supporter Name',
+                    maxLength: 128,
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'supporter_name')
+
+                })
+            );
+        }
+    }]);
+
+    return PatientSupportersDataForm;
+}(_react2.default.Component);
+
+exports.default = PatientSupportersDataForm;
 
 /***/ }),
 /* 189 */
@@ -48995,309 +48918,94 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PatientPsychoSocialFactorsDataForm = function (_React$Component) {
-    _inherits(PatientPsychoSocialFactorsDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function PatientPsychoSocialFactorsDataForm(props) {
-        _classCallCheck(this, PatientPsychoSocialFactorsDataForm);
+var PatientDrugUseDataForm = function (_React$Component) {
+    _inherits(PatientDrugUseDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (PatientPsychoSocialFactorsDataForm.__proto__ || Object.getPrototypeOf(PatientPsychoSocialFactorsDataForm)).call(this, props));
+    function PatientDrugUseDataForm(props) {
+        _classCallCheck(this, PatientDrugUseDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (PatientDrugUseDataForm.__proto__ || Object.getPrototypeOf(PatientDrugUseDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'PatientDrugUse'
+        };
         return _this;
     }
 
-    _createClass(PatientPsychoSocialFactorsDataForm, [{
+    _createClass(PatientDrugUseDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'PsychoSocialFactors', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Patient ID',
                     type: 'number',
                     required: true,
-                    name: 'patient_id',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'patient_id')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Meal Frequency',
-                    type: 'number',
-                    maxLength: 2,
-                    name: 'meal_frequency',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Shared Meal Frequency',
-                    type: 'number',
-                    maxLength: 2,
-                    name: 'shared_meal_frequency',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_YesNoSelect2.default, {
-                    id: 'auto-select',
-                    label: 'Do you have your own car?',
-                    name: 'transportation_auto',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Public Transportation Frequency',
-                    type: 'number',
-                    maxLength: 2,
-                    name: 'public_transportation_frequency',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Transportation Difficulty',
-                    type: 'number',
-                    maxLength: 2,
-                    name: 'transportation_difficulty',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Hours At Home Per Day',
-                    type: 'number',
-                    maxLength: 2,
-                    name: 'hours_at_home_day',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Nights At Home Per Week',
-                    type: 'number',
-                    maxLength: 2,
-                    name: 'nights_home_week',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Productivity',
-                    type: 'number',
-                    maxLength: 2,
-                    name: 'productivity',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Nights Spent With Family Per Week',
-                    type: 'number',
-                    maxLength: 2,
-                    name: 'family_nights_week',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Favorite Activity 1',
+                    label: 'Drug Name',
                     maxLength: 128,
-                    name: 'favorite_activity_1',
-                    onChange: this.props.onChange
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'drug_name')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Favorite Activity 2',
-                    maxLength: 128,
-                    name: 'favorite_activity_2',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Favorite Activity 3',
-                    maxLength: 128,
-                    name: 'favorite_activity_3',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Responsibility Family Vs Friends',
-                    maxLength: 64,
-                    name: 'responsibility_family_friends',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Responsibility Work Vs Home',
-                    maxLength: 64,
-                    name: 'responsibility_work_home',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Relationship With Doctor',
+                    label: 'Drug Use Count Per Frequency',
+                    defaultValue: '0',
                     type: 'number',
-                    maxLength: 2,
-                    name: 'relationship_doctor',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Trust With Doctor',
-                    type: 'number',
-                    maxLength: 2,
-                    name: 'trust_doctor',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Household Healthcare Expenses Per Month',
-                    type: 'number',
-                    name: 'household_monthly_expenses',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_YesNoSelect2.default, {
-                    id: 'auto-select',
-                    label: 'Do your expenses improve your health?',
-                    name: 'expenses_improve_health',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Time To Clinic',
-                    type: 'number',
-                    maxLength: 10,
-                    name: 'time_to_clinic',
-                    onChange: this.props.onChange
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'drug_count')
+
                 }),
                 _react2.default.createElement(_SelectFields2.default, {
-                    id: 'clinic-unit-select',
-                    label: 'Time To Clinic Unit',
+                    id: 'age-select',
+                    label: 'Drug Use Frequency',
                     className: 'md-cell',
-                    defaultValue: 'Hours',
-                    menuItems: ['Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months'],
-                    name: 'time_to_clinic_unit',
-                    onChange: this.props.onChange
+                    defaultValue: 'PerMonth',
+                    menuItems: ['PerDay', 'PerHour', 'PerWeek', 'PerMonth', 'PerQuarter', 'PerYear'],
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'drug_frequency')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Distance To Clinic',
+                    label: 'How Long Since This Was Taken',
+                    defaultValue: '0',
                     type: 'number',
-                    maxLength: 10,
-                    name: 'distance_to_clinic',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Distance To Clinic Units',
-                    maxLength: 32,
-                    name: 'distance_to_clinic_units',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_YesNoSelect2.default, {
-                    id: 'clinic-ease-select',
-                    label: 'Is the clinic easy to use?',
-                    name: 'clinic_ease_of_use',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Clinic Wait Time',
-                    type: 'number',
-                    maxLength: 10,
-                    name: 'clinic_wait_time',
-                    onChange: this.props.onChange
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'since_length')
+
                 }),
                 _react2.default.createElement(_SelectFields2.default, {
-                    id: 'clinic-wait-unit-select',
-                    label: 'Clinic Wait Time Unit',
+                    id: 'age-select',
+                    label: 'Since Unit',
                     className: 'md-cell',
-                    defaultValue: 'Hours',
-                    menuItems: ['Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months'],
-                    name: 'clinic_wait_time_unit',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_YesNoSelect2.default, {
-                    id: 'proximity-select',
-                    label: 'Does your health care need to be proximitous?',
-                    name: 'need_proximity',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Time To Pharmacy',
-                    type: 'number',
-                    maxLength: 10,
-                    name: 'time_to_pharmacy',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_SelectFields2.default, {
-                    id: 'clinic-wait-unit-select',
-                    label: 'Time To Pharmact Unit',
-                    className: 'md-cell',
-                    defaultValue: 'Hours',
-                    menuItems: ['Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months'],
-                    name: 'time_to_pharmacy_unit',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Distance To Pharmacy',
-                    type: 'number',
-                    maxLength: 10,
-                    name: 'distance_to_pharmacy',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Distance To Clinic Units',
-                    maxLength: 32,
-                    name: 'distance_to_pharmacy_units',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Pharmacy Wait Time',
-                    type: 'number',
-                    maxLength: 10,
-                    name: 'pharmacy_wait_time',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_SelectFields2.default, {
-                    id: 'clinic-wait-unit-select',
-                    label: 'Pharmacy Wait Time Unit',
-                    className: 'md-cell',
-                    defaultValue: 'Hours',
-                    menuItems: ['Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months'],
-                    name: 'pharmacy_wait_time_unit',
-                    onChange: this.props.onChange
+                    defaultValue: 'Years',
+                    menuItems: ['Hours', 'Days', 'Weeks', 'Months', 'Quarters', 'Years'],
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'since_unit')
+
                 })
             );
         }
     }]);
 
-    return PatientPsychoSocialFactorsDataForm;
+    return PatientDrugUseDataForm;
 }(_react2.default.Component);
 
-exports.default = PatientPsychoSocialFactorsDataForm;
+exports.default = PatientDrugUseDataForm;
 
 /***/ }),
 /* 190 */
@@ -49348,6 +49056,365 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var functions = __webpack_require__(87).default;
+
+var PatientPsychoSocialFactorsDataForm = function (_React$Component) {
+    _inherits(PatientPsychoSocialFactorsDataForm, _React$Component);
+
+    function PatientPsychoSocialFactorsDataForm(props) {
+        _classCallCheck(this, PatientPsychoSocialFactorsDataForm);
+
+        var _this = _possibleConstructorReturn(this, (PatientPsychoSocialFactorsDataForm.__proto__ || Object.getPrototypeOf(PatientPsychoSocialFactorsDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'PatientPsychoSocialFactors'
+        };
+        return _this;
+    }
+
+    _createClass(PatientPsychoSocialFactorsDataForm, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _DataForm2.default,
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Patient ID',
+                    type: 'number',
+                    required: true,
+                    onChange: functions.onChange.bind(this, 'patient_id')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Meal Frequency',
+                    type: 'number',
+                    maxLength: 2,
+                    onChange: functions.onChange.bind(this, 'meal_frequency')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Shared Meal Frequency',
+                    type: 'number',
+                    maxLength: 2,
+                    onChange: functions.onChange.bind(this, 'shared_meal_frequency')
+
+                }),
+                _react2.default.createElement(_YesNoSelect2.default, {
+                    id: 'auto-select',
+                    label: 'Do you have your own car?',
+                    onChange: functions.onChange.bind(this, 'transportation_auto')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Public Transportation Frequency',
+                    type: 'number',
+                    maxLength: 2,
+                    onChange: functions.onChange.bind(this, 'public_transportation_frequency')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Transportation Difficulty',
+                    type: 'number',
+                    maxLength: 2,
+                    onChange: functions.onChange.bind(this, 'transportation_difficulty')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Hours At Home Per Day',
+                    type: 'number',
+                    maxLength: 2,
+                    onChange: functions.onChange.bind(this, 'hours_at_home_day')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Nights At Home Per Week',
+                    type: 'number',
+                    maxLength: 2,
+                    onChange: functions.onChange.bind(this, 'nights_home_week')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Productivity',
+                    type: 'number',
+                    maxLength: 2,
+                    onChange: functions.onChange.bind(this, 'productivity')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Nights Spent With Family Per Week',
+                    type: 'number',
+                    maxLength: 2,
+                    onChange: functions.onChange.bind(this, 'family_nights_week')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Favorite Activity 1',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, 'favorite_activity_1')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Favorite Activity 2',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, 'favorite_activity_2')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Favorite Activity 3',
+                    maxLength: 128,
+                    onChange: functions.onChange.bind(this, 'favorite_activity_3')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Responsibility Family Vs Friends',
+                    maxLength: 64,
+                    onChange: functions.onChange.bind(this, 'responsibility_family_friends')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Responsibility Work Vs Home',
+                    maxLength: 64,
+                    onChange: functions.onChange.bind(this, 'responsibility_work_home')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Relationship With Doctor',
+                    type: 'number',
+                    maxLength: 2,
+                    onChange: functions.onChange.bind(this, 'relationship_doctor')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Trust With Doctor',
+                    type: 'number',
+                    maxLength: 2,
+                    onChange: functions.onChange.bind(this, 'trust_doctor')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Household Healthcare Expenses Per Month',
+                    type: 'number',
+                    onChange: functions.onChange.bind(this, 'household_monthly_expenses')
+
+                }),
+                _react2.default.createElement(_YesNoSelect2.default, {
+                    id: 'auto-select',
+                    label: 'Do your expenses improve your health?',
+                    onChange: functions.onChange.bind(this, 'expenses_improve_health')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Time To Clinic',
+                    type: 'number',
+                    maxLength: 10,
+                    onChange: functions.onChange.bind(this, 'time_to_clinic')
+
+                }),
+                _react2.default.createElement(_SelectFields2.default, {
+                    id: 'clinic-unit-select',
+                    label: 'Time To Clinic Unit',
+                    className: 'md-cell',
+                    defaultValue: 'Hours',
+                    menuItems: ['Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months'],
+                    onChange: functions.onChange.bind(this, 'time_to_clinic_unit')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Distance To Clinic',
+                    type: 'number',
+                    maxLength: 10,
+                    onChange: functions.onChange.bind(this, 'distance_to_clinic')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Distance To Clinic Units',
+                    maxLength: 32,
+                    onChange: functions.onChange.bind(this, 'distance_to_clinic_units')
+
+                }),
+                _react2.default.createElement(_YesNoSelect2.default, {
+                    id: 'clinic-ease-select',
+                    label: 'Is the clinic easy to use?',
+                    onChange: functions.onChange.bind(this, 'clinic_ease_of_use')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Clinic Wait Time',
+                    type: 'number',
+                    maxLength: 10,
+                    onChange: functions.onChange.bind(this, 'clinic_wait_time')
+
+                }),
+                _react2.default.createElement(_SelectFields2.default, {
+                    id: 'clinic-wait-unit-select',
+                    label: 'Clinic Wait Time Unit',
+                    className: 'md-cell',
+                    defaultValue: 'Hours',
+                    menuItems: ['Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months'],
+                    onChange: functions.onChange.bind(this, 'clinic_wait_time_unit')
+
+                }),
+                _react2.default.createElement(_YesNoSelect2.default, {
+                    id: 'proximity-select',
+                    label: 'Does your health care need to be proximitous?',
+                    onChange: functions.onChange.bind(this, 'need_proximity')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Time To Pharmacy',
+                    type: 'number',
+                    maxLength: 10,
+                    onChange: functions.onChange.bind(this, 'time_to_pharmacy')
+
+                }),
+                _react2.default.createElement(_SelectFields2.default, {
+                    id: 'clinic-wait-unit-select',
+                    label: 'Time To Pharmact Unit',
+                    className: 'md-cell',
+                    defaultValue: 'Hours',
+                    menuItems: ['Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months'],
+                    onChange: functions.onChange.bind(this, 'time_to_pharmacy_unit')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Distance To Pharmacy',
+                    type: 'number',
+                    maxLength: 10,
+                    onChange: functions.onChange.bind(this, 'distance_to_pharmacy')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Distance To Clinic Units',
+                    maxLength: 32,
+                    onChange: functions.onChange.bind(this, 'distance_to_pharmacy_units')
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Pharmacy Wait Time',
+                    type: 'number',
+                    maxLength: 10,
+                    onChange: functions.onChange.bind(this, 'pharmacy_wait_time')
+
+                }),
+                _react2.default.createElement(_SelectFields2.default, {
+                    id: 'clinic-wait-unit-select',
+                    label: 'Pharmacy Wait Time Unit',
+                    className: 'md-cell',
+                    defaultValue: 'Hours',
+                    menuItems: ['Seconds', 'Minutes', 'Hours', 'Days', 'Weeks', 'Months'],
+                    onChange: functions.onChange.bind(this, 'pharmacy_wait_time_unit')
+
+                })
+            );
+        }
+    }]);
+
+    return PatientPsychoSocialFactorsDataForm;
+}(_react2.default.Component);
+
+exports.default = PatientPsychoSocialFactorsDataForm;
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _TextFields = __webpack_require__(6);
+
+var _TextFields2 = _interopRequireDefault(_TextFields);
+
+var _Button = __webpack_require__(3);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _DatePickerContainer = __webpack_require__(7);
+
+var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
+
+var _SelectFields = __webpack_require__(4);
+
+var _SelectFields2 = _interopRequireDefault(_SelectFields);
+
+var _YesNoSelect = __webpack_require__(8);
+
+var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
+
+var _DataForm = __webpack_require__(5);
+
+var _DataForm2 = _interopRequireDefault(_DataForm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var functions = __webpack_require__(87).default;
+
 var PatientSocioEconomicFactorsDataForm = function (_React$Component) {
     _inherits(PatientSocioEconomicFactorsDataForm, _React$Component);
 
@@ -49356,7 +49423,9 @@ var PatientSocioEconomicFactorsDataForm = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (PatientSocioEconomicFactorsDataForm.__proto__ || Object.getPrototypeOf(PatientSocioEconomicFactorsDataForm)).call(this, props));
 
-        _this.state = {};
+        _this.state = {
+            'tableName': 'PatientSocioEconomicFactors'
+        };
         return _this;
     }
 
@@ -49365,47 +49434,47 @@ var PatientSocioEconomicFactorsDataForm = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'SocioEconomicFactors', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Patient ID',
                     type: 'number',
                     required: true,
-                    name: 'patient_id',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'patient_id')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Relationship Status',
                     maxLength: 64,
-                    name: 'relationship_status',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'relationship_status')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Relationship Status Other',
                     maxLength: 128,
-                    name: 'relationship_other',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'relationship_other')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Employment Status',
                     maxLength: 64,
-                    name: 'employment_status',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'employment_status')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Job Description',
                     maxLength: 512,
-                    name: 'job_description',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'job_description')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49413,8 +49482,8 @@ var PatientSocioEconomicFactorsDataForm = function (_React$Component) {
                     label: 'Job Enjoyment',
                     maxLength: 2,
                     type: 'number',
-                    name: 'job_enjoyment',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'job_enjoyment')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49422,8 +49491,8 @@ var PatientSocioEconomicFactorsDataForm = function (_React$Component) {
                     label: 'Job Ease Of Time Off',
                     maxLength: 2,
                     type: 'number',
-                    name: 'job_ease_of_time_off',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'job_ease_of_time_off')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49431,32 +49500,32 @@ var PatientSocioEconomicFactorsDataForm = function (_React$Component) {
                     label: 'Job Income Adequacy',
                     maxLength: 2,
                     type: 'number',
-                    name: 'job_income_adequacy',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'job_income_adequacy')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Average Household Income',
                     type: 'number',
-                    name: 'household_income',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'household_income')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Education Completed',
                     maxLength: 64,
-                    name: 'education_completed',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'education_completed')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Grade Scored',
                     maxLength: 1,
-                    name: 'grade_score',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'grade_score')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49464,8 +49533,8 @@ var PatientSocioEconomicFactorsDataForm = function (_React$Component) {
                     label: 'Homework Difficulty',
                     maxLength: 2,
                     type: 'number',
-                    name: 'homework_difficulty',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'homework_difficulty')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49473,72 +49542,72 @@ var PatientSocioEconomicFactorsDataForm = function (_React$Component) {
                     label: 'Test Difficulty',
                     maxLength: 2,
                     type: 'number',
-                    name: 'test_difficulty',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'test_difficulty')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Are you religious?',
-                    name: 'is_religious',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'is_religious')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Religion Title',
                     maxLength: 128,
-                    name: 'religion',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'religion')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Religious Services Attended Per Month',
                     type: 'number',
-                    name: 'services_per_month',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'services_per_month')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Are you spiritual?',
-                    name: 'is_spiritual',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'is_spiritual')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'How often are you spiritual?',
                     type: 'number',
-                    name: 'spiritual_per_month',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'spiritual_per_month')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Do you have physical difficulties?',
-                    name: 'physical_difficulty',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'physical_difficulty')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Physical Difficulty Description',
                     maxLength: 256,
-                    name: 'physical_difficulty_description',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'physical_difficulty_description')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Do you exercise?',
-                    name: 'does_exercise',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'does_exercise')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Favorite Exercise',
                     maxLength: 128,
-                    name: 'favorite_exercise',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'favorite_exercise')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49546,101 +49615,101 @@ var PatientSocioEconomicFactorsDataForm = function (_React$Component) {
                     label: 'Excercise Days Per Week',
                     maxLength: 2,
                     type: 'number',
-                    name: 'exercise_days_per_week',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'exercise_days_per_week')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Did you do sports as a kid?',
                     className: 'md-cell',
-                    name: 'kid_does_exercise',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'kid_does_exercise')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Are you spiritual?',
-                    name: 'is_spiritual',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'is_spiritual')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Did you do sports as a teenager?',
-                    name: 'teenager_does_exercise',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'teenager_does_exercise')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Do you do sports as a adult?',
-                    name: 'adult_does_exercise',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'adult_does_exercise')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Do you smoke?',
-                    name: 'is_smoker',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'is_smoker')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Did you ever smoke?',
-                    name: 'was_smoker',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'was_smoker')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Smoking Frequency',
                     maxLength: 128,
-                    name: 'smoking_frequency',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'smoking_frequency')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'How long ago did you smoke?',
                     maxLength: 128,
-                    name: 'smoking_how_long_ago',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'smoking_how_long_ago')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Do you drink alcohol?',
-                    name: 'is_drinker',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'is_drinker')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Did you ever drink alcohol?',
-                    name: 'was_drinker',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'was_drinker')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Drinking Frequency',
                     maxLength: 128,
-                    name: 'drinking_frequency',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'drinking_frequency')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Do you use drugs?',
-                    name: 'is_drugger',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'is_drugger')
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'religion-select',
                     label: 'Have you ever used drugs?',
-                    name: 'was_drugger',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'was_drugger')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Drug use Frequency',
                     maxLength: 128,
-                    name: 'drug_frequency',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'drug_frequency')
+
                 })
             );
         }
@@ -49652,7 +49721,7 @@ var PatientSocioEconomicFactorsDataForm = function (_React$Component) {
 exports.default = PatientSocioEconomicFactorsDataForm;
 
 /***/ }),
-/* 191 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49696,6 +49765,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var functions = __webpack_require__(87).default;
+
 var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
     _inherits(PatientTherapyRelatedFactorsDataForm, _React$Component);
 
@@ -49704,7 +49775,9 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (PatientTherapyRelatedFactorsDataForm.__proto__ || Object.getPrototypeOf(PatientTherapyRelatedFactorsDataForm)).call(this, props));
 
-        _this.state = {};
+        _this.state = {
+            'tableName': 'PatientTherapyRelatedFactors'
+        };
         return _this;
     }
 
@@ -49713,15 +49786,15 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'TherapyRelatedFactors', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Patient ID',
                     type: 'number',
                     required: true,
-                    name: 'patient_id',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'patient_id')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49729,8 +49802,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Side Effects Frequency',
                     type: 'number',
                     maxLength: 2,
-                    name: 'side_effects_freq',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'side_effects_freq')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49738,8 +49811,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Side Effect Previous Frequency',
                     type: 'number',
                     maxLength: 2,
-                    name: 'side_effect_prev_freq',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'side_effect_prev_freq')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49747,8 +49820,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Nedication Bad Taste',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_bad_taste',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_bad_taste')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49756,8 +49829,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Medication GI Upset',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_gi_upset',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_gi_upset')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49765,8 +49838,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Medication Acne',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_acne',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_acne')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49774,8 +49847,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Medication Changes Skin Color',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_change_skin_color',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_change_skin_color')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49783,8 +49856,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Medication Sleep Excessive',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_sleep_excessive',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_sleep_excessive')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49792,8 +49865,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Medication Nightmares',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_nightmares',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_nightmares')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49801,8 +49874,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Medication Grip Weak',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_grip_weak',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_grip_weak')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49810,8 +49883,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Medication Headaches',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_headaches',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_headaches')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49819,8 +49892,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Medication 3AM',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_3am',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_3am')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49828,8 +49901,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Medication Cold',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_cold',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_cold')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49837,8 +49910,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Medication Guest Bath',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_guest_bath',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_guest_bath')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49846,8 +49919,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Medication 50 Miles',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_50_miles',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_50_miles')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49855,8 +49928,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Medication Improves Symptoms',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_improves_symptoms',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_improves_symptoms')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49864,8 +49937,8 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
                     label: 'Medication Makes No Difference',
                     type: 'number',
                     maxLength: 2,
-                    name: 'medication_makes_no_difference',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_makes_no_difference')
+
                 })
             );
         }
@@ -49877,7 +49950,7 @@ var PatientTherapyRelatedFactorsDataForm = function (_React$Component) {
 exports.default = PatientTherapyRelatedFactorsDataForm;
 
 /***/ }),
-/* 192 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49925,6 +49998,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var functions = __webpack_require__(87).default;
+
 var PatientMedicationsDataForm = function (_React$Component) {
     _inherits(PatientMedicationsDataForm, _React$Component);
 
@@ -49933,7 +50008,9 @@ var PatientMedicationsDataForm = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (PatientMedicationsDataForm.__proto__ || Object.getPrototypeOf(PatientMedicationsDataForm)).call(this, props));
 
-        _this.state = {};
+        _this.state = {
+            'tableName': 'PatientMedications'
+        };
         return _this;
     }
 
@@ -49942,30 +50019,30 @@ var PatientMedicationsDataForm = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'PatientMedications', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Patient Therapy-Related Factors ID',
                     type: 'number',
-                    name: 'patient_id',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'patient_id')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Medication Scientific Name',
                     maxLength: 128,
-                    name: 'medication_scientific_name',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_scientific_name')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Medication Generic Name',
                     maxLength: 128,
-                    name: 'medication_generic_name',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_generic_name')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
@@ -49973,77 +50050,77 @@ var PatientMedicationsDataForm = function (_React$Component) {
                     label: 'Medication Dosage',
                     maxLength: 10,
                     type: 'number',
-                    name: 'medication_dosage',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_dosage')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Medication Dosage Units',
                     maxLength: 32,
-                    name: 'medication_dosage_units',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_dosage_units')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Medication Route',
                     maxLength: 2,
-                    name: 'medication_route',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_route')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Medication Frequency',
                     maxLength: 3,
-                    name: 'medication_freuqnecy',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_freuqnecy')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Medication Duration',
                     type: 'number',
-                    name: 'medication_duration',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_duration')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Medication Duration Units',
                     maxLength: 32,
-                    name: 'medication_duration_units',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_duration_units')
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Medication Previous Treatments',
                     maxLength: 128,
-                    name: 'medication_previous_treatments',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'medication_previous_treatments')
+
                 }),
                 _react2.default.createElement(_TimePickerContainer2.default, {
                     id: 'appointment-time-auto',
                     label: 'Preferred Dosage Time 1',
                     className: 'md-cell',
-                    name: 'preferred_dose_time_1',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'preferred_dose_time_1')
+
                 }),
                 _react2.default.createElement(_TimePickerContainer2.default, {
                     id: 'appointment-time-auto',
                     label: 'Preferred Dosage Time 2',
                     className: 'md-cell',
-                    name: 'preferred_dose_time_2',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'preferred_dose_time_2')
+
                 }),
                 _react2.default.createElement(_TimePickerContainer2.default, {
                     id: 'appointment-time-auto',
                     label: 'Preferred Dosage Time 3',
                     className: 'md-cell',
-                    name: 'preferred_dose_time_3',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, 'preferred_dose_time_3')
+
                 })
             );
         }
@@ -50055,12 +50132,12 @@ var PatientMedicationsDataForm = function (_React$Component) {
 exports.default = PatientMedicationsDataForm;
 
 /***/ }),
-/* 193 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(87)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(88)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -50171,12 +50248,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=extractTimeParts.js.map
 
 /***/ }),
-/* 194 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(195), __webpack_require__(49), __webpack_require__(199)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(2), __webpack_require__(196), __webpack_require__(49), __webpack_require__(200)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -50484,12 +50561,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=TimePicker.js.map
 
 /***/ }),
-/* 195 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(75), __webpack_require__(30), __webpack_require__(39), __webpack_require__(196), __webpack_require__(73), __webpack_require__(29), __webpack_require__(197), __webpack_require__(198)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(75), __webpack_require__(30), __webpack_require__(39), __webpack_require__(197), __webpack_require__(73), __webpack_require__(29), __webpack_require__(198), __webpack_require__(199)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -50833,7 +50910,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=ClockFace.js.map
 
 /***/ }),
-/* 196 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -50918,7 +50995,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=calcTimeFromPoint.js.map
 
 /***/ }),
-/* 197 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -51131,7 +51208,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=ClockTime.js.map
 
 /***/ }),
-/* 198 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -51323,12 +51400,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=ClockHand.js.map
 
 /***/ }),
-/* 199 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(200), __webpack_require__(50)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(201), __webpack_require__(50)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -51520,12 +51597,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=TimePickerHeader.js.map
 
 /***/ }),
-/* 200 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(201), __webpack_require__(50)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0), __webpack_require__(1), __webpack_require__(202), __webpack_require__(50)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -51686,7 +51763,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=TimePeriods.js.map
 
 /***/ }),
-/* 201 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -51729,7 +51806,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=addHours.js.map
 
 /***/ }),
-/* 202 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -51740,23 +51817,23 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.DevicesToPatientsDataForm = exports.DevicesDataForm = exports.DeviceLifecycleStatesDataForm = exports.DeviceLifecycleHistoryDataForm = exports.DeviceFirmwareDataForm = undefined;
 
-var _DevicesDataForm = __webpack_require__(203);
+var _DevicesDataForm = __webpack_require__(204);
 
 var _DevicesDataForm2 = _interopRequireDefault(_DevicesDataForm);
 
-var _DeviceFirmwareDataForm = __webpack_require__(204);
+var _DeviceFirmwareDataForm = __webpack_require__(205);
 
 var _DeviceFirmwareDataForm2 = _interopRequireDefault(_DeviceFirmwareDataForm);
 
-var _DevicesToPatientsDataForm = __webpack_require__(205);
+var _DevicesToPatientsDataForm = __webpack_require__(206);
 
 var _DevicesToPatientsDataForm2 = _interopRequireDefault(_DevicesToPatientsDataForm);
 
-var _DeviceLifecycleStatesDataForm = __webpack_require__(206);
+var _DeviceLifecycleStatesDataForm = __webpack_require__(207);
 
 var _DeviceLifecycleStatesDataForm2 = _interopRequireDefault(_DeviceLifecycleStatesDataForm);
 
-var _DeviceLifecycleHistoryDataForm = __webpack_require__(207);
+var _DeviceLifecycleHistoryDataForm = __webpack_require__(208);
 
 var _DeviceLifecycleHistoryDataForm2 = _interopRequireDefault(_DeviceLifecycleHistoryDataForm);
 
@@ -51767,117 +51844,6 @@ exports.DeviceLifecycleHistoryDataForm = _DeviceLifecycleHistoryDataForm2.defaul
 exports.DeviceLifecycleStatesDataForm = _DeviceLifecycleStatesDataForm2.default;
 exports.DevicesDataForm = _DevicesDataForm2.default;
 exports.DevicesToPatientsDataForm = _DevicesToPatientsDataForm2.default;
-
-/***/ }),
-/* 203 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _TextFields = __webpack_require__(6);
-
-var _TextFields2 = _interopRequireDefault(_TextFields);
-
-var _Button = __webpack_require__(3);
-
-var _Button2 = _interopRequireDefault(_Button);
-
-var _DatePickerContainer = __webpack_require__(7);
-
-var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
-
-var _SelectFields = __webpack_require__(4);
-
-var _SelectFields2 = _interopRequireDefault(_SelectFields);
-
-var _YesNoSelect = __webpack_require__(8);
-
-var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
-
-var _DataForm = __webpack_require__(5);
-
-var _DataForm2 = _interopRequireDefault(_DataForm);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var DevicesDataForm = function (_React$Component) {
-    _inherits(DevicesDataForm, _React$Component);
-
-    function DevicesDataForm(props) {
-        _classCallCheck(this, DevicesDataForm);
-
-        var _this = _possibleConstructorReturn(this, (DevicesDataForm.__proto__ || Object.getPrototypeOf(DevicesDataForm)).call(this, props));
-
-        _this.state = {};
-        return _this;
-    }
-
-    _createClass(DevicesDataForm, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                _DataForm2.default,
-                { tableName: 'Devices', onSubmit: this.props.onSubmit },
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Device Serial',
-                    name: 'device_serial',
-                    maxLength: 10,
-                    required: true,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Cell Modem IMEI',
-                    name: 'cell_modem_imei',
-                    type: 'number',
-                    required: true,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'SIM Card ICCID',
-                    name: 'sim_card_iccid',
-                    type: 'number',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Model Number',
-                    name: 'model_number',
-                    maxLength: 10,
-                    required: true,
-                    onChange: this.props.onChange
-                })
-            );
-        }
-    }]);
-
-    return DevicesDataForm;
-}(_react2.default.Component);
-
-exports.default = DevicesDataForm;
 
 /***/ }),
 /* 204 */
@@ -51912,10 +51878,6 @@ var _SelectFields = __webpack_require__(4);
 
 var _SelectFields2 = _interopRequireDefault(_SelectFields);
 
-var _TimePickerContainer = __webpack_require__(10);
-
-var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
-
 var _YesNoSelect = __webpack_require__(8);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
@@ -51932,66 +51894,71 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var DeviceFirmwareDataForm = function (_React$Component) {
-    _inherits(DeviceFirmwareDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function DeviceFirmwareDataForm(props) {
-        _classCallCheck(this, DeviceFirmwareDataForm);
+var DevicesDataForm = function (_React$Component) {
+    _inherits(DevicesDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (DeviceFirmwareDataForm.__proto__ || Object.getPrototypeOf(DeviceFirmwareDataForm)).call(this, props));
+    function DevicesDataForm(props) {
+        _classCallCheck(this, DevicesDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (DevicesDataForm.__proto__ || Object.getPrototypeOf(DevicesDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'Devices'
+        };
         return _this;
     }
 
-    _createClass(DeviceFirmwareDataForm, [{
+    _createClass(DevicesDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'DeviceFirmware', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Device ID',
-                    name: 'device_id',
+                    label: 'Device Serial',
+                    onChange: functions.onChange.bind(this, "device_serial"),
+                    maxLength: 10,
+                    required: true
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Cell Modem IMEI',
+                    onChange: functions.onChange.bind(this, "cell_modem_imei"),
                     type: 'number',
-                    required: true,
-                    onChange: this.props.onChange
+                    required: true
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Firmware Version',
-                    name: 'firmware_version',
-                    maxLength: 16,
-                    required: true,
-                    onChange: this.props.onChange
+                    label: 'SIM Card ICCID',
+                    onChange: functions.onChange.bind(this, "sim_card_iccid"),
+                    type: 'number'
+
                 }),
-                _react2.default.createElement(_TimePickerContainer2.default, {
-                    id: 'appointment-time-auto',
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Firmware Install Time',
-                    name: 'firmware_install_time',
-                    required: true,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_DatePickerContainer2.default, {
-                    id: 'appointment-date-auto',
-                    label: 'Firmware Install Date',
-                    name: 'firmware_install_date',
-                    className: 'md-cell',
-                    required: true,
-                    onChange: this.props.onChange
+                    label: 'Model Number',
+                    onChange: functions.onChange.bind(this, "model_number"),
+                    maxLength: 10,
+                    required: true
+
                 })
             );
         }
     }]);
 
-    return DeviceFirmwareDataForm;
+    return DevicesDataForm;
 }(_react2.default.Component);
 
-exports.default = DeviceFirmwareDataForm;
+exports.default = DevicesDataForm;
 
 /***/ }),
 /* 205 */
@@ -52046,6 +52013,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var functions = __webpack_require__(87).default;
+
 var DeviceFirmwareDataForm = function (_React$Component) {
     _inherits(DeviceFirmwareDataForm, _React$Component);
 
@@ -52054,7 +52023,9 @@ var DeviceFirmwareDataForm = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (DeviceFirmwareDataForm.__proto__ || Object.getPrototypeOf(DeviceFirmwareDataForm)).call(this, props));
 
-        _this.state = {};
+        _this.state = {
+            'tableName': 'DeviceFirmware'
+        };
         return _this;
     }
 
@@ -52063,63 +52034,40 @@ var DeviceFirmwareDataForm = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'DevicesToPatients', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Device ID',
-                    name: 'device_id',
+                    onChange: functions.onChange.bind(this, "device_id"),
                     type: 'number',
-                    required: true,
-                    onChange: this.props.onChange
+                    required: true
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Patient ID',
-                    name: 'patient_id',
-                    type: 'number',
-                    required: true,
-                    onChange: this.props.onChange
+                    label: 'Firmware Version',
+                    onChange: functions.onChange.bind(this, "firmware_version"),
+                    maxLength: 16,
+                    required: true
+
                 }),
                 _react2.default.createElement(_TimePickerContainer2.default, {
                     id: 'appointment-time-auto',
                     className: 'md-cell',
-                    label: 'Start Time',
-                    name: 'start_time',
-                    required: true,
-                    onChange: this.props.onChange
+                    label: 'Firmware Install Time',
+                    onChange: functions.onChange.bind(this, "firmware_install_time"),
+                    required: true
+
                 }),
                 _react2.default.createElement(_DatePickerContainer2.default, {
                     id: 'appointment-date-auto',
-                    label: 'Start Date',
-                    name: 'start_date',
+                    label: 'Firmware Install Date',
+                    onChange: functions.onChange.bind(this, "firmware_install_date"),
                     className: 'md-cell',
-                    required: true,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TimePickerContainer2.default, {
-                    id: 'appointment-time-auto',
-                    className: 'md-cell',
-                    label: 'End Time',
-                    name: 'end_time',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_DatePickerContainer2.default, {
-                    id: 'appointment-date-auto',
-                    label: 'End Date',
-                    name: 'end_date',
-                    className: 'md-cell',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Assigned To Patient By User Id',
-                    name: 'assigning_user_id',
-                    type: 'number',
-                    required: true,
-                    onChange: this.props.onChange
+                    required: true
+
                 })
             );
         }
@@ -52183,59 +52131,93 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var DeviceLifecycleStatesDataForm = function (_React$Component) {
-    _inherits(DeviceLifecycleStatesDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function DeviceLifecycleStatesDataForm(props) {
-        _classCallCheck(this, DeviceLifecycleStatesDataForm);
+var DeviceFirmwareDataForm = function (_React$Component) {
+    _inherits(DeviceFirmwareDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (DeviceLifecycleStatesDataForm.__proto__ || Object.getPrototypeOf(DeviceLifecycleStatesDataForm)).call(this, props));
+    function DeviceFirmwareDataForm(props) {
+        _classCallCheck(this, DeviceFirmwareDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (DeviceFirmwareDataForm.__proto__ || Object.getPrototypeOf(DeviceFirmwareDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'DeviceFirmware'
+        };
         return _this;
     }
 
-    _createClass(DeviceLifecycleStatesDataForm, [{
+    _createClass(DeviceFirmwareDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'DeviceLifecycleStates', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Device Lifecycle Status',
-                    name: 'device_lifecycle_status',
-                    maxLength: 24,
-                    required: true,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Device Lifecycle Description',
-                    name: 'device_lifecycle_description',
-                    maxLength: 255,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Device Lifecycle Ordinal',
-                    name: 'device_lifecycle_ordinal',
+                    label: 'Device ID',
+                    onChange: functions.onChange.bind(this, "device_id"),
                     type: 'number',
-                    maxLength: 4,
-                    required: true,
-                    onChange: this.props.onChange
+                    required: true
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Patient ID',
+                    onChange: functions.onChange.bind(this, "patient_id"),
+                    type: 'number',
+                    required: true
+
+                }),
+                _react2.default.createElement(_TimePickerContainer2.default, {
+                    id: 'appointment-time-auto',
+                    className: 'md-cell',
+                    label: 'Start Time',
+                    onChange: functions.onChange.bind(this, "start_time"),
+                    required: true
+
+                }),
+                _react2.default.createElement(_DatePickerContainer2.default, {
+                    id: 'appointment-date-auto',
+                    label: 'Start Date',
+                    onChange: functions.onChange.bind(this, "start_date"),
+                    className: 'md-cell',
+                    required: true
+
+                }),
+                _react2.default.createElement(_TimePickerContainer2.default, {
+                    id: 'appointment-time-auto',
+                    className: 'md-cell',
+                    label: 'End Time',
+                    onChange: functions.onChange.bind(this, "end_time")
+
+                }),
+                _react2.default.createElement(_DatePickerContainer2.default, {
+                    id: 'appointment-date-auto',
+                    label: 'End Date',
+                    onChange: functions.onChange.bind(this, "end_date"),
+                    className: 'md-cell'
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Assigned To Patient By User Id',
+                    onChange: functions.onChange.bind(this, "assigning_user_id"),
+                    type: 'number',
+                    required: true
+
                 })
             );
         }
     }]);
 
-    return DeviceLifecycleStatesDataForm;
+    return DeviceFirmwareDataForm;
 }(_react2.default.Component);
 
-exports.default = DeviceLifecycleStatesDataForm;
+exports.default = DeviceFirmwareDataForm;
 
 /***/ }),
 /* 207 */
@@ -52290,108 +52272,66 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var DeviceLifecycleHistoryDataForm = function (_React$Component) {
-    _inherits(DeviceLifecycleHistoryDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function DeviceLifecycleHistoryDataForm(props) {
-        _classCallCheck(this, DeviceLifecycleHistoryDataForm);
+var DeviceLifecycleStatesDataForm = function (_React$Component) {
+    _inherits(DeviceLifecycleStatesDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (DeviceLifecycleHistoryDataForm.__proto__ || Object.getPrototypeOf(DeviceLifecycleHistoryDataForm)).call(this, props));
+    function DeviceLifecycleStatesDataForm(props) {
+        _classCallCheck(this, DeviceLifecycleStatesDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (DeviceLifecycleStatesDataForm.__proto__ || Object.getPrototypeOf(DeviceLifecycleStatesDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'DeviceLifecycleStates'
+        };
         return _this;
     }
 
-    _createClass(DeviceLifecycleHistoryDataForm, [{
+    _createClass(DeviceLifecycleStatesDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'DeviceLifecycleHistory', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Device ID',
-                    name: 'device_id',
+                    label: 'Device Lifecycle Status',
+                    onChange: functions.onChange.bind(this, "device_lifecycle_status"),
+                    maxLength: 24,
+                    required: true
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Device Lifecycle Description',
+                    onChange: functions.onChange.bind(this, "device_lifecycle_description"),
+                    maxLength: 255
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Device Lifecycle Ordinal',
+                    onChange: functions.onChange.bind(this, "device_lifecycle_ordinal"),
                     type: 'number',
-                    required: true,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Device Lifecycle Status ID',
-                    name: 'device_lifecycle_status_id',
-                    maxLength: 3,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TimePickerContainer2.default, {
-                    id: 'appointment-time-auto',
-                    className: 'md-cell',
-                    label: 'Lifecycle Start Time',
-                    name: 'lifecycle_start_time',
-                    required: true,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_DatePickerContainer2.default, {
-                    id: 'appointment-date-auto',
-                    label: 'Lifecycle Start Date',
-                    name: 'lifecycle_start_date',
-                    className: 'md-cell',
-                    required: true,
-                    onChange: this.props.onChange
+                    maxLength: 4,
+                    required: true
+
                 })
             );
         }
     }]);
 
-    return DeviceLifecycleHistoryDataForm;
+    return DeviceLifecycleStatesDataForm;
 }(_react2.default.Component);
 
-exports.default = DeviceLifecycleHistoryDataForm;
+exports.default = DeviceLifecycleStatesDataForm;
 
 /***/ }),
 /* 208 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.RegimensDataForm = exports.WellsDataForm = exports.MedicationTracksDataForm = exports.PackagesDataForm = exports.ManifestsDataForm = undefined;
-
-var _ManifestsDataForm = __webpack_require__(209);
-
-var _ManifestsDataForm2 = _interopRequireDefault(_ManifestsDataForm);
-
-var _PackagesDataForm = __webpack_require__(210);
-
-var _PackagesDataForm2 = _interopRequireDefault(_PackagesDataForm);
-
-var _MedicationTracksDataForm = __webpack_require__(211);
-
-var _MedicationTracksDataForm2 = _interopRequireDefault(_MedicationTracksDataForm);
-
-var _WellsDataForm = __webpack_require__(212);
-
-var _WellsDataForm2 = _interopRequireDefault(_WellsDataForm);
-
-var _RegimensDataForm = __webpack_require__(213);
-
-var _RegimensDataForm2 = _interopRequireDefault(_RegimensDataForm);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.ManifestsDataForm = _ManifestsDataForm2.default;
-exports.PackagesDataForm = _PackagesDataForm2.default;
-exports.MedicationTracksDataForm = _MedicationTracksDataForm2.default;
-exports.WellsDataForm = _WellsDataForm2.default;
-exports.RegimensDataForm = _RegimensDataForm2.default;
-
-/***/ }),
-/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52443,90 +52383,109 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ManifestsDataForm = function (_React$Component) {
-    _inherits(ManifestsDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function ManifestsDataForm(props) {
-        _classCallCheck(this, ManifestsDataForm);
+var DeviceLifecycleHistoryDataForm = function (_React$Component) {
+    _inherits(DeviceLifecycleHistoryDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (ManifestsDataForm.__proto__ || Object.getPrototypeOf(ManifestsDataForm)).call(this, props));
+    function DeviceLifecycleHistoryDataForm(props) {
+        _classCallCheck(this, DeviceLifecycleHistoryDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (DeviceLifecycleHistoryDataForm.__proto__ || Object.getPrototypeOf(DeviceLifecycleHistoryDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'DeviceLifecycleHistory'
+        };
         return _this;
     }
 
-    _createClass(ManifestsDataForm, [{
+    _createClass(DeviceLifecycleHistoryDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'Manifests', onSubmit: this.props.onSubmit },
-                _react2.default.createElement(_TimePickerContainer2.default, {
-                    id: 'appointment-time-auto',
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Manifest Creation Time',
-                    name: 'manifest_creation_time',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_DatePickerContainer2.default, {
-                    id: 'appointment-date-auto',
-                    label: 'Manifest Creation Date',
-                    name: 'manifest_creation_date',
-                    className: 'md-cell',
-                    onChange: this.props.onChange
+                    label: 'Device ID',
+                    onChange: functions.onChange.bind(this, "device_id"),
+                    type: 'number',
+                    required: true
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Created By User ID',
-                    name: 'created_by_user_id',
-                    type: 'number',
-                    onChange: this.props.onChange
+                    label: 'Device Lifecycle Status ID',
+                    onChange: functions.onChange.bind(this, "device_lifecycle_status_id"),
+                    maxLength: 3
+
                 }),
                 _react2.default.createElement(_TimePickerContainer2.default, {
                     id: 'appointment-time-auto',
                     className: 'md-cell',
-                    label: 'Manifest Changed Time',
-                    name: 'manifest_changed_time',
-                    onChange: this.props.onChange
+                    label: 'Lifecycle Start Time',
+                    onChange: functions.onChange.bind(this, "lifecycle_start_time"),
+                    required: true
+
                 }),
                 _react2.default.createElement(_DatePickerContainer2.default, {
                     id: 'appointment-date-auto',
-                    label: 'Manifest Changed Date',
-                    name: 'manifest_changed_date',
+                    label: 'Lifecycle Start Date',
+                    onChange: functions.onChange.bind(this, "lifecycle_start_date"),
                     className: 'md-cell',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Changed By User ID',
-                    name: 'changed_by_user_id',
-                    type: 'number',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TimePickerContainer2.default, {
-                    id: 'appointment-time-auto',
-                    className: 'md-cell',
-                    label: 'Manifest Zero Time',
-                    name: 'manifest_zero_time',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_DatePickerContainer2.default, {
-                    id: 'appointment-date-auto',
-                    label: 'Manifest Zero Date',
-                    name: 'manifest_zero_date',
-                    className: 'md-cell',
-                    onChange: this.props.onChange
+                    required: true
+
                 })
             );
         }
     }]);
 
-    return ManifestsDataForm;
+    return DeviceLifecycleHistoryDataForm;
 }(_react2.default.Component);
 
-exports.default = ManifestsDataForm;
+exports.default = DeviceLifecycleHistoryDataForm;
+
+/***/ }),
+/* 209 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.RegimensDataForm = exports.WellsDataForm = exports.MedicationTracksDataForm = exports.PackagesDataForm = exports.ManifestsDataForm = undefined;
+
+var _ManifestsDataForm = __webpack_require__(210);
+
+var _ManifestsDataForm2 = _interopRequireDefault(_ManifestsDataForm);
+
+var _PackagesDataForm = __webpack_require__(211);
+
+var _PackagesDataForm2 = _interopRequireDefault(_PackagesDataForm);
+
+var _MedicationTracksDataForm = __webpack_require__(212);
+
+var _MedicationTracksDataForm2 = _interopRequireDefault(_MedicationTracksDataForm);
+
+var _WellsDataForm = __webpack_require__(213);
+
+var _WellsDataForm2 = _interopRequireDefault(_WellsDataForm);
+
+var _RegimensDataForm = __webpack_require__(214);
+
+var _RegimensDataForm2 = _interopRequireDefault(_RegimensDataForm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.ManifestsDataForm = _ManifestsDataForm2.default;
+exports.PackagesDataForm = _PackagesDataForm2.default;
+exports.MedicationTracksDataForm = _MedicationTracksDataForm2.default;
+exports.WellsDataForm = _WellsDataForm2.default;
+exports.RegimensDataForm = _RegimensDataForm2.default;
 
 /***/ }),
 /* 210 */
@@ -52581,54 +52540,94 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PackagesDataForm = function (_React$Component) {
-    _inherits(PackagesDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function PackagesDataForm(props) {
-        _classCallCheck(this, PackagesDataForm);
+var ManifestsDataForm = function (_React$Component) {
+    _inherits(ManifestsDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (PackagesDataForm.__proto__ || Object.getPrototypeOf(PackagesDataForm)).call(this, props));
+    function ManifestsDataForm(props) {
+        _classCallCheck(this, ManifestsDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (ManifestsDataForm.__proto__ || Object.getPrototypeOf(ManifestsDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'Manifests'
+        };
         return _this;
     }
 
-    _createClass(PackagesDataForm, [{
+    _createClass(ManifestsDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'Packages', onSubmit: this.props.onSubmit },
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
+                _react2.default.createElement(_TimePickerContainer2.default, {
+                    id: 'appointment-time-auto',
                     className: 'md-cell',
-                    label: 'Package UUID',
-                    name: 'package_uuid',
-                    onChange: this.props.onChange
+                    label: 'Manifest Creation Time',
+                    onChange: functions.onChange.bind(this, "manifest_creation_time")
+
+                }),
+                _react2.default.createElement(_DatePickerContainer2.default, {
+                    id: 'appointment-date-auto',
+                    label: 'Manifest Creation Date',
+                    onChange: functions.onChange.bind(this, "manifest_creation_date"),
+                    className: 'md-cell'
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Manifest ID',
-                    name: 'mainfest_id',
-                    type: 'number',
-                    onChange: this.props.onChange
+                    label: 'Created By User ID',
+                    onChange: functions.onChange.bind(this, "created_by_user_id"),
+                    type: 'number'
+
+                }),
+                _react2.default.createElement(_TimePickerContainer2.default, {
+                    id: 'appointment-time-auto',
+                    className: 'md-cell',
+                    label: 'Manifest Changed Time',
+                    onChange: functions.onChange.bind(this, "manifest_changed_time")
+
+                }),
+                _react2.default.createElement(_DatePickerContainer2.default, {
+                    id: 'appointment-date-auto',
+                    label: 'Manifest Changed Date',
+                    onChange: functions.onChange.bind(this, "manifest_changed_date"),
+                    className: 'md-cell'
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Packager ID',
-                    name: 'packager_id',
-                    onChange: this.props.onChange
+                    label: 'Changed By User ID',
+                    onChange: functions.onChange.bind(this, "changed_by_user_id"),
+                    type: 'number'
+
+                }),
+                _react2.default.createElement(_TimePickerContainer2.default, {
+                    id: 'appointment-time-auto',
+                    className: 'md-cell',
+                    label: 'Manifest Zero Time',
+                    onChange: functions.onChange.bind(this, "manifest_zero_time")
+
+                }),
+                _react2.default.createElement(_DatePickerContainer2.default, {
+                    id: 'appointment-date-auto',
+                    label: 'Manifest Zero Date',
+                    onChange: functions.onChange.bind(this, "manifest_zero_date"),
+                    className: 'md-cell'
+
                 })
             );
         }
     }]);
 
-    return PackagesDataForm;
+    return ManifestsDataForm;
 }(_react2.default.Component);
 
-exports.default = PackagesDataForm;
+exports.default = ManifestsDataForm;
 
 /***/ }),
 /* 211 */
@@ -52683,62 +52682,58 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var MedicationTracksDataForm = function (_React$Component) {
-    _inherits(MedicationTracksDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function MedicationTracksDataForm(props) {
-        _classCallCheck(this, MedicationTracksDataForm);
+var PackagesDataForm = function (_React$Component) {
+    _inherits(PackagesDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (MedicationTracksDataForm.__proto__ || Object.getPrototypeOf(MedicationTracksDataForm)).call(this, props));
+    function PackagesDataForm(props) {
+        _classCallCheck(this, PackagesDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (PackagesDataForm.__proto__ || Object.getPrototypeOf(PackagesDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'Packages'
+        };
         return _this;
     }
 
-    _createClass(MedicationTracksDataForm, [{
+    _createClass(PackagesDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'MedicationTracks', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Package UUID',
+                    onChange: functions.onChange.bind(this, "package_uuid")
+
+                }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Manifest ID',
-                    name: 'manifest_id',
-                    type: 'number',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, "mainfest_id"),
+                    type: 'number'
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Medication Track Ruleset ID',
-                    name: 'manifest_id',
-                    type: 'number',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TimePickerContainer2.default, {
-                    id: 'appointment-time-auto',
-                    className: 'md-cell',
-                    label: 'Medication Track Zero Time',
-                    name: 'medication_track_zero_time',
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_DatePickerContainer2.default, {
-                    id: 'appointment-date-auto',
-                    label: 'Medication Track Zero Date',
-                    name: 'medication_track_zero_date',
-                    className: 'md-cell',
-                    onChange: this.props.onChange
+                    label: 'Packager ID',
+                    onChange: functions.onChange.bind(this, "packager_id")
+
                 })
             );
         }
     }]);
 
-    return MedicationTracksDataForm;
+    return PackagesDataForm;
 }(_react2.default.Component);
 
-exports.default = MedicationTracksDataForm;
+exports.default = PackagesDataForm;
 
 /***/ }),
 /* 212 */
@@ -52793,68 +52788,66 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var WellsDataForm = function (_React$Component) {
-    _inherits(WellsDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function WellsDataForm(props) {
-        _classCallCheck(this, WellsDataForm);
+var MedicationTracksDataForm = function (_React$Component) {
+    _inherits(MedicationTracksDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (WellsDataForm.__proto__ || Object.getPrototypeOf(WellsDataForm)).call(this, props));
+    function MedicationTracksDataForm(props) {
+        _classCallCheck(this, MedicationTracksDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (MedicationTracksDataForm.__proto__ || Object.getPrototypeOf(MedicationTracksDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'MedicationTracks'
+        };
         return _this;
     }
 
-    _createClass(WellsDataForm, [{
+    _createClass(MedicationTracksDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'Wells', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Medication Track ID',
-                    name: 'medication_track_id',
-                    type: 'number',
-                    maxLength: 2,
-                    onChange: this.props.onChange
+                    label: 'Manifest ID',
+                    onChange: functions.onChange.bind(this, "manifest_id"),
+                    type: 'number'
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Well Row Number',
-                    name: 'well_row_number',
-                    type: 'number',
-                    maxLength: 2,
-                    onChange: this.props.onChange
+                    label: 'Medication Track Ruleset ID',
+                    onChange: functions.onChange.bind(this, "manifest_id"),
+                    type: 'number'
+
                 }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
+                _react2.default.createElement(_TimePickerContainer2.default, {
+                    id: 'appointment-time-auto',
                     className: 'md-cell',
-                    label: 'Well Column Number',
-                    name: 'well_column_number',
-                    type: 'number',
-                    maxLength: 2,
-                    onChange: this.props.onChange
+                    label: 'Medication Track Zero Time',
+                    onChange: functions.onChange.bind(this, "medication_track_zero_time")
+
                 }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Well Number',
-                    name: 'well_number',
-                    type: 'number',
-                    maxLength: 2,
-                    onChange: this.props.onChange
+                _react2.default.createElement(_DatePickerContainer2.default, {
+                    id: 'appointment-date-auto',
+                    label: 'Medication Track Zero Date',
+                    onChange: functions.onChange.bind(this, "medication_track_zero_date"),
+                    className: 'md-cell'
+
                 })
             );
         }
     }]);
 
-    return WellsDataForm;
+    return MedicationTracksDataForm;
 }(_react2.default.Component);
 
-exports.default = WellsDataForm;
+exports.default = MedicationTracksDataForm;
 
 /***/ }),
 /* 213 */
@@ -52909,137 +52902,75 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var RegimensDataForm = function (_React$Component) {
-    _inherits(RegimensDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function RegimensDataForm(props) {
-        _classCallCheck(this, RegimensDataForm);
+var WellsDataForm = function (_React$Component) {
+    _inherits(WellsDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (RegimensDataForm.__proto__ || Object.getPrototypeOf(RegimensDataForm)).call(this, props));
+    function WellsDataForm(props) {
+        _classCallCheck(this, WellsDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (WellsDataForm.__proto__ || Object.getPrototypeOf(WellsDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'Wells'
+        };
         return _this;
     }
 
-    _createClass(RegimensDataForm, [{
+    _createClass(WellsDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'Regimens', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Well ID',
-                    name: 'well_id',
+                    label: 'Medication Track ID',
+                    onChange: functions.onChange.bind(this, "medication_track_id"),
                     type: 'number',
-                    onChange: this.props.onChange
+                    maxLength: 2
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Drug\'s Scientific Name',
-                    name: 'drug_scientific_name',
-                    maxLength: 128,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Drug\'s Generic Name',
-                    name: 'drug_generic_name',
-                    maxLength: 128,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Dosage',
-                    name: 'regimen_dosage',
-                    maxLength: 10,
+                    label: 'Well Row Number',
+                    onChange: functions.onChange.bind(this, "well_row_number"),
                     type: 'number',
-                    onChange: this.props.onChange
+                    maxLength: 2
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Route',
-                    name: 'regimen_route',
-                    maxLength: 2,
-                    onChange: this.props.onChange
+                    label: 'Well Column Number',
+                    onChange: functions.onChange.bind(this, "well_column_number"),
+                    type: 'number',
+                    maxLength: 2
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Frequency',
-                    name: 'regimen_frequency',
-                    maxLength: 3,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Medication NDC',
-                    name: 'regimen_medication_ndc',
-                    maxLength: 13,
-                    onChange: this.props.onChange
+                    label: 'Well Number',
+                    onChange: functions.onChange.bind(this, "well_number"),
+                    type: 'number',
+                    maxLength: 2
+
                 })
             );
         }
     }]);
 
-    return RegimensDataForm;
+    return WellsDataForm;
 }(_react2.default.Component);
 
-exports.default = RegimensDataForm;
+exports.default = WellsDataForm;
 
 /***/ }),
 /* 214 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.EmailTypeDataForm = exports.EmailsDataForm = exports.PhoneTypeDataForm = exports.PhonesDataForm = exports.AddressTypeDataForm = exports.AddressesDataForm = undefined;
-
-var _AddressTypeDataForm = __webpack_require__(215);
-
-var _AddressTypeDataForm2 = _interopRequireDefault(_AddressTypeDataForm);
-
-var _EmailTypeDataForm = __webpack_require__(216);
-
-var _EmailTypeDataForm2 = _interopRequireDefault(_EmailTypeDataForm);
-
-var _PhoneTypeDataForm = __webpack_require__(217);
-
-var _PhoneTypeDataForm2 = _interopRequireDefault(_PhoneTypeDataForm);
-
-var _AddressesDataForm = __webpack_require__(218);
-
-var _AddressesDataForm2 = _interopRequireDefault(_AddressesDataForm);
-
-var _EmailsDataForm = __webpack_require__(219);
-
-var _EmailsDataForm2 = _interopRequireDefault(_EmailsDataForm);
-
-var _PhonesDataForm = __webpack_require__(220);
-
-var _PhonesDataForm2 = _interopRequireDefault(_PhonesDataForm);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.AddressesDataForm = _AddressesDataForm2.default;
-exports.AddressTypeDataForm = _AddressTypeDataForm2.default;
-exports.PhonesDataForm = _PhonesDataForm2.default;
-exports.PhoneTypeDataForm = _PhoneTypeDataForm2.default;
-exports.EmailsDataForm = _EmailsDataForm2.default;
-exports.EmailTypeDataForm = _EmailTypeDataForm2.default;
-
-/***/ }),
-/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53091,41 +53022,138 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var AddressTypeDataForm = function (_React$Component) {
-    _inherits(AddressTypeDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function AddressTypeDataForm(props) {
-        _classCallCheck(this, AddressTypeDataForm);
+var RegimensDataForm = function (_React$Component) {
+    _inherits(RegimensDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (AddressTypeDataForm.__proto__ || Object.getPrototypeOf(AddressTypeDataForm)).call(this, props));
+    function RegimensDataForm(props) {
+        _classCallCheck(this, RegimensDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (RegimensDataForm.__proto__ || Object.getPrototypeOf(RegimensDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'Regimens'
+        };
         return _this;
     }
 
-    _createClass(AddressTypeDataForm, [{
+    _createClass(RegimensDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'AddressType', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Address Type Description',
-                    name: 'address_type_description',
-                    maxLength: 64,
-                    required: true,
-                    onChange: this.props.onChange
+                    label: 'Well ID',
+                    onChange: functions.onChange.bind(this, "well_id"),
+                    type: 'number'
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Drug\'s Scientific Name',
+                    onChange: functions.onChange.bind(this, "drug_scientific_name"),
+                    maxLength: 128
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Drug\'s Generic Name',
+                    onChange: functions.onChange.bind(this, "drug_generic_name"),
+                    maxLength: 128
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Dosage',
+                    onChange: functions.onChange.bind(this, "regimen_dosage"),
+                    maxLength: 10,
+                    type: 'number'
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Route',
+                    onChange: functions.onChange.bind(this, "regimen_route"),
+                    maxLength: 2
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Frequency',
+                    onChange: functions.onChange.bind(this, "regimen_frequency"),
+                    maxLength: 3
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Medication NDC',
+                    onChange: functions.onChange.bind(this, "regimen_medication_ndc"),
+                    maxLength: 13
+
                 })
             );
         }
     }]);
 
-    return AddressTypeDataForm;
+    return RegimensDataForm;
 }(_react2.default.Component);
 
-exports.default = AddressTypeDataForm;
+exports.default = RegimensDataForm;
+
+/***/ }),
+/* 215 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.EmailTypeDataForm = exports.EmailsDataForm = exports.PhoneTypeDataForm = exports.PhonesDataForm = exports.AddressTypeDataForm = exports.AddressesDataForm = undefined;
+
+var _AddressTypeDataForm = __webpack_require__(216);
+
+var _AddressTypeDataForm2 = _interopRequireDefault(_AddressTypeDataForm);
+
+var _EmailTypeDataForm = __webpack_require__(217);
+
+var _EmailTypeDataForm2 = _interopRequireDefault(_EmailTypeDataForm);
+
+var _PhoneTypeDataForm = __webpack_require__(218);
+
+var _PhoneTypeDataForm2 = _interopRequireDefault(_PhoneTypeDataForm);
+
+var _AddressesDataForm = __webpack_require__(219);
+
+var _AddressesDataForm2 = _interopRequireDefault(_AddressesDataForm);
+
+var _EmailsDataForm = __webpack_require__(220);
+
+var _EmailsDataForm2 = _interopRequireDefault(_EmailsDataForm);
+
+var _PhonesDataForm = __webpack_require__(221);
+
+var _PhonesDataForm2 = _interopRequireDefault(_PhonesDataForm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.AddressesDataForm = _AddressesDataForm2.default;
+exports.AddressTypeDataForm = _AddressTypeDataForm2.default;
+exports.PhonesDataForm = _PhonesDataForm2.default;
+exports.PhoneTypeDataForm = _PhoneTypeDataForm2.default;
+exports.EmailsDataForm = _EmailsDataForm2.default;
+exports.EmailTypeDataForm = _EmailTypeDataForm2.default;
 
 /***/ }),
 /* 216 */
@@ -53180,41 +53208,45 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var EmailTypeDataForm = function (_React$Component) {
-    _inherits(EmailTypeDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function EmailTypeDataForm(props) {
-        _classCallCheck(this, EmailTypeDataForm);
+var AddressTypeDataForm = function (_React$Component) {
+    _inherits(AddressTypeDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (EmailTypeDataForm.__proto__ || Object.getPrototypeOf(EmailTypeDataForm)).call(this, props));
+    function AddressTypeDataForm(props) {
+        _classCallCheck(this, AddressTypeDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (AddressTypeDataForm.__proto__ || Object.getPrototypeOf(AddressTypeDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'AddressType'
+        };
         return _this;
     }
 
-    _createClass(EmailTypeDataForm, [{
+    _createClass(AddressTypeDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'EmailType', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Email Type Description',
-                    name: 'email_type_description',
+                    label: 'Address Type Description',
+                    onChange: functions.onChange.bind(this, "address_type_description"),
                     maxLength: 64,
-                    required: true,
-                    onChange: this.props.onChange
+                    required: true
+
                 })
             );
         }
     }]);
 
-    return EmailTypeDataForm;
+    return AddressTypeDataForm;
 }(_react2.default.Component);
 
-exports.default = EmailTypeDataForm;
+exports.default = AddressTypeDataForm;
 
 /***/ }),
 /* 217 */
@@ -53269,41 +53301,45 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PhoneTypeDataForm = function (_React$Component) {
-    _inherits(PhoneTypeDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function PhoneTypeDataForm(props) {
-        _classCallCheck(this, PhoneTypeDataForm);
+var EmailTypeDataForm = function (_React$Component) {
+    _inherits(EmailTypeDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (PhoneTypeDataForm.__proto__ || Object.getPrototypeOf(PhoneTypeDataForm)).call(this, props));
+    function EmailTypeDataForm(props) {
+        _classCallCheck(this, EmailTypeDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (EmailTypeDataForm.__proto__ || Object.getPrototypeOf(EmailTypeDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'EmailType'
+        };
         return _this;
     }
 
-    _createClass(PhoneTypeDataForm, [{
+    _createClass(EmailTypeDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'PhoneType', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Phone Type Description',
-                    name: 'phone_type_description',
+                    label: 'Email Type Description',
+                    onChange: functions.onChange.bind(this, "email_type_description"),
                     maxLength: 64,
-                    required: true,
-                    onChange: this.props.onChange
+                    required: true
+
                 })
             );
         }
     }]);
 
-    return PhoneTypeDataForm;
+    return EmailTypeDataForm;
 }(_react2.default.Component);
 
-exports.default = PhoneTypeDataForm;
+exports.default = EmailTypeDataForm;
 
 /***/ }),
 /* 218 */
@@ -53358,104 +53394,45 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var AddressesDataForm = function (_React$Component) {
-    _inherits(AddressesDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function AddressesDataForm(props) {
-        _classCallCheck(this, AddressesDataForm);
+var PhoneTypeDataForm = function (_React$Component) {
+    _inherits(PhoneTypeDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (AddressesDataForm.__proto__ || Object.getPrototypeOf(AddressesDataForm)).call(this, props));
+    function PhoneTypeDataForm(props) {
+        _classCallCheck(this, PhoneTypeDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (PhoneTypeDataForm.__proto__ || Object.getPrototypeOf(PhoneTypeDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'PhoneType'
+        };
         return _this;
     }
 
-    _createClass(AddressesDataForm, [{
+    _createClass(PhoneTypeDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'Addresses', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Person ID',
-                    name: 'person_id',
-                    type: 'number',
-                    required: true,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Address Type ID',
-                    name: 'address_type_id',
-                    type: 'number',
-                    required: true,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Street Address',
-                    name: 'street_address',
-                    maxLength: 128,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Street Address 2',
-                    name: 'street_address 2',
-                    maxLength: 128,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'City',
-                    name: 'city',
+                    label: 'Phone Type Description',
+                    onChange: functions.onChange.bind(this, "phone_type_description"),
                     maxLength: 64,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'State/Province',
-                    name: 'state_province',
-                    maxLength: 64,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'County',
-                    name: 'county',
-                    maxLength: 3,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_TextFields2.default, {
-                    id: 'floating-center-title',
-                    className: 'md-cell',
-                    label: 'Country',
-                    name: 'country',
-                    maxLength: 2,
-                    onChange: this.props.onChange
-                }),
-                _react2.default.createElement(_YesNoSelect2.default, {
-                    id: 'contact-select',
-                    label: 'Primary Contact Address',
-                    name: 'primary_contact_address',
-                    onChange: this.props.onChange
+                    required: true
+
                 })
             );
         }
     }]);
 
-    return AddressesDataForm;
+    return PhoneTypeDataForm;
 }(_react2.default.Component);
 
-exports.default = AddressesDataForm;
+exports.default = PhoneTypeDataForm;
 
 /***/ }),
 /* 219 */
@@ -53510,65 +53487,108 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var EmailsDataForm = function (_React$Component) {
-    _inherits(EmailsDataForm, _React$Component);
+var functions = __webpack_require__(87).default;
 
-    function EmailsDataForm(props) {
-        _classCallCheck(this, EmailsDataForm);
+var AddressesDataForm = function (_React$Component) {
+    _inherits(AddressesDataForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (EmailsDataForm.__proto__ || Object.getPrototypeOf(EmailsDataForm)).call(this, props));
+    function AddressesDataForm(props) {
+        _classCallCheck(this, AddressesDataForm);
 
-        _this.state = {};
+        var _this = _possibleConstructorReturn(this, (AddressesDataForm.__proto__ || Object.getPrototypeOf(AddressesDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'Addresses'
+        };
         return _this;
     }
 
-    _createClass(EmailsDataForm, [{
+    _createClass(AddressesDataForm, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'Emails', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Person ID',
-                    name: 'person_id',
+                    onChange: functions.onChange.bind(this, "person_id"),
                     type: 'number',
-                    required: true,
-                    onChange: this.props.onChange
+                    required: true
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Email Address',
-                    name: 'email_address',
-                    maxLength: 256,
-                    required: true,
-                    onChange: this.props.onChange
+                    label: 'Address Type ID',
+                    onChange: functions.onChange.bind(this, "address_type_id"),
+                    type: 'number',
+                    required: true
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
-                    label: 'Email Type ID',
-                    name: 'email_type_id',
-                    type: 'number',
-                    required: true,
-                    onChange: this.props.onChange
+                    label: 'Street Address',
+                    onChange: functions.onChange.bind(this, "street_address"),
+                    maxLength: 128
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Street Address 2',
+                    onChange: functions.onChange.bind(this, "street_address 2"),
+                    maxLength: 128
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'City',
+                    onChange: functions.onChange.bind(this, "city"),
+                    maxLength: 64
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'State/Province',
+                    onChange: functions.onChange.bind(this, "state_province"),
+                    maxLength: 64
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'County',
+                    onChange: functions.onChange.bind(this, "county"),
+                    maxLength: 3
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Country',
+                    onChange: functions.onChange.bind(this, "country"),
+                    maxLength: 2
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'contact-select',
-                    label: 'Primary Email Address',
-                    name: 'primary_email_address',
-                    onChange: this.props.onChange
+                    label: 'Primary Contact Address',
+                    onChange: functions.onChange.bind(this, "primary_contact_address")
+
                 })
             );
         }
     }]);
 
-    return EmailsDataForm;
+    return AddressesDataForm;
 }(_react2.default.Component);
 
-exports.default = EmailsDataForm;
+exports.default = AddressesDataForm;
 
 /***/ }),
 /* 220 */
@@ -53623,6 +53643,125 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var functions = __webpack_require__(87).default;
+
+var EmailsDataForm = function (_React$Component) {
+    _inherits(EmailsDataForm, _React$Component);
+
+    function EmailsDataForm(props) {
+        _classCallCheck(this, EmailsDataForm);
+
+        var _this = _possibleConstructorReturn(this, (EmailsDataForm.__proto__ || Object.getPrototypeOf(EmailsDataForm)).call(this, props));
+
+        _this.state = {
+            'tableName': 'Emails'
+        };
+        return _this;
+    }
+
+    _createClass(EmailsDataForm, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _DataForm2.default,
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Person ID',
+                    onChange: functions.onChange.bind(this, "person_id"),
+                    type: 'number',
+                    required: true
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Email Address',
+                    onChange: functions.onChange.bind(this, "email_address"),
+                    maxLength: 256,
+                    required: true
+
+                }),
+                _react2.default.createElement(_TextFields2.default, {
+                    id: 'floating-center-title',
+                    className: 'md-cell',
+                    label: 'Email Type ID',
+                    onChange: functions.onChange.bind(this, "email_type_id"),
+                    type: 'number',
+                    required: true
+
+                }),
+                _react2.default.createElement(_YesNoSelect2.default, {
+                    id: 'contact-select',
+                    label: 'Primary Email Address',
+                    onChange: functions.onChange.bind(this, "primary_email_address")
+
+                })
+            );
+        }
+    }]);
+
+    return EmailsDataForm;
+}(_react2.default.Component);
+
+exports.default = EmailsDataForm;
+
+/***/ }),
+/* 221 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _TextFields = __webpack_require__(6);
+
+var _TextFields2 = _interopRequireDefault(_TextFields);
+
+var _Button = __webpack_require__(3);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _DatePickerContainer = __webpack_require__(7);
+
+var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
+
+var _SelectFields = __webpack_require__(4);
+
+var _SelectFields2 = _interopRequireDefault(_SelectFields);
+
+var _TimePickerContainer = __webpack_require__(10);
+
+var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
+
+var _YesNoSelect = __webpack_require__(8);
+
+var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
+
+var _DataForm = __webpack_require__(5);
+
+var _DataForm2 = _interopRequireDefault(_DataForm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var functions = __webpack_require__(87).default;
+
 var PhonesDataForm = function (_React$Component) {
     _inherits(PhonesDataForm, _React$Component);
 
@@ -53631,7 +53770,9 @@ var PhonesDataForm = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (PhonesDataForm.__proto__ || Object.getPrototypeOf(PhonesDataForm)).call(this, props));
 
-        _this.state = {};
+        _this.state = {
+            'tableName': 'Phones'
+        };
         return _this;
     }
 
@@ -53640,37 +53781,37 @@ var PhonesDataForm = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 _DataForm2.default,
-                { tableName: 'Phones', onSubmit: this.props.onSubmit },
+                { tableName: this.state.tableName, onSubmit: functions.onSubmit.bind(this) },
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Person ID',
-                    name: 'person_id',
+                    onChange: functions.onChange.bind(this, "person_id"),
                     type: 'number',
-                    required: true,
-                    onChange: this.props.onChange
+                    required: true
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Phone',
-                    name: 'phone_number',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, "phone_number")
+
                 }),
                 _react2.default.createElement(_TextFields2.default, {
                     id: 'floating-center-title',
                     className: 'md-cell',
                     label: 'Phone Type ID',
-                    name: 'phone_type_id',
+                    onChange: functions.onChange.bind(this, "phone_type_id"),
                     type: 'number',
-                    required: true,
-                    onChange: this.props.onChange
+                    required: true
+
                 }),
                 _react2.default.createElement(_YesNoSelect2.default, {
                     id: 'contact-select',
                     label: 'Primary Contact Phone',
-                    name: 'primary_contact_phone',
-                    onChange: this.props.onChange
+                    onChange: functions.onChange.bind(this, "primary_contact_phone")
+
                 })
             );
         }

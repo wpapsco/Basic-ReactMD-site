@@ -4,26 +4,28 @@ import Button from 'react-md/lib/Buttons/Button';
 import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
 import SelectField from 'react-md/lib/SelectFields';
 import DataForm from './DataForm';
+var functions = require('../DataFormFunctions').default;
 
 export default class UserDataForm extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            'tableName': 'User'
         }
     }
 
     render() {
         return (
-            <DataForm tableName="User" onSubmit={this.props.onSubmit}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="User Type ID"
                     maxLength={2}
                     required
-                    name='user_type_id'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'user_type_id')}
+                    
                 />
                 <TextField
                     id="floating-center-title"
@@ -31,8 +33,8 @@ export default class UserDataForm extends React.Component {
                     label="Fourm Pseudonym"
                     maxLength={64}
                     required
-                    name='pseudonym'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'pseudonym')}
+                    
                 />
                 <TextField
                     id="floating-center-title"
@@ -40,8 +42,8 @@ export default class UserDataForm extends React.Component {
                     label="Attached Person ID"
                     type="number"
                     required
-                    name='person_id'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'person_id')}
+                    
                 />
                 <TextField
                     id="floating-center-title"
@@ -49,16 +51,16 @@ export default class UserDataForm extends React.Component {
                     label="Time Zone"
                     maxLength={2}
                     required
-                    name='time_zone'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'time_zone')}
+                    
                 />
                 <TextField
                     id="floating-center-title"
                     className="md-cell"
                     label="Date Format"
                     maxLength={1}
-                    name='date_format'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'date_format')}
+                    
                 />
                 <TextField
                     id="floating-center-title"
@@ -66,8 +68,8 @@ export default class UserDataForm extends React.Component {
                     label="Time Format"
                     type="number"
                     maxLength={1}
-                    name='time_format'
-                    onChange={this.props.onChange}
+                    onChange={functions.onChange.bind(this, 'time_format')}
+                    
                 />
             </DataForm>
         );
