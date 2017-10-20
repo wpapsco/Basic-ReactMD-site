@@ -22,18 +22,26 @@ export default class DataForm extends React.Component {
 
     render() {
         var classname = !this.props.noGrid ? "md-grid text-fields__application" : "text-fields__application"
+        var button = (
+            <Button raised primary
+                id={this.props.tableName}
+                name={this.props.tableName}
+                className="md-cell md-cell--12 md-cell--bottom md-cell--right"
+                onClick={this.state.onSubmit} >
+                Submit
+            </Button>
+        );
+        if (this.props.noButton) {
+            if (this.props.noButton != false) {
+                button = null;
+            }
+        }
         return (
             <form className={classname} onSubmit={this.state.onSubmit}>
                 <h1 className="md-cell md-cell--12">{this.props.tableName} Table Data Entry Form</h1>
                 <br />
                 {this.props.children}
-                <Button flat
-                    id={this.props.tableName}
-                    name={this.props.tableName}
-                    className="md-cell md-cell--12 md-cell--bottom md-cell--right"
-                    onClick={this.state.onSubmit} >
-                    Submit
-                </Button>
+                {button}
             </form>
         )
     }

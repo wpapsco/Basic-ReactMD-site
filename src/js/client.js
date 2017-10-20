@@ -41,6 +41,7 @@ import {
 } from './components/RegimensTable';
 import {
     AddressesDataForm,
+    AddressesDeck,
     AddressTypeDataForm,
     PhonesDataForm,
     PhoneTypeDataForm,
@@ -124,16 +125,20 @@ class Layout extends React.Component {
         return (
             <div id="layout">
                 <Toolbar
-                    themed
+                    colored
+                    fixed
                     titleMenu={
                         <TitleMenu
                             id="title_menu"
                             onChange={this.onFormUpdate.bind(this)} />}
                 >
                 </Toolbar>
-                <Paper id="main">
+                {/* <Paper id="main">
                     {forms[this.state.formIndex]}
-                </Paper>
+                </Paper> */}
+                <div className="md-toolbar-relative">
+                    <AddressesDeck onSubmit={this.onSubmit.bind(this)} />
+                </div>
             </div>
         );
     }

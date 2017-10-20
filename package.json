@@ -40,7 +40,7 @@
     "dev": "./node_modules/.bin/webpack-dev-server --inline --hot",
     "webpack": "webpack --progress --colors --watch",
     "build-css": "node-sass-chokidar src/ -o express/public/stylesheets",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o express/public/stylesheets --watch --recursive",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./express/bin/www"
   },

@@ -13,6 +13,12 @@ export default class AddressesDataForm extends React.Component {
 
     constructor(props) {
         super(props);
+        if (this.props.onChange) {
+            functions.onChange = this.props.onChange;
+        }
+        if(this.props.onSubmit) {
+            functions.onSubmit = this.props.onSubmit;
+        }
         this.state = {
             'tableName': 'Addresses',
             states: [
@@ -32,7 +38,12 @@ export default class AddressesDataForm extends React.Component {
                 'Api': ['e', 't', 'c'],
                 'Still': ['e', 't', 'c']
             },
-            use_counties: []
+            use_counties: [],
+            countries: [
+                'United States of America',
+                'Elsewhere'
+            ],
+            index: this.props.index
         }
     }
 
@@ -49,43 +60,54 @@ export default class AddressesDataForm extends React.Component {
                 });
             }
         }
+        functions.onChange.bind(this, name, value).call();
     }
 
     render() {
         return (
-            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)}>
+            <DataForm tableName={this.state.tableName} onSubmit={functions.onSubmit.bind(this)} {...this.props}>
                 <SelectField
                     menuItems={['Home', 'Work', 'Other']}
                     defaultValue="Home"
-                    className='md-cell md-cell--2 md-cell--bottom'
+                    className='md-cell md-cell--2 md-cell--middle'
                     onChange={functions.onChange.bind(this, "address_type_select")}
                 />
                 <TextField
                     label="Street Address Line 1"
+                    maxLength={128}
                     className='md-cell md-cell--10'
                     onChange={functions.onChange.bind(this, "address_line_1")}
                 />
                 <TextField
                     label="Street Address Line 2"
+                    maxLength={128}
                     className='md-cell md-cell--2-desktop-offset md-cell--10'
                     onChange={functions.onChange.bind(this, "address_line_2")}
                 />
                 <TextField
                     label="City"
+                    maxLength={64}
                     className='md-cell md-cell--2-desktop-offset md-cell--5'
                     onChange={functions.onChange.bind(this, "city")}
                 />
                 <SelectField
                     label="State"
+                    maxLength={64}
                     className='md-cell md-cell--2'
                     menuItems={this.state.states}
                     onChange={this.onChange.bind(this, "state")}
                 />
                 <TextField
                     label="ZIP code"
-                    className='md-cell md-cell--3 md-cell--bottom'
+                    className='md-cell md-cell--3'
                     onChange={functions.onChange.bind(this, "zip_code")}
                     required
+                />
+                <SelectField
+                    label="Country"
+                    className='md-cell md-cell--2-desktop-offset md-cell--10'
+                    menuItems={this.state.countries}
+                    onChange={functions.onChange.bind(this, "country")}
                 />
                 <h6 className="md-cell md-cell--2-desktop-offset md-cell--10">Location Information</h6>
                 <SelectField
@@ -98,12 +120,23 @@ export default class AddressesDataForm extends React.Component {
                 />
                 <SelectionControl
                     id="switch-primary-address"
-                    className='md-cell md-cell--2-desktop-offset'
+                    className='md-cell md-cell--12 md-cell--2-desktop-offset'
                     type="switch"
                     label="Primary address"
                     onChange={functions.onChange.bind(this, "primary_address")}
                     defaultChecked
                 />
+                {this.props.noAddButton ?
+                    null :
+                    <div className="md-cell">
+                        <Button
+                            style={{ display: "inline-block" }}
+                            floating mini secondary
+                            onClick={this.props.onAddClicked}>
+                            add circle
+                        </Button>
+                        <p style={{ display: "inline-block", margin: "10px" }}>Add address</p>
+                    </div>}
                 <h6 className="md-cell md-cell--12">* Required Fields</h6>
                 {/* <TextField
                     id="floating-center-title"
