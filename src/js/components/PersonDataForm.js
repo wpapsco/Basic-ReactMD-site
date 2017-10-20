@@ -34,7 +34,6 @@ export default class PersonDataForm extends React.Component {
             this.setState({
                 "display_ssn": display_ssn
             });
-            this.props.onChange(ssn, {target:{name:'ssn'}});
         }
     }
 

@@ -152,7 +152,7 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     
                 />
                 <YesNoSelect
-                    id="religion-select"
+                    id="spiritual-select"
                     label="Are you spiritual?"
                     onChange={functions.onChange.bind(this, 'is_spiritual')}
                     
@@ -166,7 +166,7 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     
                 />
                 <YesNoSelect
-                    id="religion-select"
+                    id="difficulties-select"
                     label="Do you have physical difficulties?"
                     onChange={functions.onChange.bind(this, 'physical_difficulty')}
                     
@@ -180,7 +180,7 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     
                 />
                 <YesNoSelect
-                    id="religion-select"
+                    id="exercise-select"
                     label="Do you exercise?"
                     onChange={functions.onChange.bind(this, 'does_exercise')}
                     
@@ -203,38 +203,32 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     
                 />
                 <YesNoSelect
-                    id="religion-select"
+                    id="sports-select"
                     label="Did you do sports as a kid?"
                     className="md-cell"
                     onChange={functions.onChange.bind(this, 'kid_does_exercise')}
                     
                 />
                 <YesNoSelect
-                    id="religion-select"
-                    label="Are you spiritual?"
-                    onChange={functions.onChange.bind(this, 'is_spiritual')}
-                    
-                />
-                <YesNoSelect
-                    id="religion-select"
+                    id="teenage-sports-select"
                     label="Did you do sports as a teenager?"
                     onChange={functions.onChange.bind(this, 'teenager_does_exercise')}
                     
                 />
                 <YesNoSelect
-                    id="religion-select"
+                    id="adult-sports-select"
                     label="Do you do sports as a adult?"
                     onChange={functions.onChange.bind(this, 'adult_does_exercise')}
                     
                 />
                 <YesNoSelect
-                    id="religion-select"
+                    id="smoke-select"
                     label="Do you smoke?"
                     onChange={functions.onChange.bind(this, 'is_smoker')}
                     
                 />
                 <YesNoSelect
-                    id="religion-select"
+                    id="past-smoke-select"
                     label="Did you ever smoke?"
                     onChange={functions.onChange.bind(this, 'was_smoker')}
                     
@@ -256,13 +250,13 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     
                 />
                 <YesNoSelect
-                    id="religion-select"
+                    id="alcohol-select"
                     label="Do you drink alcohol?"
                     onChange={functions.onChange.bind(this, 'is_drinker')}
                     
                 />
                 <YesNoSelect
-                    id="religion-select"
+                    id="past-alcohol-select"
                     label="Did you ever drink alcohol?"
                     onChange={functions.onChange.bind(this, 'was_drinker')}
                     
@@ -276,13 +270,13 @@ export default class PatientSocioEconomicFactorsDataForm extends React.Component
                     
                 />
                 <YesNoSelect
-                    id="religion-select"
+                    id="drugs-select"
                     label="Do you use drugs?"
                     onChange={functions.onChange.bind(this, 'is_drugger')}
                     
                 />
                 <YesNoSelect
-                    id="religion-select"
+                    id="past-drugs-select"
                     label="Have you ever used drugs?"
                     onChange={functions.onChange.bind(this, 'was_drugger')}
                     

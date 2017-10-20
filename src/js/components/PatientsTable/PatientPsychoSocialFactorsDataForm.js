@@ -173,7 +173,7 @@ export default class PatientPsychoSocialFactorsDataForm extends React.Component 
                     
                 />
                 <YesNoSelect
-                    id="auto-select"
+                    id="expenses-select"
                     label="Do your expenses improve your health?"
                     onChange={functions.onChange.bind(this, 'expenses_improve_health')}
                     

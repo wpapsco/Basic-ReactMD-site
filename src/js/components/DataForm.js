@@ -11,7 +11,7 @@ export default class DataForm extends React.Component {
         console.log(this.props.onSubmit)
         if (!this.props.onSubmit) {
             this.setState({
-                onSubmit: this.handleSubmit.bind(this)
+                onSubmit: null
             });
         } else {
             this.setState({
@@ -20,29 +20,10 @@ export default class DataForm extends React.Component {
         }
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Data submitted from DataForm.js!");
-
-        var obj = {}; 
-        for (var param in this.state) {
-            obj[param] = this.state[param];
-        }
-        obj.page = this.props.tableName;
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://www.localhost:3000/save", true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.send(JSON.stringify(obj));
-    }
-
-    handleChange = (name, value) => {
-        console.log('using this one!!');
-        console.log(name, value);
-    }
-
     render() {
+        var classname = !this.props.noGrid ? "md-grid text-fields__application" : "text-fields__application"
         return (
-            <form className="md-grid text-fields__application" onSubmit={this.state.onSubmit}>
+            <form className={classname} onSubmit={this.state.onSubmit}>
                 <h1 className="md-cell md-cell--12">{this.props.tableName} Table Data Entry Form</h1>
                 <br />
                 {this.props.children}
