@@ -16,40 +16,52 @@ export default class AddressesDeck extends React.Component {
         super(props);
         this.state = {
             addresses: 1,
+            primaryAddress: 0,
             data: {}
         };
     }
 
     onAddClicked = () => {
         this.setState({
-            addresses: this.state.addresses + 1
-        })
+            addresses: this.state.addresses + 1,
+            primaryAddress: this.state.addresses
+        });
     }
 
     onChange = (index, name, value) => {
+        console.log(this.state);
+        if (name == 'primary_address') {
+            this.setState({
+                primaryAddress: index
+            });
+        }
         this.setState(prevState => ({
-            "data": {
+            "data" : {
                 ...prevState.data,
-                [index]: {
+                [index] : {
                     ...prevState.data[index],
                     [name]: value
                 }
             }
         }));
+        console.log({name, value, index});
     }
 
     render() {
         return (
             <div>
                 {[...new Array(this.state.addresses)].map((_, i) => (
-                    <Paper id="main">
+                    <Paper id="main" key={i}>
                         <AddressesDataForm
                             onChange={this.onChange.bind(this, i)}
                             onSubmit={functions.onSubmit.bind(this)}
+                            key={i}
                             index={i}
                             onAddClicked={this.onAddClicked.bind(this)}
                             noButton={i != this.state.addresses - 1}
-                            noAddButton={i != this.state.addresses - 1 || this.state.addresses==3} />
+                            noAddButton={i != this.state.addresses - 1 || this.state.addresses == 3}
+                            noTitle={i != 0}
+                            isPrimary={this.state.primaryAddress == i} />
                     </Paper>
                 ))}
             </div>

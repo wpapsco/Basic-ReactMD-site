@@ -38,7 +38,7 @@ export default class DataForm extends React.Component {
         }
         return (
             <form className={classname} onSubmit={this.state.onSubmit}>
-                <h1 className="md-cell md-cell--12">{this.props.tableName} Table Data Entry Form</h1>
+                {!this.props.noTitle ? <h1 className="md-cell md-cell--12">{this.props.tableName} Table Data Entry Form</h1> : null}
                 <br />
                 {this.props.children}
                 {button}
