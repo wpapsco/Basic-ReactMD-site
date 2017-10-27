@@ -34,7 +34,7 @@ export default class AddressesDataForm extends React.Component {
             ],
             index: this.props.index,
             address_line_2: '',
-            zip_icon:(<FontIcon />),
+            zip_icon: (<FontIcon />),
             suggested_zip: '',
             valid_zip: true
         }
@@ -63,7 +63,7 @@ export default class AddressesDataForm extends React.Component {
                     suggested_zip: fullzip
                 });
                 console.log(fullzip);
-                callback(zip1==this.state.zip_code || this.state.zip_code == fullzip);
+                callback(zip1 == this.state.zip_code || this.state.zip_code == fullzip);
             })
             .catch((error) => {
                 callback(false);
@@ -94,8 +94,8 @@ export default class AddressesDataForm extends React.Component {
             (this.state.zip_code.length >= 5 || (name == 'zip_code' && value.length >= 5))) {
             //validate
             var that = this;
-            this.validateZip(value, function (isValid) {
-                if (isValid && value == that.state.zip_code) {
+            this.validateZip(name == 'zip_code' ? value : this.state.zip_code, function (isValid) {
+                if (isValid && (name == 'zip_code' ? value : that.state.zip_code) == that.state.zip_code) {
                     that.setState({
                         zip_icon: (<FontIcon>check_circle</FontIcon>),
                         valid_zip: true
@@ -118,7 +118,10 @@ export default class AddressesDataForm extends React.Component {
     render() {
         //var zipIcon = this.state.zip_valid ? (<FontIcon>check_circle</FontIcon>) : (<FontIcon>cancel</FontIcon>);
         return (
-            <DataForm tableName={this.state.tableName} onSubmit={this.props.onSubmit ? this.props.onSubmit.bind(this) : functions.onSubmit.bind(this)} {...this.props}>
+            <DataForm
+                tableName={this.state.tableName}
+                onSubmit={this.props.onSubmit ? this.props.onSubmit.bind(this) : functions.onSubmit.bind(this)}
+                {...this.props}>
                 <SelectField
                     id="address_type_select"
                     menuItems={['Home', 'Work', 'Other']}

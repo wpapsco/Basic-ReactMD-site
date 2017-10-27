@@ -5,6 +5,7 @@ import AddressesDataForm from './AddressesTable/AddressesDataForm';
 import EmailsDataForm from './AddressesTable/EmailsDataForm';
 import PhonesDataForm from './AddressesTable/PhonesDataForm';
 import AddressesDeck from './AddressesTable/AddressesDeck';
+import PhonesDeck from './AddressesTable/PhonesDeck';
 
 export {
     AddressesDataForm,
@@ -13,5 +14,6 @@ export {
     PhoneTypeDataForm,
     EmailsDataForm,
     EmailTypeDataForm,
-    AddressesDeck
+    AddressesDeck,
+    PhonesDeck
 }

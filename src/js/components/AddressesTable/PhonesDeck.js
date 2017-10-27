@@ -7,34 +7,26 @@ import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
 import YesNoSelect from '../YesNoSelect';
 import DataForm from '../DataForm';
 import { Paper } from 'react-md';
-import { AddressesDataForm } from '../AddressesTable';
+import { PhonesDataForm } from '../AddressesTable';
 var functions = require('../../DataFormFunctions').default;
 
-export default class AddressesDeck extends React.Component {
+export default class PhonesDeck extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            addresses: 1,
-            primaryAddress: 0,
+            phones: 1,
             data: {}
-        };
+        }
     }
 
     onAddClicked = () => {
         this.setState({
-            addresses: this.state.addresses + 1,
-            primaryAddress: this.state.addresses
+            phones: this.state.phones + 1,
         });
     }
 
-    onChange = (index, name, value) => {
-        console.log(this.state);
-        if (name == 'primary_address') {
-            this.setState({
-                primaryAddress: index
-            });
-        }
+    onChange(name, value, index) {
         this.setState(prevState => ({
             "data" : {
                 ...prevState.data,
@@ -44,26 +36,23 @@ export default class AddressesDeck extends React.Component {
                 }
             }
         }));
-        console.log({name, value, index});
     }
 
     render() {
         return (
             <div>
-                {[...new Array(this.state.addresses)].map((_, i) => (
-                    <Paper className="md-text-container" key={i}>
-                        <AddressesDataForm
-                            onChange={this.onChange.bind(this, i)}
+                {[...new Array(this.state.phones)].map((_, i) => (
+                    <Paper className="md-text-container" >
+                        <PhonesDataForm
                             onSubmit={functions.onSubmit.bind(this)}
-                            key={i}
-                            index={i}
+                            onChange={this.onChange.bind(this)}
                             onAddClicked={this.onAddClicked.bind(this)}
-                            noButton={i != this.state.addresses - 1}
-                            noAddButton={i != this.state.addresses - 1 || this.state.addresses == 3}
+                            noButton={i != this.state.phones - 1}
+                            noAddButton={i != this.state.phones - 1 || this.state.phones == 3}
                             noTitle={i != 0}
-                            isPrimary={this.state.primaryAddress == i} />
+                            index={i} />
                     </Paper>
-                ))}
+                    ))}
             </div>
         );
     }

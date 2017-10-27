@@ -44,9 +44,10 @@ import {
     AddressesDeck,
     AddressTypeDataForm,
     PhonesDataForm,
+    PhonesDeck,
     PhoneTypeDataForm,
     EmailsDataForm,
-    EmailTypeDataForm
+    EmailTypeDataForm,
 } from './components/AddressesTable';
 
 webfontloader.load({
@@ -60,7 +61,7 @@ class Layout extends React.Component {
         super(props);
         this.state = {
             form: "Addresses",
-            formIndex: 28,
+            formIndex: 0,
             data: {}
         }
     }
@@ -89,37 +90,39 @@ class Layout extends React.Component {
 
     render() {
         var forms = [
-            (<PersonDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<UserDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<UserTypeDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<PatientDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<PatientDemographicFactorsDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<PatientSportsDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<PatientSupportersDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<PatientDrugUseDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<PatientSocioEconomicFactorsDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<PatientPsychoSocialFactorsDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<PatientTherapyRelatedFactorsDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<PatientMedicationsDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<EmployersDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<CohortsDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<CohortsPatientsDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<DevicesDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<DeviceFirmwareDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<DevicesToPatientsDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<DeviceLifecycleStatesDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<DeviceLifecycleHistoryDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<ManifestsDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<PackagesDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<MedicationTracksDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<WellsDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<RegimensDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<AddressTypeDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<EmailTypeDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<PhoneTypeDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<AddressesDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<EmailsDataForm onSubmit={this.onSubmit.bind(this)} />),
-            (<PhonesDataForm onSubmit={this.onSubmit.bind(this)} />) //hooray for multiple cursors! Or not hooray depending on who you ask...
+            // (<PersonDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<UserDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<UserTypeDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<PatientDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<PatientDemographicFactorsDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<PatientSportsDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<PatientSupportersDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<PatientDrugUseDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<PatientSocioEconomicFactorsDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<PatientPsychoSocialFactorsDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<PatientTherapyRelatedFactorsDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<PatientMedicationsDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<EmployersDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<CohortsDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<CohortsPatientsDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<DevicesDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<DeviceFirmwareDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<DevicesToPatientsDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<DeviceLifecycleStatesDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<DeviceLifecycleHistoryDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<ManifestsDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<PackagesDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<MedicationTracksDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<WellsDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<RegimensDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<AddressTypeDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<EmailTypeDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<PhoneTypeDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<AddressesDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<EmailsDataForm onSubmit={this.onSubmit.bind(this)} />),
+            // (<PhonesDataForm onSubmit={this.onSubmit.bind(this)} />) //hooray for multiple cursors! Or not hooray depending on who you ask...
+            (<PhonesDeck onSubmit={this.onSubmit.bind(this)} />),
+            (<AddressesDeck onSubmit={this.onSubmit.bind(this)} />)
         ]
 
         return (
@@ -137,7 +140,7 @@ class Layout extends React.Component {
                     {forms[this.state.formIndex]}
                 </Paper> */}
                 <div className="md-toolbar-relative">
-                    <AddressesDeck onSubmit={this.onSubmit.bind(this)} />
+                    {forms[this.state.formIndex]}
                 </div>
             </div>
         );
