@@ -990,9 +990,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Button = __webpack_require__(3);
-
-var _Button2 = _interopRequireDefault(_Button);
+var _reactMd = __webpack_require__(72);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1033,7 +1031,7 @@ var DataForm = function (_React$Component) {
         value: function render() {
             var classname = !this.props.noGrid ? "md-grid text-fields__application" : "text-fields__application";
             var button = _react2.default.createElement(
-                _Button2.default,
+                _reactMd.Button,
                 { raised: true, primary: true,
                     id: this.props.tableName,
                     name: this.props.tableName,
@@ -27705,7 +27703,7 @@ var Layout = function (_React$Component) {
         };
 
         _this.onSubmit = function (e) {
-            alert(JSON.stringify(e));
+            //alert(JSON.stringify(e));
         };
 
         _this.state = {
@@ -86302,11 +86300,18 @@ var AddressesDataForm = function (_React$Component) {
                     className: 'md-cell md-cell--10',
                     onChange: this.onChange.bind(this, "address_line_1")
                 }),
+                this.props.noTitle ? null : _react2.default.createElement(_reactMd.TextField, {
+                    id: 'person_id',
+                    className: 'md-cell md-cell--2',
+                    label: 'Person ID',
+                    type: 'number',
+                    onChange: this.onChange.bind(this, "person_id")
+                }),
                 _react2.default.createElement(_reactMd.TextField, {
                     id: 'street_address_line_2',
                     label: 'Street Address Line 2',
                     maxLength: 128,
-                    className: 'md-cell md-cell--2-desktop-offset md-cell--10',
+                    className: 'md-cell md-cell--10' + (!this.props.noTitle ? '' : ' md-cell--2-desktop-offset'),
                     onChange: this.onChange.bind(this, "address_line_2")
                 }),
                 _react2.default.createElement(_reactMd.TextField, {
@@ -86535,29 +86540,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextFields = __webpack_require__(7);
-
-var _TextFields2 = _interopRequireDefault(_TextFields);
-
-var _Button = __webpack_require__(3);
-
-var _Button2 = _interopRequireDefault(_Button);
-
-var _DatePickerContainer = __webpack_require__(8);
-
-var _DatePickerContainer2 = _interopRequireDefault(_DatePickerContainer);
-
-var _SelectFields = __webpack_require__(5);
-
-var _SelectFields2 = _interopRequireDefault(_SelectFields);
-
-var _TimePickerContainer = __webpack_require__(19);
-
-var _TimePickerContainer2 = _interopRequireDefault(_TimePickerContainer);
-
 var _YesNoSelect = __webpack_require__(11);
 
 var _YesNoSelect2 = _interopRequireDefault(_YesNoSelect);
+
+var _reactMd = __webpack_require__(72);
 
 var _DataForm = __webpack_require__(6);
 
@@ -86591,12 +86578,14 @@ var PhonesDataForm = function (_React$Component) {
             mobile_carrier_name: '',
             mobile_carrier_type: ''
         };
+        _this.onChange('phones_type_select', 4);
         return _this;
     }
 
     _createClass(PhonesDataForm, [{
         key: 'onChange',
         value: function onChange(name, value) {
+            console.log({ name: name, value: value });
             if (name == 'phones_type_select') {
                 this.setState({
                     is_mobile: value == 'Mobile' || value == 4 || value == 5 || value == 6
@@ -86663,11 +86652,11 @@ var PhonesDataForm = function (_React$Component) {
                 'h3',
                 { className: 'md-cell md-cell--2-desktop-offset md-cell--10' },
                 'Mobile Phone'
-            ), _react2.default.createElement(_TextFields2.default, {
+            ), _react2.default.createElement(_reactMd.TextField, {
                 label: 'Manufacturer',
                 id: 'mobile_manufacturer',
                 onChange: this.onChange.bind(this, "mobile_manufacturer"),
-                className: 'md-cell md-cell--2-desktop-offset md-cell--10' }), _react2.default.createElement(_TextFields2.default, {
+                className: 'md-cell md-cell--2-desktop-offset md-cell--10' }), _react2.default.createElement(_reactMd.TextField, {
                 label: 'Model',
                 id: 'mobile_model',
                 onChange: this.onChange.bind(this, "mobile_model"),
@@ -86675,12 +86664,12 @@ var PhonesDataForm = function (_React$Component) {
                 'h3',
                 { className: 'md-cell md-cell--2-desktop-offset md-cell--10' },
                 'Carrier'
-            ), _react2.default.createElement(_TextFields2.default, {
+            ), _react2.default.createElement(_reactMd.TextField, {
                 label: 'Carrier',
                 id: 'mobile_carrier_name',
                 onChange: this.onChange.bind(this, "mobile_carrier_name"),
                 value: this.state.mobile_carrier_name,
-                className: 'md-cell md-cell--2-desktop-offset md-cell--10' }), _react2.default.createElement(_TextFields2.default, {
+                className: 'md-cell md-cell--2-desktop-offset md-cell--10' }), _react2.default.createElement(_reactMd.TextField, {
                 label: 'Carrier Type',
                 id: 'mobile_carrier_type',
                 onChange: this.onChange.bind(this, "mobile_carrier_type"),
@@ -86700,21 +86689,21 @@ var PhonesDataForm = function (_React$Component) {
                 _extends({}, this.props, {
                     tableName: this.state.tableName,
                     onSubmit: functions.onSubmit.bind(this) }),
-                _react2.default.createElement(_SelectFields2.default, {
+                _react2.default.createElement(_reactMd.SelectField, {
                     id: 'phones_type_select',
-                    menuItems: this.props.phone_types ? this.props.phone_types : [{ label: 'Mobile', value: 4 }, { label: 'Residence', value: 1 }, { label: 'Office', value: 7 }],
-                    defaultValue: 'Mobile',
+                    menuItems: this.props.phone_types,
+                    defaultValue: this.props.phone_types[3].value,
                     className: 'md-cell md-cell--2 md-cell--bottom',
                     onChange: this.onChange.bind(this, "phones_type_select")
                 }),
-                _react2.default.createElement(_TextFields2.default, {
+                _react2.default.createElement(_reactMd.TextField, {
                     id: 'phone_number',
                     className: 'md-cell md-cell--10',
                     label: 'Phone Number',
                     value: this.state.phone_display,
                     onChange: this.onChange.bind(this, "phone_number")
                 }),
-                this.props.noTitle ? null : _react2.default.createElement(_TextFields2.default, {
+                this.props.noTitle ? null : _react2.default.createElement(_reactMd.TextField, {
                     id: 'person_id',
                     className: 'md-cell md-cell--2',
                     label: 'Person ID',
@@ -86722,11 +86711,20 @@ var PhonesDataForm = function (_React$Component) {
                     onChange: this.onChange.bind(this, "person_id")
                 }),
                 this.state.is_mobile ? phoneInfo : null,
+                _react2.default.createElement(_reactMd.SelectionControl, {
+                    name: "switch_primary_phone" + this.props.index,
+                    id: "switch-primary-phone" + this.props.index,
+                    className: 'md-cell md-cell--12 md-cell--2-desktop-offset',
+                    type: 'switch',
+                    label: 'Primary phone',
+                    onChange: this.onChange.bind(this, "primary_phone"),
+                    checked: this.props.isPrimary
+                }),
                 this.props.noAddButton ? null : _react2.default.createElement(
                     'div',
                     { className: 'md-cell' },
                     _react2.default.createElement(
-                        _Button2.default,
+                        _reactMd.Button,
                         {
                             style: { display: "inline-block" },
                             floating: true, mini: true, secondary: true,
@@ -86808,6 +86806,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
+function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -86853,7 +86853,8 @@ var AddressesDeck = function (_React$Component) {
             addresses: 1,
             primaryAddress: 0,
             data: {},
-            loading: true
+            loading: true,
+            toasts: []
         };
         return _this;
     }
@@ -86875,6 +86876,10 @@ var AddressesDeck = function (_React$Component) {
             APIWrapper.getResource("States", function (data) {
                 _this2.setState({ states: APIWrapper.asLabelValueObject(data, "stateName", "alpha2Code") });
             });
+
+            APIWrapper.getResource("Counties", function (data) {
+                _this2.setState({ counties: "not yet fixed" });
+            });
         }
     }, {
         key: 'onSubmit',
@@ -86883,7 +86888,7 @@ var AddressesDeck = function (_React$Component) {
             var requirements_filled = true;
             var toSend = [];
             console.log(data);
-            for (var i = 0; i < this.state.addresses; i++) {
+            for (var i in this.state.addresses) {
                 var data = this.state.data[i];
                 for (var j in required) {
                     if (!data[required[j]]) {
@@ -86891,7 +86896,7 @@ var AddressesDeck = function (_React$Component) {
                     }
                 }
                 toSend = toSend.concat({
-                    "personId": 1, //TODO
+                    "personId": this.state.data[0].person_id,
                     "addressTypeId": data.address_type_select,
                     "streetAddress": data.address_line_1,
                     "streetAddress2": data.address_line_2,
@@ -86903,21 +86908,31 @@ var AddressesDeck = function (_React$Component) {
                     "primaryContactAddress": this.state.primaryAddress == i
                 });
             }
-            if (requirements_filled) {
+            if (requirements_filled && this.state.data[0].person_id) {
                 for (i in toSend) {
                     APIWrapper.postResource('Addresses', toSend[i]);
                 }
             } else {
-                alert('hey there buddy better fill those requirements');
+                this.setState({
+                    toasts: this.state.toasts.concat({ text: 'hey there buddy better fill those requirements' })
+                });
             }
             functions.onSubmit.bind(this).call();
+        }
+    }, {
+        key: 'onDismiss',
+        value: function onDismiss() {
+            var _state$toasts = _toArray(this.state.toasts),
+                toasts = _state$toasts.slice(1);
+
+            this.setState({ toasts: toasts });
         }
     }, {
         key: 'render',
         value: function render() {
             var _this3 = this;
 
-            if (this.state.address_types && this.state.countries && this.state.states) {
+            if (this.state.address_types && this.state.countries && this.state.states && this.state.counties) {
                 return _react2.default.createElement(
                     'div',
                     null,
@@ -86939,6 +86954,12 @@ var AddressesDeck = function (_React$Component) {
                                 address_types: _this3.state.address_types,
                                 isPrimary: _this3.state.primaryAddress == i })
                         );
+                    }),
+                    _react2.default.createElement(_reactMd.Snackbar, {
+                        id: 'curadite-snackbar',
+                        toasts: this.state.toasts,
+                        autohide: true,
+                        onDismiss: this.onDismiss.bind(this)
                     })
                 );
             } else {
@@ -87007,6 +87028,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
+function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -87028,13 +87051,17 @@ var PhonesDeck = function (_React$Component) {
 
         _this.onAddClicked = function () {
             _this.setState({
-                phones: _this.state.phones + 1
+                phones: _this.state.phones + 1,
+                primaryPhone: _this.state.phones
             });
         };
 
         _this.state = {
             phones: 1,
-            data: {}
+            data: {},
+            loading: true,
+            primaryPhone: 0,
+            toasts: []
         };
         return _this;
     }
@@ -87042,6 +87069,11 @@ var PhonesDeck = function (_React$Component) {
     _createClass(PhonesDeck, [{
         key: 'onChange',
         value: function onChange(name, value, index) {
+            if (name == 'primary_phone') {
+                this.setState({
+                    primaryPhone: index
+                });
+            }
             this.setState(function (prevState) {
                 return {
                     "data": _extends({}, prevState.data, _defineProperty({}, index, _extends({}, prevState.data[index], _defineProperty({}, name, value))))
@@ -87053,57 +87085,86 @@ var PhonesDeck = function (_React$Component) {
         value: function componentWillMount() {
             var that = this;
             APIWrapper.getResource("PhoneTypes", function (data) {
-                var phone_types = [];
-                for (var i = 0; i < data.length; i++) {
-                    phone_types = phone_types.concat({ label: data[i].phoneTypeDescription, value: data[i].phoneTypeId });
-                }
-                console.log(phone_types);
-                that.setState({ phone_types: phone_types });
+                var phone_types = APIWrapper.asLabelValueObject(data, 'phoneTypeDescription', 'phoneTypeId');
+                that.setState({ phone_types: phone_types, loading: false });
             });
         }
     }, {
         key: 'onSubmit',
         value: function onSubmit() {
             console.log('phonesdeckonsubmit');
-            for (var i = 0; i < this.state.phones; i++) {
+            var required = ["phone_number", "phones_type_select"];
+            var requirements_filled = true;
+            var toSend = [];
+            for (var i in this.state.phones) {
                 var data = this.state.data[i];
-                var toSend = {
+                for (var j in required) {
+                    if (!data[required[j]]) {
+                        requirements_filled = false;
+                    }
+                }
+                var toSend = toSend.concat({
                     "personId": this.state.data[0].person_id,
                     "phone": "+1" + data.phone_number,
                     "phoneTypeId": data.phones_type_select,
-                    "primaryContactPhone": false //add this
-                };
-                console.log(toSend);
-                APIWrapper.postResource('Phones', toSend);
+                    "primaryContactPhone": this.state.primaryPhone == i || this.state.phones == 1
+                });
             }
+            if (requirements_filled && this.state.data[0].person_id) {
+                for (i in toSend) {
+                    APIWrapper.postResource('Phones', toSend[i]);
+                }
+            } else {
+                this.setState({
+                    toasts: this.state.toasts.concat({ text: 'hey there buddy better fill those requirements' })
+                });
+            }
+            functions.onSubmit.bind(this).call();
+        }
+    }, {
+        key: 'onDismiss',
+        value: function onDismiss() {
+            var _state$toasts = _toArray(this.state.toasts),
+                toasts = _state$toasts.slice(1);
 
-            //functions.onChange.bind(this).call();
+            this.setState({ toasts: toasts });
         }
     }, {
         key: 'render',
         value: function render() {
             var _this2 = this;
 
-            return _react2.default.createElement(
-                'div',
-                null,
-                [].concat(_toConsumableArray(new Array(this.state.phones))).map(function (_, i) {
-                    return _react2.default.createElement(
-                        _reactMd.Paper,
-                        { className: 'md-text-container' },
-                        _react2.default.createElement(_AddressesTable.PhonesDataForm, {
-                            onSubmit: _this2.onSubmit.bind(_this2),
-                            onChange: _this2.onChange.bind(_this2),
-                            onAddClicked: _this2.onAddClicked.bind(_this2),
-                            noButton: i != _this2.state.phones - 1,
-                            noAddButton: i != _this2.state.phones - 1 || _this2.state.phones == 3,
-                            noTitle: i != 0,
-                            key: i,
-                            phone_types: _this2.state.phone_types,
-                            index: i })
-                    );
-                })
-            );
+            if (!this.state.loading) {
+                return _react2.default.createElement(
+                    'div',
+                    null,
+                    [].concat(_toConsumableArray(new Array(this.state.phones))).map(function (_, i) {
+                        return _react2.default.createElement(
+                            _reactMd.Paper,
+                            { className: 'md-text-container' },
+                            _react2.default.createElement(_AddressesTable.PhonesDataForm, {
+                                onSubmit: _this2.onSubmit.bind(_this2),
+                                onChange: _this2.onChange.bind(_this2),
+                                onAddClicked: _this2.onAddClicked.bind(_this2),
+                                noButton: i != _this2.state.phones - 1,
+                                noAddButton: i != _this2.state.phones - 1 || _this2.state.phones == 3,
+                                noTitle: i != 0,
+                                key: i,
+                                phone_types: _this2.state.phone_types,
+                                isPrimary: _this2.state.primaryPhone == i,
+                                index: i })
+                        );
+                    }),
+                    _react2.default.createElement(_reactMd.Snackbar, {
+                        id: 'curadite-snackbar',
+                        toasts: this.state.toasts,
+                        autohide: true,
+                        onDismiss: this.onDismiss.bind(this)
+                    })
+                );
+            } else {
+                return _react2.default.createElement('div', null);
+            }
         }
     }]);
 

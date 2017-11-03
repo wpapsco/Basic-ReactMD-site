@@ -1,5 +1,5 @@
 import React from "react";
-import Button from 'react-md/lib/Buttons/Button';
+import { Button, Snackbar } from 'react-md';
 
 export default class DataForm extends React.Component {
     constructor(props) {
@@ -19,7 +19,7 @@ export default class DataForm extends React.Component {
             });
         }
     }
-    
+
     render() {
         var classname = !this.props.noGrid ? "md-grid text-fields__application" : "text-fields__application"
         var button = (

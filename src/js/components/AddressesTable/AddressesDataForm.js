@@ -138,11 +138,20 @@ export default class AddressesDataForm extends React.Component {
                     className='md-cell md-cell--10'
                     onChange={this.onChange.bind(this, "address_line_1")}
                 />
+                {this.props.noTitle ? null : (
+                    <TextField
+                        id="person_id"
+                        className="md-cell md-cell--2"
+                        label="Person ID"
+                        type="number"
+                        onChange={this.onChange.bind(this, "person_id")}
+                    />
+                )}
                 <TextField
                     id="street_address_line_2"
                     label="Street Address Line 2"
                     maxLength={128}
-                    className='md-cell md-cell--2-desktop-offset md-cell--10'
+                    className={'md-cell md-cell--10' + (!this.props.noTitle ? '' : ' md-cell--2-desktop-offset')}
                     onChange={this.onChange.bind(this, "address_line_2")}
                 />
                 <TextField

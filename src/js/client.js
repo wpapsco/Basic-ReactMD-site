@@ -87,7 +87,7 @@ class Layout extends React.Component {
         // }));
 
     onSubmit = (e) => {
-        alert(JSON.stringify(e));
+        //alert(JSON.stringify(e));
     }
 
     render() {

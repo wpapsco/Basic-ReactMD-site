@@ -1,10 +1,6 @@
 import React from "react";
-import TextField from 'react-md/lib/TextFields';
-import Button from 'react-md/lib/Buttons/Button';
-import DatePicker from 'react-md/lib/Pickers/DatePickerContainer';
-import SelectField from 'react-md/lib/SelectFields';
-import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
 import YesNoSelect from '../YesNoSelect';
+import { FontIcon, SVGIcon, SelectionControl, Button, DatePicker, SelectField, TimePicker, TextField, Autocomplete } from 'react-md';
 import DataForm from '../DataForm';
 var functions = require('../../DataFormFunctions').default;
 
@@ -20,9 +16,11 @@ export default class PhonesDataForm extends React.Component {
             mobile_carrier_name: '',
             mobile_carrier_type: ''
         }
+        this.onChange('phones_type_select', 4);
     }
 
     onChange(name, value) {
+        console.log({ name, value });
         if (name == 'phones_type_select') {
             this.setState({
                 is_mobile: value == 'Mobile' || (value == 4 || value == 5 || value == 6)
@@ -119,11 +117,11 @@ export default class PhonesDataForm extends React.Component {
             <DataForm
                 {...this.props}
                 tableName={this.state.tableName}
-                onSubmit={functions.onSubmit.bind(this)}>
+                onSubmit={functions.onSubmit.bind(this)} >
                 <SelectField
                     id="phones_type_select"
-                    menuItems={this.props.phone_types ? this.props.phone_types : [{label:'Mobile', value:4}, {label:'Residence', value:1}, {label:'Office', value:7}]}
-                    defaultValue="Mobile"
+                    menuItems={this.props.phone_types}
+                    defaultValue={this.props.phone_types[3].value}
                     className='md-cell md-cell--2 md-cell--bottom'
                     onChange={this.onChange.bind(this, "phones_type_select")}
                 />
@@ -144,6 +142,15 @@ export default class PhonesDataForm extends React.Component {
                     />
                 )}
                 {this.state.is_mobile ? phoneInfo : null}
+                <SelectionControl
+                    name={"switch_primary_phone" + this.props.index}
+                    id={"switch-primary-phone" + this.props.index}
+                    className='md-cell md-cell--12 md-cell--2-desktop-offset'
+                    type="switch"
+                    label="Primary phone"
+                    onChange={this.onChange.bind(this, "primary_phone")}
+                    checked={this.props.isPrimary}
+                />
                 {this.props.noAddButton ?
                     null :
                     <div className="md-cell">

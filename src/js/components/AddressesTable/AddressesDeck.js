@@ -6,7 +6,7 @@ import SelectField from 'react-md/lib/SelectFields';
 import TimePicker from 'react-md/lib/Pickers/TimePickerContainer';
 import YesNoSelect from '../YesNoSelect';
 import DataForm from '../DataForm';
-import { Paper } from 'react-md';
+import { Paper, Snackbar } from 'react-md';
 import { AddressesDataForm } from '../AddressesTable';
 var functions = require('../../DataFormFunctions').default;
 var APIWrapper = require('../../APIWrapper');
@@ -20,6 +20,7 @@ export default class AddressesDeck extends React.Component {
             primaryAddress: 0,
             data: {},
             loading: true,
+            toasts: []
         };
     }
 
@@ -62,6 +63,10 @@ export default class AddressesDeck extends React.Component {
         APIWrapper.getResource("States", (data) => {
             this.setState({ states: APIWrapper.asLabelValueObject(data, "stateName", "alpha2Code") });
         });
+
+        APIWrapper.getResource("Counties", (data) => {
+            this.setState({counties:"not yet fixed"});
+        });
     }
 
     onSubmit() {
@@ -69,7 +74,7 @@ export default class AddressesDeck extends React.Component {
         var requirements_filled = true;
         var toSend = []
         console.log(data);
-        for (var i = 0; i < this.state.addresses; i++) {
+        for (var i in this.state.addresses) {
             var data = this.state.data[i];
             for (var j in required) {
                 if (!data[required[j]]) {
@@ -77,7 +82,7 @@ export default class AddressesDeck extends React.Component {
                 }
             }
             toSend = toSend.concat({
-                "personId": 1, //TODO
+                "personId": this.state.data[0].person_id,
                 "addressTypeId": data.address_type_select,
                 "streetAddress": data.address_line_1,
                 "streetAddress2": data.address_line_2,
@@ -89,18 +94,25 @@ export default class AddressesDeck extends React.Component {
                 "primaryContactAddress": this.state.primaryAddress == i
             });
         }
-        if (requirements_filled) {
+        if (requirements_filled && this.state.data[0].person_id) {
             for (i in toSend) {
                 APIWrapper.postResource('Addresses', toSend[i]);
             }
         } else {
-            alert('hey there buddy better fill those requirements');
+            this.setState({
+                toasts: this.state.toasts.concat({ text: 'hey there buddy better fill those requirements' })
+            });
         }
         functions.onSubmit.bind(this).call();
     }
 
+    onDismiss() {
+        const [, ...toasts] = this.state.toasts;
+        this.setState({ toasts });
+    }
+
     render() {
-        if (this.state.address_types && this.state.countries && this.state.states) {
+        if (this.state.address_types && this.state.countries && this.state.states && this.state.counties) {
             return (
                 <div>
                     {[...new Array(this.state.addresses)].map((_, i) => (
@@ -120,13 +132,12 @@ export default class AddressesDeck extends React.Component {
                                 isPrimary={this.state.primaryAddress == i} />
                         </Paper>
                     ))}
-                    {/* <Snackbar
-                        id="interactive-snackbar"
-                        toasts={toasts}
-                        autohide={autohide}
-                        autohideTimeout={autohideTimeout || Snackbar.defaultProps.autohideTimeout}
-                        onDismiss={this.dismiss}
-                    /> */}
+                    <Snackbar
+                        id="curadite-snackbar"
+                        toasts={this.state.toasts}
+                        autohide={true}
+                        onDismiss={this.onDismiss.bind(this)}
+                    />
                 </div>
             );
         } else {
