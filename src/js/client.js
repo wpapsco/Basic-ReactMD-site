@@ -56,6 +56,8 @@ webfontloader.load({
     },
 })
 
+//API HERE: http://curadite-dashboard-api.azurewebsites.net/swagger/#/
+
 class Layout extends React.Component {
     constructor(props) {
         super(props);

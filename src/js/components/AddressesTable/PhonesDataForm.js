@@ -14,26 +14,41 @@ export default class PhonesDataForm extends React.Component {
         super(props);
         this.state = {
             'tableName': 'Phones',
-            isMobile: true,
+            is_mobile: true,
             phone_display: '',
-            phone_number: 0
+            phone_number: 0,
+            mobile_carrier_name: '',
+            mobile_carrier_type: ''
         }
     }
 
     onChange(name, value) {
         if (name == 'phones_type_select') {
             this.setState({
-                isMobile: value == 'Mobile'
+                is_mobile: value == 'Mobile' || (value == 4 || value == 5 || value == 6)
             })
         }
         if (name != 'phone_number') {
             this.props.onChange(name, value, this.props.index);
+            this.setState({
+                [name]: value
+            });
         } else {
             var phone_number = value.replace(/[^0-9.]/g, "");
-            if (phone_number.length > 10) {
+            if (phone_number.length >= 10) {
                 phone_number = phone_number.slice(0, 10);
+                if (this.state.phone_number.length < 10) {
+                    this.getPhoneInfo(phone_number);
+                }
             }
-            var phone_display = '('+ phone_number.slice(0, 3) +') '+phone_number.slice(3, 6)+'-'+phone_number.slice(6);
+            var phone_display = '';
+            if (phone_number.length > 6) {
+                phone_display = '(' + phone_number.slice(0, 3) + ') ' + phone_number.slice(3, 6) + '-' + phone_number.slice(6);
+            } else if (phone_number.length > 3) {
+                phone_display = '(' + phone_number.slice(0, 3) + ') ' + phone_number.slice(3);
+            } else {
+                phone_display = '(' + phone_number.slice(0);
+            }
             this.setState({
                 phone_number,
                 phone_display
@@ -42,28 +57,63 @@ export default class PhonesDataForm extends React.Component {
         }
     }
 
+    getPhoneInfo(number) {
+        fetch('https://lookups.twilio.com/v1/PhoneNumbers/' + number + '?Type=carrier', {
+            method: "get",
+            headers: {
+                'Authorization': "Basic QUNmMWU3ZDliNGNiMjkyNTY5MzUzNjllZjg3YmMwZDRiYTo0Y2MyMjJjYzFmNzMxNzMxYjBlMDE0ZjY1ZWZhNmZlZA==",
+                'content-type': 'application/x-www-form-urlencoded'
+            }
+        }).then((response) => {
+            return response.json()
+        }).then((data) => {
+            console.log(data);
+            if (data.status == 404) {
+                Promise.reject(new Error('Twilio has no such number'));
+            }
+            this.setState({
+                mobile_carrier_name: data.carrier.name,
+                mobile_carrier_type: data.carrier.type
+            });
+            this.props.onChange('mobile_carrier_name', data.carrier.name, this.props.index);
+            this.props.onChange('mobile_carrier_type', data.carrier.type, this.props.index);
+
+        }).catch((err) => {
+            console.log('Fetch Error :-S', err);
+        });
+    }
+
     render() {
-        //md-cell md-cell--2-desktop-offset md-cell--2
         var phoneInfo = [
-            (<h4 className="md-cell md-cell--2-desktop-offset md-cell--10">Mobile Phone</h4>),
-            (<TextField 
-                label="Manufacturer" 
-                onChange={this.onChange.bind(this, "mobile_manufacturer")} 
+            (<h3 className="md-cell md-cell--2-desktop-offset md-cell--10">Mobile Phone</h3>),
+            (<TextField
+                label="Manufacturer"
+                id="mobile_manufacturer"
+                onChange={this.onChange.bind(this, "mobile_manufacturer")}
                 className="md-cell md-cell--2-desktop-offset md-cell--10" />),
-            (<TextField 
-                label="Model" 
-                onChange={this.onChange.bind(this, "mobile_model")} 
+            (<TextField
+                label="Model"
+                id="mobile_model"
+                onChange={this.onChange.bind(this, "mobile_model")}
                 className="md-cell md-cell--2-desktop-offset md-cell--10" />),
-            (<h4 className="md-cell md-cell--2-desktop-offset md-cell--10">Carrier</h4>),
-            (<TextField 
-                label="Carrier" 
-                onChange={this.onChange.bind(this, "mobile_carrier")} 
+            (<h3 className="md-cell md-cell--2-desktop-offset md-cell--10">Carrier</h3>),
+            (<TextField
+                label="Carrier"
+                id="mobile_carrier_name"
+                onChange={this.onChange.bind(this, "mobile_carrier_name")}
+                value={this.state.mobile_carrier_name}
                 className="md-cell md-cell--2-desktop-offset md-cell--10" />),
-            (<TextField 
-                label="Carrier Type" 
-                onChange={this.onChange.bind(this, "mobile_carrier_type")} 
+            (<TextField
+                label="Carrier Type"
+                id="mobile_carrier_type"
+                onChange={this.onChange.bind(this, "mobile_carrier_type")}
+                value={this.state.mobile_carrier_type}
                 className="md-cell md-cell--2-desktop-offset md-cell--10" />),
         ];
+
+        if (!this.props.noTitle) {
+            phoneInfo[0] = (<h3 className="md-cell md-cell--10 md-cell--bottom">Mobile Phone</h3>)
+        }
 
         return (
             <DataForm
@@ -72,7 +122,7 @@ export default class PhonesDataForm extends React.Component {
                 onSubmit={functions.onSubmit.bind(this)}>
                 <SelectField
                     id="phones_type_select"
-                    menuItems={['Mobile', 'Home', 'Work', 'Main', 'Home Fax', 'Work Fax', 'Pager', 'Other']}
+                    menuItems={this.props.phone_types ? this.props.phone_types : [{label:'Mobile', value:4}, {label:'Residence', value:1}, {label:'Office', value:7}]}
                     defaultValue="Mobile"
                     className='md-cell md-cell--2 md-cell--bottom'
                     onChange={this.onChange.bind(this, "phones_type_select")}
@@ -84,7 +134,16 @@ export default class PhonesDataForm extends React.Component {
                     value={this.state.phone_display}
                     onChange={this.onChange.bind(this, "phone_number")}
                 />
-                {this.state.isMobile ? phoneInfo : null}
+                {this.props.noTitle ? null : (
+                    <TextField
+                        id="person_id"
+                        className="md-cell md-cell--2"
+                        label="Person ID"
+                        type="number"
+                        onChange={this.onChange.bind(this, "person_id")}
+                    />
+                )}
+                {this.state.is_mobile ? phoneInfo : null}
                 {this.props.noAddButton ?
                     null :
                     <div className="md-cell">

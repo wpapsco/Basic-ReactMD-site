@@ -19,7 +19,7 @@ export default class DataForm extends React.Component {
             });
         }
     }
-
+    
     render() {
         var classname = !this.props.noGrid ? "md-grid text-fields__application" : "text-fields__application"
         var button = (

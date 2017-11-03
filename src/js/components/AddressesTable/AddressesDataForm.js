@@ -33,12 +33,14 @@ export default class AddressesDataForm extends React.Component {
                 'Elsewhere'
             ],
             index: this.props.index,
-            address_line_2: '',
             zip_icon: (<FontIcon />),
             suggested_zip: '',
-            valid_zip: true
+            valid_zip: true,
+            address_line_2: '',
         }
         console.log(this.props.index);
+        this.onChange('address_type_select', 2);
+        this.onChange('country', 'US');
     }
 
     validateZip = (value, callback) => {
@@ -124,8 +126,8 @@ export default class AddressesDataForm extends React.Component {
                 {...this.props}>
                 <SelectField
                     id="address_type_select"
-                    menuItems={['Home', 'Work', 'Other']}
-                    defaultValue="Home"
+                    menuItems={this.props.address_types}
+                    defaultValue={this.props.address_types[0].value}
                     className='md-cell md-cell--2 md-cell--middle'
                     onChange={this.onChange.bind(this, "address_type_select")}
                 />
@@ -155,7 +157,7 @@ export default class AddressesDataForm extends React.Component {
                     label="State"
                     maxLength={64}
                     className='md-cell md-cell--2'
-                    menuItems={this.state.states}
+                    menuItems={this.props.states}
                     onChange={this.onChange.bind(this, "state")}
                 />
                 <Autocomplete
@@ -175,8 +177,8 @@ export default class AddressesDataForm extends React.Component {
                     id="country"
                     label="Country"
                     className='md-cell md-cell--2-desktop-offset md-cell--10'
-                    menuItems={this.state.countries}
-                    defaultValue={this.state.countries[0]}
+                    menuItems={this.props.countries}
+                    defaultValue={this.props.countries[239].value}
                     onChange={this.onChange.bind(this, "country")}
                 />
                 <h6 className="md-cell md-cell--2-desktop-offset md-cell--10">Location Information</h6>
